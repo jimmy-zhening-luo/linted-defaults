@@ -1,5 +1,3 @@
-import type Rule from "@html-eslint/eslint-plugin/types/rules";
-import type { RuleState } from "../../_strings";
 import {
   enable,
   ERROR,
@@ -7,7 +5,7 @@ import {
   Never,
 } from "../../_strings";
 
-const rules: Partial<Record<`@html-eslint/${keyof typeof Rule}`, RuleState | readonly [RuleState, ...unknown[]]>> = {
+const rules = {
   // #region BEST PRACTICE
   // https://html-eslint.org/docs/rules#best-practice
   "@html-eslint/no-duplicate-attrs": ERROR,
