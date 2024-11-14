@@ -17,4 +17,4 @@ export const files = {
   json,
   jsonc,
   yml,
-} as const;
+};
