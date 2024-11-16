@@ -72,5 +72,5 @@ export const YmlEnable = [
     "yml/sort-keys": OFF,
     "yml/sort-sequence-values": OFF,
     "yml/vue-custom-block/no-parsing-error": ERROR,
-  },
+  } as const,
 ] as const;

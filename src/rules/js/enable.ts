@@ -543,5 +543,5 @@ export const Enable = [
     "unicode-bom": OFF /* preference: don't care */,
 
     // #endregion LAYOUT & FORMATTING
-  },
+  } as const,
 ] as const;

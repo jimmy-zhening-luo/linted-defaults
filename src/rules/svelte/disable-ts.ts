@@ -8,5 +8,5 @@ export const SvelteDisableTs = [
   {
     "no-unused-vars": OFF /* ESLint */,
     "@typescript-eslint/no-unused-vars": OFF /* TS Extension */,
-  },
+  } as const,
 ] as const;

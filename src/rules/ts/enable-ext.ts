@@ -113,5 +113,5 @@ export const TsEnableExtension = [
       },
     ],
     "@typescript-eslint/require-await": ERROR,
-  },
+  } as const,
 ] as const;

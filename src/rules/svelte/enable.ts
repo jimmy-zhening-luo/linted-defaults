@@ -228,5 +228,5 @@ export const SvelteEnable = [
 
     // #endregion REQUIRED
 
-  },
+  } as const,
 ] as const;

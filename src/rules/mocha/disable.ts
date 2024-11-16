@@ -7,5 +7,5 @@ export const MochaDisable = [
   ID.Disable,
   {
     "prefer-arrow-callback": OFF,
-  },
+  } as const,
 ] as const;

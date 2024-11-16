@@ -21,5 +21,5 @@ export const TsDisable = [
     "no-unsafe-negation": OFF,
     "consistent-return": OFF,
     "no-redeclare": OFF,
-  },
+  } as const,
 ] as const;

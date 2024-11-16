@@ -87,5 +87,5 @@ export const JsonEnableExtension = [
       },
     ],
     "jsonc/space-unary-ops": ERROR,
-  },
+  } as const,
 ] as const;

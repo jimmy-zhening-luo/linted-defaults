@@ -69,5 +69,5 @@ export const YmlEnableExtension = [
       ERROR,
       always,
     ],
-  },
+  } as const,
 ] as const;
