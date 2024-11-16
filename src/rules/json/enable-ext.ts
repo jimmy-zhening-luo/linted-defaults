@@ -2,12 +2,12 @@ import {
   ID,
   ERROR,
   OFF,
-  Always,
-  Consistent,
-  Double,
-  Last,
-  Never,
-  Strict,
+  always,
+  consistent,
+  double,
+  last,
+  never,
+  strict,
 } from "../../_strings";
 
 export const JsonEnableExtension = [
@@ -17,7 +17,7 @@ export const JsonEnableExtension = [
     "jsonc/array-bracket-newline": OFF /* DO NOT CHANGE */,
     "jsonc/array-bracket-spacing": [
       ERROR,
-      Never,
+      never,
       {
         singleValue: false,
         objectsInArrays: false,
@@ -26,17 +26,17 @@ export const JsonEnableExtension = [
     ] /* MUST match ../js/stylistic.ts */,
     "jsonc/array-element-newline": [
       ERROR,
-      Consistent,
+      consistent,
     ],
-    "jsonc/comma-dangle": [ERROR, Never] /* trailing commas are NOT allowed in JSON */,
-    "jsonc/comma-style": [ERROR, Last],
+    "jsonc/comma-dangle": [ERROR, never] /* trailing commas are NOT allowed in JSON */,
+    "jsonc/comma-style": [ERROR, last],
     "jsonc/indent": [ERROR, 2],
     "jsonc/key-spacing": [
       ERROR,
       {
         beforeColon: false,
         afterColon: true,
-        mode: Strict,
+        mode: strict,
       },
     ] /* MUST match ../js/stylistic.ts */,
     "jsonc/no-dupe-keys": ERROR,
@@ -66,7 +66,7 @@ export const JsonEnableExtension = [
     ] /* MUST match CHILD of ../js/stylistic.ts */,
     "jsonc/object-curly-spacing": [
       ERROR,
-      Always,
+      always,
       {
         arraysInObjects: true,
         objectsInObjects: true,
@@ -78,10 +78,10 @@ export const JsonEnableExtension = [
         allowAllPropertiesOnSameLine: true,
       },
     ] /* MUST match ../js/stylistic.ts */,
-    "jsonc/quote-props": [ERROR, Always],
+    "jsonc/quote-props": [ERROR, always],
     "jsonc/quotes": [
       ERROR,
-      Double,
+      double,
       {
         avoidEscape: false,
       },

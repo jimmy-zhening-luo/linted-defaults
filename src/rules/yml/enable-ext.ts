@@ -1,9 +1,9 @@
 import {
   ID,
   ERROR,
-  Never,
-  Always,
-  Strict,
+  never,
+  always,
+  strict,
 } from "../../_strings";
 
 export const YmlEnableExtension = [
@@ -20,7 +20,7 @@ export const YmlEnableExtension = [
     ],
     "yml/flow-mapping-curly-spacing": [
       ERROR,
-      Always,
+      always,
       {
         arraysInObjects: true,
         objectsInObjects: true,
@@ -35,7 +35,7 @@ export const YmlEnableExtension = [
     ],
     "yml/flow-sequence-bracket-spacing": [
       ERROR,
-      Never,
+      never,
       {
         singleValue: false,
         objectsInArrays: false,
@@ -47,7 +47,7 @@ export const YmlEnableExtension = [
       {
         beforeColon: false,
         afterColon: true,
-        mode: Strict,
+        mode: strict,
       },
     ],
     "yml/no-irregular-whitespace": [
@@ -67,7 +67,7 @@ export const YmlEnableExtension = [
     ],
     "yml/spaced-comment": [
       ERROR,
-      Always,
+      always,
     ],
   },
 ] as const;

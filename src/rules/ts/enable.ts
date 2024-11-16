@@ -2,8 +2,8 @@ import {
   ID,
   ERROR,
   OFF,
-  Never,
-  Explicit,
+  never,
+  explicit,
 } from "../../_strings";
 
 export const TsEnable = [
@@ -48,7 +48,7 @@ export const TsEnable = [
       ERROR,
       {
         assertionStyle: "as",
-        objectLiteralTypeAssertions: Never,
+        objectLiteralTypeAssertions: never,
       },
     ],
     "@typescript-eslint/consistent-type-definitions": OFF,
@@ -70,14 +70,14 @@ export const TsEnable = [
     "@typescript-eslint/explicit-member-accessibility": [
       ERROR,
       {
-        accessibility: Explicit,
+        accessibility: explicit,
         ignoredMethodNames: [],
         overrides: {
-          properties: Explicit,
+          properties: explicit,
           constructors: "no-public",
-          accessors: Explicit,
-          methods: Explicit,
-          parameterProperties: Explicit,
+          accessors: explicit,
+          methods: explicit,
+          parameterProperties: explicit,
         },
       },
     ],
@@ -290,8 +290,8 @@ export const TsEnable = [
       ERROR,
       {
         // allowWithName: /regex/,
-        allowInterfaces: Never,
-        allowObjectTypes: Never,
+        allowInterfaces: never,
+        allowObjectTypes: never,
       },
     ],
     "@typescript-eslint/no-explicit-any": [
@@ -474,7 +474,7 @@ export const TsEnable = [
     "@typescript-eslint/prefer-string-starts-ends-with": [
       ERROR,
       {
-        allowSingleElementEquality: Never,
+        allowSingleElementEquality: never,
       },
     ],
     "@typescript-eslint/promise-function-async": [
@@ -546,9 +546,9 @@ export const TsEnable = [
     "@typescript-eslint/triple-slash-reference": [
       ERROR,
       {
-        lib: Never /** always | never */,
-        path: Never /** always | never */,
-        types: Never /** always | never | prefer-import */,
+        lib: never /** always | never */,
+        path: never /** always | never */,
+        types: never /** always | never | prefer-import */,
       },
     ],
     "@typescript-eslint/typedef": OFF /* tsconfig: { noImplicitAny, strictPropertyInitialization } */,

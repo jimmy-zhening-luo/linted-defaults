@@ -2,7 +2,7 @@ import {
   ID,
   ERROR,
   OFF,
-  AlwaysMultiline,
+  always_multiline,
 } from "../../_strings";
 
 export const JsoncOverride = [
@@ -12,7 +12,7 @@ export const JsoncOverride = [
     "jsonc/no-comments": OFF /* comments ARE allowed in JSONC */,
     "jsonc/comma-dangle": [
       ERROR,
-      AlwaysMultiline,
+      always_multiline,
     ] /* trailing commas ARE allowed in JSONC */,
   },
 ] as const;

@@ -2,8 +2,8 @@ import {
   ID,
   ERROR,
   OFF,
-  Always,
-  All,
+  always,
+  all,
 } from "../../_strings";
 
 export const TsEnableExtension = [
@@ -26,7 +26,7 @@ export const TsEnableExtension = [
     ],
     "@typescript-eslint/init-declarations": [
       ERROR,
-      Always,
+      always,
     ],
     "@typescript-eslint/max-params": OFF /* preference */,
     "@typescript-eslint/no-array-constructor": ERROR,
@@ -61,9 +61,9 @@ export const TsEnableExtension = [
     "@typescript-eslint/no-unused-vars": [
       ERROR,
       {
-        vars: All,
-        args: All,
-        caughtErrors: All,
+        vars: all,
+        args: all,
+        caughtErrors: all,
         ignoreRestSiblings: false,
         ignoreClassWithStaticInitBlock: false,
         reportUsedIgnorePattern: true,

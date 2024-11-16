@@ -2,9 +2,9 @@ import {
   ID,
   ERROR,
   OFF,
-  Never,
-  Always,
-  Double,
+  never,
+  always,
+  double,
 } from "../../_strings";
 
 export const YmlEnable = [
@@ -13,32 +13,32 @@ export const YmlEnable = [
     // DOC: https://ota-meshi.github.io/eslint-plugin-yml/rules/#yaml-rules
     "yml/block-mapping-colon-indicator-newline": [
       ERROR,
-      Never,
+      never,
     ],
     "yml/block-mapping-question-indicator-newline": [
       ERROR,
-      Never,
+      never,
     ],
     "yml/block-mapping": [
       ERROR,
       {
-        singleline: Never,
-        multiline: Always,
+        singleline: never,
+        multiline: always,
       },
     ],
     "yml/block-sequence-hyphen-indicator-newline": [
       ERROR,
-      Never,
+      never,
       {
-        nestedHyphen: Always,
-        blockMapping: Never,
+        nestedHyphen: always,
+        blockMapping: never,
       },
     ],
     "yml/block-sequence": [
       ERROR,
       {
-        singleline: Always,
-        multiline: Always,
+        singleline: always,
+        multiline: always,
       },
     ],
     "yml/file-extension": OFF,
@@ -59,12 +59,12 @@ export const YmlEnable = [
     "yml/no-trailing-zeros": ERROR,
     "yml/plain-scalar": [
       ERROR,
-      Always,
+      always,
     ],
     "yml/quotes": [
       ERROR,
       {
-        prefer: Double,
+        prefer: double,
         avoidEscape: true,
       },
     ],

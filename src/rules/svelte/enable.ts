@@ -2,11 +2,11 @@ import {
   ID,
   ERROR,
   OFF,
-  Ignore,
-  Never,
-  Always,
-  Below,
-  Double,
+  ignore,
+  never,
+  always,
+  below,
+  double,
 } from "../../_strings";
 
 export const SvelteEnable = [
@@ -57,7 +57,7 @@ export const SvelteEnable = [
       ERROR,
       {
         allowReferrer: false,
-        enforceDynamicLinks: Always,
+        enforceDynamicLinks: always,
       },
     ],
 
@@ -121,22 +121,22 @@ export const SvelteEnable = [
     "svelte/first-attribute-linebreak": [
       ERROR,
       {
-        multiline: Below,
-        singleline: Below,
+        multiline: below,
+        singleline: below,
       },
     ],
     "svelte/html-closing-bracket-spacing": [
       ERROR,
       {
-        startTag: Never,
-        endTag: Never,
-        selfClosingTag: Always,
+        startTag: never,
+        endTag: never,
+        selfClosingTag: always,
       },
     ],
     "svelte/html-quotes": [
       ERROR,
       {
-        prefer: Double,
+        prefer: double,
         dynamic: {
           quoted: false,
           avoidInvalidUnquotedInHTML: true,
@@ -146,11 +146,11 @@ export const SvelteEnable = [
     "svelte/html-self-closing": [
       ERROR,
       {
-        "void": Always,
-        foreign: Always,
-        component: Always,
-        svelte: Always,
-        normal: Ignore,
+        "void": always,
+        foreign: always,
+        component: always,
+        svelte: always,
+        normal: ignore,
       } /* always | never | ignore */,
     ],
     "svelte/indent": [
@@ -171,12 +171,12 @@ export const SvelteEnable = [
     "svelte/mustache-spacing": [
       ERROR,
       {
-        textExpressions: Never /* or ALWAYS */,
-        attributesAndProps: Never /* or ALWAYS */,
-        directiveExpressions: Never /* or ALWAYS */,
+        textExpressions: never /* or ALWAYS */,
+        attributesAndProps: never /* or ALWAYS */,
+        directiveExpressions: never /* or ALWAYS */,
         tags: {
-          openingBrace: Never /* or ALWAYS */,
-          closingBrace: Never /* or ALWAYS or "always-after-expression" */,
+          openingBrace: never /* or ALWAYS */,
+          closingBrace: never /* or ALWAYS or "always-after-expression" */,
         },
       },
     ],
@@ -193,19 +193,19 @@ export const SvelteEnable = [
     "svelte/shorthand-attribute": [
       ERROR,
       {
-        prefer: Always,
+        prefer: always,
       },
     ],
     "svelte/shorthand-directive": [
       ERROR,
       {
-        prefer: Always,
+        prefer: always,
       },
     ],
     "svelte/sort-attributes": OFF /* INVESTIGATE: */,
     "svelte/spaced-html-comment": [
       ERROR,
-      Always,
+      always,
     ],
 
     // #endregion STYLE

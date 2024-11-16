@@ -2,7 +2,7 @@ import {
   ID,
   ERROR,
   OFF,
-  Never,
+  never,
 } from "../../_strings";
 
 export const HtmlEnable = [
@@ -29,7 +29,7 @@ export const HtmlEnable = [
     "@html-eslint/require-closing-tags": [
       ERROR,
       {
-        selfClosing: Never,
+        selfClosing: never,
         selfClosingCustomPatterns: [""] /* regex[], intention: any custom pattern is allowed */,
       },
     ],

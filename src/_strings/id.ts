@@ -4,4 +4,5 @@ Disable = "disable",
 DisableExtension = "disable/extension",
 Enable = "enable",
 EnableExtension = "enable/extension",
-EnableStylistic = "enable/stylistic";
+EnableStylistic = "enable/stylistic",
+Zebra = "zebra";

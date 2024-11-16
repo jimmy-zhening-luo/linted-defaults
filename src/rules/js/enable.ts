@@ -2,14 +2,14 @@ import {
   ID,
   ERROR,
   OFF,
-  Never,
-  Always,
-  AsNeeded,
-  Consecutive,
-  Allow,
-  All,
-  Multi,
-  Both,
+  never,
+  always,
+  as_needed,
+  consecutive,
+  allow,
+  all,
+  multi,
+  both,
 } from "../../_strings";
 
 export const Enable = [
@@ -39,7 +39,7 @@ export const Enable = [
     "no-compare-neg-zero": ERROR,
     "no-cond-assign": [
       ERROR,
-      Always,
+      always,
     ],
     "no-const-assign": ERROR, /* tsc */
     "no-constant-binary-expression": ERROR,
@@ -77,9 +77,9 @@ export const Enable = [
     "no-import-assign": ERROR, /* tsc (except Object.assign()) */
     "no-inner-declarations": [
       ERROR,
-      Both,
+      both,
       {
-        blockScopedFunctions: Allow,
+        blockScopedFunctions: allow,
       },
     ],
     "no-invalid-regexp": [
@@ -147,9 +147,9 @@ export const Enable = [
     "no-unused-vars": [
       ERROR,
       {
-        vars: All,
-        args: All,
-        caughtErrors: All,
+        vars: all,
+        args: all,
+        caughtErrors: all,
         ignoreRestSiblings: false,
         ignoreClassWithStaticInitBlock: false,
         reportUsedIgnorePattern: true,
@@ -200,7 +200,7 @@ export const Enable = [
     ],
     "arrow-body-style": [
       ERROR,
-      AsNeeded,
+      as_needed,
       {
         requireReturnForObjectLiteral: true,
       },
@@ -219,7 +219,7 @@ export const Enable = [
     "consistent-this": ERROR,
     curly: [
       ERROR,
-      Multi,
+      multi,
     ],
     "default-case": OFF, /* preference: don't care */
     "default-case-last": ERROR,
@@ -232,7 +232,7 @@ export const Enable = [
     ] /* TSLint */,
     eqeqeq: [
       ERROR,
-      Always,
+      always,
     ],
     "func-name-matching": OFF /* preference */,
     "func-names": OFF /* preference */,
@@ -244,11 +244,11 @@ export const Enable = [
     "id-match": OFF /* preference */,
     "init-declarations": [
       ERROR,
-      Always,
+      always,
     ] /* TSLint */,
     "logical-assignment-operators": [
       ERROR,
-      Always,
+      always,
       {
         enforceForIfStatements: true,
       },
@@ -446,7 +446,7 @@ export const Enable = [
     "no-with": ERROR,
     "object-shorthand": [
       ERROR,
-      Always,
+      always,
       {
         avoidQuotes: true,
         ignoreConstructors: false,
@@ -456,15 +456,15 @@ export const Enable = [
     "one-var": [
       ERROR,
       {
-        "var": Consecutive,
-        let: Consecutive,
-        "const": Consecutive,
+        "var": consecutive,
+        let: consecutive,
+        "const": consecutive,
         separateRequires: true,
       },
     ],
     "operator-assignment": [
       ERROR,
-      Always,
+      always,
     ],
     "prefer-arrow-callback": [
       ERROR,
@@ -476,7 +476,7 @@ export const Enable = [
     "prefer-const": [
       ERROR,
       {
-        destructuring: All,
+        destructuring: all,
         ignoreReadBeforeAssign: false,
       },
     ],
@@ -516,7 +516,7 @@ export const Enable = [
     "prefer-template": ERROR,
     radix: [
       ERROR,
-      AsNeeded,
+      as_needed,
     ],
     "require-await": ERROR /* TSLint */,
     "require-unicode-regexp": ERROR,
@@ -529,7 +529,7 @@ export const Enable = [
     "vars-on-top": ERROR,
     yoda: [
       ERROR,
-      Never,
+      never,
       {
         exceptRange: false,
         onlyEquality: false,

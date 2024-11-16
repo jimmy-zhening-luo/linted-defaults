@@ -2,21 +2,21 @@ import {
   ID,
   ERROR,
   OFF,
-  Never,
-  Always,
-  AlwaysMultiline,
-  Consistent,
-  AsNeeded,
-  Strict,
-  All,
-  Star,
-  Last,
-  Before,
-  After,
-  Below,
-  Beside,
-  Inside,
-  Double,
+  never,
+  always,
+  always_multiline,
+  consistent,
+  as_needed,
+  strict,
+  all,
+  star,
+  last,
+  before,
+  after,
+  below,
+  beside,
+  inside,
+  double,
 } from "../../_strings";
 
 export const EnableStylistic = [
@@ -32,7 +32,7 @@ export const EnableStylistic = [
     ],
     "@stylistic/array-bracket-spacing": [
       ERROR,
-      Never,
+      never,
       {
         singleValue: false,
         objectsInArrays: false,
@@ -56,7 +56,7 @@ export const EnableStylistic = [
     ],
     "@stylistic/arrow-parens": [
       ERROR,
-      AsNeeded,
+      as_needed,
       {
         requireForBlockBody: false,
       },
@@ -70,7 +70,7 @@ export const EnableStylistic = [
     ],
     "@stylistic/block-spacing": [
       ERROR,
-      Always,
+      always,
     ],
     "@stylistic/brace-style": [
       ERROR,
@@ -81,7 +81,7 @@ export const EnableStylistic = [
     ],
     "@stylistic/comma-dangle": [
       ERROR,
-      AlwaysMultiline,
+      always_multiline,
     ],
     "@stylistic/comma-spacing": [
       ERROR,
@@ -92,7 +92,7 @@ export const EnableStylistic = [
     ],
     "@stylistic/comma-style": [
       ERROR,
-      Last,
+      last,
       {
         exceptions: {
           ArrayExpression: false,
@@ -111,7 +111,7 @@ export const EnableStylistic = [
     ],
     "@stylistic/computed-property-spacing": [
       ERROR,
-      Never,
+      never,
       {
         enforceForClassMembers: true,
       },
@@ -122,15 +122,15 @@ export const EnableStylistic = [
     ],
     "@stylistic/eol-last": [
       ERROR,
-      Always,
+      always,
     ],
     "@stylistic/function-call-argument-newline": [
       ERROR,
-      Consistent,
+      consistent,
     ],
     "@stylistic/function-call-spacing": [
       ERROR,
-      Never,
+      never,
     ],
 
     "@stylistic/function-paren-newline": [
@@ -146,7 +146,7 @@ export const EnableStylistic = [
     ],
     "@stylistic/implicit-arrow-linebreak": [
       ERROR,
-      Beside,
+      beside,
     ],
     "@stylistic/indent": [
       ERROR,
@@ -178,7 +178,7 @@ export const EnableStylistic = [
       {
         beforeColon: false,
         afterColon: true,
-        mode: Strict,
+        mode: strict,
       },
     ],
     "@stylistic/keyword-spacing": [
@@ -223,9 +223,9 @@ export const EnableStylistic = [
       ERROR,
       {
         enforce: [
-          { prev: "field", next: "field", blankLine: Never },
-          { prev: "field", next: "method", blankLine: Always },
-          { prev: "method", next: Star, blankLine: Always },
+          { prev: "field", next: "field", blankLine: never },
+          { prev: "field", next: "method", blankLine: always },
+          { prev: "method", next: star, blankLine: always },
         ],
       },
       {
@@ -269,11 +269,11 @@ export const EnableStylistic = [
     "@stylistic/multiline-comment-style": OFF,
     "@stylistic/multiline-ternary": [
       ERROR,
-      AlwaysMultiline,
+      always_multiline,
     ],
     "@stylistic/new-parens": [
       OFF,
-      Never,
+      never,
     ],
     "@stylistic/newline-per-chained-call": [
       ERROR,
@@ -284,7 +284,7 @@ export const EnableStylistic = [
     "@stylistic/no-confusing-arrow": OFF,
     "@stylistic/no-extra-parens": [
       ERROR,
-      All,
+      all,
       {
         conditionalAssign: true,
         returnAssign: true,
@@ -335,14 +335,14 @@ export const EnableStylistic = [
     "@stylistic/no-whitespace-before-property": ERROR,
     "@stylistic/nonblock-statement-body-position": [
       ERROR,
-      Below,
+      below,
       {
         overrides: {
-          "if": Below,
-          "else": Below,
-          "while": Below,
-          "do": Below,
-          "for": Below,
+          "if": below,
+          "else": below,
+          "while": below,
+          "do": below,
+          "for": below,
         },
       },
     ],
@@ -373,7 +373,7 @@ export const EnableStylistic = [
     ],
     "@stylistic/object-curly-spacing": [
       ERROR,
-      Always,
+      always,
       {
         arraysInObjects: true,
         objectsInObjects: true,
@@ -387,23 +387,23 @@ export const EnableStylistic = [
     ],
     "@stylistic/one-var-declaration-per-line": [
       ERROR,
-      Always,
+      always,
     ],
     "@stylistic/operator-linebreak": [
       ERROR,
-      Before,
+      before,
       {
         overrides: {
-          "=": After,
+          "=": after,
         },
       },
     ],
     "@stylistic/padded-blocks": [
       ERROR,
       {
-        blocks: Never,
-        classes: Never,
-        switches: Never,
+        blocks: never,
+        classes: never,
+        switches: never,
       },
       {
         allowSingleLineBlocks: true,
@@ -413,23 +413,23 @@ export const EnableStylistic = [
       ERROR,
       {
         prev: "directive",
-        next: Star,
-        blankLine: Always,
+        next: star,
+        blankLine: always,
       },
       {
         prev: "directive",
         next: "directive",
-        blankLine: Never,
+        blankLine: never,
       },
       {
         prev: ["import", "cjs-import"],
-        next: Star,
-        blankLine: Always,
+        next: star,
+        blankLine: always,
       },
       {
         prev: ["import", "cjs-import"],
         next: ["import", "cjs-import"],
-        blankLine: Never,
+        blankLine: never,
       },
       {
         prev: [
@@ -448,98 +448,98 @@ export const EnableStylistic = [
           "debugger",
           "with",
         ],
-        next: Star,
-        blankLine: Always,
+        next: star,
+        blankLine: always,
       },
       {
         prev: "case",
-        next: Star,
-        blankLine: Always,
+        next: star,
+        blankLine: always,
       },
       {
         prev: "case",
         next: ["case", "default"],
-        blankLine: Always,
+        blankLine: always,
       },
       {
         prev: "default",
-        next: Star,
-        blankLine: Always,
+        next: star,
+        blankLine: always,
       },
       {
         prev: "type",
-        next: Star,
-        blankLine: Always,
+        next: star,
+        blankLine: always,
       },
       {
         prev: "type",
         next: "type",
-        blankLine: Never,
+        blankLine: never,
       },
       {
         prev: "function",
-        next: Star,
-        blankLine: Always,
+        next: star,
+        blankLine: always,
       },
       {
         prev: "function-overload",
-        next: Star,
-        blankLine: Always,
+        next: star,
+        blankLine: always,
       },
       {
         prev: "function-overload",
         next: "function-overload",
-        blankLine: Never,
+        blankLine: never,
       },
       {
         prev: "function-overload",
         next: "function",
-        blankLine: Never,
+        blankLine: never,
       },
       {
         prev: ["const", "let", "var"],
-        next: Star,
-        blankLine: Always,
+        next: star,
+        blankLine: always,
       },
       {
         prev: ["const", "let", "var"],
         next: ["const", "let", "var"],
-        blankLine: Never,
+        blankLine: never,
       },
       {
         prev: "expression",
-        next: Star,
-        blankLine: Always,
+        next: star,
+        blankLine: always,
       },
       {
         prev: "expression",
         next: "expression",
-        blankLine: Never,
+        blankLine: never,
       },
       {
-        prev: Star,
+        prev: star,
         next: [
           "throw",
           "return",
           "break",
           "continue",
         ],
-        blankLine: Always,
+        blankLine: always,
       },
       {
-        prev: Star,
+        prev: star,
         next: ["export", "cjs-export"],
-        blankLine: Always,
+        blankLine: always,
       },
       {
         prev: ["export", "cjs-export"],
         next: ["export", "cjs-export"],
-        blankLine: Never,
+        blankLine: never,
       },
     ],
     "@stylistic/quote-props": [
       ERROR,
-      AsNeeded,
+      as_needed,
       {
         keywords: true,
         unnecessary: true,
@@ -548,7 +548,7 @@ export const EnableStylistic = [
     ],
     "@stylistic/quotes": [
       ERROR,
-      Double,
+      double,
       {
         avoidEscape: true,
         allowTemplateLiterals: true,
@@ -556,11 +556,11 @@ export const EnableStylistic = [
     ],
     "@stylistic/rest-spread-spacing": [
       ERROR,
-      Never,
+      never,
     ],
     "@stylistic/semi": [
       ERROR,
-      Always,
+      always,
       {
         omitLastInOneLineBlock: false,
         omitLastInOneLineClassBody: false,
@@ -575,27 +575,27 @@ export const EnableStylistic = [
     ],
     "@stylistic/semi-style": [
       ERROR,
-      Last,
+      last,
     ],
     "@stylistic/space-before-blocks": [
       ERROR,
       {
-        functions: Always,
-        keywords: Always,
-        classes: Always,
+        functions: always,
+        keywords: always,
+        classes: always,
       },
     ],
     "@stylistic/space-before-function-paren": [
       ERROR,
       {
-        anonymous: Always,
-        named: Never,
-        asyncArrow: Always,
+        anonymous: always,
+        named: never,
+        asyncArrow: always,
       },
     ],
     "@stylistic/space-in-parens": [
       ERROR,
-      Never,
+      never,
     ],
     "@stylistic/space-infix-ops": [
       ERROR,
@@ -613,7 +613,7 @@ export const EnableStylistic = [
     ],
     "@stylistic/spaced-comment": [
       ERROR,
-      Always,
+      always,
     ],
     "@stylistic/switch-colon-spacing": [
       ERROR,
@@ -624,11 +624,11 @@ export const EnableStylistic = [
     ],
     "@stylistic/template-curly-spacing": [
       ERROR,
-      Never,
+      never,
     ],
     "@stylistic/template-tag-spacing": [
       ERROR,
-      Never,
+      never,
     ],
     "@stylistic/type-annotation-spacing": [
       ERROR,
@@ -647,7 +647,7 @@ export const EnableStylistic = [
     "@stylistic/type-named-tuple-spacing": ERROR,
     "@stylistic/wrap-iife": [
       ERROR,
-      Inside,
+      inside,
       {
         functionPrototypeMethods: true,
       },

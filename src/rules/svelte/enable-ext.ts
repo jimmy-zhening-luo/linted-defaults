@@ -2,8 +2,8 @@ import {
   ID,
   ERROR,
   OFF,
-  Allow,
-  Both,
+  allow,
+  both,
 } from "../../_strings";
 
 export const SvelteEnableExtension = [
@@ -12,9 +12,9 @@ export const SvelteEnableExtension = [
     // DOC: http://sveltejs.github.io/eslint-plugin-svelte/rules/#extension-rules
     "svelte/no-inner-declarations": [
       ERROR,
-      Both,
+      both,
       {
-        blockScopedFunctions: Allow,
+        blockScopedFunctions: allow,
       },
     ] /* Same options as in JsEnable */,
     "svelte/no-trailing-spaces": OFF /* Only applies to HTML comments, which I don't intend to use: http://sveltejs.github.io/eslint-plugin-svelte/rules/no-trailing-spaces/ */,
