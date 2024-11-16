@@ -1,13 +1,11 @@
-import js from "../js";
-import disable from "./disable";
-import disable_x from "./disable_x";
-import enable_x from "./enable_x";
-import enable from "./enable";
+import { TsDisable } from "./disable";
+import { TsDisableExtension } from "./disable-ext";
+import { TsEnable } from "./enable";
+import { TsEnableExtension } from "./enable-ext";
 
 export default [
-  ...js,
-  disable,
-  disable_x,
-  enable_x,
-  enable,
+  TsDisable,
+  TsDisableExtension,
+  TsEnable,
+  TsEnableExtension,
 ];

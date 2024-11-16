@@ -1,9 +1,7 @@
-import ts from "../ts";
-import disable from "./disable";
-import enable from "./enable";
+import { MochaDisable } from "./disable";
+import { MochaEnable } from "./enable";
 
 export default [
-  ...ts,
-  disable,
-  enable,
+  MochaDisable,
+  MochaEnable,
 ];

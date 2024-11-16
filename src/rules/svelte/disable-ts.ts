@@ -1,7 +1,10 @@
-import { OFF } from "../../_strings";
+import {
+  ID,
+  OFF,
+} from "../../_strings";
 
-export default [
-  "disable-ts",
+export const SvelteDisableTs = [
+  `${ID.Disable}/ts`,
   {
     "no-unused-vars": OFF /* ESLint */,
     "@typescript-eslint/no-unused-vars": OFF /* TS Extension */,

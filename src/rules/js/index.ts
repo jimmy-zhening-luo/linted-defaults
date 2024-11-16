@@ -1,7 +1,7 @@
-import stylistic from "./stylistic";
-import enable from "./enable";
+import { Enable } from "./enable";
+import { EnableStylistic } from "./enable-stylistic";
 
 export default [
-  stylistic,
-  enable,
+  Enable,
+  EnableStylistic,
 ];

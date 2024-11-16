@@ -1,15 +1,15 @@
 import {
-  enable_x,
+  ID,
   ERROR,
   OFF,
   Always,
   All,
 } from "../../_strings";
 
-export default [
-  enable_x,
+export const TsEnableExtension = [
+  ID.EnableExtension,
   {
-    // https://typescript-eslint.io/rules/?=extension-xdeprecated#rules
+    // DOC: https://typescript-eslint.io/rules/?=extension-xdeprecated#rules
     "@typescript-eslint/class-methods-use-this": OFF /* preference -- eslint:off */,
     "@typescript-eslint/consistent-return": OFF /* tsconfig: noImplicitReturns */,
     "@typescript-eslint/default-param-last": ERROR,

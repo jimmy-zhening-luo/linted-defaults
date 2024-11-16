@@ -1,10 +1,10 @@
 import {
-  disable,
+  ID,
   OFF,
 } from "../../_strings";
 
-export default [
-  disable,
+export const MochaDisable = [
+  ID.Disable,
   {
     "prefer-arrow-callback": OFF,
   },

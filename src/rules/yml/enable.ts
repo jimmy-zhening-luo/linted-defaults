@@ -1,5 +1,5 @@
 import {
-  enable,
+  ID,
   ERROR,
   OFF,
   Never,
@@ -7,10 +7,10 @@ import {
   Double,
 } from "../../_strings";
 
-export default [
-  enable,
+export const YmlEnable = [
+  ID.Enable,
   {
-    // https://ota-meshi.github.io/eslint-plugin-yml/rules/#yaml-rules
+    // DOC: https://ota-meshi.github.io/eslint-plugin-yml/rules/#yaml-rules
     "yml/block-mapping-colon-indicator-newline": [
       ERROR,
       Never,

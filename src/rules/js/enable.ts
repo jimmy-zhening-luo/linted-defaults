@@ -1,5 +1,5 @@
 import {
-  enable,
+  ID,
   ERROR,
   OFF,
   Never,
@@ -12,11 +12,11 @@ import {
   Both,
 } from "../../_strings";
 
-export default [
-  enable,
+export const Enable = [
+  ID.Enable,
   {
     // #region PROBLEMS
-    // https://eslint.org/docs/latest/rules/#possible-problems
+    // DOC: https://eslint.org/docs/latest/rules/#possible-problems
     "array-callback-return": [
       ERROR,
       {

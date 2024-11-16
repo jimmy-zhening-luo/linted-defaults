@@ -1,5 +1,5 @@
 import {
-  enable,
+  ID,
   ERROR,
   OFF,
   Ignore,
@@ -9,11 +9,11 @@ import {
   Double,
 } from "../../_strings";
 
-export default [
-  enable,
+export const SvelteEnable = [
+  ID.Enable,
   {
     // #region ERRORS
-    // http://sveltejs.github.io/eslint-plugin-svelte/rules/#possible-errors
+    // DOC: http://sveltejs.github.io/eslint-plugin-svelte/rules/#possible-errors
     "svelte/infinite-reactive-loop": ERROR,
     "svelte/no-dom-manipulating": ERROR,
     "svelte/no-dupe-else-if-blocks": ERROR,
@@ -51,7 +51,7 @@ export default [
     // #endregion ERRORS
 
     // #region SECURITY
-    // http://sveltejs.github.io/eslint-plugin-svelte/rules/#security-vulnerability
+    // DOC: http://sveltejs.github.io/eslint-plugin-svelte/rules/#security-vulnerability
     "svelte/no-at-html-tags": ERROR,
     "svelte/no-target-blank": [
       ERROR,
@@ -64,7 +64,7 @@ export default [
     // #endregion SECURITY
 
     // #region BEST PRACTICES
-    // http://sveltejs.github.io/eslint-plugin-svelte/rules/#best-practices
+    // DOC: http://sveltejs.github.io/eslint-plugin-svelte/rules/#best-practices
     "svelte/block-lang": [
       ERROR,
       {
@@ -116,7 +116,7 @@ export default [
     // #endregion BEST PRACTICES
 
     // #region STYLE
-    // http://sveltejs.github.io/eslint-plugin-svelte/rules/#stylistic-issues
+    // DOC: http://sveltejs.github.io/eslint-plugin-svelte/rules/#stylistic-issues
     "svelte/derived-has-same-inputs-outputs": ERROR,
     "svelte/first-attribute-linebreak": [
       ERROR,
@@ -211,13 +211,13 @@ export default [
     // #endregion STYLE
 
     // #region SVELTE-KIT
-    // http://sveltejs.github.io/eslint-plugin-svelte/rules/#svelte-kit
+    // DOC: http://sveltejs.github.io/eslint-plugin-svelte/rules/#svelte-kit
     "svelte/no-goto-without-base": ERROR,
 
     // #endregion SVELTE-KIT
 
     // #region REQUIRED
-    // http://sveltejs.github.io/eslint-plugin-svelte/rules/#system
+    // DOC: http://sveltejs.github.io/eslint-plugin-svelte/rules/#system
     "svelte/comment-directive": [
       ERROR,
       {

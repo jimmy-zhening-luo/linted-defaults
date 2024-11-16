@@ -1,7 +1,7 @@
-import enable_x from "./enable_x";
-import enable from "./enable";
+import { YmlEnable } from "./enable";
+import { YmlEnableExtension } from "./enable-ext";
 
 export default [
-  enable_x,
-  enable,
+  YmlEnable,
+  YmlEnableExtension,
 ];

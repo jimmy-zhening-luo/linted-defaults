@@ -1,14 +1,14 @@
 import {
-  enable,
+  ID,
   ERROR,
   WARN,
   OFF,
 } from "../../_strings";
 
-export default [
-  enable,
+export const MochaEnable = [
+  ID.Enable,
   {
-    // https://github.com/lo1tuma/eslint-plugin-mocha/tree/main?tab=readme-ov-file#rules
+    // DOC: https://github.com/lo1tuma/eslint-plugin-mocha/tree/main?tab=readme-ov-file#rules
     "mocha/consistent-spacing-between-blocks": OFF,
     "mocha/handle-done-callback": [
       ERROR,

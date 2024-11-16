@@ -1,3 +1,3 @@
-import enable from "./enable";
+import { HtmlEnable } from "./enable";
 
-export default [enable];
+export default [HtmlEnable];

@@ -1,12 +1,12 @@
 import {
-  disable_x,
+  ID,
   OFF,
 } from "../../_strings";
 
-export default [
-  disable_x,
+export const TsDisableExtension = [
+  ID.DisableExtension,
   {
-    // https://typescript-eslint.io/rules/?=extension-xdeprecated#rules
+    // DOC: https://typescript-eslint.io/rules/?=extension-xdeprecated#rules
     "class-methods-use-this": OFF,
     "consistent-return": OFF,
     "default-param-last": OFF,

@@ -1,15 +1,15 @@
 import {
-  enable_x,
+  ID,
   ERROR,
   Never,
   Always,
   Strict,
 } from "../../_strings";
 
-export default [
-  enable_x,
+export const YmlEnableExtension = [
+  ID.EnableExtension,
   {
-    // https://ota-meshi.github.io/eslint-plugin-yml/rules/#extension-rules
+    // DOC: https://ota-meshi.github.io/eslint-plugin-yml/rules/#extension-rules
     "yml/flow-mapping-curly-newline": [
       ERROR,
       {

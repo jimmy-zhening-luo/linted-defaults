@@ -1,14 +1,14 @@
 import {
-  override,
+  ID,
   ERROR,
   OFF,
   AlwaysMultiline,
 } from "../../_strings";
 
-export default [
-  override,
+export const JsoncOverride = [
+  ID.Override,
   {
-    // https://ota-meshi.github.io/eslint-plugin-jsonc/rules/#jsonc-rules
+    // DOC: https://ota-meshi.github.io/eslint-plugin-jsonc/rules/#jsonc-rules
     "jsonc/no-comments": OFF /* comments ARE allowed in JSONC */,
     "jsonc/comma-dangle": [
       ERROR,

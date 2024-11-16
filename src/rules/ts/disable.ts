@@ -1,10 +1,10 @@
 import {
-  disable,
+  ID,
   OFF,
 } from "../../_strings";
 
-export default [
-  disable,
+export const TsDisable = [
+  ID.Disable,
   {
     // Handled by TypeScript compiler
     "constructor-super": OFF,

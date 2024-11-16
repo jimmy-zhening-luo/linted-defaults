@@ -1,7 +1,7 @@
-import enable_x from "./enable_x";
-import enable from "./enable";
+import { JsonEnable } from "./enable";
+import { JsonEnableExtension } from "./enable-ext";
 
 export default [
-  enable_x,
-  enable,
+  JsonEnable,
+  JsonEnableExtension,
 ];

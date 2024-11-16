@@ -1,15 +1,13 @@
-import ts from "../ts";
-import disable_js from "./disable_js";
-import disable_ts from "./disable_ts";
-import disable from "./disable";
-import enable_x from "./enable_x";
-import enable from "./enable";
+import { SvelteDisable } from "./disable";
+import { SvelteDisableTs } from "./disable-ts";
+import { SvelteDisableExtension } from "./disable-ext";
+import { SvelteEnable } from "./enable";
+import { SvelteEnableExtension } from "./enable-ext";
 
 export default [
-  ...ts,
-  disable_js,
-  disable_ts,
-  disable,
-  enable_x,
-  enable,
+  SvelteDisable,
+  SvelteDisableTs,
+  SvelteDisableExtension,
+  SvelteEnable,
+  SvelteEnableExtension,
 ];

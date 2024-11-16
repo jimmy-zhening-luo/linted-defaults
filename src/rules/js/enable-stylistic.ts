@@ -1,5 +1,5 @@
 import {
-  stylistic,
+  ID,
   ERROR,
   OFF,
   Never,
@@ -19,10 +19,10 @@ import {
   Double,
 } from "../../_strings";
 
-export default [
-  stylistic,
+export const EnableStylistic = [
+  ID.EnableStylistic,
   {
-    // https://eslint.style/rules
+    // DOC: https://eslint.style/rules
     "@stylistic/array-bracket-newline": [
       ERROR,
       {

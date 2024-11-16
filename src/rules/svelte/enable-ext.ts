@@ -1,15 +1,15 @@
 import {
-  enable_x,
+  ID,
   ERROR,
   OFF,
   Allow,
   Both,
 } from "../../_strings";
 
-export default [
-  enable_x,
+export const SvelteEnableExtension = [
+  ID.EnableExtension,
   {
-    // http://sveltejs.github.io/eslint-plugin-svelte/rules/#extension-rules
+    // DOC: http://sveltejs.github.io/eslint-plugin-svelte/rules/#extension-rules
     "svelte/no-inner-declarations": [
       ERROR,
       Both,

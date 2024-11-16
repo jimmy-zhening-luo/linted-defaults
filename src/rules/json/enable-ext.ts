@@ -1,5 +1,5 @@
 import {
-  enable_x,
+  ID,
   ERROR,
   OFF,
   Always,
@@ -10,10 +10,10 @@ import {
   Strict,
 } from "../../_strings";
 
-export default [
-  enable_x,
+export const JsonEnableExtension = [
+  ID.EnableExtension,
   {
-    // https://ota-meshi.github.io/eslint-plugin-jsonc/rules/#extension-rules
+    // DOC: https://ota-meshi.github.io/eslint-plugin-jsonc/rules/#extension-rules
     "jsonc/array-bracket-newline": OFF /* DO NOT CHANGE */,
     "jsonc/array-bracket-spacing": [
       ERROR,

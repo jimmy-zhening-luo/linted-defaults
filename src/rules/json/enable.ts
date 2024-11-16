@@ -1,13 +1,13 @@
 import {
-  enable,
+  ID,
   ERROR,
   OFF,
 } from "../../_strings";
 
-export default [
-  enable,
+export const JsonEnable = [
+  ID.Enable,
   {
-    // https://ota-meshi.github.io/eslint-plugin-jsonc/rules/#jsonc-rules
+    // DOC: https://ota-meshi.github.io/eslint-plugin-jsonc/rules/#jsonc-rules
     "jsonc/auto": OFF,
     "jsonc/key-name-casing": OFF,
     "jsonc/no-bigint-literals": ERROR,

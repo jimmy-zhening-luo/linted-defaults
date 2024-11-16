@@ -1,7 +1,3 @@
-import json from "../json";
-import override from "./override";
+import { JsoncOverride } from "./override";
 
-export default [
-  ...json,
-  override,
-];
+export default [JsoncOverride];

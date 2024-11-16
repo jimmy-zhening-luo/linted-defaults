@@ -1,15 +1,15 @@
 import {
-  enable,
+  ID,
   ERROR,
   OFF,
   Never,
   Explicit,
 } from "../../_strings";
 
-export default [
-  enable,
+export const TsEnable = [
+  ID.Enable,
   {
-    // https://typescript-eslint.io/rules/?=xextension-xdeprecated#rules
+    // DOC: https://typescript-eslint.io/rules/?=xextension-xdeprecated#rules
     "@typescript-eslint/adjacent-overload-signatures": OFF,
     "@typescript-eslint/array-type": [
       ERROR,
