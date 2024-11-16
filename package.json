@@ -26,6 +26,9 @@
     "node": ">=22.11.0",
     "npm": ">=10.9.0"
   },
+  "peerDependencies": {
+    "@eslinted/core": ">=13.4.0-rc.1 <14.0.0"
+  },
   "peerDependenciesMeta": {},
   "dependencies": {},
   "devDependencies": {
