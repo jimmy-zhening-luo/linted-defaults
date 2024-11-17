@@ -191,7 +191,7 @@ export const EnableStylistic = [
     ],
     "@stylistic/line-comment-position": OFF,
     "@stylistic/lines-around-comment": [
-      ERROR,
+      OFF,
       {
         beforeBlockComment: false,
         afterBlockComment: false,
