@@ -1,6 +1,5 @@
-# [~~`@eslinted/config`~~](https://www.npmjs.com/package/@eslinted/config)
+# [`@eslinted/defaults`](https://www.npmjs.com/package/@eslinted/defaults)
 
-> [!CAUTION]
-> __DEPRECATED:__ Migrated to [`@eslinted/defaults`](https://www.npmjs.com/package/@eslinted/defaults).
+[![NPM Publish (RELEASE)](https://github.com/jimmy-zhening-luo/linted-defaults/actions/workflows/RELEASE.yml/badge.svg)](https://github.com/jimmy-zhening-luo/linted-defaults/actions/workflows/RELEASE.yml)
 
-~~Default config for `linted`.~~
+Default scopes for `linted`.

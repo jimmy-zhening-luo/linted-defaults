@@ -1,12 +1,12 @@
 {
   "_schemaVersion": "22.11.0",
-  "name": "@eslinted/config",
+  "name": "@eslinted/defaults",
   "version": "2.0.0",
-  "description": "Default config for `linted`.",
+  "description": "Default scopes for `linted`.",
   "keywords": [],
-  "repository": "github:jimmy-zhening-luo/linted-config",
-  "homepage": "https://github.com/jimmy-zhening-luo/linted-config#readme",
-  "bugs": "https://github.com/jimmy-zhening-luo/linted-config/issues",
+  "repository": "github:jimmy-zhening-luo/linted-defaults",
+  "homepage": "https://github.com/jimmy-zhening-luo/linted-defaults#readme",
+  "bugs": "https://github.com/jimmy-zhening-luo/linted-defaults/issues",
   "license": "MIT",
   "private": false,
   "publishConfig": {
@@ -25,9 +25,6 @@
   "engines": {
     "node": ">=22.11.0",
     "npm": ">=10.9.0"
-  },
-  "peerDependencies": {
-    "@eslinted/core": "13.4.0"
   },
   "peerDependenciesMeta": {},
   "dependencies": {},
