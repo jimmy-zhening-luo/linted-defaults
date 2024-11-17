@@ -1,7 +1,7 @@
 {
   "_schemaVersion": "22.11.0",
   "name": "@eslinted/config",
-  "version": "1.0.1",
+  "version": "2.0.0-rc.2",
   "description": "Default config for `linted`.",
   "keywords": [],
   "repository": "github:jimmy-zhening-luo/linted-config",
