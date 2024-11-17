@@ -27,7 +27,7 @@
     "npm": ">=10.9.0"
   },
   "peerDependencies": {
-    "@eslinted/core": "<=13.3.0"
+    "@eslinted/core": "13.4.0"
   },
   "peerDependenciesMeta": {},
   "dependencies": {},
