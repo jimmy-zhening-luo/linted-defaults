@@ -190,35 +190,7 @@ export const EnableStylistic = [
       },
     ],
     "@stylistic/line-comment-position": OFF,
-    "@stylistic/lines-around-comment": [
-      OFF,
-      {
-        beforeBlockComment: false,
-        afterBlockComment: false,
-        beforeLineComment: true,
-        afterLineComment: false,
-        allowBlockStart: true,
-        allowBlockEnd: true,
-        allowObjectStart: true,
-        allowObjectEnd: true,
-        allowArrayStart: true,
-        allowArrayEnd: true,
-        allowClassStart: true,
-        allowClassEnd: true,
-        applyDefaultIgnorePatterns: true,
-        afterHashbangComment: false,
-
-        // TS-only
-        allowEnumEnd: true,
-        allowEnumStart: true,
-        allowInterfaceEnd: true,
-        allowInterfaceStart: true,
-        allowModuleEnd: true,
-        allowModuleStart: true,
-        allowTypeEnd: true,
-        allowTypeStart: true,
-      },
-    ],
+    "@stylistic/lines-around-comment": OFF,
     "@stylistic/lines-between-class-members": [
       ERROR,
       {
