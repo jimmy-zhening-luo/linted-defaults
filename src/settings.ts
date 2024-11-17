@@ -1,6 +1,6 @@
 export const settings = {
   ecmaVersion: 2023,
   sourceType: "module",
-  noInlineConfig: true,
+  noInlineConfig: false,
   reportUnusedDisableDirectives: "error",
 } as const;
