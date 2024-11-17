@@ -28,7 +28,7 @@ export const TsEnable = [
         },
         "ts-ignore": true,
         "ts-nocheck": true,
-        minimumDescriptionLength: 32,
+        minimumDescriptionLength: 10,
       },
     ],
     "@typescript-eslint/ban-tslint-comment": ERROR,
