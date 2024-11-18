@@ -8,7 +8,6 @@ import jsonc from "./scopes/jsonc";
 import yml from "./scopes/yml";
 
 export const files = {
-  "*": [],
   js,
   ts,
   svelte,
