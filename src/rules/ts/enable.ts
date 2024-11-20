@@ -409,6 +409,7 @@ export const TsEnable = [
     "@typescript-eslint/no-unsafe-function-type": ERROR,
     "@typescript-eslint/no-unsafe-member-access": ERROR,
     "@typescript-eslint/no-unsafe-return": ERROR,
+    "@typescript-eslint/no-unsafe-type-assertion": OFF,
     "@typescript-eslint/no-unsafe-unary-minus": ERROR,
     "@typescript-eslint/no-useless-empty-export": ERROR,
     "@typescript-eslint/no-wrapper-object-types": ERROR,
@@ -488,6 +489,7 @@ export const TsEnable = [
         checkMethodDeclarations: true,
       },
     ],
+    "@typescript-eslint/related-getter-setter-pairs": ERROR,
     "@typescript-eslint/require-array-sort-compare": [
       ERROR,
       {
