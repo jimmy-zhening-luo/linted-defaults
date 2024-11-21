@@ -6,6 +6,8 @@ import {
 export const MochaEnableChai = [
   `${ID.Enable}/chai`,
   {
+
+    // DOC: https://github.com/ihordiachenko/eslint-plugin-chai-friendly?tab=readme-ov-file#usage
     "chai-friendly/no-unused-expressions": [
       ERROR,
       {
