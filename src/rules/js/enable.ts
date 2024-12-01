@@ -25,14 +25,14 @@ export const Enable = [
         allowVoid: true,
       },
     ],
-    "constructor-super": ERROR, /* tsc */
+    "constructor-super": ERROR /* tsc */,
     "for-direction": ERROR,
     "getter-return": [
       ERROR,
       {
         allowImplicit: false,
       },
-    ], /* tsc */
+    ] /* tsc */,
     "no-async-promise-executor": ERROR,
     "no-await-in-loop": ERROR,
     "no-class-assign": ERROR,
@@ -41,7 +41,7 @@ export const Enable = [
       ERROR,
       always,
     ],
-    "no-const-assign": ERROR, /* tsc */
+    "no-const-assign": ERROR /* tsc */,
     "no-constant-binary-expression": ERROR,
     "no-constant-condition": [
       ERROR,
@@ -52,10 +52,10 @@ export const Enable = [
     "no-constructor-return": ERROR,
     "no-control-regex": ERROR,
     "no-debugger": ERROR,
-    "no-dupe-args": ERROR, /* tsc */
-    "no-dupe-class-members": ERROR, /* tsc -- TSLint:off: tsc */
+    "no-dupe-args": ERROR /* tsc */,
+    "no-dupe-class-members": ERROR /* tsc -- TSLint:off: tsc */,
     "no-dupe-else-if": ERROR,
-    "no-dupe-keys": ERROR, /* tsc */
+    "no-dupe-keys": ERROR /* tsc */,
     "no-duplicate-case": ERROR,
     "no-duplicate-imports": OFF /* BUG: breaks separation of TS type-only imports from value imports */,
     "no-empty-character-class": ERROR,
@@ -73,8 +73,8 @@ export const Enable = [
         reportUnusedFallthroughComment: true,
       },
     ],
-    "no-func-assign": ERROR, /* tsc */
-    "no-import-assign": ERROR, /* tsc (except Object.assign()) */
+    "no-func-assign": ERROR /* tsc */,
+    "no-import-assign": ERROR /* tsc (except Object.assign()) */,
     "no-inner-declarations": [
       ERROR,
       both,
@@ -101,7 +101,7 @@ export const Enable = [
     "no-loss-of-precision": ERROR /* TSLint */,
     "no-misleading-character-class": ERROR,
     "no-new-native-nonconstructor": ERROR,
-    "no-obj-calls": ERROR, /* tsc */
+    "no-obj-calls": ERROR /* tsc */,
     "no-promise-executor-return": [
       ERROR,
       {
@@ -116,14 +116,14 @@ export const Enable = [
       },
     ],
     "no-self-compare": ERROR,
-    "no-setter-return": ERROR, /* tsc */
+    "no-setter-return": ERROR /* tsc */,
     "no-sparse-arrays": ERROR,
     "no-template-curly-in-string": ERROR,
-    "no-this-before-super": ERROR, /* tsc */
-    "no-undef": ERROR, /* tsc */
+    "no-this-before-super": ERROR /* tsc */,
+    "no-undef": ERROR /* tsc */,
     "no-unexpected-multiline": ERROR,
     "no-unmodified-loop-condition": ERROR,
-    "no-unreachable": ERROR, /* tsc */
+    "no-unreachable": ERROR /* tsc */,
     "no-unreachable-loop": [
       ERROR,
       {
@@ -136,7 +136,7 @@ export const Enable = [
       {
         enforceForOrderingRelations: true,
       },
-    ], /* tsc */
+    ] /* tsc */,
     "no-unsafe-optional-chaining": [
       ERROR,
       {
@@ -208,7 +208,7 @@ export const Enable = [
     "block-scoped-var": ERROR,
     camelcase: OFF /* preference */,
     "capitalized-comments": OFF /* preference */,
-    "class-methods-use-this": OFF, /* preference -- TSLint */
+    "class-methods-use-this": OFF /* preference -- TSLint */,
     complexity: OFF /* preference */,
     "consistent-return": [
       ERROR,
@@ -221,7 +221,7 @@ export const Enable = [
       ERROR,
       multi,
     ],
-    "default-case": OFF, /* preference: don't care */
+    "default-case": OFF /* preference: don't care */,
     "default-case-last": ERROR,
     "default-param-last": ERROR /* TSLint */,
     "dot-notation": [
@@ -238,7 +238,7 @@ export const Enable = [
     "func-names": OFF /* preference */,
     "func-style": OFF /* preference */,
     "grouped-accessor-pairs": OFF /* preference -- BUG: requires adjacency, not as described in documentation */,
-    "guard-for-in": OFF, /* preference - not helpful because using for-in on non-literal objects is bad practice and this rule doesn't guard against that anyway, while adding a pointless check to known object literals */
+    "guard-for-in": OFF /* preference - not helpful because using for-in on non-literal objects is bad practice and this rule doesn't guard against that anyway, while adding a pointless check to known object literals */,
     "id-denylist": OFF /* preference */,
     "id-length": OFF /* preference */,
     "id-match": OFF /* preference */,
@@ -258,10 +258,10 @@ export const Enable = [
     "max-lines": OFF /* preference */,
     "max-lines-per-function": OFF /* preference */,
     "max-nested-callbacks": OFF /* preference */,
-    "max-params": OFF, /* preference -- TSLint:off: preference */
+    "max-params": OFF /* preference -- TSLint:off: preference */,
     "max-statements": OFF /* preference */,
     "multiline-comment-style": OFF /* preference */,
-    "new-cap": OFF, /* preference -- breaks Scriptable */
+    "new-cap": OFF /* preference -- breaks Scriptable */,
     "no-alert": ERROR,
     "no-array-constructor": ERROR /* TSLint */,
     "no-bitwise": [
@@ -273,7 +273,7 @@ export const Enable = [
     ],
     "no-caller": ERROR,
     "no-case-declarations": ERROR,
-    "no-console": OFF, /* preference -- breaks Node.js console applications and Scriptable, and otherwise unnecessarily hampers browser test code */
+    "no-console": OFF /* preference -- breaks Node.js console applications and Scriptable, and otherwise unnecessarily hampers browser test code */,
     "no-continue": ERROR,
     "no-delete-var": ERROR,
     "no-div-regex": ERROR,
