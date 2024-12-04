@@ -110,6 +110,8 @@ export const TsEnableExtension = [
       ERROR,
       {
         allowEmptyReject: false,
+        allowThrowingAny: false,
+        allowThrowingUnknown: true,
       },
     ],
     "@typescript-eslint/require-await": ERROR,
