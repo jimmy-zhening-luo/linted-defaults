@@ -187,6 +187,7 @@ export const EnableStylistic = [
         ImportDeclaration: 1,
         flatTernaryExpressions: false,
         offsetTernaryExpressions: true,
+        offsetTernaryExpressionsOffsetFunctionCalls: true,
         ignoreComments: false,
       },
     ],
