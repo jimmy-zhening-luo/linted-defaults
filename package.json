@@ -1,7 +1,7 @@
 {
   "_schemaVersion": "22.12.1",
   "name": "@eslinted/defaults",
-  "version": "4.7.0-rc.0",
+  "version": "4.7.0",
   "description": "Default scopes for `linted`.",
   "keywords": [],
   "repository": "github:jimmy-zhening-luo/linted-defaults",
