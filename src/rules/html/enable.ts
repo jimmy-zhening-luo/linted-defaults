@@ -19,11 +19,13 @@ export const HtmlEnable = [
       },
     ],
     "@html-eslint/no-inline-styles": OFF /* @CONFLICT: breaks Svele app.html */,
+    "@html-eslint/no-nested-interactive": ERROR,
     "@html-eslint/no-obsolete-tags": ERROR,
     "@html-eslint/no-restricted-attr-values": OFF,
     "@html-eslint/no-restricted-attrs": OFF,
     "@html-eslint/no-script-style-type": OFF,
     "@html-eslint/no-target-blank": ERROR,
+    "@html-eslint/prefer-https": OFF /* @CONFLICT: not everything is https */,
     "@html-eslint/require-attrs": OFF,
     "@html-eslint/require-button-type": ERROR,
     "@html-eslint/require-closing-tags": [
@@ -54,9 +56,12 @@ export const HtmlEnable = [
     "@html-eslint/no-abstract-roles": ERROR,
     "@html-eslint/no-accesskey-attrs": ERROR,
     "@html-eslint/no-aria-hidden-body": ERROR,
+    "@html-eslint/no-heading-inside-button": ERROR,
+    "@html-eslint/no-invalid-role": ERROR,
     "@html-eslint/no-non-scalable-viewport": ERROR,
     "@html-eslint/no-positive-tabindex": ERROR,
     "@html-eslint/no-skip-heading-levels": ERROR,
+    "@html-eslint/require-form-method": ERROR,
     "@html-eslint/require-frame-title": ERROR,
     "@html-eslint/require-img-alt": [
       ERROR,
@@ -64,6 +69,7 @@ export const HtmlEnable = [
         substitute: [],
       },
     ],
+    "@html-eslint/require-input-label": ERROR,
     "@html-eslint/require-meta-viewport": ERROR,
 
     // #endregion ACCESSIBILITY
@@ -90,7 +96,7 @@ export const HtmlEnable = [
     "@html-eslint/indent": [
       ERROR,
       2,
-    ],
+    ] /* @CONFIGURE: indents for specific child tags: https://html-eslint.org/docs/rules/indent */,
     "@html-eslint/lowercase": ERROR,
     "@html-eslint/no-extra-spacing-attrs": [
       ERROR,
