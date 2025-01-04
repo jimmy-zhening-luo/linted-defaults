@@ -18,7 +18,7 @@ export const HtmlEnable = [
         skip: [],
       },
     ],
-    "@html-eslint/no-inline-styles": OFF /* breaks Svele app.html */,
+    "@html-eslint/no-inline-styles": OFF /* @CONFLICT: breaks Svele app.html */,
     "@html-eslint/no-obsolete-tags": ERROR,
     "@html-eslint/no-restricted-attr-values": OFF,
     "@html-eslint/no-restricted-attrs": OFF,
@@ -30,7 +30,7 @@ export const HtmlEnable = [
       ERROR,
       {
         selfClosing: never,
-        selfClosingCustomPatterns: [""] /* regex[], intention: any custom pattern is allowed */,
+        selfClosingCustomPatterns: [""] /* @CONFIGURE: regex[] = custom pattern */,
       },
     ],
     "@html-eslint/require-doctype": ERROR,
@@ -43,9 +43,9 @@ export const HtmlEnable = [
     // DOC: https://html-eslint.org/docs/rules#seo
     "@html-eslint/no-multiple-h1": ERROR,
     "@html-eslint/require-lang": ERROR,
-    "@html-eslint/require-meta-description": OFF /* breaks Svelte which leaves meta descriptions to route leaves */,
-    "@html-eslint/require-open-graph-protocol": OFF /* idk what this is */,
-    "@html-eslint/require-title": OFF /* breaks Svelte which leaves title to route leaves */,
+    "@html-eslint/require-meta-description": OFF /* @CONFLICT: breaks Svelte which leaves meta descriptions to route leaves */,
+    "@html-eslint/require-open-graph-protocol": OFF /* idk what this is, also it probably breaks Svelte */,
+    "@html-eslint/require-title": OFF /* @CONFLICT: breaks Svelte which leaves title to route leaves */,
 
     // #endregion SEO
 
