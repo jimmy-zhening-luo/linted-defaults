@@ -201,6 +201,7 @@ export const EnableStylistic = [
         beforeColon: false,
         afterColon: true,
         mode: strict,
+        ignoredNodes: [],
       },
     ],
     "@stylistic/keyword-spacing": [
@@ -283,6 +284,7 @@ export const EnableStylistic = [
         conditionalAssign: true,
         returnAssign: true,
         nestedBinaryExpressions: true,
+        nestedConditionalExpressions: true,
         ternaryOperandBinaryExpressions: true,
         enforceForArrowConditionals: true,
         enforceForSequenceExpressions: true,

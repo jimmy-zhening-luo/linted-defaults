@@ -48,6 +48,7 @@ export const TsEnable = [
       ERROR,
       {
         assertionStyle: "as",
+        arrayLiteralTypeAssertions: never,
         objectLiteralTypeAssertions: never,
       },
     ],
@@ -277,6 +278,12 @@ export const TsEnable = [
         ignoreVoidReturningFunctions: true,
       },
     ],
+    "@typescript-eslint/no-deprecated": [
+      ERROR,
+      {
+        allow: [],
+      },
+    ],
     "@typescript-eslint/no-duplicate-enum-values": ERROR,
     "@typescript-eslint/no-duplicate-type-constituents": [
       ERROR,
@@ -356,6 +363,12 @@ export const TsEnable = [
         },
       },
     ],
+    "@typescript-eslint/no-misused-spread": [
+      ERROR,
+      {
+        allow: [],
+      },
+    ],
     "@typescript-eslint/no-mixed-enums": ERROR,
     "@typescript-eslint/no-namespace": OFF,
     "@typescript-eslint/no-non-null-asserted-nullish-coalescing": ERROR,
@@ -390,6 +403,7 @@ export const TsEnable = [
         allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing: false,
       },
     ],
+    "@typescript-eslint/no-unnecessary-parameter-property-assignment": ERROR,
     "@typescript-eslint/no-unnecessary-qualifier": ERROR,
     "@typescript-eslint/no-unnecessary-template-expression": ERROR,
     "@typescript-eslint/no-unnecessary-type-arguments": ERROR,
