@@ -278,12 +278,7 @@ export const TsEnable = [
         ignoreVoidReturningFunctions: true,
       },
     ],
-    "@typescript-eslint/no-deprecated": [
-      ERROR,
-      {
-        allow: [],
-      },
-    ],
+    "@typescript-eslint/no-deprecated": OFF /* incompatible: Cannot be used with jsDocParsingMode: "none" */,
     "@typescript-eslint/no-duplicate-enum-values": ERROR,
     "@typescript-eslint/no-duplicate-type-constituents": [
       ERROR,
