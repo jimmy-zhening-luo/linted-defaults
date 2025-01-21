@@ -8,8 +8,8 @@ import {
 export const HtmlEnable = [
   ID.Enable,
   {
-  // #region BEST PRACTICE
-  // DOC: https://html-eslint.org/docs/rules#best-practice
+    // #region BEST PRACTICE
+    // DOC: https://html-eslint.org/docs/rules#best-practice
     "@html-eslint/no-duplicate-attrs": ERROR,
     "@html-eslint/no-duplicate-id": ERROR,
     "@html-eslint/no-extra-spacing-text": [
@@ -36,6 +36,7 @@ export const HtmlEnable = [
       },
     ],
     "@html-eslint/require-doctype": ERROR,
+    "@html-eslint/require-explicit-size": OFF /* preference, prefer using css */,
     "@html-eslint/require-li-container": ERROR,
     "@html-eslint/require-meta-charset": ERROR,
 
@@ -98,6 +99,7 @@ export const HtmlEnable = [
       2,
     ] /* @CONFIGURE: indents for specific child tags: https://html-eslint.org/docs/rules/indent */,
     "@html-eslint/lowercase": ERROR,
+    "@html-eslint/max-element-depth": OFF /* @preference: simply do not care */,
     "@html-eslint/no-extra-spacing-attrs": [
       ERROR,
       {
