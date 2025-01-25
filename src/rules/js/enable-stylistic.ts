@@ -547,7 +547,8 @@ export const EnableStylistic = [
       double,
       {
         avoidEscape: true,
-        allowTemplateLiterals: true,
+        allowTemplateLiterals: always /* always, avoidEscape, @default: never */,
+        ignoreStringLiterals: false,
       },
     ],
     "@stylistic/rest-spread-spacing": [
