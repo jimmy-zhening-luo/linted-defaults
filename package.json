@@ -1,16 +1,11 @@
 {
-  "$template": "22.13.4-alpha.0",
+  "$template": "22.13.4",
   "name": "@eslinted/defaults",
   "version": "4.10.4",
   "description": "Default scopes for `linted`.",
-  "keywords": [],
   "repository": "github:jimmy-zhening-luo/linted-defaults",
   "license": "MIT",
   "private": false,
-  "publishConfig": {
-    "access": "public",
-    "tag": "next"
-  },
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -84,10 +79,15 @@
     "predeploy": "npm test",
     "deploy": ""
   },
+  "publishConfig": {
+    "access": "public",
+    "tag": "next"
+  },
   "mocha": {
     "spec": [
       "dist/**/*.spec.js"
     ]
   },
+  "keywords": [],
   "author": "Jimmy Zhening Luo <1450044+jimmy-zhening-luo@users.noreply.github.com> (https://jimm.my/)"
 }
