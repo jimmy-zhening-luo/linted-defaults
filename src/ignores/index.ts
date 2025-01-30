@@ -1,3 +1,4 @@
+import global from "./global";
 import js from "./scopes/js";
 import ts from "./scopes/ts";
 import svelte from "./scopes/svelte";
@@ -8,18 +9,7 @@ import jsonc from "./scopes/jsonc";
 import yml from "./scopes/yml";
 
 export const ignores = {
-  "*": [
-    // "**/node_modules/", /* ESLint @default */,
-    // ".git/", /* ESLint @default */,
-    "{,**/.git/}",
-    "**/*package-lock.json",
-    "**/dist/",
-    "**/buil{d,t}/",
-    "**/bundle{,d}/",
-    "**/pack{,ed}/",
-    "{,**/.svelte-kit/}",
-    "{,**/.Trash/}",
-  ],
+  "*": global,
   js,
   ts,
   svelte,
