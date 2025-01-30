@@ -18,4 +18,4 @@ export const ignores = {
   json,
   jsonc,
   yml,
-};
+} as const;
