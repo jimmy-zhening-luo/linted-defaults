@@ -1,7 +1,7 @@
 {
   "$template": "22.13.5",
   "name": "@eslinted/defaults",
-  "version": "4.12.0-rc.2",
+  "version": "4.12.0-rc.3",
   "description": "Default scopes for `linted`.",
   "repository": "github:jimmy-zhening-luo/linted-defaults",
   "license": "MIT",
