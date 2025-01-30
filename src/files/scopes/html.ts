@@ -1,1 +1,4 @@
-export default ["{src,tests,static,public}/**/*.html"];
+export default [
+  "*.html",
+  "{code,src,tests,static,typings,public}/**/*.html",
+];
