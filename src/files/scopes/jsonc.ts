@@ -3,5 +3,5 @@ export default [
   "tsconfig.json",
   "{code,src,tests,static,typings}/**/*.jsonc",
   "{code,src,tests,static,typings}/**/tsconfig.json",
-  "{,code/**/*/}{,.vscode/**/*}",
+  "{.vscode,code/**/.vscode}/**/*.{json,jsonc,code-snippets}",
 ];
