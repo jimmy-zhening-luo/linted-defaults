@@ -97,7 +97,7 @@ export const SvelteEnable = [
     "svelte/no-reactive-functions": ERROR,
     "svelte/no-reactive-literals": ERROR,
     "svelte/no-svelte-internal": ERROR,
-    "svelte/no-unused-class-name": ERROR, /* BUG: ESLint error if array empty */
+    "svelte/no-unused-class-name": OFF /* incompatible: breaks if css class is located in another file; BUG: ESLint error if array empty */,
     "svelte/no-unused-svelte-ignore": ERROR,
     "svelte/no-useless-mustaches": [
       ERROR,
