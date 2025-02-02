@@ -1,9 +1,10 @@
 import global from "./global";
 import js from "./scopes/js";
 import ts from "./scopes/ts";
-import svelte from "./scopes/svelte";
 import mocha from "./scopes/mocha";
+import svelte from "./scopes/svelte";
 import html from "./scopes/html";
+import css from "./scopes/css";
 import json from "./scopes/json";
 import jsonc from "./scopes/jsonc";
 import yml from "./scopes/yml";
@@ -12,9 +13,10 @@ export const ignores = {
   "*": global,
   js,
   ts,
-  svelte,
   mocha,
+  svelte,
   html,
+  css,
   json,
   jsonc,
   yml,
