@@ -1,4 +1,4 @@
 export default [
-  "*.{c,m,}ts{,x}",
-  "{code,src,tests,static,typings}/**/*.{c,m,}ts{,x}",
+  "*.{c,m,}ts",
+  "{,code/*/}{src,tests,static,typings,public}/**/*.{c,m,}ts",
 ];
