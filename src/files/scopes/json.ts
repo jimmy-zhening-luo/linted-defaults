@@ -1,4 +1,4 @@
 export default [
   "*.json",
-  "{,code/*/}{src,tests,static,typings,public}/**/*.json",
+  "{,code/*/}{src,tests,static,typings,public,tools}/**/*.json",
 ];
