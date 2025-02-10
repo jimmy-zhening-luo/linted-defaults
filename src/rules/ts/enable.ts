@@ -394,7 +394,7 @@ export const TsEnable = [
     "@typescript-eslint/no-unnecessary-condition": [
       ERROR,
       {
-        allowConstantLoopConditions: false,
+        allowConstantLoopConditions: never,
         allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing: false,
       },
     ],
