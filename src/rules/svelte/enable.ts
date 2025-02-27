@@ -111,7 +111,7 @@ export const SvelteEnable = [
       ERROR,
       {
         destructuring: all,
-        ignoreReadonly: false,
+        ignoreReadBeforeAssign: false /* BUG: doc says `ignoreReadonly`, but actually same as ESLint/prefer-const: `ignoreReadBeforeAssign` */,
       },
     ] /* same options: prefer-const */,
     "svelte/prefer-destructured-store-props": ERROR,
