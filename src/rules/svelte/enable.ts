@@ -2,11 +2,12 @@ import {
   ID,
   ERROR,
   OFF,
-  ignore,
-  never,
+  all,
   always,
   below,
   double,
+  ignore,
+  never,
 } from "../../_strings";
 
 export const SvelteEnable = [
@@ -20,10 +21,9 @@ export const SvelteEnable = [
     "svelte/no-dupe-on-directives": ERROR,
     "svelte/no-dupe-style-properties": ERROR,
     "svelte/no-dupe-use-directives": ERROR,
-    "svelte/no-dynamic-slot-name": ERROR,
-    "svelte/no-export-load-in-svelte-module-in-kit-pages": ERROR,
     "svelte/no-not-function-handler": ERROR,
     "svelte/no-object-in-text-mustaches": ERROR,
+    "svelte/no-raw-special-elements": ERROR,
     "svelte/no-reactive-reassign": [
       ERROR,
       {
@@ -46,9 +46,9 @@ export const SvelteEnable = [
         ignoreWarnings: false,
       },
     ],
-    "svelte/valid-prop-names-in-kit-pages": ERROR,
+    "svelte/valid-style-parse": ERROR,
 
-    // #endregion ERRORS
+    // #endregion
 
     // #region SECURITY
     // DOC: http://sveltejs.github.io/eslint-plugin-svelte/rules/#security-vulnerability
@@ -61,7 +61,7 @@ export const SvelteEnable = [
       },
     ],
 
-    // #endregion SECURITY
+    // #endregion
 
     // #region BEST PRACTICES
     // DOC: http://sveltejs.github.io/eslint-plugin-svelte/rules/#best-practices
@@ -99,6 +99,7 @@ export const SvelteEnable = [
     "svelte/no-svelte-internal": ERROR,
     "svelte/no-unused-class-name": OFF /* incompatible: breaks if css class is located in another file; BUG: ESLint error if array empty */,
     "svelte/no-unused-svelte-ignore": ERROR,
+    "svelte/no-useless-children-snippet": ERROR,
     "svelte/no-useless-mustaches": [
       ERROR,
       {
@@ -106,6 +107,13 @@ export const SvelteEnable = [
         ignoreStringEscape: false,
       },
     ],
+    "svelte/prefer-const": [
+      ERROR,
+      {
+        destructuring: all,
+        ignoreReadonly: false,
+      },
+    ] /* same options: prefer-const */,
     "svelte/prefer-destructured-store-props": ERROR,
     "svelte/require-each-key": ERROR,
     "svelte/require-event-dispatcher-types": ERROR,
@@ -113,10 +121,21 @@ export const SvelteEnable = [
     "svelte/require-stores-init": ERROR,
     "svelte/valid-each-key": ERROR,
 
-    // #endregion BEST PRACTICES
+    // #endregion
 
     // #region STYLE
     // DOC: http://sveltejs.github.io/eslint-plugin-svelte/rules/#stylistic-issues
+    "svelte/consistent-selector-style": [
+      ERROR,
+      {
+        checkGlobal: true /* @default: false */,
+        style: [
+          "type",
+          "id",
+          "class",
+        ],
+      },
+    ],
     "svelte/derived-has-same-inputs-outputs": ERROR,
     "svelte/first-attribute-linebreak": [
       ERROR,
@@ -125,12 +144,23 @@ export const SvelteEnable = [
         singleline: below,
       },
     ],
+    "svelte/html-closing-bracket-new-line": [
+      ERROR,
+      {
+        singleline: never,
+        multiline: always,
+        selfClosingTag: {
+          singleline: never,
+          multiline: always,
+        },
+      },
+    ],
     "svelte/html-closing-bracket-spacing": [
       ERROR,
       {
         startTag: never,
         endTag: never,
-        selfClosingTag: always,
+        selfClosingTag: never,
       },
     ],
     "svelte/html-quotes": [
@@ -157,8 +187,10 @@ export const SvelteEnable = [
       ERROR,
       {
         indent: 2,
+        indentScript: true,
+        ignoredNodes: [],
         switchCase: 1,
-        alignAttributesVertically: true,
+        alignAttributesVertically: false,
       },
     ],
     "svelte/max-attributes-per-line": [
@@ -208,13 +240,15 @@ export const SvelteEnable = [
       always,
     ],
 
-    // #endregion STYLE
+    // #endregion
 
     // #region SVELTE-KIT
     // DOC: http://sveltejs.github.io/eslint-plugin-svelte/rules/#svelte-kit
-    "svelte/no-goto-without-base": ERROR,
+    "svelte/no-export-load-in-svelte-module-in-kit-pages": ERROR,
+    "svelte/no-navigation-without-base": ERROR,
+    "svelte/valid-prop-names-in-kit-pages": ERROR,
 
-    // #endregion SVELTE-KIT
+    // #endregion
 
     // #region REQUIRED
     // DOC: http://sveltejs.github.io/eslint-plugin-svelte/rules/#system
@@ -226,7 +260,7 @@ export const SvelteEnable = [
     ],
     "svelte/system": ERROR,
 
-    // #endregion REQUIRED
+    // #endregion
 
   } as const,
 ] as const;
