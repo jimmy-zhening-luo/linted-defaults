@@ -177,12 +177,11 @@ export const SvelteEnable = [
       ERROR,
       {
         "void": always,
-        foreign: always,
         component: always,
         svelte: always,
         normal: ignore,
       } /* always | never | ignore */,
-    ],
+    ] /* BUG: `foreign` option was deprecated */,
     "svelte/indent": [
       ERROR,
       {
