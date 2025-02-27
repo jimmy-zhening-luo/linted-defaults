@@ -598,6 +598,7 @@ export const EnableStylistic = [
       ERROR,
       {
         int32Hint: true,
+        ignoreTypes: false,
       },
     ],
     "@stylistic/space-unary-ops": [
