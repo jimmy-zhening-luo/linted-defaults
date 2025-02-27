@@ -83,7 +83,7 @@ export const HtmlEnable = [
       ERROR,
       {
         ifAttrsMoreThan: 0,
-        closeStyle: "sameline",
+        closeStyle: "newline",
       },
     ],
     "@html-eslint/element-newline": [
@@ -103,7 +103,7 @@ export const HtmlEnable = [
     "@html-eslint/no-extra-spacing-attrs": [
       ERROR,
       {
-        enforceBeforeSelfClose: true,
+        enforceBeforeSelfClose: false,
         disallowMissing: true,
         disallowTabs: true,
         disallowInAssignment: true,
