@@ -19,10 +19,10 @@ import {
   double,
 } from "../../_strings";
 
-export const EnableStylistic = [
-  ID.EnableStylistic,
-  {
-    // DOC: https://eslint.style/rules
+export const EnableStylistic = {
+  id: ID.EnableStylistic,
+  rules: {
+  // DOC: https://eslint.style/rules
     "@stylistic/array-bracket-newline": [
       ERROR,
       {
@@ -659,4 +659,4 @@ export const EnableStylistic = [
       },
     ],
   } as const,
-] as const;
+} as const;

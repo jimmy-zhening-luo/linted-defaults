@@ -5,10 +5,10 @@ import {
   both,
 } from "../../_strings";
 
-export const SvelteEnableExtension = [
-  ID.EnableExtension,
-  {
-    // DOC: http://sveltejs.github.io/eslint-plugin-svelte/rules/#extension-rules
+export const SvelteEnableExtension = {
+  id: ID.EnableExtension,
+  rules: {
+  // DOC: http://sveltejs.github.io/eslint-plugin-svelte/rules/#extension-rules
     "svelte/no-inner-declarations": [
       ERROR,
       both,
@@ -24,4 +24,4 @@ export const SvelteEnableExtension = [
       },
     ] /* same options: @stylistic/no-trailing-spaces */,
   } as const,
-] as const;
+} as const;

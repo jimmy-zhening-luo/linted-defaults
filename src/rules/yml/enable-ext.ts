@@ -6,10 +6,10 @@ import {
   strict,
 } from "../../_strings";
 
-export const YmlEnableExtension = [
-  ID.EnableExtension,
-  {
-    // DOC: https://ota-meshi.github.io/eslint-plugin-yml/rules/#extension-rules
+export const YmlEnableExtension = {
+  id: ID.EnableExtension,
+  rules: {
+  // DOC: https://ota-meshi.github.io/eslint-plugin-yml/rules/#extension-rules
     "yml/flow-mapping-curly-newline": [
       ERROR,
       {
@@ -70,4 +70,4 @@ export const YmlEnableExtension = [
       always,
     ],
   } as const,
-] as const;
+} as const;

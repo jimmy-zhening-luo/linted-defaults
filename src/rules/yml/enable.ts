@@ -7,10 +7,10 @@ import {
   double,
 } from "../../_strings";
 
-export const YmlEnable = [
-  ID.Enable,
-  {
-    // DOC: https://ota-meshi.github.io/eslint-plugin-yml/rules/#yaml-rules
+export const YmlEnable = {
+  id: ID.Enable,
+  rules: {
+  // DOC: https://ota-meshi.github.io/eslint-plugin-yml/rules/#yaml-rules
     "yml/block-mapping-colon-indicator-newline": [
       ERROR,
       never,
@@ -73,4 +73,4 @@ export const YmlEnable = [
     "yml/sort-sequence-values": OFF,
     "yml/vue-custom-block/no-parsing-error": ERROR,
   } as const,
-] as const;
+} as const;

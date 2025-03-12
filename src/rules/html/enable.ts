@@ -5,11 +5,11 @@ import {
   never,
 } from "../../_strings";
 
-export const HtmlEnable = [
-  ID.Enable,
-  {
-    // #region BEST PRACTICE
-    // DOC: https://html-eslint.org/docs/rules#best-practice
+export const HtmlEnable = {
+  id: ID.Enable,
+  rules: {
+  // #region BEST PRACTICE
+  // DOC: https://html-eslint.org/docs/rules#best-practice
     "@html-eslint/no-duplicate-attrs": ERROR,
     "@html-eslint/no-duplicate-id": ERROR,
     "@html-eslint/no-extra-spacing-text": [
@@ -122,4 +122,4 @@ export const HtmlEnable = [
     ],
     "@html-eslint/sort-attrs": OFF,
   } as const,
-] as const;
+} as const;

@@ -6,10 +6,10 @@ import {
   all,
 } from "../../_strings";
 
-export const TsEnableExtension = [
-  ID.EnableExtension,
-  {
-    // DOC: https://typescript-eslint.io/rules/?=extension-xdeprecated#rules
+export const TsEnableExtension = {
+  id: ID.EnableExtension,
+  rules: {
+  // DOC: https://typescript-eslint.io/rules/?=extension-xdeprecated#rules
     "@typescript-eslint/class-methods-use-this": OFF /* preference -- eslint:off */,
     "@typescript-eslint/consistent-return": OFF /* tsconfig: noImplicitReturns */,
     "@typescript-eslint/default-param-last": ERROR,
@@ -116,4 +116,4 @@ export const TsEnableExtension = [
     ],
     "@typescript-eslint/require-await": ERROR,
   } as const,
-] as const;
+} as const;

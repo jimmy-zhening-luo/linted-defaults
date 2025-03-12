@@ -12,11 +12,11 @@ import {
   both,
 } from "../../_strings";
 
-export const Enable = [
-  ID.Enable,
-  {
-    // #region PROBLEMS
-    // DOC: https://eslint.org/docs/latest/rules/#possible-problems
+export const Enable = {
+  id: ID.Enable,
+  rules: {
+  // #region PROBLEMS
+  // DOC: https://eslint.org/docs/latest/rules/#possible-problems
     "array-callback-return": [
       ERROR,
       {
@@ -542,6 +542,6 @@ export const Enable = [
     // [ https://eslint.org/docs/latest/rules/#layout--formatting ]
     "unicode-bom": OFF /* preference: don't care */,
 
-    // #endregion LAYOUT & FORMATTING
+  // #endregion LAYOUT & FORMATTING
   } as const,
-] as const;
+} as const;

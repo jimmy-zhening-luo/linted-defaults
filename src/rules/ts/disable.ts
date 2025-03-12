@@ -3,10 +3,10 @@ import {
   OFF,
 } from "../../_strings";
 
-export const TsDisable = [
-  ID.Disable,
-  {
-    // Handled by TypeScript compiler
+export const TsDisable = {
+  id: ID.Disable,
+  rules: {
+  // Handled by TypeScript compiler
     "constructor-super": OFF,
     "getter-return": OFF,
     "no-class-assign": OFF,
@@ -27,4 +27,4 @@ export const TsDisable = [
     "consistent-return": OFF,
     "no-redeclare": OFF,
   } as const,
-] as const;
+} as const;

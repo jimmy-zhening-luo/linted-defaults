@@ -4,10 +4,10 @@ import {
   OFF,
 } from "../../_strings";
 
-export const CssEnable = [
-  ID.Enable,
-  {
-    // DOC: https://github.com/eslint/css?tab=readme-ov-file#rules
+export const CssEnable = {
+  id: ID.Enable,
+  rules: {
+  // DOC: https://github.com/eslint/css?tab=readme-ov-file#rules
     "css/no-duplicate-imports": ERROR,
     "css/no-empty-blocks": ERROR,
     "css/no-invalid-at-rules": ERROR,
@@ -20,4 +20,4 @@ export const CssEnable = [
     ],
     "css/use-layers": OFF /* not recommended by docs; also BUG: ESLint config inspector: css/use-layers: Invalid rule has no description [INVALID] */,
   } as const,
-] as const;
+} as const;

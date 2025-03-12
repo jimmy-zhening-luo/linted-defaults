@@ -10,10 +10,10 @@ import {
   strict,
 } from "../../_strings";
 
-export const JsonEnableExtension = [
-  ID.EnableExtension,
-  {
-    // DOC: https://ota-meshi.github.io/eslint-plugin-jsonc/rules/#extension-rules
+export const JsonEnableExtension = {
+  id: ID.EnableExtension,
+  rules: {
+  // DOC: https://ota-meshi.github.io/eslint-plugin-jsonc/rules/#extension-rules
     "jsonc/array-bracket-newline": OFF /* DO NOT CHANGE */,
     "jsonc/array-bracket-spacing": [
       ERROR,
@@ -88,4 +88,4 @@ export const JsonEnableExtension = [
     ],
     "jsonc/space-unary-ops": ERROR,
   } as const,
-] as const;
+} as const;

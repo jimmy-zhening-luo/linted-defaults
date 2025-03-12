@@ -10,11 +10,11 @@ import {
   never,
 } from "../../_strings";
 
-export const SvelteEnable = [
-  ID.Enable,
-  {
-    // #region ERRORS
-    // DOC: http://sveltejs.github.io/eslint-plugin-svelte/rules/#possible-errors
+export const SvelteEnable = {
+  id: ID.Enable,
+  rules: {
+  // #region ERRORS
+  // DOC: http://sveltejs.github.io/eslint-plugin-svelte/rules/#possible-errors
     "svelte/infinite-reactive-loop": ERROR,
     "svelte/no-dom-manipulating": ERROR,
     "svelte/no-dupe-else-if-blocks": ERROR,
@@ -270,4 +270,4 @@ export const SvelteEnable = [
     // #endregion
 
   } as const,
-] as const;
+} as const;

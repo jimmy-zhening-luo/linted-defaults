@@ -4,10 +4,10 @@ import {
   OFF,
 } from "../../_strings";
 
-export const JsonEnable = [
-  ID.Enable,
-  {
-    // DOC: https://ota-meshi.github.io/eslint-plugin-jsonc/rules/#jsonc-rules
+export const JsonEnable = {
+  id: ID.Enable,
+  rules: {
+  // DOC: https://ota-meshi.github.io/eslint-plugin-jsonc/rules/#jsonc-rules
     "jsonc/auto": OFF,
     "jsonc/key-name-casing": OFF,
     "jsonc/no-bigint-literals": ERROR,
@@ -32,4 +32,4 @@ export const JsonEnable = [
     "jsonc/valid-json-number": ERROR,
     "jsonc/vue-custom-block/no-parsing-error": ERROR,
   } as const,
-] as const;
+} as const;

@@ -3,9 +3,9 @@ import {
   ERROR,
 } from "../../_strings";
 
-export const MochaEnableChai = [
-  `${ID.Enable}/chai`,
-  {
+export const MochaEnableChai = {
+  id: `${ID.Enable}/chai`,
+  rules: {
 
     // DOC: https://github.com/ihordiachenko/eslint-plugin-chai-friendly?tab=readme-ov-file#usage
     "chai-friendly/no-unused-expressions": [
@@ -18,4 +18,4 @@ export const MochaEnableChai = [
       },
     ] /* TSLint */,
   } as const,
-] as const;
+} as const;

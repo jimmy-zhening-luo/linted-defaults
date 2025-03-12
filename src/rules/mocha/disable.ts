@@ -3,9 +3,9 @@ import {
   OFF,
 } from "../../_strings";
 
-export const MochaDisable = [
-  ID.Disable,
-  {
+export const MochaDisable = {
+  id: ID.Disable,
+  rules: {
     "prefer-arrow-callback": OFF,
   } as const,
-] as const;
+} as const;

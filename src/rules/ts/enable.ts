@@ -6,10 +6,10 @@ import {
   explicit,
 } from "../../_strings";
 
-export const TsEnable = [
-  ID.Enable,
-  {
-    // DOC: https://typescript-eslint.io/rules/?=xextension-xdeprecated#rules
+export const TsEnable = {
+  id: ID.Enable,
+  rules: {
+  // DOC: https://typescript-eslint.io/rules/?=xextension-xdeprecated#rules
     "@typescript-eslint/adjacent-overload-signatures": OFF,
     "@typescript-eslint/array-type": [
       ERROR,
@@ -291,7 +291,7 @@ export const TsEnable = [
     "@typescript-eslint/no-empty-object-type": [
       ERROR,
       {
-        // allowWithName: /regex/,
+      // allowWithName: /regex/,
         allowInterfaces: never,
         allowObjectTypes: never,
       },
@@ -577,4 +577,4 @@ export const TsEnable = [
     ],
     "@typescript-eslint/use-unknown-in-catch-callback-variable": ERROR,
   } as const,
-] as const;
+} as const;
