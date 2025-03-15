@@ -3,7 +3,7 @@ import {
   ERROR,
   OFF,
   never,
-} from "../../_strings";
+} from "../../strings";
 
 export const HtmlEnable = {
   id: ID.Enable,

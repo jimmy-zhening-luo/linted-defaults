@@ -3,7 +3,7 @@ import {
   ERROR,
   allow,
   both,
-} from "../../_strings";
+} from "../../strings";
 
 export const SvelteEnableExtension = {
   id: ID.EnableExtension,

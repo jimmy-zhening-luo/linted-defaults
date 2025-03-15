@@ -1,7 +1,7 @@
 import {
   ID,
   OFF,
-} from "../../_strings";
+} from "../../strings";
 
 export const SvelteDisableExtension = {
   id: ID.DisableExtension,

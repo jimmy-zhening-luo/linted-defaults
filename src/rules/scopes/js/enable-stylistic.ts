@@ -17,7 +17,7 @@ import {
   beside,
   inside,
   double,
-} from "../../_strings";
+} from "../../strings";
 
 export const EnableStylistic = {
   id: ID.EnableStylistic,

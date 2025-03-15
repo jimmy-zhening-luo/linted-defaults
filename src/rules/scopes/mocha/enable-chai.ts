@@ -1,7 +1,7 @@
 import {
   ID,
   ERROR,
-} from "../../_strings";
+} from "../../strings";
 
 export const MochaEnableChai = {
   id: `${ID.Enable}/chai`,

@@ -4,7 +4,7 @@ import {
   OFF,
   never,
   explicit,
-} from "../../_strings";
+} from "../../strings";
 
 export const TsEnable = {
   id: ID.Enable,
