@@ -4,7 +4,7 @@ import {
   OFF,
   always,
   all,
-} from "../../_strings";
+} from "../_strings";
 
 export const TsEnableExtension = {
   id: ID.EnableExtension,

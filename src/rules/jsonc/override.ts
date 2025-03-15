@@ -3,7 +3,7 @@ import {
   ERROR,
   OFF,
   always_multiline,
-} from "../../_strings";
+} from "../_strings";
 
 export const JsoncOverride = {
   id: ID.Override,

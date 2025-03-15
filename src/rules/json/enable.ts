@@ -2,7 +2,7 @@ import {
   ID,
   ERROR,
   OFF,
-} from "../../_strings";
+} from "../_strings";
 
 export const JsonEnable = {
   id: ID.Enable,

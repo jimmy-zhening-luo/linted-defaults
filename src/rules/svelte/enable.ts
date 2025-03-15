@@ -8,7 +8,7 @@ import {
   double,
   ignore,
   never,
-} from "../../_strings";
+} from "../_strings";
 
 export const SvelteEnable = {
   id: ID.Enable,

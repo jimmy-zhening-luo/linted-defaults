@@ -4,7 +4,7 @@ import {
   never,
   always,
   strict,
-} from "../../_strings";
+} from "../_strings";
 
 export const YmlEnableExtension = {
   id: ID.EnableExtension,

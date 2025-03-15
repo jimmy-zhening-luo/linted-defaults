@@ -10,7 +10,7 @@ import {
   all,
   multi,
   both,
-} from "../../_strings";
+} from "../_strings";
 
 export const Enable = {
   id: ID.Enable,

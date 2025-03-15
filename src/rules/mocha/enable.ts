@@ -3,7 +3,7 @@ import {
   ERROR,
   WARN,
   OFF,
-} from "../../_strings";
+} from "../_strings";
 
 export const MochaEnable = {
   id: ID.Enable,
