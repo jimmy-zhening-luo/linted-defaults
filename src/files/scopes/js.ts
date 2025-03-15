@@ -1,4 +1,3 @@
-export default [
-  "*.{c,m,}js",
-  "{,code/*/}{src,tests,static,typings,public,tools}/**/*.{c,m,}js",
-];
+import { CreateScope } from "../utility";
+
+export default CreateScope("*.{c,m,}js");

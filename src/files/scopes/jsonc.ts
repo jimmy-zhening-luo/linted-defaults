@@ -1,5 +1,8 @@
-export default [
+import { CreateScope } from "../utility";
+
+export default CreateScope(
   "{*.jsonc,tsconfig.json}",
-  "{,code/*/}{src,tests,static,typings,public,tools}/**/{*.jsonc,tsconfig.json}",
-  "{.vscode,code/*/.vscode}/**/*.{json,jsonc,code-snippets}",
-];
+  {
+    custom: ["{.vscode,code/*/.vscode}/**/*.{json,jsonc,code-snippets}"],
+  },
+);

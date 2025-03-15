@@ -1,4 +1,3 @@
-export default [
-  "*.svelte",
-  "{,code/*/}{src,tests,static,typings,public,tools}/**/*.svelte",
-];
+import { CreateScope } from "../utility";
+
+export default CreateScope("*.svelte");

@@ -1,4 +1,3 @@
-export default [
-  "*.html",
-  "{,code/*/}{src,tests,static,typings,public,tools}/**/*.html",
-];
+import { CreateScope } from "../utility";
+
+export default CreateScope("*.html");

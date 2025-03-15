@@ -1,4 +1,3 @@
-export default [
-  "*.css",
-  "{,code/*/}{src,tests,static,typings,public,tools}/**/*.css",
-];
+import { CreateScope } from "../utility";
+
+export default CreateScope("*.css");

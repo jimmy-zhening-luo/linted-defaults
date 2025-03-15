@@ -1,4 +1,3 @@
-export default [
-  "*.json",
-  "{,code/*/}{src,tests,static,typings,public,tools}/**/*.json",
-];
+import { CreateScope } from "../utility";
+
+export default CreateScope("*.json");

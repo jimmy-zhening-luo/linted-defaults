@@ -1,4 +1,8 @@
-export default [
+import { CreateScope } from "../utility";
+
+export default CreateScope(
   "*.y{a,}ml",
-  "{,code/*/}{src,tests,static,typings,public,tools,.github}/**/*.y{a,}ml",
-];
+  {
+    subfolders: [".github"],
+  },
+);
