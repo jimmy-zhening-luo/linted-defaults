@@ -24,7 +24,7 @@ export const TsEnable = {
       {
         "ts-check": false,
         "ts-expect-error": {
-          descriptionFormat: "^(?:|:) (?:TEST:|BUG:) .+$",
+          descriptionFormat: "^:? (?:TEST|BUG): .+$",
         },
         "ts-ignore": true,
         "ts-nocheck": true,
