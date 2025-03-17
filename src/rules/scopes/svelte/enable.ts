@@ -97,7 +97,21 @@ export const SvelteEnable = {
     "svelte/no-reactive-functions": ERROR,
     "svelte/no-reactive-literals": ERROR,
     "svelte/no-svelte-internal": ERROR,
+    "svelte/no-unnecessary-state-wrap": [
+      ERROR,
+      {
+        additionalReactiveClasses: [],
+        allowReassign: false,
+      },
+    ],
     "svelte/no-unused-class-name": OFF /* incompatible: breaks if css class is located in another file; BUG: ESLint error if array empty */,
+    "svelte/no-unused-props": [
+      ERROR,
+      {
+        checkImportedTypes: true,
+        ignorePatterns: [],
+      },
+    ],
     "svelte/no-unused-svelte-ignore": ERROR,
     "svelte/no-useless-children-snippet": ERROR,
     "svelte/no-useless-mustaches": [
