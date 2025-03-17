@@ -109,7 +109,8 @@ export const SvelteEnable = {
       ERROR,
       {
         checkImportedTypes: true,
-        ignorePatterns: [],
+        ignorePropertyPatterns: [],
+        ignoreTypePatterns: [],
       },
     ],
     "svelte/no-unused-svelte-ignore": ERROR,
