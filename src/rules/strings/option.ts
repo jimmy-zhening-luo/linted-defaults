@@ -24,6 +24,6 @@ multiline = "multiline",
 never = "never",
 outside = "outside",
 single = "single",
-star = "*",
+wildcard = "*",
 strict = "strict",
 zebra = "zebra";

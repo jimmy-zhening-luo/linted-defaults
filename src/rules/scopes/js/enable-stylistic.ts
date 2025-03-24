@@ -2,21 +2,20 @@ import {
   ID,
   ERROR,
   OFF,
-  never,
-  always,
-  always_multiline,
-  consistent,
-  as_needed,
-  strict,
   all,
-  star,
-  last,
+  always_multiline,
+  always,
+  as_needed,
   before,
-  after,
   below,
   beside,
-  inside,
+  consistent,
   double,
+  inside,
+  last,
+  never,
+  wildcard,
+  strict,
 } from "../../strings";
 
 export const EnableStylistic = {
@@ -45,12 +44,12 @@ export const EnableStylistic = {
         ArrayExpression: {
           consistent: true,
           multiline: true,
-          minItems: 4,
+          minItems: 3,
         },
         ArrayPattern: {
           consistent: true,
           multiline: true,
-          minItems: 4,
+          minItems: 3,
         },
       },
     ],
@@ -220,7 +219,7 @@ export const EnableStylistic = {
         enforce: [
           { prev: "field", next: "field", blankLine: never },
           { prev: "field", next: "method", blankLine: always },
-          { prev: "method", next: star, blankLine: always },
+          { prev: "method", next: wildcard, blankLine: always },
         ],
       },
       {
@@ -231,7 +230,7 @@ export const EnableStylistic = {
     "@stylistic/max-len": [
       ERROR,
       {
-        code: 150,
+        code: 300,
         tabWidth: 2,
         ignoreComments: true,
         ignoreTrailingComments: true,
@@ -299,12 +298,12 @@ export const EnableStylistic = {
     "@stylistic/no-multi-spaces": [
       ERROR,
       {
-        ignoreEOLComments: false,
+        ignoreEOLComments: false /* @OVERRIDE */,
         exceptions: {
-          Property: false,
-          ImportAttributes: false,
+          Property: false /* @OVERRIDE */,
+          ImportAttributes: false /* @OVERRIDE */,
         },
-        includeTabs: true,
+        includeTabs: true /* @OVERRIDE */,
       },
     ],
     "@stylistic/no-multiple-empty-lines": [
@@ -334,12 +333,7 @@ export const EnableStylistic = {
       below,
       {
         overrides: {
-          "if": below,
-          "else": below,
-          "while": below,
-          "do": below,
-          "for": below,
-        },
+        } /* if | else | while | do | for */,
       },
     ],
     "@stylistic/object-curly-newline": [
@@ -348,22 +342,22 @@ export const EnableStylistic = {
         ObjectExpression: {
           consistent: true,
           multiline: true,
-          minProperties: 4,
+          minProperties: 3,
         },
         ObjectPattern: {
           consistent: true,
           multiline: true,
-          minProperties: 4,
+          minProperties: 3,
         },
         ImportDeclaration: {
           consistent: true,
           multiline: true,
-          minProperties: 4,
+          minProperties: 3,
         },
         ExportDeclaration: {
           consistent: true,
           multiline: true,
-          minProperties: 4,
+          minProperties: 3,
         },
       },
     ],
@@ -390,148 +384,171 @@ export const EnableStylistic = {
       before,
       {
         overrides: {
-          "=": after,
-        },
+        } /* e.g., = | ? | : |  @default: { "?": "before", ":": "before" } */,
       },
     ],
     "@stylistic/padded-blocks": [
       ERROR,
-      {
-        blocks: never,
-        classes: never,
-        switches: never,
-      },
+      never /* @OVERRIDE || { blocks, classes, switches } */,
       {
         allowSingleLineBlocks: true,
       },
     ],
     "@stylistic/padding-line-between-statements": [
       ERROR,
+      // #region * No Line
       {
-        prev: "directive",
-        next: star,
-        blankLine: always,
-      },
-      {
-        prev: "directive",
-        next: "directive",
-        blankLine: never,
-      },
-      {
-        prev: ["import", "cjs-import"],
-        next: star,
-        blankLine: always,
-      },
-      {
-        prev: ["import", "cjs-import"],
-        next: ["import", "cjs-import"],
-        blankLine: never,
-      },
-      {
+        blankline: never,
         prev: [
-          "class",
-          "interface",
-          "try",
-          "for",
-          "if",
-          "do",
-          "while",
-          "switch",
-          "block",
           "block-like",
-          "iife",
-          "empty",
+          "block",
+          "break",
+          "case",
+          "cjs-export",
+          "cjs-import",
+          "class",
+          "const",
+          "continue",
           "debugger",
+          "default",
+          "directive",
+          "do",
+          "empty",
+          "enum",
+          "export",
+          // "expression" /* aren't most of these expressions? */,
+          "for",
+          "function-overload",
+          "function",
+          "if",
+          "iife",
+          "import",
+          "interface",
+          "let",
+          "multiline-block-like",
+          "multiline-const",
+          "multiline-export",
+          // "multiline-expression" /* aren't most of these expressions? */,
+          "multiline-let",
+          "multiline-var",
+          "return",
+          "singleline-const",
+          "singleline-export",
+          "singleline-let",
+          "singleline-var",
+          "switch",
+          "throw",
+          "try",
+          "type",
+          "var",
+          "while",
           "with",
         ],
-        next: star,
-        blankLine: always,
+        next: wildcard,
       },
+      // #endregion
+      // #region Block >
       {
-        prev: "case",
-        next: star,
         blankLine: always,
+        prev: [
+          "block-like",
+          "block",
+          "class",
+          "debugger",
+          "directive",
+          "do",
+          "empty",
+          "for",
+          "function-overload",
+          "function",
+          "if",
+          "interface",
+          "multiline-block-like",
+          "switch",
+          "try",
+          "while",
+          "with",
+        ],
+        next: wildcard,
       },
+      // #endregion
+      // #region >Function >
       {
-        prev: "case",
-        next: ["case", "default"],
-        blankLine: always,
-      },
-      {
-        prev: "default",
-        next: star,
-        blankLine: always,
-      },
-      {
-        prev: "type",
-        next: star,
-        blankLine: always,
-      },
-      {
-        prev: "type",
-        next: "type",
         blankLine: never,
-      },
-      {
-        prev: "function",
-        next: star,
-        blankLine: always,
-      },
-      {
-        prev: "function-overload",
-        next: star,
-        blankLine: always,
-      },
-      {
-        prev: "function-overload",
-        next: "function-overload",
-        blankLine: never,
-      },
-      {
-        prev: "function-overload",
-        next: "function",
-        blankLine: never,
-      },
-      {
-        prev: ["const", "let", "var"],
-        next: star,
-        blankLine: always,
-      },
-      {
-        prev: ["const", "let", "var"],
-        next: ["const", "let", "var"],
-        blankLine: never,
-      },
-      {
-        prev: "expression",
-        next: star,
-        blankLine: always,
-      },
-      {
-        prev: "expression",
-        next: "expression",
-        blankLine: never,
-      },
-      {
-        prev: star,
+        prev: "interface",
         next: [
-          "throw",
-          "return",
+          "class",
+          "function-overload",
+          "function",
+        ],
+      },
+      {
+        blankLine: never,
+        prev: "function-overload",
+        next: [
+          "function-overload",
+          "function",
+        ],
+      },
+      // #endregion
+      // #region >Module<
+      {
+        blankLine: always,
+        prev: [
+          "cjs-import",
+          "import",
+        ],
+        next: wildcard,
+      },
+      {
+        blankLine: never,
+        prev: [
+          "cjs-import",
+          "import",
+        ],
+        next: [
+          "cjs-import",
+          "import",
+        ],
+      },
+      {
+        blankLine: always,
+        prev: wildcard,
+        next: [
+          "cjs-export",
+          "export",
+          "multiline-export",
+          "singleline-export",
+        ],
+      },
+      {
+        blankLine: never,
+        prev: [
+          "cjs-export",
+          "export",
+          "multiline-export",
+          "singleline-export",
+        ],
+        next: [
+          "cjs-export",
+          "export",
+          "multiline-export",
+          "singleline-export",
+        ],
+      },
+      // #endregion
+      // #region < Return
+      {
+        blankLine: always,
+        prev: wildcard,
+        next: [
           "break",
           "continue",
+          "return",
+          "throw",
         ],
-        blankLine: always,
       },
-      {
-        prev: star,
-        next: ["export", "cjs-export"],
-        blankLine: always,
-      },
-      {
-        prev: ["export", "cjs-export"],
-        next: ["export", "cjs-export"],
-        blankLine: never,
-      },
+      // #endregion
     ],
     "@stylistic/quote-props": [
       ERROR,

@@ -61,7 +61,7 @@ export const JsonEnableExtension = {
       {
         consistent: true,
         multiline: true,
-        minProperties: 4,
+        minProperties: 3,
       },
     ] /* MUST match CHILD of ../js/stylistic.ts */,
     "jsonc/object-curly-spacing": [
