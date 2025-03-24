@@ -152,7 +152,6 @@ export const EnableStylistic = {
       ERROR,
       never,
     ],
-
     "@stylistic/function-paren-newline": [
       ERROR,
       "multiline-arguments",
@@ -472,7 +471,7 @@ export const EnableStylistic = {
         next: wildcard,
       },
       // #endregion
-      // #region >Function >
+      // #region Function >
       {
         blankLine: never,
         prev: "interface",
@@ -491,7 +490,30 @@ export const EnableStylistic = {
         ],
       },
       // #endregion
-      // #region >Module<
+      // #region < =[]
+      {
+        blankLine: always,
+        prev: [
+          "const",
+          "enum",
+          "let",
+          "multiline-const",
+          "multiline-let",
+          "multiline-var",
+          "singleline-const",
+          "singleline-let",
+          "singleline-var",
+          "type",
+          "var",
+        ],
+        next: [
+          "expression",
+          "multiline-expression",
+          "iife",
+        ],
+      },
+      // #endregion
+      // #region Import[] >
       {
         blankLine: always,
         prev: [
@@ -510,6 +532,18 @@ export const EnableStylistic = {
           "cjs-import",
           "import",
         ],
+      },
+      // #endregion
+      // #region < Export[] >
+      {
+        blankLine: always,
+        prev: [
+          "cjs-export",
+          "export",
+          "multiline-export",
+          "singleline-export",
+        ],
+        next: wildcard,
       },
       {
         blankLine: always,
@@ -537,7 +571,17 @@ export const EnableStylistic = {
         ],
       },
       // #endregion
-      // #region < Return
+      // #region < Return >
+      {
+        blankLine: always,
+        prev: [
+          "break",
+          "continue",
+          "return",
+          "throw",
+        ],
+        next: wildcard,
+      },
       {
         blankLine: always,
         prev: wildcard,
