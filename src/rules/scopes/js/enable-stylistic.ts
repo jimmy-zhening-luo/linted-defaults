@@ -395,7 +395,7 @@ export const EnableStylistic = {
     ],
     "@stylistic/padding-line-between-statements": [
       ERROR,
-      // #region * No Line
+      // #region *<
       {
         blankLine: never,
         prev: [
@@ -446,7 +446,7 @@ export const EnableStylistic = {
         next: wildcard,
       },
       // #endregion
-      // #region Block >
+      // #region < Block >
       {
         blankLine: always,
         prev: [
@@ -470,8 +470,31 @@ export const EnableStylistic = {
         ],
         next: wildcard,
       },
+      {
+        blankLine: always,
+        prev: wildcard,
+        next: [
+          "block-like",
+          "block",
+          "class",
+          "debugger",
+          "directive",
+          "do",
+          "empty",
+          "for",
+          "function-overload",
+          "function",
+          "if",
+          "interface",
+          "multiline-block-like",
+          "switch",
+          "try",
+          "while",
+          "with",
+        ],
+      },
       // #endregion
-      // #region Function >
+      // #region Declaration >
       {
         blankLine: never,
         prev: "interface",
