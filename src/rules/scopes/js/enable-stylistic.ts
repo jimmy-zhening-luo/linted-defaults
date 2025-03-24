@@ -173,7 +173,11 @@ export const EnableStylistic = {
       {
         ignoredNodes: [],
         SwitchCase: 1,
-        VariableDeclarator: { "var": 0, let: 0, "const": 0 },
+        VariableDeclarator: {
+          "var": 0,
+          let: 0,
+          "const": 0,
+        },
         outerIIFEBody: 0,
         MemberExpression: 1,
         FunctionDeclaration: { parameters: 1, body: 1 },
@@ -216,9 +220,21 @@ export const EnableStylistic = {
       ERROR,
       {
         enforce: [
-          { prev: "field", next: "field", blankLine: never },
-          { prev: "field", next: "method", blankLine: always },
-          { prev: "method", next: wildcard, blankLine: always },
+          {
+            prev: "field",
+            next: "field",
+            blankLine: never,
+          },
+          {
+            prev: "field",
+            next: "method",
+            blankLine: always,
+          },
+          {
+            prev: "method",
+            next: wildcard,
+            blankLine: always,
+          },
         ],
       },
       {
