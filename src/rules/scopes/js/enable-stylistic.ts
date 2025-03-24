@@ -398,7 +398,7 @@ export const EnableStylistic = {
       ERROR,
       // #region * No Line
       {
-        blankline: never,
+        blankLine: never,
         prev: [
           "block-like",
           "block",
