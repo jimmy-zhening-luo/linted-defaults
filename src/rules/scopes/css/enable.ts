@@ -19,7 +19,7 @@ export const CssEnable = {
         allowUnits: [],
       },
     ],
-    "css/require-baseline": [
+    "css/use-baseline": [
       ERROR,
       {
         available: "widely" /* newly | @default widely */,
