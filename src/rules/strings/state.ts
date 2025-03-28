@@ -1,4 +1,4 @@
 export const
-ERROR = "error",
+ON = "error",
 WARN = "warn",
 OFF = "off";

@@ -1,6 +1,6 @@
 import {
   ID,
-  ERROR,
+  ON,
   never,
   always,
   strict,
@@ -11,7 +11,7 @@ export const YmlEnableExtension = {
   rules: {
   // DOC: https://ota-meshi.github.io/eslint-plugin-yml/rules/#extension-rules
     "yml/flow-mapping-curly-newline": [
-      ERROR,
+      ON,
       {
         consistent: false,
         multiline: true,
@@ -19,7 +19,7 @@ export const YmlEnableExtension = {
       },
     ],
     "yml/flow-mapping-curly-spacing": [
-      ERROR,
+      ON,
       always,
       {
         arraysInObjects: true,
@@ -27,14 +27,14 @@ export const YmlEnableExtension = {
       },
     ],
     "yml/flow-sequence-bracket-newline": [
-      ERROR,
+      ON,
       {
         multiline: true,
         minItems: null,
       },
     ],
     "yml/flow-sequence-bracket-spacing": [
-      ERROR,
+      ON,
       never,
       {
         singleValue: false,
@@ -43,7 +43,7 @@ export const YmlEnableExtension = {
       },
     ],
     "yml/key-spacing": [
-      ERROR,
+      ON,
       {
         beforeColon: false,
         afterColon: true,
@@ -51,14 +51,14 @@ export const YmlEnableExtension = {
       },
     ],
     "yml/no-irregular-whitespace": [
-      ERROR,
+      ON,
       {
         skipQuotedScalars: true,
         skipComments: false,
       },
     ],
     "yml/no-multiple-empty-lines": [
-      ERROR,
+      ON,
       {
         max: 1,
         maxEOF: 1,
@@ -66,7 +66,7 @@ export const YmlEnableExtension = {
       },
     ],
     "yml/spaced-comment": [
-      ERROR,
+      ON,
       always,
     ],
   } as const,

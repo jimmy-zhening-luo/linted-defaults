@@ -1,6 +1,6 @@
 import {
   ID,
-  ERROR,
+  ON,
   OFF,
   all,
   always_multiline,
@@ -23,14 +23,14 @@ export const EnableStylistic = {
   rules: {
   // DOC: https://eslint.style/rules
     "@stylistic/array-bracket-newline": [
-      ERROR,
+      ON,
       {
         multiline: true,
         minItems: null,
       },
     ],
     "@stylistic/array-bracket-spacing": [
-      ERROR,
+      ON,
       never,
       {
         singleValue: false,
@@ -39,7 +39,7 @@ export const EnableStylistic = {
       },
     ],
     "@stylistic/array-element-newline": [
-      ERROR,
+      ON,
       {
         ArrayExpression: {
           consistent: true,
@@ -54,43 +54,43 @@ export const EnableStylistic = {
       },
     ],
     "@stylistic/arrow-parens": [
-      ERROR,
+      ON,
       as_needed,
       {
         requireForBlockBody: false,
       },
     ],
     "@stylistic/arrow-spacing": [
-      ERROR,
+      ON,
       {
         before: true,
         after: true,
       },
     ],
     "@stylistic/block-spacing": [
-      ERROR,
+      ON,
       always,
     ],
     "@stylistic/brace-style": [
-      ERROR,
+      ON,
       "stroustrup",
       {
         allowSingleLine: true,
       },
     ],
     "@stylistic/comma-dangle": [
-      ERROR,
+      ON,
       always_multiline,
     ],
     "@stylistic/comma-spacing": [
-      ERROR,
+      ON,
       {
         before: false,
         after: true,
       },
     ],
     "@stylistic/comma-style": [
-      ERROR,
+      ON,
       last,
       {
         exceptions: {
@@ -130,45 +130,45 @@ export const EnableStylistic = {
       },
     ],
     "@stylistic/computed-property-spacing": [
-      ERROR,
+      ON,
       never,
       {
         enforceForClassMembers: true,
       },
     ],
     "@stylistic/dot-location": [
-      ERROR,
+      ON,
       "property",
     ],
     "@stylistic/eol-last": [
-      ERROR,
+      ON,
       always,
     ],
     "@stylistic/function-call-argument-newline": [
-      ERROR,
+      ON,
       consistent,
     ],
     "@stylistic/function-call-spacing": [
-      ERROR,
+      ON,
       never,
     ],
     "@stylistic/function-paren-newline": [
-      ERROR,
+      ON,
       "multiline-arguments",
     ] /* BUG: https://github.com/eslint-stylistic/eslint-stylistic/issues/290 */,
     "@stylistic/generator-star-spacing": [
-      ERROR,
+      ON,
       {
         before: true,
         after: false,
       },
     ],
     "@stylistic/implicit-arrow-linebreak": [
-      ERROR,
+      ON,
       beside,
     ],
     "@stylistic/indent": [
-      ERROR,
+      ON,
       2,
       {
         ignoredNodes: [],
@@ -194,11 +194,11 @@ export const EnableStylistic = {
       },
     ],
     "@stylistic/indent-binary-ops": [
-      ERROR,
+      ON,
       2,
     ],
     "@stylistic/key-spacing": [
-      ERROR,
+      ON,
       {
         beforeColon: false,
         afterColon: true,
@@ -207,7 +207,7 @@ export const EnableStylistic = {
       },
     ],
     "@stylistic/keyword-spacing": [
-      ERROR,
+      ON,
       {
         before: true,
         after: true,
@@ -216,12 +216,12 @@ export const EnableStylistic = {
     ],
     "@stylistic/line-comment-position": OFF,
     "@stylistic/linebreak-style": [
-      ERROR,
+      ON,
       "unix",
     ],
     "@stylistic/lines-around-comment": OFF,
     "@stylistic/lines-between-class-members": [
-      ERROR,
+      ON,
       {
         enforce: [
           {
@@ -247,7 +247,7 @@ export const EnableStylistic = {
       },
     ],
     "@stylistic/max-len": [
-      ERROR,
+      ON,
       {
         code: 300,
         tabWidth: 2,
@@ -260,13 +260,13 @@ export const EnableStylistic = {
       },
     ],
     "@stylistic/max-statements-per-line": [
-      ERROR,
+      ON,
       {
         max: 1,
       },
     ],
     "@stylistic/member-delimiter-style": [
-      ERROR,
+      ON,
       {
         multiline: {
           delimiter: "semi",
@@ -281,7 +281,7 @@ export const EnableStylistic = {
     ],
     "@stylistic/multiline-comment-style": OFF,
     "@stylistic/multiline-ternary": [
-      ERROR,
+      ON,
       always_multiline,
     ],
     "@stylistic/new-parens": [
@@ -289,14 +289,14 @@ export const EnableStylistic = {
       never,
     ],
     "@stylistic/newline-per-chained-call": [
-      ERROR,
+      ON,
       {
         ignoreChainWithDepth: 2,
       },
     ],
     "@stylistic/no-confusing-arrow": OFF,
     "@stylistic/no-extra-parens": [
-      ERROR,
+      ON,
       all,
       {
         conditionalAssign: true,
@@ -310,12 +310,12 @@ export const EnableStylistic = {
         enforceForFunctionPrototypeMethods: true,
       },
     ],
-    "@stylistic/no-extra-semi": ERROR,
-    "@stylistic/no-floating-decimal": ERROR,
+    "@stylistic/no-extra-semi": ON,
+    "@stylistic/no-floating-decimal": ON,
     "@stylistic/no-mixed-operators": OFF,
-    "@stylistic/no-mixed-spaces-and-tabs": ERROR,
+    "@stylistic/no-mixed-spaces-and-tabs": ON,
     "@stylistic/no-multi-spaces": [
-      ERROR,
+      ON,
       {
         ignoreEOLComments: false /* @OVERRIDE */,
         exceptions: {
@@ -326,7 +326,7 @@ export const EnableStylistic = {
       },
     ],
     "@stylistic/no-multiple-empty-lines": [
-      ERROR,
+      ON,
       {
         max: 1,
         maxEOF: 1,
@@ -334,21 +334,21 @@ export const EnableStylistic = {
       },
     ],
     "@stylistic/no-tabs": [
-      ERROR,
+      ON,
       {
         allowIndentationTabs: false,
       },
     ],
     "@stylistic/no-trailing-spaces": [
-      ERROR,
+      ON,
       {
         skipBlankLines: false,
         ignoreComments: false,
       },
     ],
-    "@stylistic/no-whitespace-before-property": ERROR,
+    "@stylistic/no-whitespace-before-property": ON,
     "@stylistic/nonblock-statement-body-position": [
-      ERROR,
+      ON,
       below,
       {
         overrides: {
@@ -356,7 +356,7 @@ export const EnableStylistic = {
       },
     ],
     "@stylistic/object-curly-newline": [
-      ERROR,
+      ON,
       {
         ObjectExpression: {
           consistent: true,
@@ -381,7 +381,7 @@ export const EnableStylistic = {
       },
     ],
     "@stylistic/object-curly-spacing": [
-      ERROR,
+      ON,
       always,
       {
         arraysInObjects: true,
@@ -389,17 +389,17 @@ export const EnableStylistic = {
       },
     ],
     "@stylistic/object-property-newline": [
-      ERROR,
+      ON,
       {
         allowAllPropertiesOnSameLine: true,
       },
     ],
     "@stylistic/one-var-declaration-per-line": [
-      ERROR,
+      ON,
       always,
     ],
     "@stylistic/operator-linebreak": [
-      ERROR,
+      ON,
       before,
       {
         overrides: {
@@ -407,14 +407,14 @@ export const EnableStylistic = {
       },
     ],
     "@stylistic/padded-blocks": [
-      ERROR,
+      ON,
       never /* @OVERRIDE || { blocks, classes, switches } */,
       {
         allowSingleLineBlocks: true,
       },
     ],
     "@stylistic/padding-line-between-statements": [
-      ERROR,
+      ON,
       // #region *<
       {
         blankLine: never,
@@ -638,7 +638,7 @@ export const EnableStylistic = {
       // #endregion
     ],
     "@stylistic/quote-props": [
-      ERROR,
+      ON,
       as_needed,
       {
         keywords: true,
@@ -647,7 +647,7 @@ export const EnableStylistic = {
       },
     ],
     "@stylistic/quotes": [
-      ERROR,
+      ON,
       double,
       {
         avoidEscape: true,
@@ -656,11 +656,11 @@ export const EnableStylistic = {
       },
     ],
     "@stylistic/rest-spread-spacing": [
-      ERROR,
+      ON,
       never,
     ],
     "@stylistic/semi": [
-      ERROR,
+      ON,
       always,
       {
         omitLastInOneLineBlock: false,
@@ -668,18 +668,18 @@ export const EnableStylistic = {
       },
     ],
     "@stylistic/semi-spacing": [
-      ERROR,
+      ON,
       {
         before: false,
         after: true,
       },
     ],
     "@stylistic/semi-style": [
-      ERROR,
+      ON,
       last,
     ],
     "@stylistic/space-before-blocks": [
-      ERROR,
+      ON,
       {
         functions: always,
         keywords: always,
@@ -687,7 +687,7 @@ export const EnableStylistic = {
       },
     ],
     "@stylistic/space-before-function-paren": [
-      ERROR,
+      ON,
       {
         anonymous: always,
         named: never,
@@ -695,18 +695,18 @@ export const EnableStylistic = {
       },
     ],
     "@stylistic/space-in-parens": [
-      ERROR,
+      ON,
       never,
     ],
     "@stylistic/space-infix-ops": [
-      ERROR,
+      ON,
       {
         int32Hint: true,
         ignoreTypes: false,
       },
     ],
     "@stylistic/space-unary-ops": [
-      ERROR,
+      ON,
       {
         words: true,
         nonwords: false,
@@ -714,26 +714,26 @@ export const EnableStylistic = {
       },
     ],
     "@stylistic/spaced-comment": [
-      ERROR,
+      ON,
       always,
     ],
     "@stylistic/switch-colon-spacing": [
-      ERROR,
+      ON,
       {
         after: true,
         before: false,
       },
     ],
     "@stylistic/template-curly-spacing": [
-      ERROR,
+      ON,
       never,
     ],
     "@stylistic/template-tag-spacing": [
-      ERROR,
+      ON,
       never,
     ],
     "@stylistic/type-annotation-spacing": [
-      ERROR,
+      ON,
       {
         before: true,
         after: true,
@@ -745,18 +745,18 @@ export const EnableStylistic = {
         },
       } /* non-overriden rule affects all type annotations (arrows, "as" keyword, "satisfies" keyword) except colons */,
     ],
-    "@stylistic/type-generic-spacing": ERROR,
-    "@stylistic/type-named-tuple-spacing": ERROR,
+    "@stylistic/type-generic-spacing": ON,
+    "@stylistic/type-named-tuple-spacing": ON,
     "@stylistic/wrap-iife": [
-      ERROR,
+      ON,
       inside,
       {
         functionPrototypeMethods: true,
       },
     ],
-    "@stylistic/wrap-regex": ERROR,
+    "@stylistic/wrap-regex": ON,
     "@stylistic/yield-star-spacing": [
-      ERROR,
+      ON,
       {
         before: false,
         after: true,

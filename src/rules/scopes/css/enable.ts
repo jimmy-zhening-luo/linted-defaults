@@ -1,6 +1,6 @@
 import {
   ID,
-  ERROR,
+  ON,
   OFF,
 } from "../../strings";
 
@@ -8,19 +8,19 @@ export const CssEnable = {
   id: ID.Enable,
   rules: {
     // DOC: https://github.com/eslint/css/tree/main/docs/rules
-    "css/no-duplicate-imports": ERROR,
-    "css/no-empty-blocks": ERROR,
-    "css/no-invalid-at-rules": ERROR,
-    "css/no-invalid-properties": ERROR,
+    "css/no-duplicate-imports": ON,
+    "css/no-empty-blocks": ON,
+    "css/no-invalid-at-rules": ON,
+    "css/no-invalid-properties": ON,
     "css/prefer-logical-properties": [
-      ERROR,
+      ON,
       {
         allowProperties: [],
         allowUnits: [],
       },
     ],
     "css/use-baseline": [
-      ERROR,
+      ON,
       {
         available: "widely" /* newly | @default widely */,
       },

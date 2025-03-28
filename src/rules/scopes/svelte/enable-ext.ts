@@ -1,6 +1,6 @@
 import {
   ID,
-  ERROR,
+  ON,
   allow,
   both,
 } from "../../strings";
@@ -10,14 +10,14 @@ export const SvelteEnableExtension = {
   rules: {
   // DOC: http://sveltejs.github.io/eslint-plugin-svelte/rules/#extension-rules
     "svelte/no-inner-declarations": [
-      ERROR,
+      ON,
       both,
       {
         blockScopedFunctions: allow,
       },
     ] /* same options: no-inner-declarations */,
     "svelte/no-trailing-spaces": [
-      ERROR,
+      ON,
       {
         skipBlankLines: false,
         ignoreComments: false,

@@ -1,6 +1,6 @@
 import {
   ID,
-  ERROR,
+  ON,
   OFF,
   all,
   always,
@@ -15,46 +15,46 @@ export const SvelteEnable = {
   rules: {
   // #region ERRORS
   // DOC: http://sveltejs.github.io/eslint-plugin-svelte/rules/#possible-errors
-    "svelte/infinite-reactive-loop": ERROR,
-    "svelte/no-dom-manipulating": ERROR,
-    "svelte/no-dupe-else-if-blocks": ERROR,
-    "svelte/no-dupe-on-directives": ERROR,
-    "svelte/no-dupe-style-properties": ERROR,
-    "svelte/no-dupe-use-directives": ERROR,
-    "svelte/no-not-function-handler": ERROR,
-    "svelte/no-object-in-text-mustaches": ERROR,
-    "svelte/no-raw-special-elements": ERROR,
+    "svelte/infinite-reactive-loop": ON,
+    "svelte/no-dom-manipulating": ON,
+    "svelte/no-dupe-else-if-blocks": ON,
+    "svelte/no-dupe-on-directives": ON,
+    "svelte/no-dupe-style-properties": ON,
+    "svelte/no-dupe-use-directives": ON,
+    "svelte/no-not-function-handler": ON,
+    "svelte/no-object-in-text-mustaches": ON,
+    "svelte/no-raw-special-elements": ON,
     "svelte/no-reactive-reassign": [
-      ERROR,
+      ON,
       {
         props: true,
       },
     ],
-    "svelte/no-shorthand-style-property-overrides": ERROR,
-    "svelte/no-store-async": ERROR,
+    "svelte/no-shorthand-style-property-overrides": ON,
+    "svelte/no-store-async": ON,
     "svelte/no-unknown-style-directive-property": [
-      ERROR,
+      ON,
       {
         ignorePrefixed: true,
       },
     ],
-    "svelte/require-store-callbacks-use-set-param": ERROR,
-    "svelte/require-store-reactive-access": ERROR,
+    "svelte/require-store-callbacks-use-set-param": ON,
+    "svelte/require-store-reactive-access": ON,
     "svelte/valid-compile": [
-      ERROR,
+      ON,
       {
         ignoreWarnings: false,
       },
     ],
-    "svelte/valid-style-parse": ERROR,
+    "svelte/valid-style-parse": ON,
 
     // #endregion
 
     // #region SECURITY
     // DOC: http://sveltejs.github.io/eslint-plugin-svelte/rules/#security-vulnerability
-    "svelte/no-at-html-tags": ERROR,
+    "svelte/no-at-html-tags": ON,
     "svelte/no-target-blank": [
-      ERROR,
+      ON,
       {
         allowReferrer: false,
         enforceDynamicLinks: always,
@@ -66,7 +66,7 @@ export const SvelteEnable = {
     // #region BEST PRACTICES
     // DOC: http://sveltejs.github.io/eslint-plugin-svelte/rules/#best-practices
     "svelte/block-lang": [
-      ERROR,
+      ON,
       {
         enforceScriptPresent: true,
         enforceStylePresent: false,
@@ -78,27 +78,27 @@ export const SvelteEnable = {
       },
     ], /* INVESTIGATE: */
     "svelte/button-has-type": [
-      ERROR,
+      ON,
       {
         button: true,
         submit: true,
         reset: true,
       },
     ],
-    "svelte/no-at-debug-tags": ERROR,
-    "svelte/no-ignored-unsubscribe": ERROR,
-    "svelte/no-immutable-reactive-statements": ERROR,
+    "svelte/no-at-debug-tags": ON,
+    "svelte/no-ignored-unsubscribe": ON,
+    "svelte/no-immutable-reactive-statements": ON,
     "svelte/no-inline-styles": [
-      ERROR,
+      ON,
       {
         allowTransitions: false,
       },
     ],
-    "svelte/no-reactive-functions": ERROR,
-    "svelte/no-reactive-literals": ERROR,
-    "svelte/no-svelte-internal": ERROR,
+    "svelte/no-reactive-functions": ON,
+    "svelte/no-reactive-literals": ON,
+    "svelte/no-svelte-internal": ON,
     "svelte/no-unnecessary-state-wrap": [
-      ERROR,
+      ON,
       {
         additionalReactiveClasses: [],
         allowReassign: false,
@@ -106,42 +106,42 @@ export const SvelteEnable = {
     ],
     "svelte/no-unused-class-name": OFF /* incompatible: breaks if css class is located in another file; BUG: ESLint error if array empty */,
     "svelte/no-unused-props": [
-      ERROR,
+      ON,
       {
         checkImportedTypes: true,
         ignorePropertyPatterns: [],
         ignoreTypePatterns: [],
       },
     ],
-    "svelte/no-unused-svelte-ignore": ERROR,
-    "svelte/no-useless-children-snippet": ERROR,
+    "svelte/no-unused-svelte-ignore": ON,
+    "svelte/no-useless-children-snippet": ON,
     "svelte/no-useless-mustaches": [
-      ERROR,
+      ON,
       {
         ignoreIncludesComment: false,
         ignoreStringEscape: false,
       },
     ],
     "svelte/prefer-const": [
-      ERROR,
+      ON,
       {
         destructuring: all,
         ignoreReadBeforeAssign: false /* BUG: doc says `ignoreReadonly`, but actually same as ESLint/prefer-const: `ignoreReadBeforeAssign` */,
       },
     ] /* same options: prefer-const */,
-    "svelte/prefer-destructured-store-props": ERROR,
-    "svelte/require-each-key": ERROR,
-    "svelte/require-event-dispatcher-types": ERROR,
-    "svelte/require-optimized-style-attribute": ERROR,
-    "svelte/require-stores-init": ERROR,
-    "svelte/valid-each-key": ERROR,
+    "svelte/prefer-destructured-store-props": ON,
+    "svelte/require-each-key": ON,
+    "svelte/require-event-dispatcher-types": ON,
+    "svelte/require-optimized-style-attribute": ON,
+    "svelte/require-stores-init": ON,
+    "svelte/valid-each-key": ON,
 
     // #endregion
 
     // #region STYLE
     // DOC: http://sveltejs.github.io/eslint-plugin-svelte/rules/#stylistic-issues
     "svelte/consistent-selector-style": [
-      ERROR,
+      ON,
       {
         checkGlobal: true /* @default: false */,
         style: [
@@ -151,16 +151,16 @@ export const SvelteEnable = {
         ],
       },
     ],
-    "svelte/derived-has-same-inputs-outputs": ERROR,
+    "svelte/derived-has-same-inputs-outputs": ON,
     "svelte/first-attribute-linebreak": [
-      ERROR,
+      ON,
       {
         multiline: below,
         singleline: below,
       },
     ],
     "svelte/html-closing-bracket-new-line": [
-      ERROR,
+      ON,
       {
         singleline: never,
         multiline: always,
@@ -171,7 +171,7 @@ export const SvelteEnable = {
       },
     ],
     "svelte/html-closing-bracket-spacing": [
-      ERROR,
+      ON,
       {
         startTag: never,
         endTag: never,
@@ -179,7 +179,7 @@ export const SvelteEnable = {
       },
     ],
     "svelte/html-quotes": [
-      ERROR,
+      ON,
       {
         prefer: double,
         dynamic: {
@@ -189,7 +189,7 @@ export const SvelteEnable = {
       },
     ],
     "svelte/html-self-closing": [
-      ERROR,
+      ON,
       {
         "void": always,
         component: always,
@@ -198,7 +198,7 @@ export const SvelteEnable = {
       } /* always | never | ignore */,
     ] /* BUG: `foreign` option was deprecated */,
     "svelte/indent": [
-      ERROR,
+      ON,
       {
         indent: 2,
         indentScript: true,
@@ -208,14 +208,14 @@ export const SvelteEnable = {
       },
     ],
     "svelte/max-attributes-per-line": [
-      ERROR,
+      ON,
       {
         multiline: 1,
         singleline: 1,
       },
     ],
     "svelte/mustache-spacing": [
-      ERROR,
+      ON,
       {
         textExpressions: never /* or ALWAYS */,
         attributesAndProps: never /* or ALWAYS */,
@@ -226,31 +226,31 @@ export const SvelteEnable = {
         },
       },
     ],
-    "svelte/no-extra-reactive-curlies": ERROR,
+    "svelte/no-extra-reactive-curlies": ON,
     "svelte/no-restricted-html-elements": OFF,
-    "svelte/no-spaces-around-equal-signs-in-attribute": ERROR,
+    "svelte/no-spaces-around-equal-signs-in-attribute": ON,
     "svelte/prefer-class-directive": [
-      ERROR,
+      ON,
       {
         prefer: "empty",
       },
     ],
-    "svelte/prefer-style-directive": ERROR,
+    "svelte/prefer-style-directive": ON,
     "svelte/shorthand-attribute": [
-      ERROR,
+      ON,
       {
         prefer: always,
       },
     ],
     "svelte/shorthand-directive": [
-      ERROR,
+      ON,
       {
         prefer: always,
       },
     ],
     "svelte/sort-attributes": OFF /* INVESTIGATE: */,
     "svelte/spaced-html-comment": [
-      ERROR,
+      ON,
       always,
     ],
 
@@ -258,9 +258,9 @@ export const SvelteEnable = {
 
     // #region SVELTE-KIT
     // DOC: http://sveltejs.github.io/eslint-plugin-svelte/rules/#svelte-kit
-    "svelte/no-export-load-in-svelte-module-in-kit-pages": ERROR,
+    "svelte/no-export-load-in-svelte-module-in-kit-pages": ON,
     "svelte/no-navigation-without-base": [
-      ERROR,
+      ON,
       {
         ignoreGoto: false,
         ignoreLinks: true /* ignore <a> links | @default: false */,
@@ -268,19 +268,19 @@ export const SvelteEnable = {
         ignoreReplaceState: false,
       },
     ],
-    "svelte/valid-prop-names-in-kit-pages": ERROR,
+    "svelte/valid-prop-names-in-kit-pages": ON,
 
     // #endregion
 
     // #region REQUIRED
     // DOC: http://sveltejs.github.io/eslint-plugin-svelte/rules/#system
     "svelte/comment-directive": [
-      ERROR,
+      ON,
       {
         reportUnusedDisableDirectives: true,
       },
     ],
-    "svelte/system": ERROR,
+    "svelte/system": ON,
 
     // #endregion
 

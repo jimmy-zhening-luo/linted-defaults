@@ -1,6 +1,6 @@
 import {
   ID,
-  ERROR,
+  ON,
   OFF,
   never,
   always,
@@ -12,22 +12,22 @@ export const YmlEnable = {
   rules: {
   // DOC: https://ota-meshi.github.io/eslint-plugin-yml/rules/#yaml-rules
     "yml/block-mapping-colon-indicator-newline": [
-      ERROR,
+      ON,
       never,
     ],
     "yml/block-mapping-question-indicator-newline": [
-      ERROR,
+      ON,
       never,
     ],
     "yml/block-mapping": [
-      ERROR,
+      ON,
       {
         singleline: never,
         multiline: always,
       },
     ],
     "yml/block-sequence-hyphen-indicator-newline": [
-      ERROR,
+      ON,
       never,
       {
         nestedHyphen: always,
@@ -35,7 +35,7 @@ export const YmlEnable = {
       },
     ],
     "yml/block-sequence": [
-      ERROR,
+      ON,
       {
         singleline: always,
         multiline: always,
@@ -43,7 +43,7 @@ export const YmlEnable = {
     ],
     "yml/file-extension": OFF,
     "yml/indent": [
-      ERROR,
+      ON,
       2,
       {
         indentBlockSequences: true,
@@ -51,26 +51,26 @@ export const YmlEnable = {
       },
     ],
     "yml/key-name-casing": OFF,
-    "yml/no-empty-document": ERROR,
-    "yml/no-empty-key": ERROR,
-    "yml/no-empty-mapping-value": ERROR,
-    "yml/no-empty-sequence-entry": ERROR,
-    "yml/no-tab-indent": ERROR,
-    "yml/no-trailing-zeros": ERROR,
+    "yml/no-empty-document": ON,
+    "yml/no-empty-key": ON,
+    "yml/no-empty-mapping-value": ON,
+    "yml/no-empty-sequence-entry": ON,
+    "yml/no-tab-indent": ON,
+    "yml/no-trailing-zeros": ON,
     "yml/plain-scalar": [
-      ERROR,
+      ON,
       always,
     ],
     "yml/quotes": [
-      ERROR,
+      ON,
       {
         prefer: double,
         avoidEscape: true,
       },
     ],
-    "yml/require-string-key": ERROR,
+    "yml/require-string-key": ON,
     "yml/sort-keys": OFF,
     "yml/sort-sequence-values": OFF,
-    "yml/vue-custom-block/no-parsing-error": ERROR,
+    "yml/vue-custom-block/no-parsing-error": ON,
   } as const,
 } as const;

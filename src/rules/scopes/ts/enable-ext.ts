@@ -1,6 +1,6 @@
 import {
   ID,
-  ERROR,
+  ON,
   OFF,
   always,
   all,
@@ -12,9 +12,9 @@ export const TsEnableExtension = {
   // DOC: https://typescript-eslint.io/rules/?=extension-xdeprecated#rules
     "@typescript-eslint/class-methods-use-this": OFF /* preference -- eslint:off */,
     "@typescript-eslint/consistent-return": OFF /* tsconfig: noImplicitReturns */,
-    "@typescript-eslint/default-param-last": ERROR,
+    "@typescript-eslint/default-param-last": ON,
     "@typescript-eslint/dot-notation": [
-      ERROR,
+      ON,
       {
         allowKeywords: true,
 
@@ -25,14 +25,14 @@ export const TsEnableExtension = {
       },
     ],
     "@typescript-eslint/init-declarations": [
-      ERROR,
+      ON,
       always,
     ],
     "@typescript-eslint/max-params": OFF /* preference */,
-    "@typescript-eslint/no-array-constructor": ERROR,
+    "@typescript-eslint/no-array-constructor": ON,
     "@typescript-eslint/no-dupe-class-members": OFF /* tsc */,
     "@typescript-eslint/no-empty-function": [
-      ERROR,
+      ON,
       {
         allow: [
           "constructors",
@@ -42,15 +42,15 @@ export const TsEnableExtension = {
         ],
       }, /* functions, arrowFunctions, generatorFunctions, methods, generatorMethods, getters, setters, constructors, asyncFunctions, asyncMethods; TS-ONLY: private-constructors, protected-constructors, decoratedFunctions, overrideMethods */
     ],
-    "@typescript-eslint/no-implied-eval": ERROR,
+    "@typescript-eslint/no-implied-eval": ON,
     "@typescript-eslint/no-invalid-this": OFF /* tsconfig: { strict, noImplicitThis } */,
-    "@typescript-eslint/no-loop-func": ERROR,
+    "@typescript-eslint/no-loop-func": ON,
     "@typescript-eslint/no-magic-numbers": OFF,
     "@typescript-eslint/no-redeclare": OFF /* tsc (let, const, -var) */,
     "@typescript-eslint/no-restricted-imports": OFF /* preference */,
     "@typescript-eslint/no-shadow": OFF /* investigate */,
     "@typescript-eslint/no-unused-expressions": [
-      ERROR,
+      ON,
       {
         allowShortCircuit: true,
         allowTernary: true,
@@ -59,7 +59,7 @@ export const TsEnableExtension = {
       },
     ],
     "@typescript-eslint/no-unused-vars": [
-      ERROR,
+      ON,
       {
         vars: all,
         args: all,
@@ -70,7 +70,7 @@ export const TsEnableExtension = {
       },
     ],
     "@typescript-eslint/no-use-before-define": [
-      ERROR,
+      ON,
       {
         functions: true,
         classes: true,
@@ -81,16 +81,16 @@ export const TsEnableExtension = {
         ignoreTypeReferences: true,
       },
     ],
-    "@typescript-eslint/no-useless-constructor": ERROR,
+    "@typescript-eslint/no-useless-constructor": ON,
     "@typescript-eslint/only-throw-error": [
-      ERROR,
+      ON,
       {
         allowThrowingAny: false,
         allowThrowingUnknown: false,
       },
     ],
     "@typescript-eslint/prefer-destructuring": [
-      ERROR,
+      ON,
       {
         VariableDeclarator: {
           array: true,
@@ -107,13 +107,13 @@ export const TsEnableExtension = {
       },
     ],
     "@typescript-eslint/prefer-promise-reject-errors": [
-      ERROR,
+      ON,
       {
         allowEmptyReject: false,
         allowThrowingAny: false,
         allowThrowingUnknown: true,
       },
     ],
-    "@typescript-eslint/require-await": ERROR,
+    "@typescript-eslint/require-await": ON,
   } as const,
 } as const;

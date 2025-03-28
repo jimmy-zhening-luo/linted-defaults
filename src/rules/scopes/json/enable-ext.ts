@@ -1,6 +1,6 @@
 import {
   ID,
-  ERROR,
+  ON,
   OFF,
   always,
   consistent,
@@ -16,7 +16,7 @@ export const JsonEnableExtension = {
   // DOC: https://ota-meshi.github.io/eslint-plugin-jsonc/rules/#extension-rules
     "jsonc/array-bracket-newline": OFF /* DO NOT CHANGE */,
     "jsonc/array-bracket-spacing": [
-      ERROR,
+      ON,
       never,
       {
         singleValue: false,
@@ -25,24 +25,24 @@ export const JsonEnableExtension = {
       },
     ] /* MUST match ../js/stylistic.ts */,
     "jsonc/array-element-newline": [
-      ERROR,
+      ON,
       consistent,
     ],
-    "jsonc/comma-dangle": [ERROR, never] /* trailing commas are NOT allowed in JSON */,
-    "jsonc/comma-style": [ERROR, last],
-    "jsonc/indent": [ERROR, 2],
+    "jsonc/comma-dangle": [ON, never] /* trailing commas are NOT allowed in JSON */,
+    "jsonc/comma-style": [ON, last],
+    "jsonc/indent": [ON, 2],
     "jsonc/key-spacing": [
-      ERROR,
+      ON,
       {
         beforeColon: false,
         afterColon: true,
         mode: strict,
       },
     ] /* MUST match ../js/stylistic.ts */,
-    "jsonc/no-dupe-keys": ERROR,
-    "jsonc/no-floating-decimal": ERROR,
+    "jsonc/no-dupe-keys": ON,
+    "jsonc/no-floating-decimal": ON,
     "jsonc/no-irregular-whitespace": [
-      ERROR,
+      ON,
       {
         skipStrings: true,
         skipComments: true,
@@ -51,13 +51,13 @@ export const JsonEnableExtension = {
         skipJSXText: true,
       },
     ],
-    "jsonc/no-multi-str": ERROR,
-    "jsonc/no-octal-escape": ERROR,
-    "jsonc/no-octal": ERROR,
-    "jsonc/no-sparse-arrays": ERROR,
-    "jsonc/no-useless-escape": ERROR,
+    "jsonc/no-multi-str": ON,
+    "jsonc/no-octal-escape": ON,
+    "jsonc/no-octal": ON,
+    "jsonc/no-sparse-arrays": ON,
+    "jsonc/no-useless-escape": ON,
     "jsonc/object-curly-newline": [
-      ERROR,
+      ON,
       {
         consistent: true,
         multiline: true,
@@ -65,7 +65,7 @@ export const JsonEnableExtension = {
       },
     ] /* MUST match CHILD of ../js/stylistic.ts */,
     "jsonc/object-curly-spacing": [
-      ERROR,
+      ON,
       always,
       {
         arraysInObjects: true,
@@ -73,19 +73,19 @@ export const JsonEnableExtension = {
       },
     ] /* MUST match ../js/stylistic.ts */,
     "jsonc/object-property-newline": [
-      ERROR,
+      ON,
       {
         allowAllPropertiesOnSameLine: true,
       },
     ] /* MUST match ../js/stylistic.ts */,
-    "jsonc/quote-props": [ERROR, always],
+    "jsonc/quote-props": [ON, always],
     "jsonc/quotes": [
-      ERROR,
+      ON,
       double,
       {
         avoidEscape: false,
       },
     ],
-    "jsonc/space-unary-ops": ERROR,
+    "jsonc/space-unary-ops": ON,
   } as const,
 } as const;

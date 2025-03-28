@@ -1,6 +1,6 @@
 import {
   ID,
-  ERROR,
+  ON,
   OFF,
   never,
   always,
@@ -18,78 +18,78 @@ export const Enable = {
   // #region PROBLEMS
   // DOC: https://eslint.org/docs/latest/rules/#possible-problems
     "array-callback-return": [
-      ERROR,
+      ON,
       {
         allowImplicit: false,
         checkForEach: true,
         allowVoid: true,
       },
     ],
-    "constructor-super": ERROR /* tsc */,
-    "for-direction": ERROR,
+    "constructor-super": ON /* tsc */,
+    "for-direction": ON,
     "getter-return": [
-      ERROR,
+      ON,
       {
         allowImplicit: false,
       },
     ] /* tsc */,
-    "no-async-promise-executor": ERROR,
-    "no-await-in-loop": ERROR,
-    "no-class-assign": ERROR,
-    "no-compare-neg-zero": ERROR,
+    "no-async-promise-executor": ON,
+    "no-await-in-loop": ON,
+    "no-class-assign": ON,
+    "no-compare-neg-zero": ON,
     "no-cond-assign": [
-      ERROR,
+      ON,
       always,
     ],
-    "no-const-assign": ERROR /* tsc */,
-    "no-constant-binary-expression": ERROR,
+    "no-const-assign": ON /* tsc */,
+    "no-constant-binary-expression": ON,
     "no-constant-condition": [
-      ERROR,
+      ON,
       {
         checkLoops: true,
       },
     ] /* BUG: incorrect option description (claims "all" is ok): https://eslint.org/docs/latest/rules/no-constant-condition */,
-    "no-constructor-return": ERROR,
-    "no-control-regex": ERROR,
-    "no-debugger": ERROR,
-    "no-dupe-args": ERROR /* tsc */,
-    "no-dupe-class-members": ERROR /* tsc -- TSLint:off: tsc */,
-    "no-dupe-else-if": ERROR,
-    "no-dupe-keys": ERROR /* tsc */,
-    "no-duplicate-case": ERROR,
+    "no-constructor-return": ON,
+    "no-control-regex": ON,
+    "no-debugger": ON,
+    "no-dupe-args": ON /* tsc */,
+    "no-dupe-class-members": ON /* tsc -- TSLint:off: tsc */,
+    "no-dupe-else-if": ON,
+    "no-dupe-keys": ON /* tsc */,
+    "no-duplicate-case": ON,
     "no-duplicate-imports": OFF /* BUG: breaks separation of TS type-only imports from value imports */,
-    "no-empty-character-class": ERROR,
+    "no-empty-character-class": ON,
     "no-empty-pattern": [
-      ERROR,
+      ON,
       {
         allowObjectPatternsAsParameters: false,
       },
     ],
-    "no-ex-assign": ERROR,
+    "no-ex-assign": ON,
     "no-fallthrough": [
-      ERROR,
+      ON,
       {
         allowEmptyCase: true,
         reportUnusedFallthroughComment: true,
       },
     ],
-    "no-func-assign": ERROR /* tsc */,
-    "no-import-assign": ERROR /* tsc (except Object.assign()) */,
+    "no-func-assign": ON /* tsc */,
+    "no-import-assign": ON /* tsc (except Object.assign()) */,
     "no-inner-declarations": [
-      ERROR,
+      ON,
       both,
       {
         blockScopedFunctions: allow,
       },
     ],
     "no-invalid-regexp": [
-      ERROR,
+      ON,
       {
         allowConstructorFlags: [],
       },
     ],
     "no-irregular-whitespace": [
-      ERROR,
+      ON,
       {
         skipStrings: true,
         skipComments: true,
@@ -98,54 +98,54 @@ export const Enable = {
         skipJSXText: true,
       },
     ],
-    "no-loss-of-precision": ERROR /* TSLint */,
-    "no-misleading-character-class": ERROR,
-    "no-new-native-nonconstructor": ERROR,
-    "no-obj-calls": ERROR /* tsc */,
+    "no-loss-of-precision": ON /* TSLint */,
+    "no-misleading-character-class": ON,
+    "no-new-native-nonconstructor": ON,
+    "no-obj-calls": ON /* tsc */,
     "no-promise-executor-return": [
-      ERROR,
+      ON,
       {
         allowVoid: true,
       },
     ],
-    "no-prototype-builtins": ERROR,
+    "no-prototype-builtins": ON,
     "no-self-assign": [
-      ERROR,
+      ON,
       {
         props: true,
       },
     ],
-    "no-self-compare": ERROR,
-    "no-setter-return": ERROR /* tsc */,
-    "no-sparse-arrays": ERROR,
-    "no-template-curly-in-string": ERROR,
-    "no-this-before-super": ERROR /* tsc */,
-    "no-undef": ERROR /* tsc */,
-    "no-unexpected-multiline": ERROR,
-    "no-unmodified-loop-condition": ERROR,
-    "no-unreachable": ERROR /* tsc */,
+    "no-self-compare": ON,
+    "no-setter-return": ON /* tsc */,
+    "no-sparse-arrays": ON,
+    "no-template-curly-in-string": ON,
+    "no-this-before-super": ON /* tsc */,
+    "no-undef": ON /* tsc */,
+    "no-unexpected-multiline": ON,
+    "no-unmodified-loop-condition": ON,
+    "no-unreachable": ON /* tsc */,
     "no-unreachable-loop": [
-      ERROR,
+      ON,
       {
         ignore: [] /* WhileStatement, DoWhileStatement, ForStatement, ForInStatement, ForOfStatement */,
       },
     ],
-    "no-unsafe-finally": ERROR,
+    "no-unsafe-finally": ON,
     "no-unsafe-negation": [
-      ERROR,
+      ON,
       {
         enforceForOrderingRelations: true,
       },
     ] /* tsc */,
     "no-unsafe-optional-chaining": [
-      ERROR,
+      ON,
       {
         disallowArithmeticOperators: true,
       },
     ],
-    "no-unused-private-class-members": ERROR,
+    "no-unused-private-class-members": ON,
     "no-unused-vars": [
-      ERROR,
+      ON,
       {
         vars: all,
         args: all,
@@ -156,7 +156,7 @@ export const Enable = {
       },
     ] /* TSLint */,
     "no-use-before-define": [
-      ERROR,
+      ON,
       {
         functions: true,
         classes: true,
@@ -164,23 +164,23 @@ export const Enable = {
         allowNamedExports: false,
       },
     ] /* TSLint */,
-    "no-useless-assignment": ERROR,
-    "no-useless-backreference": ERROR,
+    "no-useless-assignment": ON,
+    "no-useless-backreference": ON,
     "require-atomic-updates": [
-      ERROR,
+      ON,
       {
         allowProperties: false,
       },
     ],
     "use-isnan": [
-      ERROR,
+      ON,
       {
         enforceForSwitchCase: true,
         enforceForIndexOf: true,
       },
     ],
     "valid-typeof": [
-      ERROR,
+      ON,
       {
         requireStringLiterals: true,
       },
@@ -191,7 +191,7 @@ export const Enable = {
     // #region SUGGESTIONS
     // [ https://eslint.org/docs/latest/rules/#suggestions ]
     "accessor-pairs": [
-      ERROR,
+      ON,
       {
         setWithoutGet: true,
         getWithoutSet: false,
@@ -199,39 +199,39 @@ export const Enable = {
       },
     ],
     "arrow-body-style": [
-      ERROR,
+      ON,
       as_needed,
       {
         requireReturnForObjectLiteral: true,
       },
     ],
-    "block-scoped-var": ERROR,
+    "block-scoped-var": ON,
     camelcase: OFF /* preference */,
     "capitalized-comments": OFF /* preference */,
     "class-methods-use-this": OFF /* preference -- TSLint */,
     complexity: OFF /* preference */,
     "consistent-return": [
-      ERROR,
+      ON,
       {
         treatUndefinedAsUnspecified: false,
       },
     ] /* tsc -- TSLint:off: tsconfig: noImplicitReturns */,
-    "consistent-this": ERROR,
+    "consistent-this": ON,
     curly: [
-      ERROR,
+      ON,
       multi,
     ],
     "default-case": OFF /* preference: don't care */,
-    "default-case-last": ERROR,
-    "default-param-last": ERROR /* TSLint */,
+    "default-case-last": ON,
+    "default-param-last": ON /* TSLint */,
     "dot-notation": [
-      ERROR,
+      ON,
       {
         allowKeywords: true,
       },
     ] /* TSLint */,
     eqeqeq: [
-      ERROR,
+      ON,
       always,
     ],
     "func-name-matching": OFF /* preference */,
@@ -243,11 +243,11 @@ export const Enable = {
     "id-length": OFF /* preference */,
     "id-match": OFF /* preference */,
     "init-declarations": [
-      ERROR,
+      ON,
       always,
     ] /* TSLint */,
     "logical-assignment-operators": [
-      ERROR,
+      ON,
       always,
       {
         enforceForIfStatements: true,
@@ -262,65 +262,65 @@ export const Enable = {
     "max-statements": OFF /* preference */,
     "multiline-comment-style": OFF /* preference */,
     "new-cap": OFF /* preference -- breaks Scriptable */,
-    "no-alert": ERROR,
-    "no-array-constructor": ERROR /* TSLint */,
+    "no-alert": ON,
+    "no-array-constructor": ON /* TSLint */,
     "no-bitwise": [
-      ERROR,
+      ON,
       {
         allow: [],
         int32Hint: true,
       },
     ],
-    "no-caller": ERROR,
-    "no-case-declarations": ERROR,
+    "no-caller": ON,
+    "no-case-declarations": ON,
     "no-console": OFF /* preference -- breaks Node.js console applications and Scriptable, and otherwise unnecessarily hampers browser test code */,
-    "no-continue": ERROR,
-    "no-delete-var": ERROR,
-    "no-div-regex": ERROR,
+    "no-continue": ON,
+    "no-delete-var": ON,
+    "no-div-regex": ON,
     "no-else-return": OFF /* preference */,
     "no-empty": [
-      ERROR,
+      ON,
       {
         allowEmptyCatch: false,
       },
     ],
     "no-empty-function": [
-      ERROR,
+      ON,
       {
         allow:
          ["constructors"] /**  functions, arrowFunctions, generatorFunctions, methods, generatorMethods, getters, setters, constructors, asyncFunctions, asyncMethods; TS-ONLY: private-constructors, protected-constructors, decoratedFunctions, overrideMethods  */,
       },
     ] /* TSLint */,
-    "no-empty-static-block": ERROR,
-    "no-eq-null": ERROR,
+    "no-empty-static-block": ON,
+    "no-eq-null": ON,
     "no-eval": [
-      ERROR,
+      ON,
       {
         allowIndirect: false,
       },
     ],
     "no-extend-native": [
-      ERROR,
+      ON,
       {
         exceptions: [],
       },
     ],
-    "no-extra-bind": ERROR,
+    "no-extra-bind": ON,
     "no-extra-boolean-cast": [
-      ERROR,
+      ON,
       {
         enforceForLogicalOperands: true,
       },
     ],
-    "no-extra-label": ERROR,
+    "no-extra-label": ON,
     "no-global-assign": [
-      ERROR,
+      ON,
       {
         exceptions: [],
       },
     ],
     "no-implicit-coercion": [
-      ERROR,
+      ON,
       {
         "boolean": true,
         number: true,
@@ -330,36 +330,36 @@ export const Enable = {
       },
     ],
     "no-implicit-globals": OFF /* investigate (breaks Scriptable? breaks Sveltekit?) */,
-    "no-implied-eval": ERROR /* TSLint */,
+    "no-implied-eval": ON /* TSLint */,
     "no-inline-comments": OFF /* preference */,
     "no-invalid-this": [
-      ERROR,
+      ON,
       { capIsConstructor: false },
     ] /* TSLint:off: tsconfig: { strict, noImplicitThis } */,
-    "no-iterator": ERROR,
-    "no-label-var": ERROR,
-    "no-lone-blocks": ERROR,
+    "no-iterator": ON,
+    "no-label-var": ON,
+    "no-lone-blocks": ON,
     "no-lonely-if": OFF /* preference */,
-    "no-loop-func": ERROR /* TSLint */,
+    "no-loop-func": ON /* TSLint */,
     "no-magic-numbers": OFF /* preference - breaks TypeScript number literals, even with most liberal exceptions */,
     "no-multi-assign": [
-      ERROR,
+      ON,
       {
         ignoreNonDeclaration: false,
       },
     ],
-    "no-multi-str": ERROR,
+    "no-multi-str": ON,
     "no-negated-condition": OFF /* preference */,
     "no-nested-ternary": OFF /* preference */,
-    "no-new": ERROR,
-    "no-new-func": ERROR,
-    "no-new-wrappers": ERROR,
-    "no-nonoctal-decimal-escape": ERROR,
-    "no-object-constructor": ERROR,
-    "no-octal": ERROR,
-    "no-octal-escape": ERROR,
+    "no-new": ON,
+    "no-new-func": ON,
+    "no-new-wrappers": ON,
+    "no-nonoctal-decimal-escape": ON,
+    "no-object-constructor": ON,
+    "no-octal": ON,
+    "no-octal-escape": ON,
     "no-param-reassign": [
-      ERROR,
+      ON,
       {
         props: true,
         ignorePropertyModificationsFor: [],
@@ -367,14 +367,14 @@ export const Enable = {
       },
     ],
     "no-plusplus": [
-      ERROR,
+      ON,
       {
         allowForLoopAfterthoughts: true,
       },
     ],
-    "no-proto": ERROR,
+    "no-proto": ON,
     "no-redeclare": [
-      ERROR,
+      ON,
       { builtinGlobals: true },
     ] /* tsc -- TSLint:off: tsc (let, const, -var) */,
     "no-regex-spaces": OFF /* preference */,
@@ -384,28 +384,28 @@ export const Enable = {
     "no-restricted-properties": OFF /* preference */,
     "no-restricted-syntax": OFF /* preference */,
     "no-return-assign": OFF /* "always" | "except-parens" (disallow assignments unless enclosed in parens) */,
-    "no-script-url": ERROR,
+    "no-script-url": ON,
     "no-sequences": [
-      ERROR,
+      ON,
       {
         allowInParentheses: true,
       },
     ],
     "no-shadow": OFF /* investigate -- TSLint:off: investigate */,
-    "no-shadow-restricted-names": ERROR,
+    "no-shadow-restricted-names": ON,
     "no-ternary": OFF /* preference */,
-    "no-throw-literal": ERROR /* TSLint */,
-    "no-undef-init": ERROR,
+    "no-throw-literal": ON /* TSLint */,
+    "no-undef-init": ON,
     "no-undefined": OFF /* investigate (breaks Scriptable? breaks Sveltekit?) */,
     "no-underscore-dangle": OFF /* preference */,
     "no-unneeded-ternary": [
-      ERROR,
+      ON,
       {
         defaultAssignment: false,
       },
     ],
     "no-unused-expressions": [
-      ERROR,
+      ON,
       {
         allowShortCircuit: true,
         allowTernary: true,
@@ -413,39 +413,39 @@ export const Enable = {
         enforceForJSX: false,
       },
     ] /* TSLint */,
-    "no-unused-labels": ERROR,
-    "no-useless-call": ERROR,
-    "no-useless-catch": ERROR,
+    "no-unused-labels": ON,
+    "no-useless-call": ON,
+    "no-useless-catch": ON,
     "no-useless-computed-key": [
-      ERROR,
+      ON,
       {
         enforceForClassMembers: true,
       },
     ],
-    "no-useless-concat": ERROR,
-    "no-useless-constructor": ERROR /* TSLint */,
-    "no-useless-escape": ERROR,
+    "no-useless-concat": ON,
+    "no-useless-constructor": ON /* TSLint */,
+    "no-useless-escape": ON,
     "no-useless-rename": [
-      ERROR,
+      ON,
       {
         ignoreImport: false,
         ignoreExport: false,
         ignoreDestructuring: false,
       },
     ],
-    "no-useless-return": ERROR,
-    "no-var": ERROR,
+    "no-useless-return": ON,
+    "no-var": ON,
     "no-void": [
-      ERROR,
+      ON,
       {
         allowAsStatement: true,
 
       },
     ],
     "no-warning-comments": OFF /* preference */,
-    "no-with": ERROR,
+    "no-with": ON,
     "object-shorthand": [
-      ERROR,
+      ON,
       always,
       {
         avoidQuotes: true,
@@ -454,7 +454,7 @@ export const Enable = {
       },
     ],
     "one-var": [
-      ERROR,
+      ON,
       {
         "var": consecutive,
         let: consecutive,
@@ -463,25 +463,25 @@ export const Enable = {
       },
     ],
     "operator-assignment": [
-      ERROR,
+      ON,
       always,
     ],
     "prefer-arrow-callback": [
-      ERROR,
+      ON,
       {
         allowNamedFunctions: false,
         allowUnboundThis: true,
       },
     ],
     "prefer-const": [
-      ERROR,
+      ON,
       {
         destructuring: all,
         ignoreReadBeforeAssign: false,
       },
     ],
     "prefer-destructuring": [
-      ERROR,
+      ON,
       {
         VariableDeclarator: {
           array: true,
@@ -494,41 +494,41 @@ export const Enable = {
       },
       { enforceForRenamedProperties: true },
     ] /* TSLint */,
-    "prefer-exponentiation-operator": ERROR,
+    "prefer-exponentiation-operator": ON,
     "prefer-named-capture-group": OFF,
-    "prefer-numeric-literals": ERROR,
-    "prefer-object-has-own": ERROR,
-    "prefer-object-spread": ERROR,
+    "prefer-numeric-literals": ON,
+    "prefer-object-has-own": ON,
+    "prefer-object-spread": ON,
     "prefer-promise-reject-errors": [
-      ERROR,
+      ON,
       {
         allowEmptyReject: false,
       },
     ],
     "prefer-regex-literals": [
-      ERROR,
+      ON,
       {
         disallowRedundantWrapping: true,
       },
     ] /* TSLint */,
-    "prefer-rest-params": ERROR,
-    "prefer-spread": ERROR,
-    "prefer-template": ERROR,
+    "prefer-rest-params": ON,
+    "prefer-spread": ON,
+    "prefer-template": ON,
     radix: [
-      ERROR,
+      ON,
       as_needed,
     ],
-    "require-await": ERROR /* TSLint */,
-    "require-unicode-regexp": ERROR,
-    "require-yield": ERROR,
+    "require-await": ON /* TSLint */,
+    "require-unicode-regexp": ON,
+    "require-yield": ON,
     "sort-imports": OFF /* preference */,
     "sort-keys": OFF /* preference */,
     "sort-vars": OFF /* preference */,
     strict: OFF /* preference */,
     "symbol-description": OFF /* preference */,
-    "vars-on-top": ERROR,
+    "vars-on-top": ON,
     yoda: [
-      ERROR,
+      ON,
       never,
       {
         exceptRange: false,

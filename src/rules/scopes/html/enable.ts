@@ -1,6 +1,6 @@
 import {
   ID,
-  ERROR,
+  ON,
   OFF,
   never,
 } from "../../strings";
@@ -10,42 +10,42 @@ export const HtmlEnable = {
   rules: {
   // #region BEST PRACTICE
   // DOC: https://html-eslint.org/docs/rules#best-practice
-    "@html-eslint/no-duplicate-attrs": ERROR,
-    "@html-eslint/no-duplicate-id": ERROR,
+    "@html-eslint/no-duplicate-attrs": ON,
+    "@html-eslint/no-duplicate-id": ON,
     "@html-eslint/no-extra-spacing-text": [
-      ERROR,
+      ON,
       {
         skip: [],
       },
     ],
     "@html-eslint/no-inline-styles": OFF /* @CONFLICT: breaks Svele app.html */,
-    "@html-eslint/no-nested-interactive": ERROR,
-    "@html-eslint/no-obsolete-tags": ERROR,
+    "@html-eslint/no-nested-interactive": ON,
+    "@html-eslint/no-obsolete-tags": ON,
     "@html-eslint/no-restricted-attr-values": OFF,
     "@html-eslint/no-restricted-attrs": OFF,
     "@html-eslint/no-script-style-type": OFF,
-    "@html-eslint/no-target-blank": ERROR,
+    "@html-eslint/no-target-blank": ON,
     "@html-eslint/prefer-https": OFF /* @CONFLICT: not everything is https */,
     "@html-eslint/require-attrs": OFF,
-    "@html-eslint/require-button-type": ERROR,
+    "@html-eslint/require-button-type": ON,
     "@html-eslint/require-closing-tags": [
-      ERROR,
+      ON,
       {
         selfClosing: never,
         selfClosingCustomPatterns: [""] /* @CONFIGURE: regex[] = custom pattern */,
       },
     ],
-    "@html-eslint/require-doctype": ERROR,
+    "@html-eslint/require-doctype": ON,
     "@html-eslint/require-explicit-size": OFF /* preference, prefer using css */,
-    "@html-eslint/require-li-container": ERROR,
-    "@html-eslint/require-meta-charset": ERROR,
+    "@html-eslint/require-li-container": ON,
+    "@html-eslint/require-meta-charset": ON,
 
     // #endregion BEST PRACTICE
 
     // #region SEO
     // DOC: https://html-eslint.org/docs/rules#seo
-    "@html-eslint/no-multiple-h1": ERROR,
-    "@html-eslint/require-lang": ERROR,
+    "@html-eslint/no-multiple-h1": ON,
+    "@html-eslint/require-lang": ON,
     "@html-eslint/require-meta-description": OFF /* @CONFLICT: breaks Svelte which leaves meta descriptions to route leaves */,
     "@html-eslint/require-open-graph-protocol": OFF /* idk what this is, also it probably breaks Svelte */,
     "@html-eslint/require-title": OFF /* @CONFLICT: breaks Svelte which leaves title to route leaves */,
@@ -54,24 +54,24 @@ export const HtmlEnable = {
 
     // #region ACCESSIBILITY
     // DOC: https://html-eslint.org/docs/rules#accessibility
-    "@html-eslint/no-abstract-roles": ERROR,
-    "@html-eslint/no-accesskey-attrs": ERROR,
-    "@html-eslint/no-aria-hidden-body": ERROR,
-    "@html-eslint/no-heading-inside-button": ERROR,
-    "@html-eslint/no-invalid-role": ERROR,
-    "@html-eslint/no-non-scalable-viewport": ERROR,
-    "@html-eslint/no-positive-tabindex": ERROR,
-    "@html-eslint/no-skip-heading-levels": ERROR,
-    "@html-eslint/require-form-method": ERROR,
-    "@html-eslint/require-frame-title": ERROR,
+    "@html-eslint/no-abstract-roles": ON,
+    "@html-eslint/no-accesskey-attrs": ON,
+    "@html-eslint/no-aria-hidden-body": ON,
+    "@html-eslint/no-heading-inside-button": ON,
+    "@html-eslint/no-invalid-role": ON,
+    "@html-eslint/no-non-scalable-viewport": ON,
+    "@html-eslint/no-positive-tabindex": ON,
+    "@html-eslint/no-skip-heading-levels": ON,
+    "@html-eslint/require-form-method": ON,
+    "@html-eslint/require-frame-title": ON,
     "@html-eslint/require-img-alt": [
-      ERROR,
+      ON,
       {
         substitute: [],
       },
     ],
-    "@html-eslint/require-input-label": ERROR,
-    "@html-eslint/require-meta-viewport": ERROR,
+    "@html-eslint/require-input-label": ON,
+    "@html-eslint/require-meta-viewport": ON,
 
     // #endregion ACCESSIBILITY
 
@@ -80,14 +80,14 @@ export const HtmlEnable = {
 
     // #endregion STYLE
     "@html-eslint/attrs-newline": [
-      ERROR,
+      ON,
       {
         ifAttrsMoreThan: 0,
         closeStyle: "newline",
       },
     ],
     "@html-eslint/element-newline": [
-      ERROR,
+      ON,
       {
         skip: ["head"],
         inline: ["$inline"],
@@ -95,13 +95,13 @@ export const HtmlEnable = {
     ],
     "@html-eslint/id-naming-convention": OFF,
     "@html-eslint/indent": [
-      ERROR,
+      ON,
       2,
     ] /* @CONFIGURE: indents for specific child tags: https://html-eslint.org/docs/rules/indent */,
-    "@html-eslint/lowercase": ERROR,
+    "@html-eslint/lowercase": ON,
     "@html-eslint/max-element-depth": OFF /* @preference: simply do not care */,
     "@html-eslint/no-extra-spacing-attrs": [
-      ERROR,
+      ON,
       {
         enforceBeforeSelfClose: false,
         disallowMissing: true,
@@ -110,14 +110,14 @@ export const HtmlEnable = {
       },
     ],
     "@html-eslint/no-multiple-empty-lines": [
-      ERROR,
+      ON,
       {
         max: 1,
       },
     ],
-    "@html-eslint/no-trailing-spaces": ERROR,
+    "@html-eslint/no-trailing-spaces": ON,
     "@html-eslint/quotes": [
-      ERROR,
+      ON,
       "double",
     ],
     "@html-eslint/sort-attrs": OFF,
