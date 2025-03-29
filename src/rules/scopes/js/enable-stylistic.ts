@@ -215,10 +215,6 @@ export const EnableStylistic = {
       },
     ],
     "@stylistic/line-comment-position": OFF,
-    "@stylistic/linebreak-style": [
-      ON,
-      "unix",
-    ],
     "@stylistic/lines-around-comment": OFF,
     "@stylistic/lines-between-class-members": [
       ON,
