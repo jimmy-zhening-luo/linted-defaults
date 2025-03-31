@@ -448,6 +448,7 @@ export const TsEnable = {
         allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing: false,
         ignoreBooleanCoercion: false,
         ignoreConditionalTests: false,
+        ignoreIfStatements: false,
         ignoreMixedLogicalExpressions: false,
         ignorePrimitives: {
           bigint: false,
