@@ -11,7 +11,7 @@ export const CssEnable = {
     "css/no-duplicate-imports": ON,
     "css/no-empty-blocks": ON,
     "css/no-invalid-at-rules": ON,
-    "css/no-invalid-properties": OFF /* BUG: disabled with PREJUDICE (see commit: ) */,
+    "css/no-invalid-properties": OFF /* BUG: disabled with PREJUDICE (see commit: https://github.com/jimmy-zhening-luo/linted-defaults/commit/702e6632328813e84df92cade730469661ee85db) */,
     "css/prefer-logical-properties": [
       ON,
       {
