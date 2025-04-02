@@ -11,7 +11,7 @@ export const CssEnable = {
     "css/no-duplicate-imports": ON,
     "css/no-empty-blocks": ON,
     "css/no-invalid-at-rules": ON,
-    "css/no-invalid-properties": ON,
+    "css/no-invalid-properties": OFF /* BUG: disabled with PREJUDICE (see commit: ) */,
     "css/prefer-logical-properties": [
       ON,
       {
