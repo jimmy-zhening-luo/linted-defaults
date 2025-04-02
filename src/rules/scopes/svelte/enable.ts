@@ -111,6 +111,7 @@ export const SvelteEnable = {
         checkImportedTypes: true,
         ignorePropertyPatterns: [],
         ignoreTypePatterns: [],
+        allowUnusedNestedProperties: false,
       },
     ],
     "svelte/no-unused-svelte-ignore": ON,
