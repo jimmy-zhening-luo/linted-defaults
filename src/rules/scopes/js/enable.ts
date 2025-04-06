@@ -53,7 +53,7 @@ export const Enable = {
     "no-control-regex": ON,
     "no-debugger": ON,
     "no-dupe-args": ON /* tsc */,
-    "no-dupe-class-members": ON /* tsc -- TSLint:off: tsc */,
+    "no-dupe-class-members": ON /* tsc -- TSLint:OFF: tsc */,
     "no-dupe-else-if": ON,
     "no-dupe-keys": ON /* tsc */,
     "no-duplicate-case": ON,
@@ -215,7 +215,7 @@ export const Enable = {
       {
         treatUndefinedAsUnspecified: false,
       },
-    ] /* tsc -- TSLint:off: tsconfig: noImplicitReturns */,
+    ] /* tsc -- TSLint:OFF: tsconfig: noImplicitReturns */,
     "consistent-this": ON,
     curly: [
       ON,
@@ -258,7 +258,7 @@ export const Enable = {
     "max-lines": OFF /* preference */,
     "max-lines-per-function": OFF /* preference */,
     "max-nested-callbacks": OFF /* preference */,
-    "max-params": OFF /* preference -- TSLint:off: preference */,
+    "max-params": OFF /* preference -- TSLint:OFF: preference */,
     "max-statements": OFF /* preference */,
     "multiline-comment-style": OFF /* preference */,
     "new-cap": OFF /* preference -- breaks Scriptable */,
@@ -335,7 +335,7 @@ export const Enable = {
     "no-invalid-this": [
       ON,
       { capIsConstructor: false },
-    ] /* TSLint:off: tsconfig: { strict, noImplicitThis } */,
+    ] /* TSLint:OFF: tsconfig: { strict, noImplicitThis } */,
     "no-iterator": ON,
     "no-label-var": ON,
     "no-lone-blocks": ON,
@@ -376,11 +376,11 @@ export const Enable = {
     "no-redeclare": [
       ON,
       { builtinGlobals: true },
-    ] /* tsc -- TSLint:off: tsc (let, const, -var) */,
+    ] /* tsc -- TSLint:OFF: tsc (let, const, -var) */,
     "no-regex-spaces": OFF /* preference */,
     "no-restricted-exports": OFF /* preference */,
     "no-restricted-globals": OFF /* preference */,
-    "no-restricted-imports": OFF /* preference -- TSLint:off */,
+    "no-restricted-imports": OFF /* preference -- TSLint:OFF */,
     "no-restricted-properties": OFF /* preference */,
     "no-restricted-syntax": OFF /* preference */,
     "no-return-assign": OFF /* "always" | "except-parens" (disallow assignments unless enclosed in parens) */,
@@ -391,7 +391,7 @@ export const Enable = {
         allowInParentheses: true,
       },
     ],
-    "no-shadow": OFF /* investigate -- TSLint:off: investigate */,
+    "no-shadow": OFF /* investigate -- TSLint:OFF: investigate */,
     "no-shadow-restricted-names": ON,
     "no-ternary": OFF /* preference */,
     "no-throw-literal": ON /* TSLint */,
@@ -439,7 +439,6 @@ export const Enable = {
       ON,
       {
         allowAsStatement: true,
-
       },
     ],
     "no-warning-comments": OFF /* preference */,
