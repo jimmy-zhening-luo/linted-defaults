@@ -208,7 +208,7 @@ export const Enable = {
     "block-scoped-var": ON,
     camelcase: OFF /* preference */,
     "capitalized-comments": OFF /* preference */,
-    "class-methods-use-this": OFF /* preference -- TSLint */,
+    "class-methods-use-this": OFF /* TS-capable; (preference) */,
     complexity: OFF /* preference */,
     "consistent-return": [
       ON,
@@ -223,7 +223,7 @@ export const Enable = {
     ],
     "default-case": OFF /* preference: don't care */,
     "default-case-last": ON,
-    "default-param-last": ON /* TSLint */,
+    "default-param-last": ON /* TS-capable */,
     "dot-notation": [
       ON,
       {
@@ -423,7 +423,7 @@ export const Enable = {
       },
     ],
     "no-useless-concat": ON,
-    "no-useless-constructor": ON /* TSLint */,
+    "no-useless-constructor": ON /* TS-capable */,
     "no-useless-escape": ON,
     "no-useless-rename": [
       ON,
