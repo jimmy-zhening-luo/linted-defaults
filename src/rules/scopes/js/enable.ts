@@ -15,8 +15,8 @@ import {
 export const Enable = {
   id: ID.Enable,
   rules: {
-  // #region PROBLEMS
-  // DOC: https://eslint.org/docs/latest/rules/#possible-problems
+    // #region PROBLEMS
+    // DOC: https://eslint.org/docs/latest/rules/#possible-problems
     "array-callback-return": [
       ON,
       {
@@ -53,7 +53,7 @@ export const Enable = {
     "no-control-regex": ON,
     "no-debugger": ON,
     "no-dupe-args": ON /* tsc */,
-    "no-dupe-class-members": ON /* tsc -- TSLint:OFF: tsc */,
+    "no-dupe-class-members": ON /* TS-capable BUT tsc */,
     "no-dupe-else-if": ON,
     "no-dupe-keys": ON /* tsc */,
     "no-duplicate-case": ON,
@@ -98,7 +98,7 @@ export const Enable = {
         skipJSXText: true,
       },
     ],
-    "no-loss-of-precision": ON /* TSLint */,
+    "no-loss-of-precision": ON /* TS-capable, originally had TSLint rule but was deprecated */,
     "no-misleading-character-class": ON,
     "no-new-native-nonconstructor": ON,
     "no-obj-calls": ON /* tsc */,
@@ -185,8 +185,7 @@ export const Enable = {
         requireStringLiterals: true,
       },
     ],
-
-    // #endregion PROBLEMS
+    // #endregion
 
     // #region SUGGESTIONS
     // [ https://eslint.org/docs/latest/rules/#suggestions ]
@@ -245,7 +244,7 @@ export const Enable = {
     "init-declarations": [
       ON,
       always,
-    ] /* TSLint */,
+    ] /* TS-capable */,
     "logical-assignment-operators": [
       ON,
       always,
@@ -263,7 +262,7 @@ export const Enable = {
     "multiline-comment-style": OFF /* preference */,
     "new-cap": OFF /* preference -- breaks Scriptable */,
     "no-alert": ON,
-    "no-array-constructor": ON /* TSLint */,
+    "no-array-constructor": ON /* TS-capable */,
     "no-bitwise": [
       ON,
       {
@@ -534,13 +533,11 @@ export const Enable = {
         onlyEquality: false,
       },
     ],
+    // #endregion
 
-    // #endregion SUGGESTIONS
-
-    // #region LAYOUT & FORMATTING
+    // #region FORMATTING
     // [ https://eslint.org/docs/latest/rules/#layout--formatting ]
     "unicode-bom": OFF /* preference: don't care */,
-
-  // #endregion LAYOUT & FORMATTING
+    // #endregion
   } as const,
 } as const;

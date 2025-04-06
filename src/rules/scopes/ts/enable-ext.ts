@@ -9,9 +9,9 @@ import {
 export const TsEnableExtension = {
   id: ID.EnableExtension,
   rules: {
-  // DOC: https://typescript-eslint.io/rules/?=extension-xdeprecated#rules
+    // DOC: https://typescript-eslint.io/rules/?=extension-xdeprecated#rules
     // "@typescript-eslint/class-methods-use-this": OFF /* ESLint now supports TS (preference -- eslint:OFF) */,
-    "@typescript-eslint/consistent-return": OFF /* tsconfig: noImplicitReturns */,
+    // "@typescript-eslint/consistent-return": OFF /* tsc: noImplicitReturns */,
     // "@typescript-eslint/default-param-last": OFF /* ESLint now supports TS */,
     "@typescript-eslint/dot-notation": [
       ON,
@@ -24,13 +24,10 @@ export const TsEnableExtension = {
         allowIndexSignaturePropertyAccess: true,
       },
     ],
-    "@typescript-eslint/init-declarations": [
-      ON,
-      always,
-    ],
+    // "@typescript-eslint/init-declarations": OFF /* ESLint now supports TS */,
     "@typescript-eslint/max-params": OFF /* preference */,
-    "@typescript-eslint/no-array-constructor": ON,
-    "@typescript-eslint/no-dupe-class-members": OFF /* tsc */,
+    // "@typescript-eslint/no-array-constructor": OFF /* ESLint now supports TS */,
+    // "@typescript-eslint/no-dupe-class-members": OFF /* tsc, although ESLint now supports TS */,
     "@typescript-eslint/no-empty-function": [
       ON,
       {
@@ -43,10 +40,10 @@ export const TsEnableExtension = {
       }, /* functions, arrowFunctions, generatorFunctions, methods, generatorMethods, getters, setters, constructors, asyncFunctions, asyncMethods; TS-ONLY: private-constructors, protected-constructors, decoratedFunctions, overrideMethods */
     ],
     "@typescript-eslint/no-implied-eval": ON,
-    "@typescript-eslint/no-invalid-this": OFF /* tsconfig: { strict, noImplicitThis } */,
+    // "@typescript-eslint/no-invalid-this": OFF /* tsc: { strict, noImplicitThis } */,
     "@typescript-eslint/no-loop-func": ON,
-    "@typescript-eslint/no-magic-numbers": OFF,
-    "@typescript-eslint/no-redeclare": OFF /* tsc (let, const, -var) */,
+    "@typescript-eslint/no-magic-numbers": OFF /* preference */,
+    // "@typescript-eslint/no-redeclare": OFF /* tsc (let, const, -var) */,
     "@typescript-eslint/no-restricted-imports": OFF /* preference */,
     "@typescript-eslint/no-shadow": OFF /* investigate */,
     "@typescript-eslint/no-unused-expressions": [
