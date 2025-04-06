@@ -39,8 +39,7 @@ export const HtmlEnable = {
     "@html-eslint/require-explicit-size": OFF /* preference, prefer using css */,
     "@html-eslint/require-li-container": ON,
     "@html-eslint/require-meta-charset": ON,
-
-    // #endregion BEST PRACTICE
+    // #endregion
 
     // #region SEO
     // DOC: https://html-eslint.org/docs/rules#seo
@@ -49,8 +48,7 @@ export const HtmlEnable = {
     "@html-eslint/require-meta-description": OFF /* @CONFLICT: breaks Svelte which leaves meta descriptions to route leaves */,
     "@html-eslint/require-open-graph-protocol": OFF /* idk what this is, also it probably breaks Svelte */,
     "@html-eslint/require-title": OFF /* @CONFLICT: breaks Svelte which leaves title to route leaves */,
-
-    // #endregion SEO
+    // #endregion
 
     // #region ACCESSIBILITY
     // DOC: https://html-eslint.org/docs/rules#accessibility
@@ -72,13 +70,10 @@ export const HtmlEnable = {
     ],
     "@html-eslint/require-input-label": ON,
     "@html-eslint/require-meta-viewport": ON,
-
-    // #endregion ACCESSIBILITY
+    // #endregion
 
     // #region STYLE
     // DOC: https://html-eslint.org/docs/rules#style
-
-    // #endregion STYLE
     "@html-eslint/attrs-newline": [
       ON,
       {
@@ -121,5 +116,6 @@ export const HtmlEnable = {
       "double",
     ],
     "@html-eslint/sort-attrs": OFF,
+    // #endregion
   } as const,
 } as const;
