@@ -39,6 +39,12 @@ export const HtmlEnable = {
     "@html-eslint/require-explicit-size": OFF /* preference, prefer using css */,
     "@html-eslint/require-li-container": ON,
     "@html-eslint/require-meta-charset": ON,
+    "@html-eslint/use-baseline": [
+      ON,
+      {
+        available: "widely",
+      },
+    ],
     // #endregion
 
     // #region SEO
