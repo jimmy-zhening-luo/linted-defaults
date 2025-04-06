@@ -10,9 +10,9 @@ export const TsEnableExtension = {
   id: ID.EnableExtension,
   rules: {
   // DOC: https://typescript-eslint.io/rules/?=extension-xdeprecated#rules
-    "@typescript-eslint/class-methods-use-this": OFF /* preference -- eslint:off */,
+    // "@typescript-eslint/class-methods-use-this": OFF /* ESLint now supports TS (preference -- eslint:OFF) */,
     "@typescript-eslint/consistent-return": OFF /* tsconfig: noImplicitReturns */,
-    "@typescript-eslint/default-param-last": ON,
+    // "@typescript-eslint/default-param-last": OFF /* ESLint now supports TS */,
     "@typescript-eslint/dot-notation": [
       ON,
       {
@@ -81,7 +81,7 @@ export const TsEnableExtension = {
         ignoreTypeReferences: true,
       },
     ],
-    "@typescript-eslint/no-useless-constructor": ON,
+    // "@typescript-eslint/no-useless-constructor": OFF /* ESLint now supports TS */,
     "@typescript-eslint/only-throw-error": [
       ON,
       {

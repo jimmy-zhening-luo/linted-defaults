@@ -7,9 +7,9 @@ export const TsDisableExtension = {
   id: ID.DisableExtension,
   rules: {
   // DOC: https://typescript-eslint.io/rules/?=extension-xdeprecated#rules
-    "class-methods-use-this": OFF,
+    // "class-methods-use-this": OFF /* ESLint now supports TS */,
     "consistent-return": OFF,
-    "default-param-last": OFF,
+    // "default-param-last": OFF /* ESLint now supports TS */,
     "dot-notation": OFF,
     "init-declarations": OFF,
     "max-params": OFF,
@@ -27,7 +27,7 @@ export const TsDisableExtension = {
     "no-unused-expressions": OFF,
     "no-unused-vars": OFF,
     "no-use-before-define": OFF,
-    "no-useless-constructor": OFF,
+    // "no-useless-constructor": OFF /* ESLint now supports TS */,
     "prefer-destructuring": OFF,
     "prefer-promise-reject-errors": OFF,
     "require-await": OFF,
