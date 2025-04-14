@@ -1,4 +1,4 @@
-export const subfolders = [
+export const subdirectories = [
   "src",
   "tests",
   "static",

@@ -1,3 +1,3 @@
 import { CreateScope } from "../utility";
 
-export default CreateScope("*.{c,m,}js");
+export default CreateScope("{c,m,}js");

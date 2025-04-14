@@ -1,30 +1,48 @@
-import { projects, subfolders } from "./paths";
+import * as common from "./paths";
 
 export function CreateScope(
-  files: string,
+  extension: string,
   {
-    projects: moreProjects = [],
-    subfolders: moreSubfolders = [],
+    files = [],
+    subdirectories = [],
     paths = [],
     custom = [],
-  }: {
-    projects?: string[];
-    subfolders?: string[];
-    paths?: string[];
-    custom?: string[];
-  } = {},
+  }: Partial<Record<
+    | "files"
+    | "subdirectories"
+    | "paths"
+    | "custom"
+    ,
+    string[]
+  >> = {},
 ) {
-  function globOr(paths: string[], more: string[] = []) {
-    return [...paths, ...more].join(",");
+  function glob(
+    common: string[],
+    scoped: string[] = [],
+  ) {
+    const elements = [
+      ...common,
+      ...scoped,
+    ]
+      .join(",");
+
+    return elements.includes(",") || elements.startsWith(".")
+      ? `{${elements}}`
+      : elements;
   }
+
+  const leaves = glob(
+    [`*.${extension}`],
+    files,
+  );
 
   return [
     ...[
       "",
-      `{${globOr(projects, moreProjects)}}{${globOr(subfolders, moreSubfolders)}}/**/`,
+      `${glob(common.roots)}${glob(common.subdirectories, subdirectories)}/**/`,
       ...paths.map(path => `${path}/`),
     ]
-      .map(glob => `${glob}${files}`),
+      .map(branch => `${branch}${leaves}`),
     ...custom,
   ];
 }

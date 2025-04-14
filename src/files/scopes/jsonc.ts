@@ -1,8 +1,9 @@
 import { CreateScope } from "../utility";
 
 export default CreateScope(
-  "{*.jsonc,tsconfig.json}",
+  "{jsonc,code-snippets}",
   {
-    custom: ["{.vscode,code/*/.vscode}/**/*.{json,jsonc,code-snippets}"],
+    files: ["{tsconfig,.vscode/**/*}.json"],
+    subdirectories: [".vscode"],
   },
 );

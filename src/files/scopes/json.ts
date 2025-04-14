@@ -1,3 +1,3 @@
 import { CreateScope } from "../utility";
 
-export default CreateScope("*.json");
+export default CreateScope("json");

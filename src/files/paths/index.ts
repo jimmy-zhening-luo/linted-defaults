@@ -1,2 +1,2 @@
-export * from "./projects";
-export * from "./subfolders";
+export * from "./roots";
+export * from "./subdirectories";

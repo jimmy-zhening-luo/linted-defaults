@@ -1,3 +1,3 @@
 import { CreateScope } from "../utility";
 
-export default CreateScope("*.svelte");
+export default CreateScope("svelte");
