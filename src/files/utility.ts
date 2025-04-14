@@ -5,12 +5,10 @@ export function CreateScope(
   {
     filenames = [],
     subdirectories = [],
-    paths = [],
     custom = [],
   }: Partial<Record<
     | "filenames"
     | "subdirectories"
-    | "paths"
     | "custom",
     string[]
   >> = {},
