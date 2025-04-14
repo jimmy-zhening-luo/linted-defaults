@@ -17,7 +17,7 @@ export function CreateScope(
   >> = {},
 ) {
   function glob(
-    common: string[],
+    common: readonly string[],
     scoped: string[] = [],
   ) {
     const elements = [
