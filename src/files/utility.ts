@@ -50,9 +50,10 @@ export function CreateScope(
           ]
             .join(""),
         ),
-      ),
+      )
+        .flat(),
     )
-      .flat(Infinity),
+      .flat(),
     ...custom,
   ];
 }
