@@ -11,8 +11,7 @@ export function CreateScope(
     | "files"
     | "subdirectories"
     | "paths"
-    | "custom"
-    ,
+    | "custom",
     string[]
   >> = {},
 ) {
