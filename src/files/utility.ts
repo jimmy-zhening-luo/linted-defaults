@@ -1,4 +1,4 @@
-import * as common from "./paths";
+import * as common from "./common";
 
 export function CreateScope(
   extension: string,
