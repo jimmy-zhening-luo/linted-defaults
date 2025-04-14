@@ -3,12 +3,12 @@ import * as common from "./paths";
 export function CreateScope(
   extension: string,
   {
-    files = [],
+    filenames = [],
     subdirectories = [],
     paths = [],
     custom = [],
   }: Partial<Record<
-    | "files"
+    | "filenames"
     | "subdirectories"
     | "paths"
     | "custom",
@@ -19,29 +19,42 @@ export function CreateScope(
     common: readonly string[],
     scoped: string[] = [],
   ) {
-    const elements = [
-      ...common,
-      ...scoped,
-    ]
-      .join(",");
-
-    return elements.includes(",") || elements.startsWith(".")
-      ? `{${elements}}`
-      : elements;
+    return `{${
+      [
+        ...common,
+        ...scoped,
+      ]
+        .join(",")
+    }}`;
   }
 
-  const leaves = glob(
-    [`*.${extension}`],
-    files,
-  );
+  const { roots } = common,
+  branches = [
+    "",
+    `${glob(
+      common.subdirectories,
+      subdirectories,
+    )}/**/`,
+  ],
+  leaves = [
+    `*.${extension}`,
+    ...filenames,
+  ];
 
   return [
-    ...[
-      "",
-      `${glob(common.roots)}${glob(common.subdirectories, subdirectories)}/**/`,
-      ...paths.map(path => `${path}/`),
-    ]
-      .map(branch => `${branch}${leaves}`),
+    ...roots.map(
+      root => branches.map(
+        branch => leaves.map(
+          leaf => [
+            root,
+            branch,
+            leaf,
+          ]
+            .join(""),
+        ),
+      ),
+    )
+      .flat(Infinity),
     ...custom,
   ];
 }
