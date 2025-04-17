@@ -11,6 +11,7 @@ export const HtmlEnable = {
   // #region BEST PRACTICE
   // DOC: https://html-eslint.org/docs/rules#best-practice
     "@html-eslint/no-duplicate-attrs": ON,
+    "@html-eslint/no-duplicate-class": ON,
     "@html-eslint/no-duplicate-id": ON,
     "@html-eslint/no-extra-spacing-text": [
       ON,
@@ -42,7 +43,7 @@ export const HtmlEnable = {
     "@html-eslint/use-baseline": [
       ON,
       {
-        available: "widely",
+        available: "widely" /* "widely" | "newly" | integer (year) */,
       },
     ],
     // #endregion
