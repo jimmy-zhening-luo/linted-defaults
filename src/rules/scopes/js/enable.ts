@@ -286,10 +286,15 @@ export const Enable = {
     "no-empty-function": [
       ON,
       {
-        allow:
-         ["constructors"] /**  functions, arrowFunctions, generatorFunctions, methods, generatorMethods, getters, setters, constructors, asyncFunctions, asyncMethods; TS-ONLY: private-constructors, protected-constructors, decoratedFunctions, overrideMethods  */,
-      },
-    ] /* TSLint */,
+        allow: [
+          "constructors",
+          "privateConstructors",
+          "protectedConstructors",
+          "decoratedFunctions",
+          "overrideMethods",
+        ],
+      }, /* functions, arrowFunctions, generatorFunctions, methods, generatorMethods, getters, setters, constructors, asyncFunctions, asyncMethods; TS-ONLY: privateConstructors, protectedConstructors, decoratedFunctions, overrideMethods */
+    ] /* TS-capable */,
     "no-empty-static-block": ON,
     "no-eq-null": ON,
     "no-eval": [
@@ -334,12 +339,12 @@ export const Enable = {
     "no-invalid-this": [
       ON,
       { capIsConstructor: false },
-    ] /* TSLint:OFF: tsconfig: { strict, noImplicitThis } */,
+    ] /* TS-capable BUT tsc: TSLint:OFF: tsconfig: { strict, noImplicitThis } */,
     "no-iterator": ON,
     "no-label-var": ON,
     "no-lone-blocks": ON,
     "no-lonely-if": OFF /* preference */,
-    "no-loop-func": ON /* TSLint */,
+    "no-loop-func": ON /* TS-capable */,
     "no-magic-numbers": OFF /* preference - breaks TypeScript number literals, even with most liberal exceptions */,
     "no-multi-assign": [
       ON,
@@ -411,7 +416,7 @@ export const Enable = {
         allowTaggedTemplates: true,
         enforceForJSX: false,
       },
-    ] /* TSLint */,
+    ] /* TS-capable */,
     "no-unused-labels": ON,
     "no-useless-call": ON,
     "no-useless-catch": ON,

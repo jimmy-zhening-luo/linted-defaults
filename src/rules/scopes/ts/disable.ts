@@ -17,7 +17,7 @@ export const TsDisable = {
     "no-dupe-keys": OFF,
     "no-func-assign": OFF,
     "no-import-assign": OFF,
-    "no-invalid-this": OFF /* TSLint BUT tsc */,
+    "no-invalid-this": OFF /* TS-capable BUT tsc */,
     "no-new-native-nonconstructor": OFF,
     "no-obj-calls": OFF,
     "no-redeclare": OFF /* TSLint BUT tsc */,

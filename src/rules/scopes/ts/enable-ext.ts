@@ -27,33 +27,15 @@ export const TsEnableExtension = {
     "@typescript-eslint/max-params": OFF /* preference */,
     // "@typescript-eslint/no-array-constructor": OFF /* ESLint now supports TS */,
     // "@typescript-eslint/no-dupe-class-members": OFF /* tsc, although ESLint now supports TS */,
-    "@typescript-eslint/no-empty-function": [
-      ON,
-      {
-        allow: [
-          "constructors",
-          "private-constructors",
-          "protected-constructors",
-          "decoratedFunctions",
-        ],
-      }, /* functions, arrowFunctions, generatorFunctions, methods, generatorMethods, getters, setters, constructors, asyncFunctions, asyncMethods; TS-ONLY: private-constructors, protected-constructors, decoratedFunctions, overrideMethods */
-    ],
+    // "@typescript-eslint/no-empty-function": OFF /* ESLint now supports TS */,
     "@typescript-eslint/no-implied-eval": ON,
-    // "@typescript-eslint/no-invalid-this": OFF /* tsc: { strict, noImplicitThis } */,
-    "@typescript-eslint/no-loop-func": ON,
+    // "@typescript-eslint/no-invalid-this": OFF /* tsc: { strict, noImplicitThis }, although ESLint now supports TS */,
+    // "@typescript-eslint/no-loop-func": OFF /* ESLint now supports TS */,
     "@typescript-eslint/no-magic-numbers": OFF /* preference */,
     // "@typescript-eslint/no-redeclare": OFF /* tsc (let, const, -var) */,
     "@typescript-eslint/no-restricted-imports": OFF /* preference */,
     "@typescript-eslint/no-shadow": OFF /* investigate */,
-    "@typescript-eslint/no-unused-expressions": [
-      ON,
-      {
-        allowShortCircuit: true,
-        allowTernary: true,
-        allowTaggedTemplates: true,
-        enforceForJSX: false,
-      },
-    ],
+    // "@typescript-eslint/no-unused-expressions": OFF /* ESLint now supports TS (preference -- eslint:OFF) */,
     "@typescript-eslint/no-unused-vars": [
       ON,
       {
