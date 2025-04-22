@@ -405,6 +405,7 @@ export const TsEnable = {
     "@typescript-eslint/no-unnecessary-type-assertion": [
       ON,
       {
+        checkLiteralConstAssertions: false,
         typesToIgnore: [],
       },
     ],
