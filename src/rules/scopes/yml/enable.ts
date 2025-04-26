@@ -46,6 +46,7 @@ export const YmlEnable = {
       ON,
       2,
       {
+        alignMultilineFlowScalars: true /* @default: false */,
         indentBlockSequences: true,
         indicatorValueIndent: 2,
       },
