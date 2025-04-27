@@ -23,7 +23,7 @@ export const MochaEnable = {
       },
     ],
     "mocha/no-async-suite": ON,
-    "mocha/no-empty-description": ON,
+    "mocha/no-empty-title": ON,
     "mocha/no-exclusive-tests": ON,
     "mocha/no-exports": ON,
     "mocha/no-global-tests": ON,
