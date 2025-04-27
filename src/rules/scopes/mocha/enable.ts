@@ -1,7 +1,6 @@
 import {
   ID,
   ON,
-  WARN,
   OFF,
 } from "../../strings";
 
@@ -13,7 +12,7 @@ export const MochaEnable = {
     "mocha/handle-done-callback": [
       ON,
       {
-        ignoreSkipped: false,
+        ignorePending: false,
       },
     ],
     "mocha/max-top-level-suites": [
@@ -32,12 +31,11 @@ export const MochaEnable = {
     "mocha/no-identical-title": ON,
     "mocha/no-mocha-arrows": ON,
     "mocha/no-nested-tests": ON,
-    "mocha/no-pending-tests": WARN,
+    "mocha/no-pending-tests": ON,
     "mocha/no-return-and-callback": ON,
     "mocha/no-return-from-async": ON,
     "mocha/no-setup-in-describe": ON,
     "mocha/no-sibling-hooks": ON,
-    "mocha/no-skipped-tests": ON,
     "mocha/no-synchronous-tests": OFF,
     "mocha/no-top-level-hooks": ON,
     "mocha/prefer-arrow-callback": [
@@ -47,7 +45,7 @@ export const MochaEnable = {
         allowUnboundThis: true,
       },
     ] /* MUST match ../js/enable.ts */,
-    "mocha/valid-suite-description": OFF,
-    "mocha/valid-test-description": OFF,
+    "mocha/valid-suite-description": OFF /* preference */,
+    "mocha/valid-test-description": OFF /* preference */,
   } as const,
 } as const;
