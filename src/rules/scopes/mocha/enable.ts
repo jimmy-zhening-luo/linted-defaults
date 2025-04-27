@@ -8,6 +8,7 @@ export const MochaEnable = {
   id: ID.Enable,
   rules: {
   // DOC: https://github.com/lo1tuma/eslint-plugin-mocha/tree/main?tab=readme-ov-file#rules
+    "mocha/consistent-interface": OFF, /* unable, must choose BDD or TDD first */
     "mocha/consistent-spacing-between-blocks": OFF,
     "mocha/handle-done-callback": [
       ON,
@@ -21,7 +22,7 @@ export const MochaEnable = {
         limit: 1,
       },
     ],
-    "mocha/no-async-describe": ON,
+    "mocha/no-async-suite": ON,
     "mocha/no-empty-description": ON,
     "mocha/no-exclusive-tests": ON,
     "mocha/no-exports": ON,
@@ -45,7 +46,7 @@ export const MochaEnable = {
         allowUnboundThis: true,
       },
     ] /* MUST match ../js/enable.ts */,
-    "mocha/valid-suite-description": OFF /* preference */,
-    "mocha/valid-test-description": OFF /* preference */,
+    "mocha/valid-suite-title": OFF /* preference */,
+    "mocha/valid-test-title": OFF /* preference */,
   } as const,
 } as const;
