@@ -35,7 +35,7 @@ export const MochaEnable = {
     "mocha/no-pending-tests": ON,
     "mocha/no-return-and-callback": ON,
     "mocha/no-return-from-async": ON,
-    "mocha/no-setup-in-describe": ON,
+    "mocha/no-setup-in-describe": OFF /* pointless and arbitrary */,
     "mocha/no-sibling-hooks": ON,
     "mocha/no-synchronous-tests": OFF,
     "mocha/no-top-level-hooks": ON,
