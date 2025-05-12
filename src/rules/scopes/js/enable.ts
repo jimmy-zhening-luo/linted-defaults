@@ -396,7 +396,12 @@ export const Enable = {
       },
     ],
     "no-shadow": OFF /* investigate -- TSLint:OFF: investigate */,
-    "no-shadow-restricted-names": ON,
+    "no-shadow-restricted-names": [
+      ON,
+      {
+        reportGlobalThis: false,
+      },
+    ],
     "no-ternary": OFF /* preference */,
     "no-throw-literal": ON /* TSLint */,
     "no-undef-init": ON,
@@ -415,6 +420,7 @@ export const Enable = {
         allowTernary: true,
         allowTaggedTemplates: true,
         enforceForJSX: false,
+        ignoreDirectives: false,
       },
     ] /* TS-capable */,
     "no-unused-labels": ON,
