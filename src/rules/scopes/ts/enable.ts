@@ -410,6 +410,7 @@ export const TsEnable = {
       },
     ],
     "@typescript-eslint/no-unnecessary-type-constraint": ON,
+    "@typescript-eslint/no-unnecessary-type-conversion": ON,
     "@typescript-eslint/no-unnecessary-type-parameters": ON,
     "@typescript-eslint/no-unsafe-argument": ON,
     "@typescript-eslint/no-unsafe-assignment": ON,

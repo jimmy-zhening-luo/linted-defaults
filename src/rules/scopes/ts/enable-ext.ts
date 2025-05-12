@@ -63,6 +63,7 @@ export const TsEnableExtension = {
     "@typescript-eslint/only-throw-error": [
       ON,
       {
+        allowRethrowing: true,
         allowThrowingAny: false,
         allowThrowingUnknown: false,
       },
