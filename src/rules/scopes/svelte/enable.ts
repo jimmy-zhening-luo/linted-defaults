@@ -85,6 +85,7 @@ export const SvelteEnable = {
         reset: true,
       },
     ],
+    "svelte/no-add-event-listener": ON,
     "svelte/no-at-debug-tags": ON,
     "svelte/no-ignored-unsubscribe": ON,
     "svelte/no-immutable-reactive-statements": ON,
@@ -131,6 +132,7 @@ export const SvelteEnable = {
       },
     ] /* same options: prefer-const */,
     "svelte/prefer-destructured-store-props": ON,
+    "svelte/prefer-writable-derived": ON,
     "svelte/require-each-key": ON,
     "svelte/require-event-dispatcher-types": ON,
     "svelte/require-optimized-style-attribute": ON,
@@ -237,6 +239,12 @@ export const SvelteEnable = {
       },
     ],
     "svelte/prefer-style-directive": ON,
+    "svelte/require-event-prefix": [
+      ON,
+      {
+        checkAsyncFunctions: false,
+      },
+    ],
     "svelte/shorthand-attribute": [
       ON,
       {
