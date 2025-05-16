@@ -12,7 +12,7 @@ export const TsDisableExtension = {
     // "default-param-last": OFF /* ESLint now supports TS */,
     "dot-notation": OFF,
     // "init-declarations": OFF /* ESLint now supports TS */,
-    "max-params": OFF,
+    // "max-params": OFF /* ESLint now supports TS */,
     // "no-array-constructor": OFF /* ESLint now supports TS */,
     // "no-dupe-class-members": OFF /* tsc, although ESLint now supports TS */,
     // "no-empty-function": OFF /* ESLint now supports TS */,

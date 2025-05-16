@@ -24,7 +24,7 @@ export const TsEnableExtension = {
       },
     ],
     // "@typescript-eslint/init-declarations": OFF /* ESLint now supports TS */,
-    "@typescript-eslint/max-params": OFF /* preference */,
+    // "@typescript-eslint/max-params": OFF /* preference, although ESLint now supports TS */,
     // "@typescript-eslint/no-array-constructor": OFF /* ESLint now supports TS */,
     // "@typescript-eslint/no-dupe-class-members": OFF /* tsc, although ESLint now supports TS */,
     // "@typescript-eslint/no-empty-function": OFF /* ESLint now supports TS */,
