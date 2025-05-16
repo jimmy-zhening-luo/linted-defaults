@@ -438,7 +438,7 @@ export const Enable = {
     "no-useless-escape": [
       ON,
       {
-        allowRegexCharacters: true,
+        allowRegexCharacters: ["-"],
       },
     ],
     "no-useless-rename": [
