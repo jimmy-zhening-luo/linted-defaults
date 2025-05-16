@@ -120,6 +120,7 @@ export const Enable = {
     "no-sparse-arrays": ON,
     "no-template-curly-in-string": ON,
     "no-this-before-super": ON /* tsc */,
+    "no-unassigned-vars": ON,
     "no-undef": ON /* tsc */,
     "no-unexpected-multiline": ON,
     "no-unmodified-loop-condition": ON,
@@ -257,7 +258,7 @@ export const Enable = {
     "max-lines": OFF /* preference */,
     "max-lines-per-function": OFF /* preference */,
     "max-nested-callbacks": OFF /* preference */,
-    "max-params": OFF /* preference -- TSLint:OFF: preference */,
+    "max-params": OFF /* TS-capable BUT preference -- TSLint:OFF: preference */,
     "max-statements": OFF /* preference */,
     "multiline-comment-style": OFF /* preference */,
     "new-cap": OFF /* preference -- breaks Scriptable */,
@@ -434,7 +435,12 @@ export const Enable = {
     ],
     "no-useless-concat": ON,
     "no-useless-constructor": ON /* TS-capable */,
-    "no-useless-escape": ON,
+    "no-useless-escape": [
+      ON,
+      {
+        allowRegexCharacters: true,
+      },
+    ],
     "no-useless-rename": [
       ON,
       {
