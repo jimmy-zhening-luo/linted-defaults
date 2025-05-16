@@ -20,7 +20,12 @@ export const CssEnable = {
         allowUnits: [],
       },
     ],
-    "css/use-baseline": OFF /* BUG: https://github.com/eslint/css/issues/135 */,
+    "css/use-baseline": [
+      ON,
+      {
+        available: "widely" /* 2023 | number (year) | `newly` | @default `widely` */,
+      },
+    ],
     "css/use-layers": OFF, /* not recommended by docs: https://github.com/eslint/css?tab=readme-ov-file#rules; also BUG: ESLint config inspector: css/use-layers: Invalid rule has no description [INVALID] */
   } as const,
 } as const;
