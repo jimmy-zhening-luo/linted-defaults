@@ -32,6 +32,7 @@ export const SvelteEnable = {
     ],
     "svelte/no-shorthand-style-property-overrides": ON,
     "svelte/no-store-async": ON,
+    "svelte/no-top-level-browser-globals": ON,
     "svelte/no-unknown-style-directive-property": [
       ON,
       {
