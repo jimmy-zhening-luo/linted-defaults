@@ -17,5 +17,5 @@ export const MochaEnableChai = {
         enforceForJSX: false,
       },
     ] /* TSLint */,
-  } as const,
-} as const;
+  },
+};

@@ -579,5 +579,5 @@ export const TsEnable = {
       },
     ],
     "@typescript-eslint/use-unknown-in-catch-callback-variable": ON,
-  } as const,
-} as const;
+  },
+};

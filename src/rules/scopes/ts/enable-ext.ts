@@ -94,5 +94,5 @@ export const TsEnableExtension = {
       },
     ],
     "@typescript-eslint/require-await": ON,
-  } as const,
-} as const;
+  },
+};

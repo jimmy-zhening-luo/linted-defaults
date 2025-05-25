@@ -124,5 +124,5 @@ export const HtmlEnable = {
     ],
     "@html-eslint/sort-attrs": OFF,
     // #endregion
-  } as const,
-} as const;
+  },
+};

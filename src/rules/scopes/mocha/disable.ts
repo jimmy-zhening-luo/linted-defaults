@@ -9,5 +9,5 @@ export const MochaDisable = {
     "prefer-arrow-callback": OFF,
     "no-unused-expressions": OFF,
     // "@typescript-eslint/no-unused-expressions": OFF /* ESLint now supports TS */,
-  } as const,
-} as const;
+  },
+};

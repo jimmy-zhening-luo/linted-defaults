@@ -758,5 +758,5 @@ export const EnableStylistic = {
         after: true,
       },
     ],
-  } as const,
-} as const;
+  },
+};

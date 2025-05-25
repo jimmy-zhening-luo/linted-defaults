@@ -26,5 +26,5 @@ export const TsDisable = {
     "no-undef": OFF,
     "no-unreachable": OFF,
     "no-unsafe-negation": OFF,
-  } as const,
-} as const;
+  },
+};

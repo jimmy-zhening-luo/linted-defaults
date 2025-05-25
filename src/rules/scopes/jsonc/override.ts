@@ -14,5 +14,5 @@ export const JsoncOverride = {
       ON,
       always_multiline,
     ] /* trailing commas ARE allowed in JSONC */,
-  } as const,
-} as const;
+  },
+};

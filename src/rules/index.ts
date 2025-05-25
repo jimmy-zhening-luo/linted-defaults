@@ -18,4 +18,4 @@ export const rules = {
   json,
   jsonc,
   yml,
-} as const;
+};

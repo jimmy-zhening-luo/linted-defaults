@@ -3,4 +3,4 @@ export const settings = {
   sourceType: "module",
   noInlineConfig: false,
   reportUnusedDisableDirectives: "error",
-} as const;
+};
