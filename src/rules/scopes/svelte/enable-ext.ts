@@ -23,5 +23,5 @@ export const SvelteEnableExtension = {
         ignoreComments: false,
       },
     ] /* same options: @stylistic/no-trailing-spaces */,
-  },
+  } as const,
 };

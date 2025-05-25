@@ -12,5 +12,5 @@ export const MochaEnableChaiExpect = {
     "chai-expect/no-inner-literal": ON,
     "chai-expect/missing-assertion": ON,
     "chai-expect/terminating-properties": OFF,
-  },
+  } as const,
 };

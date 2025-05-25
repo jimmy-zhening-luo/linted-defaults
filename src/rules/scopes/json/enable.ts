@@ -31,5 +31,5 @@ export const JsonEnable = {
     "jsonc/sort-keys": OFF,
     "jsonc/valid-json-number": ON,
     "jsonc/vue-custom-block/no-parsing-error": ON,
-  },
+  } as const,
 };

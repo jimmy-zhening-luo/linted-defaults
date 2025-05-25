@@ -14,5 +14,5 @@ export const SvelteDisable = {
     // "no-irregular-whitespace": OFF /* INFO: This is commented out in the config as well */,
     "no-self-assign": OFF /* Self assign is one of way to update reactive value in Svelte */,
     "prefer-const": OFF /* svelte/prefer-const */,
-  },
+  } as const,
 };

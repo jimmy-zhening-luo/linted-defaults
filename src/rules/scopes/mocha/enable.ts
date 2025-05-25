@@ -48,5 +48,5 @@ export const MochaEnable = {
     ] /* MUST match ../js/enable.ts */,
     "mocha/valid-suite-title": OFF /* preference */,
     "mocha/valid-test-title": OFF /* preference */,
-  },
+  } as const,
 };

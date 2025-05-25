@@ -556,5 +556,5 @@ export const Enable = {
     // [ https://eslint.org/docs/latest/rules/#layout--formatting ]
     "unicode-bom": OFF /* preference: don't care */,
     // #endregion
-  },
+  } as const,
 };

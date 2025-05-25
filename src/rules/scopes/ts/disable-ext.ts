@@ -31,5 +31,5 @@ export const TsDisableExtension = {
     "prefer-destructuring": OFF,
     "prefer-promise-reject-errors": OFF,
     "require-await": OFF,
-  },
+  } as const,
 };
