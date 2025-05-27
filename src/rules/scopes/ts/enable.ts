@@ -368,7 +368,7 @@ export const TsEnable = {
     "@typescript-eslint/no-namespace": OFF,
     "@typescript-eslint/no-non-null-asserted-nullish-coalescing": ON,
     "@typescript-eslint/no-non-null-asserted-optional-chain": ON,
-    "@typescript-eslint/no-non-null-assertion": ON,
+    "@typescript-eslint/no-non-null-assertion": OFF /* preference */,
     "@typescript-eslint/no-redundant-type-constituents": ON,
     "@typescript-eslint/no-restricted-types": OFF /* preference - no shared custom types across all projects that I wish to ban*/,
     "@typescript-eslint/no-require-imports": [
@@ -424,7 +424,7 @@ export const TsEnable = {
     "@typescript-eslint/no-unsafe-unary-minus": ON,
     "@typescript-eslint/no-useless-empty-export": ON,
     "@typescript-eslint/no-wrapper-object-types": ON,
-    "@typescript-eslint/non-nullable-type-assertion-style": OFF,
+    "@typescript-eslint/non-nullable-type-assertion-style": OFF /* preference */,
     "@typescript-eslint/parameter-properties": [
       ON,
       {
