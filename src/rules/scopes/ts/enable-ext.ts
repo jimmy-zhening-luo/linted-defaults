@@ -31,10 +31,10 @@ export const TsEnableExtension = {
     "@typescript-eslint/no-implied-eval": ON,
     // "@typescript-eslint/no-invalid-this": OFF /* tsc: { strict, noImplicitThis }, although ESLint now supports TS */,
     // "@typescript-eslint/no-loop-func": OFF /* ESLint now supports TS */,
-    "@typescript-eslint/no-magic-numbers": OFF /* preference */,
+    // "@typescript-eslint/no-magic-numbers": OFF /* preference, although ESLint now supports TS */,
     // "@typescript-eslint/no-redeclare": OFF /* tsc (let, const, -var) */,
     "@typescript-eslint/no-restricted-imports": OFF /* preference */,
-    "@typescript-eslint/no-shadow": OFF /* investigate */,
+    // "@typescript-eslint/no-shadow": OFF /* ESLint now supports TS (was: investigate) */,
     // "@typescript-eslint/no-unused-expressions": OFF /* ESLint now supports TS (preference -- eslint:OFF) */,
     "@typescript-eslint/no-unused-vars": [
       ON,
@@ -47,18 +47,7 @@ export const TsEnableExtension = {
         reportUsedIgnorePattern: true,
       },
     ],
-    "@typescript-eslint/no-use-before-define": [
-      ON,
-      {
-        functions: true,
-        classes: true,
-        variables: true,
-        allowNamedExports: false,
-        enums: true,
-        typedefs: false /* changed 14.2.2 (still questionable) */,
-        ignoreTypeReferences: true,
-      },
-    ],
+    // "@typescript-eslint/no-use-before-define": OFF /* ESLint now supports TS */,
     // "@typescript-eslint/no-useless-constructor": OFF /* ESLint now supports TS */,
     "@typescript-eslint/only-throw-error": [
       ON,

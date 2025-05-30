@@ -163,8 +163,11 @@ export const Enable = {
         classes: true,
         variables: true,
         allowNamedExports: false,
+        enums: true,
+        typedefs: false /* changed 14.2.2 (still questionable) */,
+        ignoreTypeReferences: true,
       },
-    ] /* TSLint */,
+    ] /* TS-capable */,
     "no-useless-assignment": ON,
     "no-useless-backreference": ON,
     "require-atomic-updates": [
@@ -236,7 +239,7 @@ export const Enable = {
     ],
     "func-name-matching": OFF /* preference */,
     "func-names": OFF /* preference */,
-    "func-style": OFF /* preference */,
+    "func-style": OFF /* TS-capable BUT preference */,
     "grouped-accessor-pairs": OFF /* preference -- BUG: requires adjacency, not as described in documentation */,
     "guard-for-in": OFF /* preference - not helpful because using for-in on non-literal objects is bad practice and this rule doesn't guard against that anyway, while adding a pointless check to known object literals */,
     "id-denylist": OFF /* preference */,
@@ -346,7 +349,7 @@ export const Enable = {
     "no-lone-blocks": ON,
     "no-lonely-if": OFF /* preference */,
     "no-loop-func": ON /* TS-capable */,
-    "no-magic-numbers": OFF /* preference - breaks TypeScript number literals, even with most liberal exceptions */,
+    "no-magic-numbers": OFF /* TS-capable BUT preference - breaks TypeScript number literals, even with most liberal exceptions */,
     "no-multi-assign": [
       ON,
       {
@@ -396,7 +399,7 @@ export const Enable = {
         allowInParentheses: true,
       },
     ],
-    "no-shadow": OFF /* investigate -- TSLint:OFF: investigate */,
+    "no-shadow": OFF /* TS-capable BUT investigate */,
     "no-shadow-restricted-names": [
       ON,
       {
@@ -487,7 +490,7 @@ export const Enable = {
         allowNamedFunctions: false,
         allowUnboundThis: true,
       },
-    ],
+    ] /* TS-capable */,
     "prefer-const": [
       ON,
       {

@@ -45,7 +45,7 @@ export const MochaEnable = {
         allowNamedFunctions: false,
         allowUnboundThis: true,
       },
-    ] /* MUST match ../js/enable.ts */,
+    ] /* MUST match ../js/enable.ts, which is TS-capable -- is this?? */,
     "mocha/valid-suite-title": OFF /* preference */,
     "mocha/valid-test-title": OFF /* preference */,
   } as const,
