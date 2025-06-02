@@ -17,9 +17,9 @@ export const JsonEnableExtension = {
       ON,
       {
         multiline: true,
-        minItems: null,
+        minItems: 1,
       },
-    ] /* MUST match @stylistic/array-bracket-newline */,
+    ], /* @OVERRIDE: BUG: the spec says: `requires line breaks if the number of elements is at least the given integer. If this is 0, this condition will act the same as the option "always". If this is null (the default), this condition is disabled`. However, when null, the jsonc plugin actually errors when there are linebreaks with a single item | (was: MUST match @stylistic/array-bracket-newline) */
     "jsonc/array-bracket-spacing": [
       ON,
       never,
