@@ -22,16 +22,16 @@ export const YmlEnable = {
     "yml/block-mapping": [
       ON,
       {
-        singleline: never,
-        multiline: always,
+        singleline: always /* always | never | ignore */,
+        multiline: always /* always | never | ignore */,
       },
     ],
     "yml/block-sequence-hyphen-indicator-newline": [
       ON,
       never,
       {
-        nestedHyphen: always,
-        blockMapping: never,
+        nestedHyphen: always /* never | @default: always */,
+        blockMapping: never /* never | always | @default: string option */,
       },
     ],
     "yml/block-sequence": [
@@ -48,7 +48,7 @@ export const YmlEnable = {
       {
         alignMultilineFlowScalars: true /* @default: false */,
         indentBlockSequences: true,
-        indicatorValueIndent: 2,
+        indicatorValueIndent: 2 /* @default: number option */,
       },
     ],
     "yml/key-name-casing": OFF,
@@ -61,6 +61,16 @@ export const YmlEnable = {
     "yml/plain-scalar": [
       ON,
       always,
+      /*
+        {
+          ignorePatterns: [
+            "[\\v\\f\\u0085\\u00a0\\u1680\\u180e\\u2000-\\u200b\\u2028\\u2029\\u202f\\u205f\\u3000\\ufeff]" // @default
+          ],
+          overrides: {
+            [key]: null | "always" | "never",
+          }
+        }
+      */
     ],
     "yml/quotes": [
       ON,

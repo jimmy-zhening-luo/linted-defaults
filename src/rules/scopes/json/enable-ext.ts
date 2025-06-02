@@ -14,7 +14,7 @@ export const JsonEnableExtension = {
   id: ID.EnableExtension,
   rules: {
   // DOC: https://ota-meshi.github.io/eslint-plugin-jsonc/rules/#extension-rules
-    "jsonc/array-bracket-newline": OFF /* DO NOT CHANGE */,
+    "jsonc/array-bracket-newline": OFF /* @OVERRIDE DO NOT CHANGE (? why?) @stylistic/array-bracket-newline */,
     "jsonc/array-bracket-spacing": [
       ON,
       never,
@@ -23,7 +23,7 @@ export const JsonEnableExtension = {
         objectsInArrays: false,
         arraysInArrays: false,
       },
-    ] /* MUST match ../js/stylistic.ts */,
+    ] /* MUST match @stylistic/array-bracket-spacing */,
     "jsonc/array-element-newline": [
       ON,
       consistent,
@@ -38,7 +38,7 @@ export const JsonEnableExtension = {
         afterColon: true,
         mode: strict,
       },
-    ] /* MUST match ../js/stylistic.ts */,
+    ] /* MUST match @stylistic/key-spacing */,
     "jsonc/no-dupe-keys": ON,
     "jsonc/no-floating-decimal": ON,
     "jsonc/no-irregular-whitespace": [
@@ -61,9 +61,9 @@ export const JsonEnableExtension = {
       {
         consistent: true,
         multiline: true,
-        minProperties: 3,
+        minProperties: 2,
       },
-    ] /* MUST match CHILD of ../js/stylistic.ts */,
+    ] /* @OVERRIDE CHILD of @stylistic/object-curly-newline */,
     "jsonc/object-curly-spacing": [
       ON,
       always,
@@ -71,14 +71,17 @@ export const JsonEnableExtension = {
         arraysInObjects: true,
         objectsInObjects: true,
       },
-    ] /* MUST match ../js/stylistic.ts */,
+    ] /* MUST match @stylistic/object-curly-spacing */,
     "jsonc/object-property-newline": [
       ON,
       {
         allowAllPropertiesOnSameLine: true,
       },
-    ] /* MUST match ../js/stylistic.ts */,
-    "jsonc/quote-props": [ON, always],
+    ] /* MUST match @stylistic/object-property-newline */,
+    "jsonc/quote-props": [
+      ON,
+      always,
+    ],
     "jsonc/quotes": [
       ON,
       double,
