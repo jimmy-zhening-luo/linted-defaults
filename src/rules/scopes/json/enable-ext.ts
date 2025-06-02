@@ -1,7 +1,6 @@
 import {
   ID,
   ON,
-  OFF,
   always,
   consistent,
   double,
@@ -14,7 +13,13 @@ export const JsonEnableExtension = {
   id: ID.EnableExtension,
   rules: {
   // DOC: https://ota-meshi.github.io/eslint-plugin-jsonc/rules/#extension-rules
-    "jsonc/array-bracket-newline": OFF /* @OVERRIDE DO NOT CHANGE (? why?) @stylistic/array-bracket-newline */,
+    "jsonc/array-bracket-newline": [
+      ON,
+      {
+        multiline: true,
+        minItems: null,
+      },
+    ] /* MUST match @stylistic/array-bracket-newline */,
     "jsonc/array-bracket-spacing": [
       ON,
       never,
