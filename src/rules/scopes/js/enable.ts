@@ -531,7 +531,7 @@ export const Enable = {
     ] /* TSLint */,
     "prefer-rest-params": ON,
     "prefer-spread": ON,
-    "prefer-template": ON,
+    "prefer-template": OFF /* preference: performance */,
     radix: [
       ON,
       as_needed,
