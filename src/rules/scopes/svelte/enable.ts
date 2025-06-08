@@ -262,7 +262,7 @@ export const SvelteEnable = {
     "svelte/spaced-html-comment": [
       ON,
       always,
-    ],
+    ] /* INFO: does not have third object option (exceptions/markers), unlike @stylistic/spaced-comment */,
 
     // #endregion
 

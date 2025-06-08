@@ -54,7 +54,7 @@ export const YmlEnable = {
     "yml/key-name-casing": OFF,
     "yml/no-empty-document": ON,
     "yml/no-empty-key": ON,
-    "yml/no-empty-mapping-value": ON,
+    "yml/no-empty-mapping-value": OFF /* PREFERENCE: breaks Home Assistant integration enablement shorthand style (would require a `{}` after) */,
     "yml/no-empty-sequence-entry": ON,
     "yml/no-tab-indent": ON,
     "yml/no-trailing-zeros": ON,

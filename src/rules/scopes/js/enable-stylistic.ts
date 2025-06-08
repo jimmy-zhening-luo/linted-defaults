@@ -712,6 +712,33 @@ export const EnableStylistic = {
     "@stylistic/spaced-comment": [
       ON,
       always,
+      {
+        line: {
+          exceptions: [
+            "/",
+            "-",
+            "+",
+            "=",
+          ],
+          markers: [
+            "!",
+            "@",
+            "#",
+            "/",
+            "#region",
+            "#endregion",
+            "#part",
+            "/#region",
+            "/#endregion",
+            "/#part",
+          ],
+        },
+        block: {
+          exceptions: ["*"],
+          markers: ["*"],
+          balanced: true,
+        },
+      },
     ],
     "@stylistic/switch-colon-spacing": [
       ON,

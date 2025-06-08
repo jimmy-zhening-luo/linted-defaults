@@ -68,6 +68,21 @@ export const YmlEnableExtension = {
     "yml/spaced-comment": [
       ON,
       always,
-    ] /* MUST match @stylistic/spaced-comment */,
+      {
+        exceptions: ["#"],
+        markers: [
+          "!",
+          "@",
+          "#",
+          "##",
+          "###",
+          "####",
+          "#####",
+          "######",
+          "region",
+          "endregion",
+        ],
+      },
+    ] /* @OVERRIDE @stylistic/spaced-comment */,
   } as const,
 };
