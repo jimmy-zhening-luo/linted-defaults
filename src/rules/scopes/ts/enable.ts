@@ -370,7 +370,7 @@ export const TsEnable = {
     "@typescript-eslint/no-non-null-asserted-optional-chain": ON,
     "@typescript-eslint/no-non-null-assertion": OFF /* preference */,
     "@typescript-eslint/no-redundant-type-constituents": ON,
-    "@typescript-eslint/no-restricted-types": OFF /* preference - no shared custom types across all projects that I wish to ban*/,
+    "@typescript-eslint/no-restricted-types": OFF /* preference - no shared custom types across all projects that I wish to ban */,
     "@typescript-eslint/no-require-imports": [
       ON,
       {
