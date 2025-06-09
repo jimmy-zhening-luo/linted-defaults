@@ -1,7 +1,7 @@
-import { YmlEnable } from "./enable";
-import { YmlEnableExtension } from "./enable-ext";
+import { YmlEnablePlugin } from "./plugin";
+import { YmlEnablePluginExtension } from "./plugin/extension";
 
 export default [
-  YmlEnable,
-  YmlEnableExtension,
+  YmlEnablePlugin,
+  YmlEnablePluginExtension,
 ];

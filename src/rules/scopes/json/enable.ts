@@ -5,31 +5,14 @@ import {
 } from "../../strings";
 
 export const JsonEnable = {
-  id: ID.Enable,
+  id: ID.Enable.Enable,
   rules: {
-  // DOC: https://ota-meshi.github.io/eslint-plugin-jsonc/rules/#jsonc-rules
-    "jsonc/auto": OFF,
-    "jsonc/key-name-casing": OFF,
-    "jsonc/no-bigint-literals": ON,
-    "jsonc/no-binary-expression": ON,
-    "jsonc/no-binary-numeric-literals": ON,
-    "jsonc/no-comments": ON /* comments are NOT allowed in JSON */,
-    "jsonc/no-escape-sequence-in-identifier": ON,
-    "jsonc/no-hexadecimal-numeric-literals": ON,
-    "jsonc/no-infinity": ON,
-    "jsonc/no-nan": ON,
-    "jsonc/no-number-props": ON,
-    "jsonc/no-numeric-separators": ON,
-    "jsonc/no-octal-numeric-literals": ON,
-    "jsonc/no-parenthesized": ON,
-    "jsonc/no-plus-sign": ON,
-    "jsonc/no-regexp-literals": ON,
-    "jsonc/no-template-literals": ON,
-    "jsonc/no-undefined-value": ON,
-    "jsonc/no-unicode-codepoint-escapes": ON,
-    "jsonc/sort-array-values": OFF,
-    "jsonc/sort-keys": OFF,
-    "jsonc/valid-json-number": ON,
-    "jsonc/vue-custom-block/no-parsing-error": ON,
+    // DOC: https://github.com/eslint/json?tab=readme-ov-file#rules
+    "json/no-duplicate-keys": ON /* replaces jsonc/no-dupe-keys */,
+    "json/no-empty-keys": OFF /* preference: I use empty keys or keys with only whitespace sometimes, as does `package-lock.json` per DOC: "jsonc/no-dupe-keys": ON /* ESLint: json/no-duplicate-keys */,
+    "json/no-unsafe-values": ON,
+    "json/no-unnormalized-keys": ON,
+    "json/sort-keys": OFF /* replaces jsonc/sort-keys BUT preference: I don't like sorting keys, it makes diffs harder to read, and I don't see the point of it in JSON */,
+    "json/top-level-interop": ON,
   } as const,
 };

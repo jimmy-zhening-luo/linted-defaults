@@ -1,10 +1,10 @@
 import {
   ID,
-  ON,
   OFF,
+  ON,
   all,
-  always_multiline,
   always,
+  always_multiline,
   as_needed,
   before,
   below,
@@ -14,12 +14,12 @@ import {
   inside,
   last,
   never,
-  wildcard,
   strict,
-} from "../../strings";
+  wildcard,
+} from "../strings";
 
-export const EnableStylistic = {
-  id: ID.EnableStylistic,
+export const EnableStyle = {
+  id: ID.Enable.Style,
   rules: {
   // DOC: https://eslint.style/rules
     "@stylistic/array-bracket-newline": [

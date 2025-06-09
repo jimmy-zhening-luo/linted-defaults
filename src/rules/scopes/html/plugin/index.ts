@@ -3,10 +3,10 @@ import {
   ON,
   OFF,
   never,
-} from "../../strings";
+} from "../../../strings";
 
-export const HtmlEnable = {
-  id: ID.Enable,
+export const HtmlEnablePlugin = {
+  id: ID.Enable.Plugin,
   rules: {
   // #region BEST PRACTICE
   // DOC: https://html-eslint.org/docs/rules#best-practice

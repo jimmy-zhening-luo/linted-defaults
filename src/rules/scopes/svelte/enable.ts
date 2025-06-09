@@ -11,7 +11,7 @@ import {
 } from "../../strings";
 
 export const SvelteEnable = {
-  id: ID.Enable,
+  id: ID.Enable.Enable,
   rules: {
   // #region ERRORS
   // DOC: http://sveltejs.github.io/eslint-plugin-svelte/rules/#possible-errors

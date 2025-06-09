@@ -2,10 +2,10 @@ import {
   ID,
   ON,
   OFF,
-} from "../../strings";
+} from "../../../strings";
 
-export const MochaEnableChaiExpect = {
-  id: `${ID.Enable}/chai/expect`,
+export const MochaEnablePluginChaiExpect = {
+  id: `${ID.Enable.Plugin.Plugin}/chai/expect`,
   rules: {
   // DOC: https://github.com/turbo87/eslint-plugin-chai-expect?tab=readme-ov-file#rules
     "chai-expect/no-inner-compare": ON,

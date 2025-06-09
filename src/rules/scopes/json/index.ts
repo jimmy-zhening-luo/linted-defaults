@@ -1,7 +1,9 @@
 import { JsonEnable } from "./enable";
-import { JsonEnableExtension } from "./enable-ext";
+import { JsonEnablePlugin } from "./plugin";
+import { JsonEnablePluginExtension } from "./plugin/extension";
 
 export default [
   JsonEnable,
-  JsonEnableExtension,
+  JsonEnablePlugin,
+  JsonEnablePluginExtension,
 ];

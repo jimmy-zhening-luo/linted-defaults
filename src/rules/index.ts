@@ -1,4 +1,4 @@
-import js from "./scopes/js";
+import js from "./scopes";
 import ts from "./scopes/ts";
 import mocha from "./scopes/mocha";
 import svelte from "./scopes/svelte";

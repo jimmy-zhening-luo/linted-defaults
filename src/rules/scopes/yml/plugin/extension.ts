@@ -4,10 +4,10 @@ import {
   never,
   always,
   strict,
-} from "../../strings";
+} from "../../../strings";
 
-export const YmlEnableExtension = {
-  id: ID.EnableExtension,
+export const YmlEnablePluginExtension = {
+  id: ID.Enable.Plugin.Extension,
   rules: {
   // DOC: https://ota-meshi.github.io/eslint-plugin-yml/rules/#extension-rules
     "yml/flow-mapping-curly-newline": [

@@ -5,7 +5,7 @@ import {
 } from "../../strings";
 
 export const CssEnable = {
-  id: ID.Enable,
+  id: ID.Enable.Enable,
   rules: {
     // DOC: https://github.com/eslint/css/tree/main/docs/rules
     "css/no-duplicate-imports": ON,

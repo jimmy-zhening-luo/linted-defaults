@@ -5,10 +5,10 @@ import {
   never,
   always,
   double,
-} from "../../strings";
+} from "../../../strings";
 
-export const YmlEnable = {
-  id: ID.Enable,
+export const YmlEnablePlugin = {
+  id: ID.Enable.Plugin.Plugin,
   rules: {
   // DOC: https://ota-meshi.github.io/eslint-plugin-yml/rules/#yaml-rules
     "yml/block-mapping-colon-indicator-newline": [

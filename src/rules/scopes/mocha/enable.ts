@@ -5,7 +5,7 @@ import {
 } from "../../strings";
 
 export const MochaEnable = {
-  id: ID.Enable,
+  id: ID.Enable.Enable,
   rules: {
   // DOC: https://github.com/lo1tuma/eslint-plugin-mocha/tree/main?tab=readme-ov-file#rules
     "mocha/consistent-interface": OFF, /* unable, must choose BDD or TDD first */

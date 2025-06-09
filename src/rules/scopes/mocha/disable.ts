@@ -4,7 +4,7 @@ import {
 } from "../../strings";
 
 export const MochaDisable = {
-  id: ID.Disable,
+  id: ID.Disable.Disable,
   rules: {
     "prefer-arrow-callback": OFF /* TS-capable */,
     "no-unused-expressions": OFF,

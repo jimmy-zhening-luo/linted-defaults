@@ -10,10 +10,10 @@ import {
   all,
   multi,
   both,
-} from "../../strings";
+} from "../strings";
 
 export const Enable = {
-  id: ID.Enable,
+  id: ID.Enable.Enable,
   rules: {
     // #region PROBLEMS
     // DOC: https://eslint.org/docs/latest/rules/#possible-problems

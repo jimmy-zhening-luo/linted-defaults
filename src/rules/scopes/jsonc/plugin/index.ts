@@ -3,10 +3,10 @@ import {
   ON,
   OFF,
   always_multiline,
-} from "../../strings";
+} from "../../../strings";
 
-export const JsoncOverride = {
-  id: ID.Override,
+export const JsoncPluginDisable = {
+  id: ID.Override.Override,
   rules: {
   // DOC: https://ota-meshi.github.io/eslint-plugin-jsonc/rules/#jsonc-rules
     "jsonc/no-comments": OFF /* comments ARE allowed in JSONC */,

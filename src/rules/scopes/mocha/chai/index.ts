@@ -1,10 +1,10 @@
 import {
   ID,
   ON,
-} from "../../strings";
+} from "../../../strings";
 
-export const MochaEnableChai = {
-  id: `${ID.Enable}/chai`,
+export const MochaEnablePluginChai = {
+  id: `${ID.Enable.Plugin.Plugin}/chai`,
   rules: {
 
     // DOC: https://github.com/ihordiachenko/eslint-plugin-chai-friendly?tab=readme-ov-file#usage

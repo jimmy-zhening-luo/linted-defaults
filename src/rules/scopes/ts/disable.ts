@@ -4,7 +4,7 @@ import {
 } from "../../strings";
 
 export const TsDisable = {
-  id: ID.Disable,
+  id: ID.Disable.Disable,
   rules: {
     // Handled by TypeScript compiler
     "consistent-return": OFF /* TSLint BUT tsc */,
