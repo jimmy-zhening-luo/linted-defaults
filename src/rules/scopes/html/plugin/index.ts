@@ -6,7 +6,7 @@ import {
 } from "../../../strings";
 
 export const HtmlEnablePlugin = {
-  id: ID.Enable.Plugin,
+  id: ID.Enable.Plugin.Plugin,
   rules: {
   // #region BEST PRACTICE
   // DOC: https://html-eslint.org/docs/rules#best-practice
