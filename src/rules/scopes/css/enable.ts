@@ -20,6 +20,15 @@ export const CssEnable = {
         allowUnits: [],
       },
     ],
+    "css/relative-font-units": [
+      ON,
+      {
+        allowUnits: [
+          "rem",
+          "%",
+        ],
+      },
+    ],
     "css/use-baseline": [
       ON,
       {
