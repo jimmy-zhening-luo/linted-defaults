@@ -387,7 +387,7 @@ export const Enable = {
     ] /* tsc -- TSLint:OFF: tsc (let, const, -var) */,
     "no-regex-spaces": OFF /* preference */,
     "no-restricted-exports": OFF /* preference */,
-    "no-restricted-globals": OFF /* preference */,
+    "no-restricted-globals": OFF /* TS-capable BUT preference */,
     "no-restricted-imports": OFF /* preference -- TSLint:OFF */,
     "no-restricted-properties": OFF /* preference */,
     "no-restricted-syntax": OFF /* preference */,
@@ -453,7 +453,7 @@ export const Enable = {
       },
     ],
     "no-useless-return": ON,
-    "no-var": ON,
+    "no-var": ON /* TS-capable */,
     "no-void": [
       ON,
       {
