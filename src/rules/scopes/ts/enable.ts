@@ -261,12 +261,13 @@ export const TsEnable = {
     "@typescript-eslint/no-base-to-string": [
       ON,
       {
+        checkUnknown: false /* PREFERENCE & @default */,
         ignoredTypeNames: [
           "Error",
           "RegExp",
           "URL",
           "URLSearchParams",
-        ],
+        ] /* @default */,
       },
     ],
     "@typescript-eslint/no-confusing-non-null-assertion": ON,
