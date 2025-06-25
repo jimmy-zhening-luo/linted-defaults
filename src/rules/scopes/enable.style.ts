@@ -136,6 +136,14 @@ export const EnableStyle = {
         enforceForClassMembers: true,
       },
     ],
+    "@stylistic/curly-newline": [
+      ON,
+      {
+        // multiline: false,
+        // minElements: 2 /* when consistent:true, this errors if there are linebreaks with elements < minElements */,
+        consistent: true /* @default */,
+      },
+    ],
     "@stylistic/dot-location": [
       ON,
       "property",
@@ -298,12 +306,19 @@ export const EnableStyle = {
         conditionalAssign: true,
         returnAssign: true,
         nestedBinaryExpressions: true,
-        nestedConditionalExpressions: true,
         ternaryOperandBinaryExpressions: true,
+        // ignoreJSX: "none" /* all | multi-line | single-line | @default: none */,
         enforceForArrowConditionals: true,
         enforceForSequenceExpressions: true,
         enforceForNewInMemberExpressions: true,
         enforceForFunctionPrototypeMethods: true,
+        // allowParensAfterCommentPattern: "" /* regex */,
+        nestedConditionalExpressions: true,
+        allowNodesInSpreadElement: {
+          ConditionalExpression: false,
+          LogicalExpression: false,
+          AwaitExpression: false,
+        } /* @default: all true */,
       },
     ],
     "@stylistic/no-extra-semi": ON,
@@ -374,6 +389,21 @@ export const EnableStyle = {
           multiline: true,
           minProperties: 3,
         },
+        TSTypeLiteral: {
+          consistent: true,
+          multiline: true,
+          minProperties: 3,
+        },
+        TSInterfaceBody: {
+          consistent: true,
+          multiline: true,
+          minProperties: 3,
+        },
+        TSEnumBody: {
+          consistent: true,
+          multiline: true,
+          minProperties: 3,
+        },
       },
     ],
     "@stylistic/object-curly-spacing": [
@@ -384,12 +414,7 @@ export const EnableStyle = {
         objectsInObjects: true,
       },
     ],
-    "@stylistic/object-property-newline": [
-      ON,
-      {
-        allowAllPropertiesOnSameLine: true,
-      },
-    ],
+    "@stylistic/object-property-newline": ON,
     "@stylistic/one-var-declaration-per-line": [
       ON,
       always,
@@ -398,8 +423,7 @@ export const EnableStyle = {
       ON,
       before,
       {
-        overrides: {
-        } /* e.g., = | ? | : |  @default: { "?": "before", ":": "before" } */,
+        overrides: {} /* e.g., = | ? | : |  @default: { "?": "before", ":": "before" } */,
       },
     ],
     "@stylistic/padded-blocks": [
@@ -455,6 +479,7 @@ export const EnableStyle = {
           "throw",
           "try",
           "type",
+          "using",
           "var",
           "while",
           "with",
@@ -481,6 +506,7 @@ export const EnableStyle = {
           "multiline-block-like",
           "switch",
           "try",
+          "using",
           "while",
           "with",
         ],
@@ -505,6 +531,7 @@ export const EnableStyle = {
           "multiline-block-like",
           "switch",
           "try",
+          "using",
           "while",
           "with",
         ],
@@ -688,6 +715,7 @@ export const EnableStyle = {
         anonymous: always,
         named: never,
         asyncArrow: always,
+        "catch": always,
       },
     ],
     "@stylistic/space-in-parens": [

@@ -81,12 +81,7 @@ export const JsonEnablePluginExtension = {
         objectsInObjects: true,
       },
     ] /* MUST match @stylistic/object-curly-spacing */,
-    "jsonc/object-property-newline": [
-      ON,
-      {
-        allowAllPropertiesOnSameLine: true,
-      },
-    ] /* MUST match @stylistic/object-property-newline */,
+    "jsonc/object-property-newline": ON /* MUST match @stylistic/object-property-newline */,
     "jsonc/quote-props": [
       ON,
       always,
