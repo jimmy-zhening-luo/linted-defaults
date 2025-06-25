@@ -10,16 +10,13 @@ export const HtmlEnablePlugin = {
   rules: {
   // #region BEST PRACTICE
   // DOC: https://html-eslint.org/docs/rules#best-practice
+    "@html-eslint/max-element-depth": OFF /* @preference: simply do not care */,
     "@html-eslint/no-duplicate-attrs": ON,
     "@html-eslint/no-duplicate-class": ON,
     "@html-eslint/no-duplicate-id": ON,
-    "@html-eslint/no-extra-spacing-text": [
-      ON,
-      {
-        skip: [],
-      },
-    ],
-    "@html-eslint/no-inline-styles": OFF /* @CONFLICT: breaks Svele app.html */,
+    "@html-eslint/no-duplicate-in-head": ON,
+    "@html-eslint/no-inline-styles": OFF /* @CONFLICT: breaks Svelte app.html */,
+    "@html-eslint/no-invalid-entity": ON,
     "@html-eslint/no-nested-interactive": ON,
     "@html-eslint/no-obsolete-tags": ON,
     "@html-eslint/no-restricted-attr-values": OFF,
@@ -62,6 +59,8 @@ export const HtmlEnablePlugin = {
     "@html-eslint/no-abstract-roles": ON,
     "@html-eslint/no-accesskey-attrs": ON,
     "@html-eslint/no-aria-hidden-body": ON,
+    "@html-eslint/no-aria-hidden-on-focusable": ON,
+    "@html-eslint/no-empty-headings": ON,
     "@html-eslint/no-heading-inside-button": ON,
     "@html-eslint/no-invalid-role": ON,
     "@html-eslint/no-non-scalable-viewport": ON,
@@ -101,7 +100,6 @@ export const HtmlEnablePlugin = {
       2,
     ] /* @CONFIGURE: indents for specific child tags: https://html-eslint.org/docs/rules/indent */,
     "@html-eslint/lowercase": ON,
-    "@html-eslint/max-element-depth": OFF /* @preference: simply do not care */,
     "@html-eslint/no-extra-spacing-attrs": [
       ON,
       {
@@ -109,6 +107,12 @@ export const HtmlEnablePlugin = {
         disallowMissing: true,
         disallowTabs: true,
         disallowInAssignment: true,
+      },
+    ],
+    "@html-eslint/no-extra-spacing-text": [
+      ON,
+      {
+        skip: [],
       },
     ],
     "@html-eslint/no-multiple-empty-lines": [
