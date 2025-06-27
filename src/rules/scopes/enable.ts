@@ -342,7 +342,9 @@ export const Enable = {
     "no-inline-comments": OFF /* preference */,
     "no-invalid-this": [
       ON,
-      { capIsConstructor: false },
+      {
+        capIsConstructor: false,
+      },
     ] /* TS-capable BUT tsc: TSLint:OFF: tsconfig: { strict, noImplicitThis } */,
     "no-iterator": ON,
     "no-label-var": ON,
@@ -383,7 +385,9 @@ export const Enable = {
     "no-proto": ON,
     "no-redeclare": [
       ON,
-      { builtinGlobals: true },
+      {
+        builtinGlobals: true,
+      },
     ] /* tsc -- TSLint:OFF: tsc (let, const, -var) */,
     "no-regex-spaces": OFF /* preference */,
     "no-restricted-exports": OFF /* preference */,
@@ -510,7 +514,9 @@ export const Enable = {
           object: false,
         },
       },
-      { enforceForRenamedProperties: true },
+      {
+        enforceForRenamedProperties: true,
+      },
     ] /* TSLint */,
     "prefer-exponentiation-operator": ON,
     "prefer-named-capture-group": OFF,
