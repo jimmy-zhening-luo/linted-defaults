@@ -57,7 +57,13 @@ export const Enable = {
     "no-dupe-else-if": ON,
     "no-dupe-keys": ON /* tsc */,
     "no-duplicate-case": ON,
-    "no-duplicate-imports": OFF /* BUG: breaks separation of TS type-only imports from value imports */,
+    "no-duplicate-imports": [
+      ON,
+      {
+        includeExports: true /* @default: false */,
+        allowSeparateTypeImports: true /* @default: false */,
+      },
+    ],
     "no-empty-character-class": ON,
     "no-empty-pattern": [
       ON,
