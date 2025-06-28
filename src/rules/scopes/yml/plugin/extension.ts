@@ -9,7 +9,7 @@ import {
 export const YmlEnablePluginExtension = {
   id: ID.Enable.Plugin.Extension,
   rules: {
-  // DOC: https://ota-meshi.github.io/eslint-plugin-yml/rules/#extension-rules
+    // DOC: https://ota-meshi.github.io/eslint-plugin-yml/rules/#extension-rules
     "yml/flow-mapping-curly-newline": [
       ON,
       {

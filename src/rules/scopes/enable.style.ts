@@ -21,7 +21,7 @@ import {
 export const EnableStyle = {
   id: ID.Enable.Style,
   rules: {
-  // DOC: https://eslint.style/rules
+    // DOC: https://eslint.style/rules
     "@stylistic/array-bracket-newline": [
       ON,
       {

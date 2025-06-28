@@ -6,6 +6,7 @@ import html from "./scopes/html";
 import css from "./scopes/css";
 import json from "./scopes/json";
 import jsonc from "./scopes/jsonc";
+import jsoncc from "./scopes/jsoncc";
 import yml from "./scopes/yml";
 
 export const rules = {
@@ -17,5 +18,6 @@ export const rules = {
   css,
   json,
   jsonc,
+  jsoncc,
   yml,
 };

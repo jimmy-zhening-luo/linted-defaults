@@ -13,8 +13,8 @@ import {
 export const SvelteEnable = {
   id: ID.Enable.Enable,
   rules: {
-  // #region ERRORS
-  // DOC: http://sveltejs.github.io/eslint-plugin-svelte/rules/#possible-errors
+    // #region ERRORS
+    // DOC: http://sveltejs.github.io/eslint-plugin-svelte/rules/#possible-errors
     "svelte/infinite-reactive-loop": ON,
     "svelte/no-dom-manipulating": ON,
     "svelte/no-dupe-else-if-blocks": ON,
@@ -48,7 +48,6 @@ export const SvelteEnable = {
       },
     ],
     "svelte/valid-style-parse": ON,
-
     // #endregion
 
     // #region SECURITY
@@ -61,7 +60,6 @@ export const SvelteEnable = {
         enforceDynamicLinks: always,
       },
     ],
-
     // #endregion
 
     // #region BEST PRACTICES
@@ -139,7 +137,6 @@ export const SvelteEnable = {
     "svelte/require-optimized-style-attribute": ON,
     "svelte/require-stores-init": ON,
     "svelte/valid-each-key": ON,
-
     // #endregion
 
     // #region STYLE
@@ -263,7 +260,6 @@ export const SvelteEnable = {
       ON,
       always,
     ] /* INFO: does not have third object option (exceptions/markers), unlike @stylistic/spaced-comment */,
-
     // #endregion
 
     // #region SVELTE-KIT
@@ -279,7 +275,6 @@ export const SvelteEnable = {
       },
     ],
     "svelte/valid-prop-names-in-kit-pages": ON,
-
     // #endregion
 
     // #region REQUIRED
@@ -291,8 +286,6 @@ export const SvelteEnable = {
       },
     ],
     "svelte/system": ON,
-
     // #endregion
-
   } as const,
 };

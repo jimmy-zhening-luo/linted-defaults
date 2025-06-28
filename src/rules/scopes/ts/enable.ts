@@ -9,7 +9,7 @@ import {
 export const TsEnable = {
   id: ID.Enable.Enable,
   rules: {
-  // DOC: https://typescript-eslint.io/rules/?=xextension-xdeprecated#rules
+    // DOC: https://typescript-eslint.io/rules/?=xextension-xdeprecated#rules
     "@typescript-eslint/adjacent-overload-signatures": OFF,
     "@typescript-eslint/array-type": [
       ON,

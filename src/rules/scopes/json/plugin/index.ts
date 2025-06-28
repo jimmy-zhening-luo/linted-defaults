@@ -7,7 +7,7 @@ import {
 export const JsonEnablePlugin = {
   id: ID.Enable.Plugin.Plugin,
   rules: {
-  // DOC: https://ota-meshi.github.io/eslint-plugin-jsonc/rules/#jsonc-rules
+    // DOC: https://ota-meshi.github.io/eslint-plugin-jsonc/rules/#jsonc-rules
     "jsonc/auto": OFF,
     "jsonc/key-name-casing": OFF,
     "jsonc/no-bigint-literals": ON,

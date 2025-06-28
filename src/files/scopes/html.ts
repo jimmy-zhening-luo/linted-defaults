@@ -1,3 +1,5 @@
 import { CreateScope } from "../utility";
 
-export default CreateScope("html");
+export default CreateScope(
+  "html",
+);

@@ -8,8 +8,8 @@ import {
 export const HtmlEnablePlugin = {
   id: ID.Enable.Plugin.Plugin,
   rules: {
-  // #region BEST PRACTICE
-  // DOC: https://html-eslint.org/docs/rules#best-practice
+    // #region BEST PRACTICE
+    // DOC: https://html-eslint.org/docs/rules#best-practice
     "@html-eslint/max-element-depth": OFF /* @preference: simply do not care */,
     "@html-eslint/no-duplicate-attrs": ON,
     "@html-eslint/no-duplicate-class": ON,

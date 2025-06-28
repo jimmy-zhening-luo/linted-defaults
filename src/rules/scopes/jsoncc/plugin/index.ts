@@ -1,12 +1,16 @@
 import {
   ID,
-  OFF,
+  ON,
+  always_multiline,
 } from "../../../strings";
 
-export const JsoncPluginDisable = {
+export const JsoncCommaPluginDisable = {
   id: ID.Disable.Plugin.Plugin,
   rules: {
     // DOC: https://ota-meshi.github.io/eslint-plugin-jsonc/rules/#jsonc-rules
-    "jsonc/no-comments": OFF /* comments ARE allowed in JSONC */,
+    "jsonc/comma-dangle": [
+      ON,
+      always_multiline,
+    ] /* trailing commas ARE allowed in JSONC */,
   } as const,
 };
