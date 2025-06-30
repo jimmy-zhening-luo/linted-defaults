@@ -1,2 +1,2 @@
-export { root } from "./root";
+export { roots } from "./roots";
 export { subdirectories } from "./subdirectories";
