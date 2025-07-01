@@ -11,13 +11,7 @@ export const TsEnable = {
   rules: {
     // DOC: https://typescript-eslint.io/rules/?=xextension-xdeprecated#rules
     "@typescript-eslint/adjacent-overload-signatures": OFF,
-    "@typescript-eslint/array-type": [
-      ON,
-      {
-        "default": "array",
-        readonly: "array",
-      },
-    ],
+    "@typescript-eslint/array-type": OFF /* preference: ideally, I'd like to don't-care mutable arrays while requiring readonly [] syntax for immutable arrays, but there is no way to do that with the current rule options */,
     "@typescript-eslint/await-thenable": ON,
     "@typescript-eslint/ban-ts-comment": [
       ON,
