@@ -1,6 +1,6 @@
-export { files } from "./files";
-export { ignores } from "./ignores";
-export { rules } from "./rules";
+import { files } from "./files";
+import { ignores } from "./ignores";
+import { rules } from "./rules";
 
 export const defaults = {
   files,
