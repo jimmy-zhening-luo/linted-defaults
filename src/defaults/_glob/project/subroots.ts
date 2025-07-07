@@ -1,4 +1,4 @@
-export const subdirectories = [
+export const SUBROOTS = [
   "src",
   "tests",
   "static",

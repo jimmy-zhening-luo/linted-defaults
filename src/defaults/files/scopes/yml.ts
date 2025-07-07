@@ -1,8 +1,8 @@
-import { CreateScope } from "../project";
+import { Scope } from "../../_glob";
 
-export default CreateScope(
-  "y{a,}ml",
+export default Scope(
+  "y{,a}ml",
   {
-    subdirectories: [".github"],
+    folders: [".github"],
   },
 );

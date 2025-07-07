@@ -1,5 +1,5 @@
-import { CreateScope } from "../project";
+import { Scope } from "../../_glob";
 
-export default CreateScope(
-  "{spec,test}.{c,m,}ts",
+export default Scope(
+  "{spec,test}.{,[cm]}ts",
 );

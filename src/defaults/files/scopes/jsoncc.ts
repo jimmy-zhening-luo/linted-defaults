@@ -1,9 +1,9 @@
-import { CreateScope } from "../project";
+import { Scope } from "../../_glob";
 
-export default CreateScope(
+export default Scope(
   "{jsonc,code-snippets}",
   {
-    filenames: ["{tsconfig,.vscode/**/*}.json"],
-    subdirectories: [".vscode"],
+    files: ["{tsconfig,.vscode/**/*}.json"],
+    folders: [".vscode"],
   },
 );
