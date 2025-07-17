@@ -13,5 +13,7 @@ export const SvelteDisable = {
     "no-unused-vars": OFF /* breaks use of svelte global */,
     "@typescript-eslint/no-unused-vars": OFF /* TS: breaks use of svelte global */,
     "prefer-const": OFF /* svelte/prefer-const */,
+    // My own
+    "@stylistic/indent": OFF /* Conflicts with `svelte/indent` */,
   } as const,
 };
