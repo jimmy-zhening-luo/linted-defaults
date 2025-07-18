@@ -39,6 +39,7 @@ export const SvelteEnable = {
         ignorePrefixed: true,
       },
     ],
+    "svelte/prefer-svelte-reactivity": ON,
     "svelte/require-store-callbacks-use-set-param": ON,
     "svelte/require-store-reactive-access": ON,
     "svelte/valid-compile": [
