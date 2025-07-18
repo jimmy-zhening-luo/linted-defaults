@@ -1,10 +1,11 @@
 import {
   ID,
   OFF,
+  WARN,
   ON,
   all,
-  always,
   always_multiline,
+  always,
   as_needed,
   before,
   below,
@@ -444,7 +445,7 @@ export const EnableStyle = {
       },
     ],
     "@stylistic/padding-line-between-statements": [
-      ON,
+      WARN,
       // #region *<
       {
         blankLine: never,
