@@ -192,10 +192,12 @@ export const EnableStyle = {
         FunctionDeclaration: {
           parameters: 1,
           body: 1,
+          returnType: 1,
         },
         FunctionExpression: {
           parameters: 1,
           body: 1,
+          returnType: 1,
         },
         StaticBlock: {
           body: 1,
@@ -210,6 +212,7 @@ export const EnableStyle = {
         offsetTernaryExpressions: true,
         offsetTernaryExpressionsOffsetCallExpressions: true,
         ignoreComments: false,
+        tabLength: 2 /* @default: 4 */,
       },
     ],
     "@stylistic/indent-binary-ops": [
