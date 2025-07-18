@@ -1,7 +1,7 @@
 import {
   ID,
-  ON,
   OFF,
+  ON,
   never,
 } from "../../../strings";
 

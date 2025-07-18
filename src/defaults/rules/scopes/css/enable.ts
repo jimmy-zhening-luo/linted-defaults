@@ -1,7 +1,7 @@
 import {
   ID,
-  ON,
   OFF,
+  ON,
 } from "../../strings";
 
 export const CssEnable = {

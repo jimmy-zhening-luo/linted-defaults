@@ -1,7 +1,7 @@
 import {
   ID,
-  ON,
   OFF,
+  ON,
   always,
   consistent,
   double,
