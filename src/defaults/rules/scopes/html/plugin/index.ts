@@ -125,6 +125,9 @@ export const HtmlEnablePlugin = {
     "@html-eslint/quotes": [
       ON,
       "double",
+      {
+        enforceTemplatedAttrValue: false,
+      },
     ],
     "@html-eslint/sort-attrs": OFF,
     // #endregion
