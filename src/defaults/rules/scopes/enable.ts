@@ -205,6 +205,7 @@ export const Enable = {
         setWithoutGet: true,
         getWithoutSet: false,
         enforceForClassMembers: true,
+        enforceForTSTypes: true,
       },
     ],
     "arrow-body-style": [
