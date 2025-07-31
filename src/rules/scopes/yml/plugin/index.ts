@@ -2,9 +2,10 @@ import {
   ID,
   OFF,
   ON,
-  never,
   always,
   double,
+  ignore,
+  never,
 } from "../../../_strings";
 
 export const YmlEnablePlugin = {
@@ -22,23 +23,23 @@ export const YmlEnablePlugin = {
     "yml/block-mapping": [
       ON,
       {
-        singleline: always /* always | never | ignore */,
-        multiline: always /* always | never | ignore */,
+        singleline: ignore /* always | never | @default ignore */,
+        multiline: always /* @default always | never | ignore */,
       },
     ],
     "yml/block-sequence-hyphen-indicator-newline": [
       ON,
       never,
       {
-        nestedHyphen: always /* never | @default: always */,
-        blockMapping: never /* never | always | @default: string option */,
+        nestedHyphen: always /* never | @default always */,
+        blockMapping: never /* never | always | @default string option */,
       },
     ],
     "yml/block-sequence": [
       ON,
       {
-        singleline: always,
-        multiline: always,
+        singleline: ignore /* always | never | @default ignore */,
+        multiline: always /* @default always | never | ignore */,
       },
     ],
     "yml/file-extension": OFF,
@@ -52,7 +53,7 @@ export const YmlEnablePlugin = {
       },
     ],
     "yml/key-name-casing": OFF,
-    "yml/no-empty-document": ON,
+    "yml/no-empty-document": OFF,
     "yml/no-empty-key": ON,
     "yml/no-empty-mapping-value": OFF /* PREFERENCE: breaks Home Assistant integration enablement shorthand style (would require a `{}` after) */,
     "yml/no-empty-sequence-entry": ON,
