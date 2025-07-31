@@ -3,7 +3,7 @@ import {
   OFF,
   ON,
   never,
-} from "../../../strings";
+} from "../../../_strings";
 
 export const HtmlEnablePlugin = {
   id: ID.Enable.Plugin.Plugin,

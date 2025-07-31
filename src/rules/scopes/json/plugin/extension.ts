@@ -8,7 +8,7 @@ import {
   last,
   never,
   strict,
-} from "../../../strings";
+} from "../../../_strings";
 
 export const JsonEnablePluginExtension = {
   id: ID.Enable.Plugin.Extension,

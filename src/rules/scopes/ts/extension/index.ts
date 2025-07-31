@@ -3,7 +3,7 @@ import {
   OFF,
   ON,
   all,
-} from "../../../strings";
+} from "../../../_strings";
 
 export const TsEnableExtension = {
   id: ID.Enable.Extension,

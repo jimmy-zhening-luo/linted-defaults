@@ -2,7 +2,7 @@ import {
   ID,
   OFF,
   ON,
-} from "../../../strings";
+} from "../../../_strings";
 
 export const JsonEnablePlugin = {
   id: ID.Enable.Plugin.Plugin,

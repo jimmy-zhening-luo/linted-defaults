@@ -2,7 +2,7 @@ import {
   ID,
   ON,
   always_multiline,
-} from "../../../strings";
+} from "../../../_strings";
 
 export const JsoncCommaPluginDisable = {
   id: ID.Disable.Plugin.Plugin,

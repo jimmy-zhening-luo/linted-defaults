@@ -17,7 +17,7 @@ import {
   never,
   strict,
   wildcard,
-} from "../strings";
+} from "../_strings";
 
 export const EnableStyle = {
   id: ID.Enable.Style,

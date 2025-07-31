@@ -5,7 +5,7 @@ import {
   never,
   always,
   double,
-} from "../../../strings";
+} from "../../../_strings";
 
 export const YmlEnablePlugin = {
   id: ID.Enable.Plugin.Plugin,

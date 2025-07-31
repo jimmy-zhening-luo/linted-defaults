@@ -3,7 +3,7 @@ import {
   ON,
   allow,
   both,
-} from "../../../strings";
+} from "../../../_strings";
 
 export const SvelteEnableExtension = {
   id: ID.Enable.Extension,

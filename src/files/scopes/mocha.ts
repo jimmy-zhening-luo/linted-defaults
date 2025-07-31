@@ -1,4 +1,4 @@
-import { Scope } from "../../_glob";
+import { Scope } from "../_factory";
 
 export default Scope(
   "{spec,test}.{,[cm]}ts",

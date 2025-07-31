@@ -2,7 +2,7 @@ import {
   ID,
   OFF,
   ON,
-} from "../../strings";
+} from "../../_strings";
 
 export const MochaEnable = {
   id: ID.Enable.Enable,

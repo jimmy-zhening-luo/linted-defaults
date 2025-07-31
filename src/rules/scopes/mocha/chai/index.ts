@@ -1,7 +1,7 @@
 import {
   ID,
   ON,
-} from "../../../strings";
+} from "../../../_strings";
 
 export const MochaEnablePluginChai = {
   id: `${ID.Enable.Plugin.Plugin}/chai`,
