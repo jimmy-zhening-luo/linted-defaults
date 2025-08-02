@@ -354,8 +354,8 @@ export const EnableStyle = {
       ON,
       {
         max: 1,
-        maxEOF: 1,
         maxBOF: 0,
+        maxEOF: 0 /* combine with `eol-last` to ensure file still ends with a single line-break (eol character) */,
       },
     ],
     "@stylistic/no-tabs": [

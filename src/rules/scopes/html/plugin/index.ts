@@ -98,7 +98,7 @@ export const HtmlEnablePlugin = {
     "@html-eslint/indent": [
       ON,
       2,
-    ] /* @CONFIGURE: indents for specific child tags: https://html-eslint.org/docs/rules/indent */,
+    ] /* TBD: @CONFIGURE: indents for specific child tags: https://html-eslint.org/docs/rules/indent */,
     "@html-eslint/lowercase": ON,
     "@html-eslint/no-extra-spacing-attrs": [
       ON,

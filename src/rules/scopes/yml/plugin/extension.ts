@@ -61,8 +61,8 @@ export const YmlEnablePluginExtension = {
       ON,
       {
         max: 1,
-        maxEOF: 1,
         maxBOF: 0,
+        maxEOF: 0 /* INFO: auto-fix still keeps final line-break (eol character) at EOF even though unlike `stylistic`, `yml` does not have `eol-last` */,
       },
     ] /* MUST match @stylistic/no-multiple-empty-lines */,
     "yml/spaced-comment": [
