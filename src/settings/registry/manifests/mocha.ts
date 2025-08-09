@@ -1,6 +1,6 @@
 export const mocha = {
   languageOptions: {
-    globals: "mocha" as const,
+    // Inherits `ts`
   },
   parserOptions: {
     // Inherits `ts`
