@@ -2,7 +2,6 @@ import {
   ID,
   // OFF,
   ON,
-  never,
 } from "../../../_strings";
 
 export const HtmlEnablePlugin = {
@@ -26,23 +25,12 @@ export const HtmlEnablePlugin = {
     // "@html-eslint/prefer-https": OFF /* @CONFLICT: not everything is https */,
     // "@html-eslint/require-attrs": OFF,
     "@html-eslint/require-button-type": ON,
-    "@html-eslint/require-closing-tags": [
-      ON,
-      {
-        selfClosing: never,
-        selfClosingCustomPatterns: [""] /* @CONFIGURE: regex[] = custom pattern */,
-      },
-    ],
+    "@html-eslint/require-closing-tags": ON,
     "@html-eslint/require-doctype": ON,
     // "@html-eslint/require-explicit-size": OFF /* preference, prefer using css */,
     "@html-eslint/require-li-container": ON,
     "@html-eslint/require-meta-charset": ON,
-    "@html-eslint/use-baseline": [
-      ON,
-      {
-        available: "widely" /* "widely" | "newly" | integer (year) */,
-      },
-    ],
+    "@html-eslint/use-baseline": ON,
     // #endregion
 
     // #region SEO
@@ -68,12 +56,7 @@ export const HtmlEnablePlugin = {
     "@html-eslint/no-skip-heading-levels": ON,
     "@html-eslint/require-form-method": ON,
     "@html-eslint/require-frame-title": ON,
-    "@html-eslint/require-img-alt": [
-      ON,
-      {
-        substitute: [],
-      },
-    ],
+    "@html-eslint/require-img-alt": ON,
     "@html-eslint/require-input-label": ON,
     "@html-eslint/require-meta-viewport": ON,
     // #endregion
@@ -84,7 +67,7 @@ export const HtmlEnablePlugin = {
       ON,
       {
         ifAttrsMoreThan: 0,
-        closeStyle: "newline",
+        // closeStyle: "newline" /* sameline | @default newline */,
       },
     ],
     "@html-eslint/element-newline": [
@@ -97,38 +80,33 @@ export const HtmlEnablePlugin = {
     // "@html-eslint/id-naming-convention": OFF,
     "@html-eslint/indent": [
       ON,
-      2,
+      2 /* tab | number | @default 4 */,
+      // {
+      //   Attribute: 1 /* number | @default 1 */,
+      //   tagChildrenIndent: {
+      //     html: 0 /* number */,
+      //   } /* @default {} */,
+      // },
     ] /* TBD: @CONFIGURE: indents for specific child tags: https://html-eslint.org/docs/rules/indent */,
     "@html-eslint/lowercase": ON,
     "@html-eslint/no-extra-spacing-attrs": [
       ON,
       {
-        enforceBeforeSelfClose: false,
-        disallowMissing: true,
-        disallowTabs: true,
-        disallowInAssignment: true,
+        // enforceBeforeSelfClose: false /* @default false */,
+        disallowMissing: true /* @default false */,
+        disallowTabs: true /* @default false */,
+        disallowInAssignment: true /* @default false */,
       },
     ],
-    "@html-eslint/no-extra-spacing-text": [
-      ON,
-      {
-        skip: [],
-      },
-    ],
+    "@html-eslint/no-extra-spacing-text": ON,
     "@html-eslint/no-multiple-empty-lines": [
       ON,
       {
-        max: 1,
+        max: 1 /* number | @default 2 */,
       },
     ],
     "@html-eslint/no-trailing-spaces": ON,
-    "@html-eslint/quotes": [
-      ON,
-      "double",
-      {
-        enforceTemplatedAttrValue: false,
-      },
-    ],
+    "@html-eslint/quotes": ON,
     // "@html-eslint/sort-attrs": OFF,
     // #endregion
   } as const,

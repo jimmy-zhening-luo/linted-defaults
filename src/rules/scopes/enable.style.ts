@@ -1,6 +1,6 @@
 import {
   ID,
-  OFF,
+  // OFF,
   WARN,
   ON,
   all,
@@ -9,13 +9,11 @@ import {
   as_needed,
   before,
   below,
-  beside,
   consistent,
   double,
   inside,
   last,
   never,
-  strict,
   wildcard,
 } from "../_strings";
 
@@ -23,164 +21,58 @@ export const EnableStyle = {
   id: ID.Enable.Style,
   rules: {
     // DOC: https://eslint.style/rules
-    "@stylistic/array-bracket-newline": [
-      ON,
-      {
-        multiline: true,
-        minItems: null,
-      },
-    ],
-    "@stylistic/array-bracket-spacing": [
-      ON,
-      never,
-      {
-        singleValue: false,
-        objectsInArrays: false,
-        arraysInArrays: false,
-      },
-    ],
+    "@stylistic/array-bracket-newline": ON,
+    "@stylistic/array-bracket-spacing": ON,
     "@stylistic/array-element-newline": [
       ON,
       {
-        ArrayExpression: {
-          consistent: true,
-          multiline: true,
-          minItems: 3,
-        },
-        ArrayPattern: {
-          consistent: true,
-          multiline: true,
-          minItems: 3,
-        },
-      },
+        consistent: true,
+        multiline: true,
+        minItems: 3,
+      } /* never | consistent | @default always | { ... } */,
     ],
     "@stylistic/arrow-parens": [
       ON,
-      as_needed,
-      {
-        requireForBlockBody: false,
-      },
+      as_needed /* as-needed | @default always */,
     ],
-    "@stylistic/arrow-spacing": [
-      ON,
-      {
-        before: true,
-        after: true,
-      },
-    ],
-    "@stylistic/block-spacing": [
-      ON,
-      always,
-    ],
+    "@stylistic/arrow-spacing": ON,
+    "@stylistic/block-spacing": ON,
     "@stylistic/brace-style": [
       ON,
-      "stroustrup",
+      "stroustrup" /* stroustrup | allman | @default 1tbs */,
       {
-        allowSingleLine: true,
+        allowSingleLine: true /* @default false */,
       },
     ],
     "@stylistic/comma-dangle": [
       ON,
       always_multiline,
     ],
-    "@stylistic/comma-spacing": [
-      ON,
-      {
-        before: false,
-        after: true,
-      },
-    ],
-    "@stylistic/comma-style": [
-      ON,
-      last,
-      {
-        exceptions: {
-          ArrayExpression: false /* ignores comma style in array literals */,
-          ArrayPattern: false /* ignores comma style in array patterns of destructuring */,
-          ArrowFunctionExpression: false /* ignores comma style in the parameters of arrow function expressions */,
-          CallExpression: false /* ignores comma style in the arguments of function calls */,
-          FunctionDeclaration: false /* ignores comma style in the parameters of function declarations */,
-          FunctionExpression: false /* ignores comma style in the parameters of function expressions */,
-          ImportDeclaration: false /* ignores comma style in the specifiers / import attributes of import declarations */,
-          ObjectExpression: false /* ignores comma style in object literals */,
-          ObjectPattern: false /* ignores comma style in object patterns of destructuring */,
-          VariableDeclaration: false /* ignores comma style in variable declarations */,
-          NewExpression: false /* ignores comma style in the parameters of constructor expressions */,
-          ExportAllDeclaration: false /* ignores comma style in the import attributes of export all declarations */,
-          ExportNamedDeclaration: false /* ignores comma style in the specifiers / import attributes of export named declarations */,
-          ImportExpression: false /* ignores comma style in the arguments of import expressions */,
-          SequenceExpression: false /* ignores comma style in sequence expressions */,
-          ClassDeclaration: false /* ignores comma style in the TypeScript implements of class declarations */,
-          ClassExpression: false /* ignores comma style in the TypeScript implements of class declarations */,
-          TSDeclareFunction: false /* ignores comma style in the parameters of TypeScript declare functions */,
-          TSFunctionType: false /* ignores comma style in the parameters of TypeScript function types */,
-          TSConstructorType: false /* ignores comma style in the parameters of TypeScript constructor types */,
-          TSEmptyBodyFunctionExpression: false /* ignores comma style in the parameters of TypeScript empty body function expressions */,
-          TSMethodSignature: false /* ignores comma style in the parameters of TypeScript method signatures */,
-          TSCallSignatureDeclaration: false /* ignores comma style in the parameters of TypeScript call signature declarations */,
-          TSConstructSignatureDeclaration: false /* ignores comma style in the parameters of TypeScript construct signature declarations */,
-          TSEnumBody: false /* ignores comma style in the members of TypeScript enums */,
-          TSTypeLiteral: false /* ignores comma style in the members of TypeScript type literals */,
-          TSInterfaceBody: false /* ignores comma style in the members of TypeScript interfaces */,
-          TSIndexSignature: false /* ignores comma style in the key parameters of TypeScript index signatures */,
-          TSInterfaceDeclaration: false /* ignores comma style in the extend classes of TypeScript interfaces */,
-          TSTupleType: false /* ignores comma style in the elements of TypeScript tuple types */,
-          TSTypeParameterDeclaration: false /* ignores comma style in the type parameters of TypeScript type parameter declarations */,
-          TSTypeParameterInstantiation: false /* ignores comma style in the type arguments of TypeScript type parameter instantiations */,
-        },
-      },
-    ],
-    "@stylistic/computed-property-spacing": [
-      ON,
-      never,
-      {
-        enforceForClassMembers: true,
-      },
-    ],
-    "@stylistic/curly-newline": [
-      ON,
-      {
-        // multiline: false,
-        // minElements: 2 /* when consistent:true, this errors if there are linebreaks with elements < minElements */,
-        consistent: true /* @default */,
-      },
-    ],
+    "@stylistic/comma-spacing": ON,
+    "@stylistic/comma-style": ON,
+    "@stylistic/computed-property-spacing": ON,
+    "@stylistic/curly-newline": ON,
     "@stylistic/dot-location": [
       ON,
-      "property",
+      "property" /* property | @default object */,
     ],
-    "@stylistic/eol-last": [
-      ON,
-      always,
-    ],
+    "@stylistic/eol-last": ON,
     "@stylistic/function-call-argument-newline": [
       ON,
-      consistent,
+      consistent /* consistent | never | @default always */,
     ],
-    "@stylistic/function-call-spacing": [
-      ON,
-      never,
-    ],
+    "@stylistic/function-call-spacing": ON,
     "@stylistic/function-paren-newline": [
       ON,
       "multiline-arguments",
     ] /* BUG: https://github.com/eslint-stylistic/eslint-stylistic/issues/290 */,
-    "@stylistic/generator-star-spacing": [
-      ON,
-      {
-        before: true,
-        after: false,
-      },
-    ],
-    "@stylistic/implicit-arrow-linebreak": [
-      ON,
-      beside,
-    ],
+    "@stylistic/generator-star-spacing": ON,
+    "@stylistic/implicit-arrow-linebreak": ON,
     "@stylistic/indent": [
       ON,
-      2,
+      2 /* tab | number | @default 4 */,
       {
-        ignoredNodes: [],
+        // ignoredNodes: [],
         SwitchCase: 1,
         VariableDeclarator: {
           "var": 0,
@@ -188,54 +80,39 @@ export const EnableStyle = {
           "const": 0,
         },
         outerIIFEBody: 0,
-        MemberExpression: 1,
-        FunctionDeclaration: {
-          parameters: 1,
-          body: 1,
-          returnType: 1,
-        },
-        FunctionExpression: {
-          parameters: 1,
-          body: 1,
-          returnType: 1,
-        },
-        StaticBlock: {
-          body: 1,
-        },
-        CallExpression: {
-          arguments: 1,
-        },
-        ArrayExpression: 1,
-        ObjectExpression: 1,
-        ImportDeclaration: 1,
-        flatTernaryExpressions: false,
+        // MemberExpression: 1,
+        // FunctionDeclaration: {
+        //   parameters: 1,
+        //   body: 1,
+        //   returnType: 1,
+        // },
+        // FunctionExpression: {
+        //   parameters: 1,
+        //   body: 1,
+        //   returnType: 1,
+        // },
+        // StaticBlock: {
+        //   body: 1,
+        // },
+        // CallExpression: {
+        //   arguments: 1,
+        // },
+        // ArrayExpression: 1,
+        // ObjectExpression: 1,
+        // ImportDeclaration: 1,
+        // flatTernaryExpressions: false,
         offsetTernaryExpressions: true,
-        offsetTernaryExpressionsOffsetCallExpressions: true,
-        ignoreComments: false,
-        tabLength: 2 /* @default: 4 */,
+        // offsetTernaryExpressionsOffsetCallExpressions: true,
+        // ignoreComments: false,
+        tabLength: 2 /* @default 4 */,
       },
     ],
     "@stylistic/indent-binary-ops": [
       ON,
       2,
     ],
-    "@stylistic/key-spacing": [
-      ON,
-      {
-        beforeColon: false,
-        afterColon: true,
-        mode: strict,
-        ignoredNodes: [],
-      },
-    ],
-    "@stylistic/keyword-spacing": [
-      ON,
-      {
-        before: true,
-        after: true,
-        overrides: {},
-      },
-    ],
+    "@stylistic/key-spacing": ON,
+    "@stylistic/keyword-spacing": ON,
     // "@stylistic/line-comment-position": OFF,
     // "@stylistic/lines-around-comment": OFF,
     "@stylistic/lines-between-class-members": [
@@ -302,10 +179,7 @@ export const EnableStyle = {
       ON,
       always_multiline,
     ],
-    "@stylistic/new-parens": [
-      OFF,
-      never,
-    ],
+    // "@stylistic/new-parens": OFF,
     "@stylistic/newline-per-chained-call": [
       ON,
       {
