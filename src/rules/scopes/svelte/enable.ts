@@ -1,6 +1,6 @@
 import {
   ID,
-  OFF,
+  // OFF,
   ON,
   all,
   always,
@@ -105,7 +105,7 @@ export const SvelteEnable = {
         allowReassign: false,
       },
     ],
-    "svelte/no-unused-class-name": OFF /* incompatible: breaks if css class is located in another file; BUG: ESLint error if array empty */,
+    // "svelte/no-unused-class-name": OFF /* incompatible: breaks if css class is located in another file; BUG: ESLint error if array empty */,
     "svelte/no-unused-props": [
       ON,
       {
@@ -229,7 +229,7 @@ export const SvelteEnable = {
       },
     ],
     "svelte/no-extra-reactive-curlies": ON,
-    "svelte/no-restricted-html-elements": OFF,
+    // "svelte/no-restricted-html-elements": OFF,
     "svelte/no-spaces-around-equal-signs-in-attribute": ON,
     "svelte/prefer-class-directive": [
       ON,
@@ -256,7 +256,7 @@ export const SvelteEnable = {
         prefer: always,
       },
     ],
-    "svelte/sort-attributes": OFF /* INVESTIGATE: */,
+    // "svelte/sort-attributes": OFF /* INVESTIGATE: */,
     "svelte/spaced-html-comment": [
       ON,
       always,

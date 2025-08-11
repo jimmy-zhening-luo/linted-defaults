@@ -1,6 +1,6 @@
 import {
   ID,
-  OFF,
+  // OFF,
   ON,
   all,
 } from "../../../_strings";
@@ -33,7 +33,7 @@ export const TsEnableExtension = {
     // "@typescript-eslint/no-loop-func": OFF /* ESLint now supports TS */,
     // "@typescript-eslint/no-magic-numbers": OFF /* preference, although ESLint now supports TS */,
     // "@typescript-eslint/no-redeclare": OFF /* tsc (let, const, -var) */,
-    "@typescript-eslint/no-restricted-imports": OFF /* preference */,
+    // "@typescript-eslint/no-restricted-imports": OFF /* preference */,
     // "@typescript-eslint/no-shadow": OFF /* ESLint now supports TS (was: investigate) */,
     // "@typescript-eslint/no-unused-expressions": OFF /* ESLint now supports TS (preference -- eslint:OFF) */,
     "@typescript-eslint/no-unused-vars": [

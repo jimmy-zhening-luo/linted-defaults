@@ -236,8 +236,8 @@ export const EnableStyle = {
         overrides: {},
       },
     ],
-    "@stylistic/line-comment-position": OFF,
-    "@stylistic/lines-around-comment": OFF,
+    // "@stylistic/line-comment-position": OFF,
+    // "@stylistic/lines-around-comment": OFF,
     "@stylistic/lines-between-class-members": [
       ON,
       {
@@ -297,7 +297,7 @@ export const EnableStyle = {
         multilineDetection: "brackets",
       },
     ],
-    "@stylistic/multiline-comment-style": OFF,
+    // "@stylistic/multiline-comment-style": OFF,
     "@stylistic/multiline-ternary": [
       ON,
       always_multiline,
@@ -312,7 +312,7 @@ export const EnableStyle = {
         ignoreChainWithDepth: 2,
       },
     ],
-    "@stylistic/no-confusing-arrow": OFF,
+    // "@stylistic/no-confusing-arrow": OFF,
     "@stylistic/no-extra-parens": [
       ON,
       all,
@@ -337,7 +337,7 @@ export const EnableStyle = {
     ],
     "@stylistic/no-extra-semi": ON,
     "@stylistic/no-floating-decimal": ON,
-    "@stylistic/no-mixed-operators": OFF,
+    // "@stylistic/no-mixed-operators": OFF,
     "@stylistic/no-mixed-spaces-and-tabs": ON,
     "@stylistic/no-multi-spaces": [
       ON,

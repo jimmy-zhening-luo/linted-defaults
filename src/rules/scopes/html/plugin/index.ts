@@ -1,6 +1,6 @@
 import {
   ID,
-  OFF,
+  // OFF,
   ON,
   never,
 } from "../../../_strings";
@@ -10,21 +10,21 @@ export const HtmlEnablePlugin = {
   rules: {
     // #region BEST PRACTICE
     // DOC: https://html-eslint.org/docs/rules#best-practice
-    "@html-eslint/max-element-depth": OFF /* @preference: simply do not care */,
+    // "@html-eslint/max-element-depth": OFF /* @preference: simply do not care */,
     "@html-eslint/no-duplicate-attrs": ON,
     "@html-eslint/no-duplicate-class": ON,
     "@html-eslint/no-duplicate-id": ON,
     "@html-eslint/no-duplicate-in-head": ON,
-    "@html-eslint/no-inline-styles": OFF /* @CONFLICT: breaks Svelte app.html */,
+    // "@html-eslint/no-inline-styles": OFF /* @CONFLICT: breaks Svelte app.html */,
     "@html-eslint/no-invalid-entity": ON,
     "@html-eslint/no-nested-interactive": ON,
     "@html-eslint/no-obsolete-tags": ON,
-    "@html-eslint/no-restricted-attr-values": OFF,
-    "@html-eslint/no-restricted-attrs": OFF,
-    "@html-eslint/no-script-style-type": OFF,
+    // "@html-eslint/no-restricted-attr-values": OFF,
+    // "@html-eslint/no-restricted-attrs": OFF,
+    // "@html-eslint/no-script-style-type": OFF,
     "@html-eslint/no-target-blank": ON,
-    "@html-eslint/prefer-https": OFF /* @CONFLICT: not everything is https */,
-    "@html-eslint/require-attrs": OFF,
+    // "@html-eslint/prefer-https": OFF /* @CONFLICT: not everything is https */,
+    // "@html-eslint/require-attrs": OFF,
     "@html-eslint/require-button-type": ON,
     "@html-eslint/require-closing-tags": [
       ON,
@@ -34,7 +34,7 @@ export const HtmlEnablePlugin = {
       },
     ],
     "@html-eslint/require-doctype": ON,
-    "@html-eslint/require-explicit-size": OFF /* preference, prefer using css */,
+    // "@html-eslint/require-explicit-size": OFF /* preference, prefer using css */,
     "@html-eslint/require-li-container": ON,
     "@html-eslint/require-meta-charset": ON,
     "@html-eslint/use-baseline": [
@@ -49,9 +49,9 @@ export const HtmlEnablePlugin = {
     // DOC: https://html-eslint.org/docs/rules#seo
     "@html-eslint/no-multiple-h1": ON,
     "@html-eslint/require-lang": ON,
-    "@html-eslint/require-meta-description": OFF /* @CONFLICT: breaks Svelte which leaves meta descriptions to route leaves */,
-    "@html-eslint/require-open-graph-protocol": OFF /* idk what this is, also it probably breaks Svelte */,
-    "@html-eslint/require-title": OFF /* @CONFLICT: breaks Svelte which leaves title to route leaves */,
+    // "@html-eslint/require-meta-description": OFF /* @CONFLICT: breaks Svelte which leaves meta descriptions to route leaves */,
+    // "@html-eslint/require-open-graph-protocol": OFF /* idk what this is, also it probably breaks Svelte */,
+    // "@html-eslint/require-title": OFF /* @CONFLICT: breaks Svelte which leaves title to route leaves */,
     // #endregion
 
     // #region ACCESSIBILITY
@@ -94,7 +94,7 @@ export const HtmlEnablePlugin = {
         inline: ["$inline"],
       },
     ],
-    "@html-eslint/id-naming-convention": OFF,
+    // "@html-eslint/id-naming-convention": OFF,
     "@html-eslint/indent": [
       ON,
       2,
@@ -129,7 +129,7 @@ export const HtmlEnablePlugin = {
         enforceTemplatedAttrValue: false,
       },
     ],
-    "@html-eslint/sort-attrs": OFF,
+    // "@html-eslint/sort-attrs": OFF,
     // #endregion
   } as const,
 };

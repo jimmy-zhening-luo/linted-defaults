@@ -1,6 +1,6 @@
 import {
   ID,
-  OFF,
+  // OFF,
   ON,
   never,
   explicit,
@@ -10,8 +10,8 @@ export const TsEnable = {
   id: ID.Enable.Enable,
   rules: {
     // DOC: https://typescript-eslint.io/rules/?=xextension-xdeprecated#rules
-    "@typescript-eslint/adjacent-overload-signatures": OFF,
-    "@typescript-eslint/array-type": OFF /* preference: ideally, I'd like to don't-care mutable arrays while requiring readonly [] syntax for immutable arrays, but there is no way to do that with the current rule options */,
+    // "@typescript-eslint/adjacent-overload-signatures": OFF,
+    // "@typescript-eslint/array-type": OFF /* preference: ideally, I'd like to don't-care mutable arrays while requiring readonly [] syntax for immutable arrays, but there is no way to do that with the current rule options */,
     "@typescript-eslint/await-thenable": ON,
     "@typescript-eslint/ban-ts-comment": [
       ON,
@@ -46,7 +46,7 @@ export const TsEnable = {
         objectLiteralTypeAssertions: never,
       },
     ],
-    "@typescript-eslint/consistent-type-definitions": OFF,
+    // "@typescript-eslint/consistent-type-definitions": OFF,
     "@typescript-eslint/consistent-type-exports": [
       ON,
       {
@@ -61,7 +61,7 @@ export const TsEnable = {
         prefer: "type-imports",
       },
     ],
-    "@typescript-eslint/explicit-function-return-type": OFF,
+    // "@typescript-eslint/explicit-function-return-type": OFF,
     "@typescript-eslint/explicit-member-accessibility": [
       ON,
       {
@@ -76,7 +76,7 @@ export const TsEnable = {
         },
       },
     ],
-    "@typescript-eslint/explicit-module-boundary-types": OFF,
+    // "@typescript-eslint/explicit-module-boundary-types": OFF,
     "@typescript-eslint/member-ordering": [
       ON,
       {
@@ -250,7 +250,7 @@ export const TsEnable = {
       ON,
       "property",
     ],
-    "@typescript-eslint/naming-convention": OFF,
+    // "@typescript-eslint/naming-convention": OFF,
     "@typescript-eslint/no-array-delete": ON,
     "@typescript-eslint/no-base-to-string": [
       ON,
@@ -273,7 +273,7 @@ export const TsEnable = {
         ignoreVoidReturningFunctions: true,
       },
     ],
-    "@typescript-eslint/no-deprecated": OFF /* incompatible: Cannot be used with jsDocParsingMode: "none" */,
+    // "@typescript-eslint/no-deprecated": OFF /* incompatible: Cannot be used with jsDocParsingMode: "none" */,
     "@typescript-eslint/no-duplicate-enum-values": ON,
     "@typescript-eslint/no-duplicate-type-constituents": [
       ON,
@@ -360,12 +360,12 @@ export const TsEnable = {
       },
     ],
     "@typescript-eslint/no-mixed-enums": ON,
-    "@typescript-eslint/no-namespace": OFF,
+    // "@typescript-eslint/no-namespace": OFF,
     "@typescript-eslint/no-non-null-asserted-nullish-coalescing": ON,
     "@typescript-eslint/no-non-null-asserted-optional-chain": ON,
-    "@typescript-eslint/no-non-null-assertion": OFF /* preference */,
+    // "@typescript-eslint/no-non-null-assertion": OFF /* preference */,
     "@typescript-eslint/no-redundant-type-constituents": ON,
-    "@typescript-eslint/no-restricted-types": OFF /* preference - no shared custom types across all projects that I wish to ban */,
+    // "@typescript-eslint/no-restricted-types": OFF /* preference - no shared custom types across all projects that I wish to ban */,
     "@typescript-eslint/no-require-imports": [
       ON,
       {
@@ -415,11 +415,11 @@ export const TsEnable = {
     "@typescript-eslint/no-unsafe-function-type": ON,
     "@typescript-eslint/no-unsafe-member-access": ON,
     "@typescript-eslint/no-unsafe-return": ON,
-    "@typescript-eslint/no-unsafe-type-assertion": OFF,
+    // "@typescript-eslint/no-unsafe-type-assertion": OFF,
     "@typescript-eslint/no-unsafe-unary-minus": ON,
     "@typescript-eslint/no-useless-empty-export": ON,
     "@typescript-eslint/no-wrapper-object-types": ON,
-    "@typescript-eslint/non-nullable-type-assertion-style": OFF /* preference */,
+    // "@typescript-eslint/non-nullable-type-assertion-style": OFF /* preference */,
     "@typescript-eslint/parameter-properties": [
       ON,
       {
@@ -475,7 +475,7 @@ export const TsEnable = {
         onlyInlineLambdas: false,
       },
     ],
-    "@typescript-eslint/prefer-readonly-parameter-types": OFF /* preference - WAY too restrictive */,
+    // "@typescript-eslint/prefer-readonly-parameter-types": OFF /* preference - WAY too restrictive */,
     "@typescript-eslint/prefer-reduce-type-parameter": ON,
     "@typescript-eslint/prefer-regexp-exec": ON,
     "@typescript-eslint/prefer-return-this-type": ON,
@@ -560,7 +560,7 @@ export const TsEnable = {
         types: never /** always | never | prefer-import */,
       },
     ],
-    "@typescript-eslint/typedef": OFF /* tsconfig: { noImplicitAny, strictPropertyInitialization } */,
+    // "@typescript-eslint/typedef": OFF /* tsconfig: { noImplicitAny, strictPropertyInitialization } */,
     "@typescript-eslint/unbound-method": [
       ON,
       {

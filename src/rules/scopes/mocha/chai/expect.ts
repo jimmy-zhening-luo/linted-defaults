@@ -1,6 +1,6 @@
 import {
   ID,
-  OFF,
+  // OFF,
   ON,
 } from "../../../_strings";
 
@@ -11,6 +11,6 @@ export const MochaEnablePluginChaiExpect = {
     "chai-expect/no-inner-compare": ON,
     "chai-expect/no-inner-literal": ON,
     "chai-expect/missing-assertion": ON,
-    "chai-expect/terminating-properties": OFF,
+    // "chai-expect/terminating-properties": OFF,
   } as const,
 };

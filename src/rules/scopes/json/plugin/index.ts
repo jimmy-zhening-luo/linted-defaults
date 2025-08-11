@@ -1,6 +1,6 @@
 import {
   ID,
-  OFF,
+  // OFF,
   ON,
 } from "../../../_strings";
 
@@ -8,8 +8,8 @@ export const JsonEnablePlugin = {
   id: ID.Enable.Plugin.Plugin,
   rules: {
     // DOC: https://ota-meshi.github.io/eslint-plugin-jsonc/rules/#jsonc-rules
-    "jsonc/auto": OFF,
-    "jsonc/key-name-casing": OFF,
+    // "jsonc/auto": OFF,
+    // "jsonc/key-name-casing": OFF,
     "jsonc/no-bigint-literals": ON,
     "jsonc/no-binary-expression": ON,
     "jsonc/no-binary-numeric-literals": ON,
@@ -27,8 +27,8 @@ export const JsonEnablePlugin = {
     "jsonc/no-template-literals": ON,
     "jsonc/no-undefined-value": ON,
     "jsonc/no-unicode-codepoint-escapes": ON,
-    "jsonc/sort-array-values": OFF /* preference: this makes no sense, arrays can be ordered */,
-    "jsonc/sort-keys": OFF /* ESLint: json/sort-keys BUT preference: only sort keys manually when I'd like */,
+    // "jsonc/sort-array-values": OFF /* preference: this makes no sense, arrays can be ordered */,
+    // "jsonc/sort-keys": OFF /* ESLint: json/sort-keys BUT preference: only sort keys manually when I'd like */,
     "jsonc/valid-json-number": ON,
     "jsonc/vue-custom-block/no-parsing-error": ON,
   } as const,
