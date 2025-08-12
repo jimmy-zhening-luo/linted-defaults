@@ -1,9 +1,7 @@
 import {
   ID,
   ON,
-  never,
   always,
-  strict,
 } from "../../../_strings";
 
 export const YmlEnablePluginExtension = {
@@ -21,42 +19,11 @@ export const YmlEnablePluginExtension = {
     "yml/flow-mapping-curly-spacing": [
       ON,
       always,
-      {
-        arraysInObjects: true,
-        objectsInObjects: true,
-      },
     ] /* MUST match jsonc/object-curly-spacing */,
-    "yml/flow-sequence-bracket-newline": [
-      ON,
-      {
-        multiline: true,
-        minItems: null,
-      },
-    ] /* @OVERRIDE jsonc/array-bracket-newline, instead -> MUST match its parent: @stylistic/array-bracket-newline */,
-    "yml/flow-sequence-bracket-spacing": [
-      ON,
-      never,
-      {
-        singleValue: false,
-        objectsInArrays: false,
-        arraysInArrays: false,
-      },
-    ] /* MUST match jsonc/array-bracket-spacing */,
-    "yml/key-spacing": [
-      ON,
-      {
-        beforeColon: false,
-        afterColon: true,
-        mode: strict,
-      },
-    ] /* MUST match jsonc/key-spacing */,
-    "yml/no-irregular-whitespace": [
-      ON,
-      {
-        skipQuotedScalars: true,
-        skipComments: false,
-      },
-    ],
+    "yml/flow-sequence-bracket-newline": ON /* @OVERRIDE jsonc/array-bracket-newline, instead -> MUST match its parent: @stylistic/array-bracket-newline */,
+    "yml/flow-sequence-bracket-spacing": ON /* MUST match jsonc/array-bracket-spacing */,
+    "yml/key-spacing": ON /* MUST match jsonc/key-spacing */,
+    "yml/no-irregular-whitespace": ON,
     "yml/no-multiple-empty-lines": [
       ON,
       {

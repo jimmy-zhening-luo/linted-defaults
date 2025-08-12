@@ -3,7 +3,6 @@ import {
   // OFF,
   WARN,
   ON,
-  all,
   always_multiline,
   always,
   as_needed,
@@ -12,7 +11,6 @@ import {
   consistent,
   double,
   inside,
-  last,
   never,
   wildcard,
 } from "../_strings";
@@ -72,44 +70,18 @@ export const EnableStyle = {
       ON,
       2 /* tab | number | @default 4 */,
       {
-        // ignoredNodes: [],
-        SwitchCase: 1,
         VariableDeclarator: {
           "var": 0,
           let: 0,
           "const": 0,
         },
         outerIIFEBody: 0,
-        // MemberExpression: 1,
-        // FunctionDeclaration: {
-        //   parameters: 1,
-        //   body: 1,
-        //   returnType: 1,
-        // },
-        // FunctionExpression: {
-        //   parameters: 1,
-        //   body: 1,
-        //   returnType: 1,
-        // },
-        // StaticBlock: {
-        //   body: 1,
-        // },
-        // CallExpression: {
-        //   arguments: 1,
-        // },
-        // ArrayExpression: 1,
-        // ObjectExpression: 1,
-        // ImportDeclaration: 1,
-        // flatTernaryExpressions: false,
         offsetTernaryExpressions: true,
-        // offsetTernaryExpressionsOffsetCallExpressions: true,
-        // ignoreComments: false,
-        tabLength: 2 /* @default 4 */,
       },
     ],
     "@stylistic/indent-binary-ops": [
       ON,
-      2,
+      2 /* MUST be same as `@stylistic/indent`[1] */,
     ],
     "@stylistic/key-spacing": ON,
     "@stylistic/keyword-spacing": ON,
@@ -136,16 +108,12 @@ export const EnableStyle = {
           },
         ],
       },
-      {
-        exceptAfterSingleLine: false,
-        exceptAfterOverload: true /* TS-only */,
-      },
     ],
     "@stylistic/max-len": [
       ON,
       {
-        code: 300,
-        tabWidth: 2,
+        code: 300 /* @default 80 */,
+        // tabWidth: 4,
         ignoreComments: true,
         ignoreTrailingComments: true,
         ignoreUrls: true,
@@ -154,61 +122,17 @@ export const EnableStyle = {
         ignoreRegExpLiterals: true,
       },
     ],
-    "@stylistic/max-statements-per-line": [
-      ON,
-      {
-        max: 1,
-      },
-    ],
-    "@stylistic/member-delimiter-style": [
-      ON,
-      {
-        multiline: {
-          delimiter: "semi",
-          requireLast: true,
-        },
-        singleline: {
-          delimiter: "semi",
-          requireLast: false,
-        },
-        multilineDetection: "brackets",
-      },
-    ],
+    "@stylistic/max-statements-per-line": ON,
+    "@stylistic/member-delimiter-style": ON,
     // "@stylistic/multiline-comment-style": OFF,
     "@stylistic/multiline-ternary": [
       ON,
-      always_multiline,
+      always_multiline /* never | always-multiline | @default always */,
     ],
     // "@stylistic/new-parens": OFF,
-    "@stylistic/newline-per-chained-call": [
-      ON,
-      {
-        ignoreChainWithDepth: 2,
-      },
-    ],
+    "@stylistic/newline-per-chained-call": ON,
     // "@stylistic/no-confusing-arrow": OFF,
-    "@stylistic/no-extra-parens": [
-      ON,
-      all,
-      {
-        conditionalAssign: true,
-        returnAssign: true,
-        nestedBinaryExpressions: true,
-        ternaryOperandBinaryExpressions: true,
-        // ignoreJSX: "none" /* all | multi-line | single-line | @default: none */,
-        enforceForArrowConditionals: true,
-        enforceForSequenceExpressions: true,
-        enforceForNewInMemberExpressions: true,
-        enforceForFunctionPrototypeMethods: true,
-        // allowParensAfterCommentPattern: "" /* regex */,
-        nestedConditionalExpressions: true,
-        allowNodesInSpreadElement: {
-          ConditionalExpression: false,
-          LogicalExpression: false,
-          AwaitExpression: false,
-        } /* @default: all true */,
-      },
-    ],
+    "@stylistic/no-extra-parens": ON,
     "@stylistic/no-extra-semi": ON,
     "@stylistic/no-floating-decimal": ON,
     // "@stylistic/no-mixed-operators": OFF,
@@ -216,107 +140,51 @@ export const EnableStyle = {
     "@stylistic/no-multi-spaces": [
       ON,
       {
-        ignoreEOLComments: false /* @OVERRIDE */,
         exceptions: {
-          Property: false /* @OVERRIDE */,
-          ImportAttributes: false /* @OVERRIDE */,
+          Property: false,
+          ImportAttributes: false,
         },
-        includeTabs: true /* @OVERRIDE */,
       },
     ],
     "@stylistic/no-multiple-empty-lines": [
       ON,
       {
-        max: 1,
+        max: 1 /* @default 2 */,
         maxBOF: 0,
         maxEOF: 0 /* combine with `eol-last` to ensure file still ends with a single line-break (eol character) */,
       },
     ],
-    "@stylistic/no-tabs": [
-      ON,
-      {
-        allowIndentationTabs: false,
-      },
-    ],
-    "@stylistic/no-trailing-spaces": [
-      ON,
-      {
-        skipBlankLines: false,
-        ignoreComments: false,
-      },
-    ],
+    "@stylistic/no-tabs": ON,
+    "@stylistic/no-trailing-spaces": ON,
     "@stylistic/no-whitespace-before-property": ON,
     "@stylistic/nonblock-statement-body-position": [
       ON,
-      below,
-      {
-        overrides: {
-        } /* if | else | while | do | for */,
-      },
+      below /* any | below | @default beside */,
     ],
     "@stylistic/object-curly-newline": [
       ON,
       {
-        ObjectExpression: {
-          consistent: true,
-          multiline: true,
-          minProperties: 3,
-        },
-        ObjectPattern: {
-          consistent: true,
-          multiline: true,
-          minProperties: 3,
-        },
-        ImportDeclaration: {
-          consistent: true,
-          multiline: true,
-          minProperties: 3,
-        },
-        ExportDeclaration: {
-          consistent: true,
-          multiline: true,
-          minProperties: 3,
-        },
-        TSTypeLiteral: {
-          consistent: true,
-          multiline: true,
-          minProperties: 3,
-        },
-        TSInterfaceBody: {
-          consistent: true,
-          multiline: true,
-          minProperties: 3,
-        },
-        TSEnumBody: {
-          consistent: true,
-          multiline: true,
-          minProperties: 3,
-        },
+        consistent: true,
+        multiline: true,
+        minProperties: 3,
       },
     ],
     "@stylistic/object-curly-spacing": [
       ON,
-      always,
-      {
-        arraysInObjects: true,
-        objectsInObjects: true,
-      },
+      always /* always | @default never */,
     ],
     "@stylistic/object-property-newline": ON,
     "@stylistic/one-var-declaration-per-line": [
       ON,
-      always,
+      always /* always | @default initializations */,
     ],
     "@stylistic/operator-linebreak": [
       ON,
-      before,
-      {
-        overrides: {} /* e.g., = | ? | : |  @default: { "?": "before", ":": "before" } */,
-      },
+      before /* ignore | none | before | @default after */,
     ],
     "@stylistic/padded-blocks": [
       ON,
-      never /* @OVERRIDE || { blocks, classes, switches } */,
+      never /* never | start | end | @default always */,
       {
         allowSingleLineBlocks: true,
       },
@@ -375,7 +243,7 @@ export const EnableStyle = {
         next: wildcard,
       },
       // #endregion
-      // #region < Block >
+      // #region <Block>
       {
         blankLine: always,
         prev: [
@@ -425,7 +293,7 @@ export const EnableStyle = {
         ],
       },
       // #endregion
-      // #region Declaration >
+      // #region Declaration>
       {
         blankLine: never,
         prev: "interface",
@@ -444,7 +312,7 @@ export const EnableStyle = {
         ],
       },
       // #endregion
-      // #region < =[]
+      // #region <=[]
       {
         blankLine: always,
         prev: [
@@ -467,7 +335,7 @@ export const EnableStyle = {
         ],
       },
       // #endregion
-      // #region Import[] >
+      // #region Import[]>
       {
         blankLine: always,
         prev: [
@@ -488,7 +356,7 @@ export const EnableStyle = {
         ],
       },
       // #endregion
-      // #region < Export[] >
+      // #region <Export[]>
       {
         blankLine: always,
         prev: [
@@ -525,7 +393,7 @@ export const EnableStyle = {
         ],
       },
       // #endregion
-      // #region < Return >
+      // #region <Return>
       {
         blankLine: always,
         prev: [
@@ -553,78 +421,30 @@ export const EnableStyle = {
       as_needed,
       {
         keywords: true,
-        unnecessary: true,
-        numbers: false,
       },
     ],
     "@stylistic/quotes": [
       ON,
-      double,
+      double /* @default double */,
       {
         avoidEscape: true,
-        allowTemplateLiterals: always /* always, avoidEscape, @default: never */,
-        ignoreStringLiterals: false,
+        allowTemplateLiterals: always /* always | avoidEscape | @default never */,
       },
     ],
-    "@stylistic/rest-spread-spacing": [
-      ON,
-      never,
-    ],
-    "@stylistic/semi": [
-      ON,
-      always,
-      {
-        omitLastInOneLineBlock: false,
-        omitLastInOneLineClassBody: false,
-      },
-    ],
-    "@stylistic/semi-spacing": [
-      ON,
-      {
-        before: false,
-        after: true,
-      },
-    ],
-    "@stylistic/semi-style": [
-      ON,
-      last,
-    ],
-    "@stylistic/space-before-blocks": [
-      ON,
-      {
-        functions: always,
-        keywords: always,
-        classes: always,
-      },
-    ],
+    "@stylistic/rest-spread-spacing": ON,
+    "@stylistic/semi": ON,
+    "@stylistic/semi-spacing": ON,
+    "@stylistic/semi-style": ON,
+    "@stylistic/space-before-blocks": ON,
     "@stylistic/space-before-function-paren": [
       ON,
       {
-        anonymous: always,
         named: never,
-        asyncArrow: always,
-        "catch": always,
       },
     ],
-    "@stylistic/space-in-parens": [
-      ON,
-      never,
-    ],
-    "@stylistic/space-infix-ops": [
-      ON,
-      {
-        int32Hint: true,
-        ignoreTypes: false,
-      },
-    ],
-    "@stylistic/space-unary-ops": [
-      ON,
-      {
-        words: true,
-        nonwords: false,
-        overrides: {},
-      },
-    ],
+    "@stylistic/space-in-parens": ON,
+    "@stylistic/space-infix-ops": ON,
+    "@stylistic/space-unary-ops": ON,
     "@stylistic/spaced-comment": [
       ON,
       always,
@@ -656,21 +476,9 @@ export const EnableStyle = {
         },
       },
     ],
-    "@stylistic/switch-colon-spacing": [
-      ON,
-      {
-        after: true,
-        before: false,
-      },
-    ],
-    "@stylistic/template-curly-spacing": [
-      ON,
-      never,
-    ],
-    "@stylistic/template-tag-spacing": [
-      ON,
-      never,
-    ],
+    "@stylistic/switch-colon-spacing": ON,
+    "@stylistic/template-curly-spacing": ON,
+    "@stylistic/template-tag-spacing": ON,
     "@stylistic/type-annotation-spacing": [
       ON,
       {
@@ -694,12 +502,6 @@ export const EnableStyle = {
       },
     ],
     "@stylistic/wrap-regex": ON,
-    "@stylistic/yield-star-spacing": [
-      ON,
-      {
-        before: false,
-        after: true,
-      },
-    ],
+    "@stylistic/yield-star-spacing": ON,
   } as const,
 };

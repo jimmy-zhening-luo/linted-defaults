@@ -3,10 +3,8 @@ import {
   // OFF,
   ON,
   all,
-  always,
   below,
   double,
-  ignore,
   never,
 } from "../../_strings";
 
@@ -24,43 +22,22 @@ export const SvelteEnable = {
     "svelte/no-not-function-handler": ON,
     "svelte/no-object-in-text-mustaches": ON,
     "svelte/no-raw-special-elements": ON,
-    "svelte/no-reactive-reassign": [
-      ON,
-      {
-        props: true,
-      },
-    ],
+    "svelte/no-reactive-reassign": ON,
     "svelte/no-shorthand-style-property-overrides": ON,
     "svelte/no-store-async": ON,
     "svelte/no-top-level-browser-globals": ON,
-    "svelte/no-unknown-style-directive-property": [
-      ON,
-      {
-        ignorePrefixed: true,
-      },
-    ],
+    "svelte/no-unknown-style-directive-property": ON,
     "svelte/prefer-svelte-reactivity": ON,
     "svelte/require-store-callbacks-use-set-param": ON,
     "svelte/require-store-reactive-access": ON,
-    "svelte/valid-compile": [
-      ON,
-      {
-        ignoreWarnings: false,
-      },
-    ],
+    "svelte/valid-compile": ON,
     "svelte/valid-style-parse": ON,
     // #endregion
 
     // #region SECURITY
     // DOC: http://sveltejs.github.io/eslint-plugin-svelte/rules/#security-vulnerability
     "svelte/no-at-html-tags": ON,
-    "svelte/no-target-blank": [
-      ON,
-      {
-        allowReferrer: false,
-        enforceDynamicLinks: always,
-      },
-    ],
+    "svelte/no-target-blank": ON,
     // #endregion
 
     // #region BEST PRACTICES
@@ -68,67 +45,34 @@ export const SvelteEnable = {
     "svelte/block-lang": [
       ON,
       {
-        enforceScriptPresent: true,
-        enforceStylePresent: false,
         script: ["ts"],
-        style: [
-          "css",
-          "scss",
-        ],
+        style: ["css"],
       },
     ], /* INVESTIGATE: */
-    "svelte/button-has-type": [
-      ON,
-      {
-        button: true,
-        submit: true,
-        reset: true,
-      },
-    ],
+    "svelte/button-has-type": ON,
     "svelte/no-add-event-listener": ON,
     "svelte/no-at-debug-tags": ON,
     "svelte/no-ignored-unsubscribe": ON,
     "svelte/no-immutable-reactive-statements": ON,
-    "svelte/no-inline-styles": [
-      ON,
-      {
-        allowTransitions: false,
-      },
-    ],
+    "svelte/no-inline-styles": ON,
     "svelte/no-reactive-functions": ON,
     "svelte/no-reactive-literals": ON,
     "svelte/no-svelte-internal": ON,
-    "svelte/no-unnecessary-state-wrap": [
-      ON,
-      {
-        additionalReactiveClasses: [],
-        allowReassign: false,
-      },
-    ],
+    "svelte/no-unnecessary-state-wrap": ON,
     // "svelte/no-unused-class-name": OFF /* incompatible: breaks if css class is located in another file; BUG: ESLint error if array empty */,
     "svelte/no-unused-props": [
       ON,
       {
         checkImportedTypes: true,
-        ignorePropertyPatterns: [],
-        ignoreTypePatterns: [],
-        allowUnusedNestedProperties: false,
       },
     ],
     "svelte/no-unused-svelte-ignore": ON,
     "svelte/no-useless-children-snippet": ON,
-    "svelte/no-useless-mustaches": [
-      ON,
-      {
-        ignoreIncludesComment: false,
-        ignoreStringEscape: false,
-      },
-    ],
+    "svelte/no-useless-mustaches": ON,
     "svelte/prefer-const": [
       ON,
       {
         destructuring: all,
-        ignoreReadBeforeAssign: false /* BUG: doc says `ignoreReadonly`, but actually same as ESLint/prefer-const: `ignoreReadBeforeAssign` */,
       },
     ] /* same options: prefer-const */,
     "svelte/prefer-destructured-store-props": ON,
@@ -145,89 +89,36 @@ export const SvelteEnable = {
     "svelte/consistent-selector-style": [
       ON,
       {
-        checkGlobal: true /* @default: false */,
-        style: [
-          "type",
-          "id",
-          "class",
-        ],
+        checkGlobal: true /* @default false */,
       },
     ],
     "svelte/derived-has-same-inputs-outputs": ON,
     "svelte/first-attribute-linebreak": [
       ON,
       {
-        multiline: below,
         singleline: below,
       },
     ],
-    "svelte/html-closing-bracket-new-line": [
-      ON,
-      {
-        singleline: never,
-        multiline: always,
-        selfClosingTag: {
-          singleline: never,
-          multiline: always,
-        },
-      },
-    ],
+    "svelte/html-closing-bracket-new-line": ON,
     "svelte/html-closing-bracket-spacing": [
       ON,
       {
-        startTag: never,
-        endTag: never,
         selfClosingTag: never,
       },
     ],
     "svelte/html-quotes": [
       ON,
       {
-        prefer: double,
+        prefer: double /* @default ? */,
         dynamic: {
-          quoted: false,
           avoidInvalidUnquotedInHTML: true,
         },
       },
     ],
-    "svelte/html-self-closing": [
-      ON,
-      {
-        "void": always,
-        component: always,
-        svelte: always,
-        normal: ignore,
-      } /* always | never | ignore */,
-    ] /* BUG: `foreign` option was deprecated */,
-    "svelte/indent": [
-      ON,
-      {
-        indent: 2,
-        indentScript: true,
-        ignoredNodes: [],
-        switchCase: 1,
-        alignAttributesVertically: false,
-      },
-    ],
-    "svelte/max-attributes-per-line": [
-      ON,
-      {
-        multiline: 1,
-        singleline: 1,
-      },
-    ],
-    "svelte/mustache-spacing": [
-      ON,
-      {
-        textExpressions: never /* or ALWAYS */,
-        attributesAndProps: never /* or ALWAYS */,
-        directiveExpressions: never /* or ALWAYS */,
-        tags: {
-          openingBrace: never /* or ALWAYS */,
-          closingBrace: never /* or ALWAYS or "always-after-expression" */,
-        },
-      },
-    ],
+    "svelte/html-self-closing": ON,
+    "svelte/indent": ON,
+    "svelte/max-attributes-per-line": ON,
+    "svelte/mustache-spacing": ON,
     "svelte/no-extra-reactive-curlies": ON,
     // "svelte/no-restricted-html-elements": OFF,
     "svelte/no-spaces-around-equal-signs-in-attribute": ON,
@@ -238,29 +129,11 @@ export const SvelteEnable = {
       },
     ],
     "svelte/prefer-style-directive": ON,
-    "svelte/require-event-prefix": [
-      ON,
-      {
-        checkAsyncFunctions: false,
-      },
-    ],
-    "svelte/shorthand-attribute": [
-      ON,
-      {
-        prefer: always,
-      },
-    ],
-    "svelte/shorthand-directive": [
-      ON,
-      {
-        prefer: always,
-      },
-    ],
+    "svelte/require-event-prefix": ON,
+    "svelte/shorthand-attribute": ON,
+    "svelte/shorthand-directive": ON,
     // "svelte/sort-attributes": OFF /* INVESTIGATE: */,
-    "svelte/spaced-html-comment": [
-      ON,
-      always,
-    ] /* INFO: does not have third object option (exceptions/markers), unlike @stylistic/spaced-comment */,
+    "svelte/spaced-html-comment": ON /* INFO: does not have third object option (exceptions/markers), unlike @stylistic/spaced-comment */,
     // #endregion
 
     // #region SVELTE-KIT
@@ -269,10 +142,7 @@ export const SvelteEnable = {
     "svelte/no-navigation-without-base": [
       ON,
       {
-        ignoreGoto: false,
-        ignoreLinks: true /* ignore <a> links | @default: false */,
-        ignorePushState: false,
-        ignoreReplaceState: false,
+        ignoreLinks: true /* ignore <a> links; @default false */,
       },
     ],
     "svelte/valid-prop-names-in-kit-pages": ON,
@@ -280,12 +150,7 @@ export const SvelteEnable = {
 
     // #region REQUIRED
     // DOC: http://sveltejs.github.io/eslint-plugin-svelte/rules/#system
-    "svelte/comment-directive": [
-      ON,
-      {
-        reportUnusedDisableDirectives: true,
-      },
-    ],
+    "svelte/comment-directive": ON,
     "svelte/system": ON,
     // #endregion
   } as const,

@@ -2,7 +2,6 @@ import {
   ID,
   // OFF,
   ON,
-  all,
 } from "../../../_strings";
 
 export const TsEnableExtension = {
@@ -15,9 +14,7 @@ export const TsEnableExtension = {
     "@typescript-eslint/dot-notation": [
       ON,
       {
-        allowKeywords: true,
-
-        // TS-only
+        // TS-only:
         allowPrivateClassPropertyAccess: true,
         allowProtectedClassPropertyAccess: true,
         allowIndexSignaturePropertyAccess: true,
@@ -36,49 +33,27 @@ export const TsEnableExtension = {
     // "@typescript-eslint/no-restricted-imports": OFF /* preference */,
     // "@typescript-eslint/no-shadow": OFF /* ESLint now supports TS (was: investigate) */,
     // "@typescript-eslint/no-unused-expressions": OFF /* ESLint now supports TS (preference -- eslint:OFF) */,
-    "@typescript-eslint/no-unused-vars": [
-      ON,
-      {
-        vars: all,
-        args: all,
-        caughtErrors: all,
-        ignoreRestSiblings: false,
-        ignoreClassWithStaticInitBlock: false,
-        reportUsedIgnorePattern: true,
-      },
-    ],
+    "@typescript-eslint/no-unused-vars": ON,
     // "@typescript-eslint/no-use-before-define": OFF /* ESLint now supports TS */,
     // "@typescript-eslint/no-useless-constructor": OFF /* ESLint now supports TS */,
     "@typescript-eslint/only-throw-error": [
       ON,
       {
-        allowRethrowing: true,
         allowThrowingAny: false,
-        allowThrowingUnknown: false,
       },
     ],
     "@typescript-eslint/prefer-destructuring": [
       ON,
       {
-        VariableDeclarator: {
-          array: true,
-          object: true,
-        },
         AssignmentExpression: {
           array: false,
           object: false,
         },
       },
-      {
-        enforceForRenamedProperties: false,
-        enforceForDeclarationWithTypeAnnotation: false,
-      },
     ],
     "@typescript-eslint/prefer-promise-reject-errors": [
       ON,
       {
-        allowEmptyReject: false,
-        allowThrowingAny: false,
         allowThrowingUnknown: true,
       },
     ],

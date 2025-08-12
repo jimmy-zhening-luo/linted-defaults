@@ -297,9 +297,6 @@ export const Enable = {
       {
         allowShortCircuit: true /* @default false */,
         allowTernary: true /* @default false */,
-        // allowTaggedTemplates: false,
-        // enforceForJSX: false,
-        // ignoreDirectives: false /* emcaVersion:3 only */,
       },
     ] /* TS-capable */,
     "no-unused-labels": ON,
@@ -343,23 +340,15 @@ export const Enable = {
       ON,
       {
         destructuring: all /* any | @default all */,
-        // ignoreReadBeforeAssign: false,
       },
     ],
     "prefer-destructuring": [
       ON,
       {
-        // VariableDeclarator: {
-        //   array: true,
-        //   object: true,
-        // },
         AssignmentExpression: {
           array: false /* @default true */,
           object: false /* @default true */,
         },
-      },
-      {
-        enforceForRenamedProperties: true /* @default false */,
       },
     ] /* TSLint */,
     "prefer-exponentiation-operator": ON,

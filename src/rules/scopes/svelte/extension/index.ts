@@ -1,7 +1,6 @@
 import {
   ID,
   ON,
-  allow,
   both,
 } from "../../../_strings";
 
@@ -12,16 +11,7 @@ export const SvelteEnableExtension = {
     "svelte/no-inner-declarations": [
       ON,
       both,
-      {
-        blockScopedFunctions: allow,
-      },
     ] /* same options: no-inner-declarations */,
-    "svelte/no-trailing-spaces": [
-      ON,
-      {
-        skipBlankLines: false,
-        ignoreComments: false,
-      },
-    ] /* same options: @stylistic/no-trailing-spaces */,
+    "svelte/no-trailing-spaces": ON /* same options: @stylistic/no-trailing-spaces */,
   } as const,
 };

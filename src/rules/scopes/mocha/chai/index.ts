@@ -12,8 +12,6 @@ export const MochaEnablePluginChai = {
       {
         allowShortCircuit: true,
         allowTernary: true,
-        allowTaggedTemplates: true,
-        enforceForJSX: false,
       },
     ] /* TSLint */,
   } as const,

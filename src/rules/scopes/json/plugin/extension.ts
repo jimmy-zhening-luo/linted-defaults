@@ -4,10 +4,6 @@ import {
   ON,
   always,
   consistent,
-  double,
-  last,
-  never,
-  strict,
 } from "../../../_strings";
 
 export const JsonEnablePluginExtension = {
@@ -15,39 +11,18 @@ export const JsonEnablePluginExtension = {
   rules: {
     // DOC: https://ota-meshi.github.io/eslint-plugin-jsonc/rules/#extension-rules
     // "jsonc/array-bracket-newline": OFF /* @OVERRIDE: BIGGER BUG: i mean this basically just doesn't work, even with multiple lines it will still fail| BUG: the spec says: `requires line breaks if the number of elements is at least the given integer. If this is 0, this condition will act the same as the option "always". If this is null (the default), this condition is disabled`. However, when null, the jsonc plugin actually errors when there are linebreaks with a single item | (was: MUST match @stylistic/array-bracket-newline) */,
-    "jsonc/array-bracket-spacing": [
-      ON,
-      never,
-      {
-        singleValue: false,
-        objectsInArrays: false,
-        arraysInArrays: false,
-      },
-    ] /* MUST match @stylistic/array-bracket-spacing */,
+    "jsonc/array-bracket-spacing": ON /* MUST match @stylistic/array-bracket-spacing */,
     "jsonc/array-element-newline": [
       ON,
       consistent,
-    ],
-    "jsonc/comma-dangle": [
-      ON,
-      never,
-    ] /* trailing commas are NOT allowed in JSON */,
-    "jsonc/comma-style": [
-      ON,
-      last,
-    ],
+    ] /* WOULD match @stylistic/array-element-newline, but jsonc plugin has slightly different options */,
+    "jsonc/comma-dangle": ON /* trailing commas are NOT allowed in JSON */,
+    "jsonc/comma-style": ON,
     "jsonc/indent": [
       ON,
       2,
     ],
-    "jsonc/key-spacing": [
-      ON,
-      {
-        beforeColon: false,
-        afterColon: true,
-        mode: strict,
-      },
-    ] /* MUST match @stylistic/key-spacing */,
+    "jsonc/key-spacing": ON /* MUST match @stylistic/key-spacing */,
     // "jsonc/no-dupe-keys": OFF /* ESLint: json/no-duplicate-keys */,
     "jsonc/no-floating-decimal": ON,
     "jsonc/no-irregular-whitespace": [
@@ -70,29 +45,16 @@ export const JsonEnablePluginExtension = {
       {
         consistent: true,
         multiline: true,
-        minProperties: 2,
+        minProperties: 2 /* instead of 3 in stylistic */,
       },
-    ] /* @OVERRIDE CHILD of @stylistic/object-curly-newline */,
+    ] /* @OVERRIDE @stylistic/object-curly-newline */,
     "jsonc/object-curly-spacing": [
       ON,
       always,
-      {
-        arraysInObjects: true,
-        objectsInObjects: true,
-      },
     ] /* MUST match @stylistic/object-curly-spacing */,
     "jsonc/object-property-newline": ON /* MUST match @stylistic/object-property-newline */,
-    "jsonc/quote-props": [
-      ON,
-      always,
-    ],
-    "jsonc/quotes": [
-      ON,
-      double,
-      {
-        avoidEscape: false,
-      },
-    ],
+    "jsonc/quote-props": ON,
+    "jsonc/quotes": ON,
     "jsonc/space-unary-ops": ON,
   } as const,
 };
