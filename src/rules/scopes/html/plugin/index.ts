@@ -14,6 +14,7 @@ export const HtmlEnablePlugin = {
     "@html-eslint/no-duplicate-class": ON,
     "@html-eslint/no-duplicate-id": ON,
     "@html-eslint/no-duplicate-in-head": ON,
+    "@html-eslint/no-ineffective-attrs": ON,
     // "@html-eslint/no-inline-styles": OFF /* @CONFLICT: breaks Svelte app.html */,
     "@html-eslint/no-invalid-entity": ON,
     "@html-eslint/no-nested-interactive": ON,
