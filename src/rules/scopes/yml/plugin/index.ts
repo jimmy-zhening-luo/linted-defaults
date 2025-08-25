@@ -29,7 +29,7 @@ export const YmlEnablePlugin = {
     "yml/no-tab-indent": ON,
     "yml/no-trailing-zeros": ON,
     "yml/plain-scalar": ON,
-    "yml/quotes": ON,
+    // "yml/quotes": OFF /* preference */,
     "yml/require-string-key": ON,
     // "yml/sort-keys": OFF,
     // "yml/sort-sequence-values": OFF,
