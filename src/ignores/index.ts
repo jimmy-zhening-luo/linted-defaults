@@ -1,14 +1,14 @@
-import global from "./global";
-import js from "./scopes/js";
-import ts from "./scopes/ts";
-import mocha from "./scopes/mocha";
-import svelte from "./scopes/svelte";
-import html from "./scopes/html";
-import css from "./scopes/css";
-import json from "./scopes/json";
-import jsonc from "./scopes/jsonc";
-import jsoncc from "./scopes/jsoncc";
-import yml from "./scopes/yml";
+import base from "./base";
+import js from "./ignores/js";
+import ts from "./ignores/ts";
+import mocha from "./ignores/mocha";
+import svelte from "./ignores/svelte";
+import html from "./ignores/html";
+import css from "./ignores/css";
+import json from "./ignores/json";
+import jsonc from "./ignores/jsonc";
+import jsoncc from "./ignores/jsoncc";
+import yml from "./ignores/yml";
 
 export const ignores = {
   "*": global,

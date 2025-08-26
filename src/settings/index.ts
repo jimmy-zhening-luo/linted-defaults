@@ -1,7 +1,7 @@
-import { global } from "./global";
+import { base } from "./base";
 import { registry } from "./registry";
 
 export const settings = {
-  global,
+  global: base,
   registry,
 };
