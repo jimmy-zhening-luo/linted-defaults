@@ -11,7 +11,7 @@ import jsoncc from "./ignores/jsoncc";
 import yml from "./ignores/yml";
 
 export const ignores = {
-  "*": global,
+  "*": base,
   js,
   ts,
   mocha,
