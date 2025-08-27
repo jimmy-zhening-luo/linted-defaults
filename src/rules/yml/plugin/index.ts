@@ -14,13 +14,7 @@ export const YmlEnablePlugin = {
     "yml/block-sequence-hyphen-indicator-newline": ON,
     "yml/block-sequence": ON,
     // "yml/file-extension": OFF,
-    "yml/indent": [
-      ON,
-      2,
-      {
-        alignMultilineFlowScalars: true,
-      },
-    ],
+    "yml/indent": ON,
     // "yml/key-name-casing": OFF,
     // "yml/no-empty-document": OFF,
     "yml/no-empty-key": ON,
