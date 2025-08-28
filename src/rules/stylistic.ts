@@ -15,7 +15,7 @@ import {
   wildcard,
 } from "./_strings";
 
-export const EnableStyle = {
+export default {
   id: ID.Enable.Style,
   rules: {
     // DOC: https://eslint.style/rules

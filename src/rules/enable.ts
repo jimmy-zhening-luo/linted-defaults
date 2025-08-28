@@ -10,7 +10,7 @@ import {
   both,
 } from "./_strings";
 
-export const Enable = {
+export default {
   id: ID.Enable.Enable,
   rules: {
     // #region PROBLEMS
