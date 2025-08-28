@@ -23,7 +23,7 @@ export const YmlEnablePlugin = {
     "yml/no-tab-indent": ON,
     "yml/no-trailing-zeros": ON,
     // "yml/plain-scalar": OFF /* breaks any holdovers from YAML 1.1 or non-YAML 1.2 core implementers (god YAML is so fucking stupid, everyone should just use JSON but noooo somebody had to try to be clever and make something "more readable", fucking feeble-minded fuck) */,
-    // "yml/quotes": OFF /* preference */,
+    // "yml/quotes": OFF /* doesn't allow enough flexibility for me to use single quotes and double quotes depending on string interpolation needs when there's extra engine logic outside of YAML spec */,
     "yml/require-string-key": ON,
     // "yml/sort-keys": OFF,
     // "yml/sort-sequence-values": OFF,
