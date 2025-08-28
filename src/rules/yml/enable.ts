@@ -2,7 +2,7 @@ import {
   ID,
   // OFF,
   ON,
-} from "../../_strings";
+} from "../_strings";
 
 export const YmlEnablePlugin = {
   id: ID.Enable.Plugin.Plugin,
