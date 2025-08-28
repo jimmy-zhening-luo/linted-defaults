@@ -38,14 +38,11 @@ export const YmlEnablePluginExtension = {
       {
         exceptions: ["#"],
         markers: [
-          "!",
-          "@",
           "#",
           "##",
           "###",
           "####",
           "#####",
-          "######",
           "region",
           "endregion",
         ],
