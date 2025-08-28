@@ -22,7 +22,7 @@ export const YmlEnablePlugin = {
     "yml/no-empty-sequence-entry": ON,
     "yml/no-tab-indent": ON,
     "yml/no-trailing-zeros": ON,
-    "yml/plain-scalar": ON,
+    // "yml/plain-scalar": OFF /* breaks any holdovers from YAML 1.1 or non-YAML 1.2 core implementers (god YAML is so fucking stupid, everyone should just use JSON but noooo somebody had to try to be clever and make something "more readable", fucking feeble-minded fuck) */,
     // "yml/quotes": OFF /* preference */,
     "yml/require-string-key": ON,
     // "yml/sort-keys": OFF,
