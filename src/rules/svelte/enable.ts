@@ -139,12 +139,7 @@ export const SvelteEnable = {
     // #region SVELTE-KIT
     // DOC: http://sveltejs.github.io/eslint-plugin-svelte/rules/#svelte-kit
     "svelte/no-export-load-in-svelte-module-in-kit-pages": ON,
-    "svelte/no-navigation-without-base": [
-      ON,
-      {
-        ignoreLinks: true /* ignore <a> links; @default false */,
-      },
-    ],
+    "svelte/no-navigation-without-resolve": ON,
     "svelte/valid-prop-names-in-kit-pages": ON,
     // #endregion
 
