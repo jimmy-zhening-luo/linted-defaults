@@ -16,7 +16,7 @@ export const CssEnable = {
     "css/no-invalid-at-rule-placement": ON,
     "css/no-invalid-at-rules": ON,
     "css/no-invalid-named-grid-areas": ON,
-    "css/no-invalid-properties": ON,
+    // "css/no-invalid-properties": OFF /* BUG: this shit is still way too broken, it doens't recognize actual rules. in futue if it recognizes actual rules, turn on allow unknown values btw */,
     "css/prefer-logical-properties": ON,
     "css/relative-font-units": ON,
     "css/use-baseline": ON,
