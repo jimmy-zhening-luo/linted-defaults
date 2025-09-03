@@ -327,9 +327,9 @@ export default {
       ON,
       {
         "var": consecutive,
-        let: consecutive,
+        "let": consecutive,
         "const": consecutive,
-        using: consecutive,
+        "using": consecutive,
         awaitUsing: consecutive,
         separateRequires: true,
       },
