@@ -366,6 +366,12 @@ export default {
     "prefer-rest-params": ON,
     "prefer-spread": ON,
     // "prefer-template": OFF /* preference: performance */,
+    "preserve-caught-error": [
+      ON,
+      {
+        requireCatchParameter: true,
+      },
+    ],
     radix: [
       ON,
       as_needed /* as-needed | @default always */,
