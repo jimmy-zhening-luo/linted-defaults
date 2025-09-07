@@ -27,6 +27,6 @@ export const YmlEnablePlugin = {
     "yml/require-string-key": ON,
     // "yml/sort-keys": OFF,
     // "yml/sort-sequence-values": OFF,
-    "yml/vue-custom-block/no-parsing-error": ON,
+    // "yml/vue-custom-block/no-parsing-error": OFF /* I don't use Vue and I plan to continue not using it if I can help it */,
   } as const,
 };
