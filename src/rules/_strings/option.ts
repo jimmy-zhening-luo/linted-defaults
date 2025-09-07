@@ -25,6 +25,5 @@ never = "never",
 none = "none",
 outside = "outside",
 single = "single",
-wildcard = "*",
 strict = "strict",
-zebra = "zebra";
+wildcard = "*";
