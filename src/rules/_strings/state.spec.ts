@@ -1,45 +1,45 @@
 import "chai/register-should.js";
 import * as State from "./state";
 
-const state = { ...State };
-
 describe(
-  "Strings:Level",
+  "Strings: State",
   function () {
+    const state = { ...State };
+
     describe(
       "shape",
       function () {
         it(
-          "is module (converted to object)",
+          "is object module",
           function () {
             state
-              .should.be
+              .should
+              .be
               .an("object");
           },
         );
       },
     );
     describe(
-      "count",
+      "keys",
       function () {
+        const keys = Object.keys(state);
+
         it(
-          "is 3",
+          "count 3",
           function () {
-            Object.keys(state)
-              .should.have
+            keys
+              .should
+              .have
               .lengthOf(3);
           },
         );
-      },
-    );
-    describe(
-      "unique count",
-      function () {
         it(
-          "is 3",
+          "unique count 3",
           function () {
-            new Map(Object.entries(state))
-              .should.have
+            new Set(keys)
+              .should
+              .have
               .lengthOf(3);
           },
         );
@@ -49,13 +49,16 @@ describe(
       "values",
       function () {
         it(
-          "are: error | warn | off",
+          "off(0) | warn(1) | error(2)",
           function () {
-            new Map(Object.entries(state))
+            new Set(Object.values(state))
               .should
-              .include("error")
-              .and.include("warn")
-              .and.include("off");
+              .have
+              .keys(
+                "off",
+                "warn",
+                "error",
+              );
           },
         );
       },

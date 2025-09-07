@@ -4,7 +4,7 @@ import { rules } from "./rules";
 
 export { settings } from "./settings";
 export const defaults = {
-  files,
   ignores,
+  files,
   rules,
 };
