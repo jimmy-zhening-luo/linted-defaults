@@ -54,10 +54,12 @@ describe(
             new Set(Object.values(state))
               .should
               .have
-              .keys(
-                "off",
-                "warn",
-                "error",
+              .members(
+                [
+                  0,
+                  1,
+                  2,
+                ],
               );
           },
         );
