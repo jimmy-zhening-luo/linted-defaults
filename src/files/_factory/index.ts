@@ -26,13 +26,12 @@ export function Scope(
     predicate = [...set]
       .join(",");
 
-    return prepend
-      + (
-        set.size <= 1
-          ? predicate
-          : `{${predicate}}`
-      )
-      + append;
+    return prepend.concat(
+      set.size <= 1
+        ? predicate
+        : `{${predicate}}`,
+      append,
+    );
   }
 
   if (extension === "")
@@ -57,7 +56,7 @@ export function Scope(
     ),
     leaves = glob(
       [
-        "*." + extension,
+        "*.".concat(extension),
         ...files,
       ],
     );
@@ -68,7 +67,10 @@ export function Scope(
           ...unbound.length === 0
             ? [""]
             : unbound,
-          roots + branches + leaves,
+          roots.concat(
+            branches,
+            leaves,
+          ),
         ],
       ),
     ];
