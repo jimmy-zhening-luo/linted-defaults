@@ -21,6 +21,7 @@ export const HtmlEnablePlugin = {
     "@html-eslint/no-obsolete-tags": ON,
     // "@html-eslint/no-restricted-attr-values": OFF,
     // "@html-eslint/no-restricted-attrs": OFF,
+    // "@html-eslint/no-restricted-tags": OFF,
     // "@html-eslint/no-script-style-type": OFF,
     "@html-eslint/no-target-blank": ON,
     // "@html-eslint/prefer-https": OFF /* @CONFLICT: not everything is https */,
