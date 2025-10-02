@@ -4,7 +4,6 @@ import {
   ON,
   all,
   below,
-  double,
   never,
 } from "../_strings";
 
@@ -106,15 +105,7 @@ export const SvelteEnable = {
         selfClosingTag: never,
       },
     ],
-    "svelte/html-quotes": [
-      ON,
-      {
-        prefer: double /* @default ? */,
-        dynamic: {
-          avoidInvalidUnquotedInHTML: true,
-        },
-      },
-    ],
+    // "svelte/html-quotes": OFF /* BUG: incompatible with object props, which should not be stringified */,
     "svelte/html-self-closing": ON,
     "svelte/indent": ON,
     "svelte/max-attributes-per-line": ON,

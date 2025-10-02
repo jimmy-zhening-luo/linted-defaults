@@ -15,5 +15,6 @@ export const SvelteDisable = {
     "prefer-const": OFF /* svelte/prefer-const */,
     // My own
     "@stylistic/indent": OFF /* Conflicts with `svelte/indent` */,
+    "@typescript-eslint/no-confusing-void-expression": OFF /* errors on render() */,
   } as const,
 };
