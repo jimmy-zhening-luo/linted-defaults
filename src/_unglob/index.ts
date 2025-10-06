@@ -1,6 +1,6 @@
 import {
-ROOTS,
-SUBROOTS,
+  ROOTS,
+  SUBROOTS,
 } from "./project";
 
 export function Scope(
@@ -11,7 +11,7 @@ export function Scope(
   }: Partial<
     Record<
       | "folders"
-      | "files"
+      | "files",
       string[]
     >
   > = {},
