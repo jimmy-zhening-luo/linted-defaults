@@ -7,9 +7,7 @@ export default Scope(
   ],
   {
     folders: [".vscode"],
-    files: [
-      "tsconfig.json",
-    ],
+    files: ["tsconfig.json"],
   },
 )
   .concat(
