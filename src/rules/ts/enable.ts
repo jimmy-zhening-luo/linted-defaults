@@ -120,7 +120,12 @@ export const TsEnable = {
     "@typescript-eslint/no-unsafe-declaration-merging": ON,
     "@typescript-eslint/no-unsafe-enum-comparison": ON,
     "@typescript-eslint/no-unsafe-function-type": ON,
-    "@typescript-eslint/no-unsafe-member-access": ON,
+    "@typescript-eslint/no-unsafe-member-access": [
+      ON,
+      {
+        allowOptionalChaining: true,
+      },
+    ],
     "@typescript-eslint/no-unsafe-return": ON,
     // "@typescript-eslint/no-unsafe-type-assertion": OFF,
     "@typescript-eslint/no-unsafe-unary-minus": ON,
