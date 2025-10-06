@@ -6,10 +6,13 @@ export default Scope(
     "code-snippets",
   ],
   {
+    folders: [".vscode"],
     files: [
       "tsconfig.json",
-      ".vscode/**/*.json",
     ],
-    folders: [".vscode"],
   },
-);
+)
+  .concat(
+    ".vscode/**/*.json",
+    "code/*/.vscode/**/*.json",
+  );

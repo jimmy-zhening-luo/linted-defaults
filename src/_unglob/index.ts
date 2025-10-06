@@ -34,7 +34,9 @@ export function Scope(
           .concat(folders)
   )
     .map(
-      branch => branch.concat("/**/"),
+      branch => branch === ""
+        ? branch
+        : branch.concat("/**/"),
     ),
   subpaths = branches.length === 0
     ? leaves

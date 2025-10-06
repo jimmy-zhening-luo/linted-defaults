@@ -1,4 +1,5 @@
 export const SUBROOTS = [
+  "",
   "src",
   "tests",
   "static",
