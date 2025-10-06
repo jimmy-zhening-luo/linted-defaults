@@ -1,5 +1,9 @@
-import { Scope } from "./_factory";
+import { Scope } from "../_unglob";
 
 export default Scope(
-  "{,[cm]}ts",
+  [
+    "ts",
+    "cts",
+    "mts",
+  ],
 );

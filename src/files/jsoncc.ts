@@ -1,9 +1,15 @@
-import { Scope } from "./_factory";
+import { Scope } from "../_unglob";
 
 export default Scope(
-  "{jsonc,code-snippets}",
+  [
+    "jsonc",
+    "code-snippets",
+  ],
   {
-    files: ["{tsconfig,.vscode/**/*}.json"],
+    files: [
+      "tsconfig.json",
+      ".vscode/**/*.json",
+    ],
     folders: [".vscode"],
   },
 );

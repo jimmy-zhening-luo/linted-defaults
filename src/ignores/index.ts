@@ -1,17 +1,39 @@
-import base from "./base";
-import js from "./ignores/js";
-import ts from "./ignores/ts";
-import mocha from "./ignores/mocha";
-import svelte from "./ignores/svelte";
-import html from "./ignores/html";
-import css from "./ignores/css";
-import json from "./ignores/json";
-import jsonc from "./ignores/jsonc";
-import jsoncc from "./ignores/jsoncc";
-import yml from "./ignores/yml";
+import { Scope } from "../_unglob";
+import js from "./js";
+import ts from "./ts";
+import mocha from "./mocha";
+import svelte from "./svelte";
+import html from "./html";
+import css from "./css";
+import json from "./json";
+import jsonc from "./jsonc";
+import jsoncc from "./jsoncc";
+import yml from "./yml";
 
 export const ignores = {
-  "*": base,
+  "*": Scope(
+    [],
+    {
+      files: [
+        ".git",
+        ".svelte-kit",
+        "dist",
+        "build",
+        "built",
+        "bundle",
+        "bundled",
+        "pack",
+        "packed",
+        "in",
+        "out",
+        "input",
+        "output",
+        ".Trash",
+      ]
+        .map(folder => folder.concat("/")),
+    },
+    true,
+  ),
   js,
   ts,
   mocha,

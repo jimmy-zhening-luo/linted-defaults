@@ -1,4 +1,4 @@
-import { Scope } from "./_factory";
+import { Scope } from "../_unglob";
 
 export default Scope(
   "json",

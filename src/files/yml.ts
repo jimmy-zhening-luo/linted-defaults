@@ -1,7 +1,10 @@
-import { Scope } from "./_factory";
+import { Scope } from "../_unglob";
 
 export default Scope(
-  "y{,a}ml",
+  [
+    "yml",
+    "yaml",
+  ],
   {
     folders: [".github"],
   },
