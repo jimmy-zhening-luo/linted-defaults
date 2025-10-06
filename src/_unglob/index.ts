@@ -31,7 +31,7 @@ export function Scope(
     override
       ? folders
       : SUBROOTS
-        .concat(folders)
+          .concat(folders)
   )
     .map(
       branch => branch.concat("/**/"),
@@ -39,13 +39,13 @@ export function Scope(
   subpaths = branches.length === 0
     ? leaves
     : branches
-      .map(
-        branch => leaves
-          .map(
-            leaf => branch.concat(leaf),
-          ),
-      )
-      .flat();
+        .map(
+          branch => leaves
+            .map(
+              leaf => branch.concat(leaf),
+            ),
+        )
+        .flat();
 
   return ROOTS
     .map(
