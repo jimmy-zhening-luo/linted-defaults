@@ -41,20 +41,18 @@ export function Scope(
   subpaths = branches.length === 0
     ? leaves
     : branches
-        .map(
+        .flatMap(
           branch => leaves
             .map(
               leaf => branch.concat(leaf),
             ),
-        )
-        .flat();
+        );
 
   return ROOTS
-    .map(
+    .flatMap(
       root => subpaths
         .map(
           subpath => root.concat(subpath),
         ),
-    )
-    .flat();
+    );
 }
