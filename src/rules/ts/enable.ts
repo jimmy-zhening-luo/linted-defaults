@@ -139,7 +139,7 @@ export const TsEnable = {
       },
     ],
     "@typescript-eslint/prefer-as-const": ON,
-    "@typescript-eslint/prefer-enum-initializers": ON,
+    // "@typescript-eslint/prefer-enum-initializers": OFF /* preference */,
     "@typescript-eslint/prefer-find": ON,
     "@typescript-eslint/prefer-for-of": ON,
     "@typescript-eslint/prefer-function-type": ON,
