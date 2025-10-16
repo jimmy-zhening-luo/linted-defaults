@@ -9,7 +9,7 @@ import jsonc from "./jsonc";
 import jsoncc from "./jsoncc";
 import yml from "./yml";
 
-export const files = {
+export const files: Record<string, string[]> = {
   js,
   ts,
   mocha,
