@@ -50,14 +50,7 @@ export const TsEnable = {
     "@typescript-eslint/no-array-delete": ON,
     "@typescript-eslint/no-base-to-string": ON,
     "@typescript-eslint/no-confusing-non-null-assertion": ON,
-    "@typescript-eslint/no-confusing-void-expression": [
-      ON,
-      {
-        ignoreArrowShorthand: true,
-        ignoreVoidOperator: true,
-        ignoreVoidReturningFunctions: true,
-      },
-    ],
+    "@typescript-eslint/no-confusing-void-expression": ON,
     // "@typescript-eslint/no-deprecated": OFF /* incompatible: Cannot be used with jsDocParsingMode: "none" */,
     "@typescript-eslint/no-duplicate-enum-values": ON,
     "@typescript-eslint/no-duplicate-type-constituents": ON,
