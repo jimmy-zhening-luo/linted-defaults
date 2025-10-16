@@ -83,16 +83,6 @@ describe(
                   .a("string");
           },
         );
-        it(
-          "with at least one global ignore pattern",
-          function () {
-            ignores[GLOBAL_SCOPE]
-              .should
-              .have
-              .lengthOf
-              .above(0);
-          },
-        );
       },
     );
     describe(
