@@ -85,7 +85,7 @@ export const TsEnable = {
     "@typescript-eslint/no-for-in-array": ON,
     "@typescript-eslint/no-import-type-side-effects": ON,
     "@typescript-eslint/no-inferrable-types": ON,
-    "@typescript-eslint/no-invalid-void-type": ON,
+    // "@typescript-eslint/no-invalid-void-type": OFF /* preference - I powerfully ideologically disagree with disallowing void, a valid type */,
     "@typescript-eslint/no-meaningless-void-operator": [
       ON,
       {
