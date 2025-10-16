@@ -1,4 +1,4 @@
-import { Scope } from "../_unglob";
+import { Scope } from "../_scope";
 import js from "./js";
 import ts from "./ts";
 import mocha from "./mocha";

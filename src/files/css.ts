@@ -1,4 +1,4 @@
-import { Scope } from "../_unglob";
+import { Scope } from "../_scope";
 
 export default Scope(
   "css",
