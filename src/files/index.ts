@@ -1,26 +1,26 @@
-import Scope from "../_scope";
+import pattern from "../_pattern";
 
 export default {
-  js: Scope([
+  js: pattern([
     "js",
     "cjs",
     "mjs",
   ]),
-  ts: Scope([
+  ts: pattern([
     "ts",
     "cts",
     "mts",
   ]),
-  mocha: Scope([
+  mocha: pattern([
     "spec.ts",
     "spec.cts",
     "spec.mts",
   ]),
-  svelte: Scope("svelte"),
-  html: Scope("html"),
-  css: Scope("css"),
-  json: Scope("json"),
-  jsoncc: Scope(
+  svelte: pattern("svelte"),
+  html: pattern("html"),
+  css: pattern("css"),
+  json: pattern("json"),
+  jsoncc: pattern(
     ["jsonc", "code-snippets"],
     {
       folders: [".vscode"],
@@ -31,7 +31,7 @@ export default {
       ],
     },
   ),
-  yml: Scope(
+  yml: pattern(
     ["yml", "yaml"],
     {
       folders: [".github"],

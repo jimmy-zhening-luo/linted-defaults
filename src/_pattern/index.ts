@@ -12,7 +12,7 @@ SUBROOTS = [
   "tools",
 ];
 
-export default function Scope(
+export default function pattern(
   extensions: string | string[],
   {
     folders = [],

@@ -1,6 +1,6 @@
-import Scope from "../_scope";
+import pattern from "../_pattern";
 
-export default Scope(
+export default pattern(
   [],
   {
     files: [
