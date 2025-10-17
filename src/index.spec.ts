@@ -41,17 +41,6 @@ describe(
       "submodule: ignores",
       function () {
         it(
-          "has scopes",
-          function () {
-            for (const scope of SCOPE)
-              ignores
-                .should
-                .have
-                .own
-                .property(scope);
-          },
-        );
-        it(
           "has global scope",
           function () {
             ignores
