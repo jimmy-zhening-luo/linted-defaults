@@ -4,4 +4,4 @@ export default {
     "chai-friendly",
     "chai-expect",
   ] as const,
-}
+};
