@@ -4,7 +4,7 @@ import {
   ON,
 } from "../_strings";
 
-export const MochaEnable = {
+export default {
   id: ID.Enable.Enable,
   rules: {
     // DOC: https://github.com/lo1tuma/eslint-plugin-mocha/tree/main?tab=readme-ov-file#rules

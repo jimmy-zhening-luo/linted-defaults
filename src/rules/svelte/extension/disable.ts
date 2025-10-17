@@ -3,7 +3,7 @@ import {
   OFF,
 } from "../../_strings";
 
-export const SvelteDisableExtension = {
+export default {
   id: ID.Disable.Extension,
   rules: {
     // DOC: http://sveltejs.github.io/eslint-plugin-svelte/rules/#extension-rules

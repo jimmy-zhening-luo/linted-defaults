@@ -1,10 +1,11 @@
-import { files } from "./files";
-import { ignores } from "./ignores";
-import { rules } from "./rules";
+import settings from "./settings";
+import files from "./files";
+import ignores from "./ignores";
+import rules from "./rules";
 
-export { settings } from "./settings";
-export const defaults = {
-  ignores,
+export default {
+  settings,
   files,
+  ignores,
   rules,
 };

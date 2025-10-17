@@ -3,7 +3,7 @@ import {
   OFF,
 } from "../../_strings";
 
-export const JsoncPluginDisable = {
+export default {
   id: ID.Disable.Plugin.Plugin,
   rules: {
     // DOC: https://ota-meshi.github.io/eslint-plugin-jsonc/rules/#jsonc-rules

@@ -3,7 +3,7 @@ import {
   ON,
 } from "../../_strings";
 
-export const MochaEnablePluginChai = {
+export default {
   id: `${ID.Enable.Plugin.Plugin}/chai`,
   rules: {
     // DOC: https://github.com/ihordiachenko/eslint-plugin-chai-friendly?tab=readme-ov-file#usage

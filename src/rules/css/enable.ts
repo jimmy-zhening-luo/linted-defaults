@@ -4,7 +4,7 @@ import {
   ON,
 } from "../_strings";
 
-export const CssEnable = {
+export default {
   id: ID.Enable.Enable,
   rules: {
     // DOC: https://github.com/eslint/css/tree/main/docs/rules

@@ -1,7 +1,7 @@
 import {
   ROOTS,
   SUBROOTS,
-} from "./project";
+} from "./const";
 
 export function Scope(
   extensions: string | string[],

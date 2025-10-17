@@ -4,7 +4,7 @@ import {
   always_multiline,
 } from "../../_strings";
 
-export const JsoncCommaPluginDisable = {
+export default {
   id: ID.Disable.Plugin.Plugin,
   rules: {
     // DOC: https://ota-meshi.github.io/eslint-plugin-jsonc/rules/#jsonc-rules

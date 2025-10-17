@@ -4,7 +4,7 @@ import {
   ON,
 } from "../../_strings";
 
-export const TsEnableExtension = {
+export default {
   id: ID.Enable.Extension,
   rules: {
     // DOC: https://typescript-eslint.io/rules/?=extension-xdeprecated#rules

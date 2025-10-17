@@ -10,7 +10,7 @@ import jsonc from "./jsonc";
 import jsoncc from "./jsoncc";
 import yml from "./yml";
 
-export const ignores: Record<string, string[]> = {
+export default {
   "*": Scope(
     [],
     {

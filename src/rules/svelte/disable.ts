@@ -3,7 +3,7 @@ import {
   OFF,
 } from "../_strings";
 
-export const SvelteDisable = {
+export default {
   id: ID.Disable.Disable,
   rules: {
     // ESLint core rules known to cause problems with `.svelte`.

@@ -4,7 +4,7 @@ import {
   always,
 } from "../_strings";
 
-export const YmlEnablePluginExtension = {
+export default {
   id: ID.Enable.Plugin.Extension,
   rules: {
     // DOC: https://ota-meshi.github.io/eslint-plugin-yml/rules/#extension-rules

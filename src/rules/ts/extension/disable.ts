@@ -3,7 +3,7 @@ import {
   OFF,
 } from "../../_strings";
 
-export const TsDisableExtension = {
+export default {
   id: ID.Disable.Extension,
   rules: {
     // DOC: https://typescript-eslint.io/rules/?=extension-xdeprecated#rules

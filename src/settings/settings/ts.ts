@@ -1,9 +1,9 @@
-export const ts = {
+// DOC: https://typescript-eslint.io/packages/parser/#configuration
+export default {
   languageOptions: {
     parser: "ts" as const,
   },
   parserOptions: {
-    // DOC: https://typescript-eslint.io/packages/parser/#configuration
     // INFO: `parserOptions.projectService` is the modern replacement for the deprecated `parserOptions.project`:
     // - https://typescript-eslint.io/blog/project-service/
     // - https://typescript-eslint.io/getting-started/typed-linting/
@@ -24,7 +24,7 @@ export const ts = {
     // jsxFragmentName: null /* string | @default: null | INFO: if `parserOptions.project` is set, this will automatically be detected from the compiler. */,
     // jsxPragma: "React" /* null | string (e.g. "preact") | @default: "React" | INFO: if `parserOptions.project` is set, this will automatically be detected from the compiler. */,
     // lib: ["es2018"] /* string[] | @default: ["es2018"] | INFO: if `parserOptions.project` is set, this will automatically be detected from the compiler. */,
-    projectService: true /* ProjectServiceOptions (DOC: https://typescript-eslint.io/packages/parser/#projectserviceoptions) | true | @default: false */,
+    projectService: true /* ProjectServiceOptions (INFO: https://typescript-eslint.io/packages/parser/#projectserviceoptions) | true | @default: false */,
     warnOnUnsupportedTypeScriptVersion: false /* preference due to nuisance | @default: true */,
   },
 };

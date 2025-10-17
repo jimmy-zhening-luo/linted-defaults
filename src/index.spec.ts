@@ -1,5 +1,5 @@
 import "chai/register-should.js";
-import { defaults } from ".";
+import defaults from ".";
 
 describe(
   "Main Export",
@@ -8,7 +8,7 @@ describe(
       "js",
       "ts",
     ],
-    GLOBAL_SCOPE = "*",
+    GLOBAL = "*",
     {
       ignores,
       files,
@@ -58,7 +58,7 @@ describe(
               .should
               .have
               .own
-              .property(GLOBAL_SCOPE);
+              .property(GLOBAL);
           },
         );
         it(
@@ -107,7 +107,7 @@ describe(
               .not
               .have
               .own
-              .property(GLOBAL_SCOPE);
+              .property(GLOBAL);
           },
         );
         it(
@@ -156,7 +156,7 @@ describe(
               .not
               .have
               .own
-              .property(GLOBAL_SCOPE);
+              .property(GLOBAL);
           },
         );
         it(

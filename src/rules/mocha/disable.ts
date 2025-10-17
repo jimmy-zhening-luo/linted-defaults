@@ -3,7 +3,7 @@ import {
   OFF,
 } from "../_strings";
 
-export const MochaDisable = {
+export default {
   id: ID.Disable.Disable,
   rules: {
     "prefer-arrow-callback": OFF /* TS-capable */,

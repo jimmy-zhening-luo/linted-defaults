@@ -1,7 +1,7 @@
-import { MochaDisable } from "./disable";
-import { MochaEnable } from "./enable";
-import { MochaEnablePluginChai } from "./chai";
-import { MochaEnablePluginChaiExpect } from "./chai/expect";
+import MochaDisable from "./disable";
+import MochaEnable from "./enable";
+import MochaEnablePluginChai from "./chai";
+import MochaEnablePluginChaiExpect from "./chai/expect";
 
 export default [
   MochaDisable,

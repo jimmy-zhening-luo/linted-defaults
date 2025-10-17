@@ -4,7 +4,7 @@ import {
   both,
 } from "../../_strings";
 
-export const SvelteEnableExtension = {
+export default {
   id: ID.Enable.Extension,
   rules: {
     // DOC: http://sveltejs.github.io/eslint-plugin-svelte/rules/#extension-rules

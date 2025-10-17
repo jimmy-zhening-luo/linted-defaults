@@ -4,7 +4,7 @@ import {
   ON,
 } from "../../_strings";
 
-export const MochaEnablePluginChaiExpect = {
+export default {
   id: `${ID.Enable.Plugin.Plugin}/chai/expect`,
   rules: {
     // DOC: https://github.com/turbo87/eslint-plugin-chai-expect?tab=readme-ov-file#rules

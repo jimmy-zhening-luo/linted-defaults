@@ -5,7 +5,7 @@ import {
   never,
 } from "../_strings";
 
-export const TsEnable = {
+export default {
   id: ID.Enable.Enable,
   rules: {
     // DOC: https://typescript-eslint.io/rules/?=xextension-xdeprecated#rules

@@ -1,3 +1,3 @@
-import { HtmlEnablePlugin } from "./plugin";
+import HtmlEnablePlugin from "./enable";
 
 export default [HtmlEnablePlugin];

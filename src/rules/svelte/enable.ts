@@ -7,7 +7,7 @@ import {
   never,
 } from "../_strings";
 
-export const SvelteEnable = {
+export default {
   id: ID.Enable.Enable,
   rules: {
     // #region ERRORS

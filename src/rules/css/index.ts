@@ -1,3 +1,3 @@
-import { CssEnable } from "./enable";
+import CssEnable from "./enable";
 
 export default [CssEnable];

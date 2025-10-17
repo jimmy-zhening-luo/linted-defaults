@@ -3,7 +3,7 @@ import {
   OFF,
 } from "../_strings";
 
-export const TsDisable = {
+export default {
   id: ID.Disable.Disable,
   rules: {
     // Handled by TypeScript compiler

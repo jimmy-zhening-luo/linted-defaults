@@ -1,9 +1,4 @@
-export const jsoncc = {
-  languageOptions: {
-    // Inherits `jsonc`
-  },
-  parserOptions: {
-    // Inherits `jsonc`
-  },
+// Inherits `jsonc`
+export default {
   language: "json/jsonc",
 };

@@ -1,5 +1,4 @@
-import eslint from "./enable";
-import stylistic from "./stylistic";
+import js from "./base";
 import ts from "./ts";
 import mocha from "./mocha";
 import svelte from "./svelte";
@@ -10,11 +9,8 @@ import jsonc from "./jsonc";
 import jsoncc from "./jsoncc";
 import yml from "./yml";
 
-export const rules = {
-  js: [
-    eslint,
-    stylistic,
-  ],
+export default {
+  js,
   ts,
   mocha,
   svelte,

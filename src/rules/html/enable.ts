@@ -2,9 +2,9 @@ import {
   ID,
   // OFF,
   ON,
-} from "../../_strings";
+} from "../_strings";
 
-export const HtmlEnablePlugin = {
+export default {
   id: ID.Enable.Plugin.Plugin,
   rules: {
     // #region BEST PRACTICE

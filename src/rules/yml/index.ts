@@ -1,5 +1,5 @@
-import { YmlEnablePlugin } from "./enable";
-import { YmlEnablePluginExtension } from "./extension";
+import YmlEnablePlugin from "./enable";
+import YmlEnablePluginExtension from "./extension";
 
 export default [
   YmlEnablePlugin,

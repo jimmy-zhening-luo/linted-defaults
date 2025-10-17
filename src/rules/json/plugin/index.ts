@@ -4,7 +4,7 @@ import {
   ON,
 } from "../../_strings";
 
-export const JsonEnablePlugin = {
+export default {
   id: ID.Enable.Plugin.Plugin,
   rules: {
     // DOC: https://ota-meshi.github.io/eslint-plugin-jsonc/rules/#jsonc-rules

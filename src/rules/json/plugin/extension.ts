@@ -6,7 +6,7 @@ import {
   consistent,
 } from "../../_strings";
 
-export const JsonEnablePluginExtension = {
+export default {
   id: ID.Enable.Plugin.Extension,
   rules: {
     // DOC: https://ota-meshi.github.io/eslint-plugin-jsonc/rules/#extension-rules

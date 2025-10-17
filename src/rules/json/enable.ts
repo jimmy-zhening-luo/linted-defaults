@@ -4,7 +4,7 @@ import {
   ON,
 } from "../_strings";
 
-export const JsonEnable = {
+export default {
   id: ID.Enable.Enable,
   rules: {
     // DOC: https://github.com/eslint/json?tab=readme-ov-file#rules
