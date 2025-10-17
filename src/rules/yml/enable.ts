@@ -1,7 +1,7 @@
 import {
   // OFF,
   ON,
-} from "../_strings";
+} from "../state";
 
 export default {
   id: "enable/plugin",

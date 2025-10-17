@@ -2,7 +2,7 @@ import {
   // OFF,
   WARN,
   ON,
-} from "./_strings";
+} from "./state";
 
 export default {
   id: "enable/stylistic",

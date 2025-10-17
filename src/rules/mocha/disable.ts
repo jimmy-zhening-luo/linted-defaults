@@ -1,6 +1,6 @@
 import {
   OFF,
-} from "../_strings";
+} from "../state";
 
 export default {
   id: "disable",
