@@ -15,7 +15,4 @@ Disable = {
     Plugin: "disable/plugin",
     Extension: "disable/plugin/extension",
   },
-} as const,
-Override = {
-  Override: "override",
 } as const;
