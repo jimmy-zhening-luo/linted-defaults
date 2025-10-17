@@ -1,4 +1,8 @@
 export default {
+  plugins: [
+    "json",
+    "jsonc",
+  ],
   languageOptions: {
     allowTrailingCommas: true /* INFO: https://github.com/eslint/json?tab=readme-ov-file#allowing-trailing-commas-in-jsonc */,
   },
