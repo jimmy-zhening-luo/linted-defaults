@@ -20,7 +20,6 @@ export default {
   html: Scope("html"),
   css: Scope("css"),
   json: Scope("json"),
-  jsonc: [],
   jsoncc: Scope(
     ["jsonc", "code-snippets"],
     {

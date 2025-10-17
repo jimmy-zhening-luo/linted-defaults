@@ -8,9 +8,7 @@ import jsoncc from "./jsoncc";
 import yml from "./yml";
 
 export default {
-  js: {},
   ts,
-  mocha: {},
   svelte,
   html,
   css,
