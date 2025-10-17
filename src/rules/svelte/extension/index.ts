@@ -1,15 +1,13 @@
-import {
-  ON,
-} from "../../state";
+import { State } from "../../state";
 
+// DOC: http://sveltejs.github.io/eslint-plugin-svelte/rules/#extension-rules
 export default {
   id: "enable/extension",
   rules: {
-    // DOC: http://sveltejs.github.io/eslint-plugin-svelte/rules/#extension-rules
     "svelte/no-inner-declarations": [
-      ON,
+      State.ON,
       "both",
     ] /* same options: no-inner-declarations */,
-    "svelte/no-trailing-spaces": ON /* same options: @stylistic/no-trailing-spaces */,
+    "svelte/no-trailing-spaces": State.ON /* same options: @stylistic/no-trailing-spaces */,
   } as const,
 };

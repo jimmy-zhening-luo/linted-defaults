@@ -1,29 +1,26 @@
-import {
-  // OFF,
-  ON,
-} from "../../state";
+import { State } from "../../state";
 
+// DOC: https://ota-meshi.github.io/eslint-plugin-jsonc/rules/#extension-rules
 export default {
   id: "enable/plugin/extension",
   rules: {
-    // DOC: https://ota-meshi.github.io/eslint-plugin-jsonc/rules/#extension-rules
-    // "jsonc/array-bracket-newline": OFF /* @OVERRIDE: BIGGER BUG: i mean this basically just doesn't work, even with multiple lines it will still fail| BUG: the spec says: `requires line breaks if the number of elements is at least the given integer. If this is 0, this condition will act the same as the option "always". If this is null (the default), this condition is disabled`. However, when null, the jsonc plugin actually errors when there are linebreaks with a single item | (was: MUST match @stylistic/array-bracket-newline) */,
-    "jsonc/array-bracket-spacing": ON /* MUST match @stylistic/array-bracket-spacing */,
+    // "jsonc/array-bracket-newline": State.OFF /* @OVERRIDE: BIGGER BUG: i mean this basically just doesn't work, even with multiple lines it will still fail| BUG: the spec says: `requires line breaks if the number of elements is at least the given integer. If this is 0, this condition will act the same as the option "always". If this is null (the default), this condition is disabled`. However, when null, the jsonc plugin actually errors when there are linebreaks with a single item | (was: MUST match @stylistic/array-bracket-newline) */,
+    "jsonc/array-bracket-spacing": State.ON /* MUST match @stylistic/array-bracket-spacing */,
     "jsonc/array-element-newline": [
-      ON,
+      State.ON,
       "consistent",
     ] /* WOULD match @stylistic/array-element-newline, but jsonc plugin has slightly different options */,
-    "jsonc/comma-dangle": ON /* trailing commas are NOT allowed in JSON */,
-    "jsonc/comma-style": ON,
+    "jsonc/comma-dangle": State.ON /* trailing commas are NOT allowed in JSState.ON */,
+    "jsonc/comma-style": State.ON,
     "jsonc/indent": [
-      ON,
+      State.ON,
       2,
     ],
-    "jsonc/key-spacing": ON /* MUST match @stylistic/key-spacing */,
-    // "jsonc/no-dupe-keys": OFF /* ESLint: json/no-duplicate-keys */,
-    "jsonc/no-floating-decimal": ON,
+    "jsonc/key-spacing": State.ON /* MUST match @stylistic/key-spacing */,
+    // "jsonc/no-dupe-keys": State.OFF /* ESLint: json/no-duplicate-keys */,
+    "jsonc/no-floating-decimal": State.ON,
     "jsonc/no-irregular-whitespace": [
-      ON,
+      State.ON,
       {
         skipStrings: true,
         skipComments: true,
@@ -32,13 +29,13 @@ export default {
         skipJSXText: true,
       },
     ],
-    "jsonc/no-multi-str": ON,
-    "jsonc/no-octal-escape": ON,
-    "jsonc/no-octal": ON,
-    "jsonc/no-sparse-arrays": ON,
-    "jsonc/no-useless-escape": ON,
+    "jsonc/no-multi-str": State.ON,
+    "jsonc/no-octal-escape": State.ON,
+    "jsonc/no-octal": State.ON,
+    "jsonc/no-sparse-arrays": State.ON,
+    "jsonc/no-useless-escape": State.ON,
     "jsonc/object-curly-newline": [
-      ON,
+      State.ON,
       {
         consistent: true,
         multiline: true,
@@ -46,12 +43,12 @@ export default {
       },
     ] /* @OVERRIDE @stylistic/object-curly-newline */,
     "jsonc/object-curly-spacing": [
-      ON,
+      State.ON,
       "always",
     ] /* MUST match @stylistic/object-curly-spacing */,
-    "jsonc/object-property-newline": ON /* MUST match @stylistic/object-property-newline */,
-    "jsonc/quote-props": ON,
-    "jsonc/quotes": ON,
-    "jsonc/space-unary-ops": ON,
+    "jsonc/object-property-newline": State.ON /* MUST match @stylistic/object-property-newline */,
+    "jsonc/quote-props": State.ON,
+    "jsonc/quotes": State.ON,
+    "jsonc/space-unary-ops": State.ON,
   } as const,
 };

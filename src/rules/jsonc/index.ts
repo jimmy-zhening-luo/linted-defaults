@@ -1,3 +1,3 @@
-import JsoncPluginDisable from "./plugin";
+import JsoncPluginDisable from "./override";
 
 export default [JsoncPluginDisable];

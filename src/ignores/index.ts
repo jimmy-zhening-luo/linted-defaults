@@ -1,47 +1,18 @@
-import { Scope } from "../_scope";
-import js from "./js";
-import ts from "./ts";
-import mocha from "./mocha";
-import svelte from "./svelte";
-import html from "./html";
-import css from "./css";
-import json from "./json";
-import jsonc from "./jsonc";
-import jsoncc from "./jsoncc";
-import yml from "./yml";
+import global from "./global";
 
 export default {
-  "*": Scope(
-    [],
-    {
-      files: [
-        ".git",
-        ".svelte-kit",
-        "dist",
-        "build",
-        "built",
-        "bundle",
-        "bundled",
-        "pack",
-        "packed",
-        "in",
-        "out",
-        "input",
-        "output",
-        ".Trash",
-      ]
-        .map(folder => folder.concat("/")),
-    },
-    true,
-  ),
-  js,
-  ts,
-  mocha,
-  svelte,
-  html,
-  css,
-  json,
-  jsonc,
-  jsoncc,
-  yml,
+  "*": global,
+  js: [],
+  ts: [],
+  mocha: [],
+  svelte: [],
+  html: [],
+  css: [],
+  json: [
+    "**/.clasprc.json",
+    "**/package-lock.json",
+  ],
+  jsonc: [],
+  jsoncc: [],
+  yml: [],
 };

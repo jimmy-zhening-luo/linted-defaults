@@ -1,23 +1,41 @@
-import js from "./js";
-import ts from "./ts";
-import mocha from "./mocha";
-import svelte from "./svelte";
-import html from "./html";
-import css from "./css";
-import json from "./json";
-import jsonc from "./jsonc";
-import jsoncc from "./jsoncc";
-import yml from "./yml";
+import Scope from "../_scope";
 
 export default {
-  js,
-  ts,
-  mocha,
-  svelte,
-  html,
-  css,
-  json,
-  jsonc,
-  jsoncc,
-  yml,
+  js: Scope([
+    "js",
+    "cjs",
+    "mjs",
+  ]),
+  ts: Scope([
+    "ts",
+    "cts",
+    "mts",
+  ]),
+  mocha: Scope([
+    "spec.ts",
+    "spec.cts",
+    "spec.mts",
+  ]),
+  svelte: Scope("svelte"),
+  html: Scope("html"),
+  css: Scope("css"),
+  json: Scope("json"),
+  jsonc: Scope("jsonc"),
+  jsoncc: Scope(
+    ["jsonc", "code-snippets"],
+    {
+      folders: [".vscode"],
+      files: ["tsconfig.json"],
+      paths: [
+        ".vscode/**/*.json",
+        "code/*/.vscode/**/*.json",
+      ],
+    },
+  ),
+  yml: Scope(
+    ["yml", "yaml"],
+    {
+      folders: [".github"],
+    },
+  ),
 };

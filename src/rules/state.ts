@@ -1,4 +1,5 @@
-export const
-OFF = 0,
-WARN = 1,
-ON = 2;
+export const enum State {
+  OFF,
+  WARN,
+  ON,
+}

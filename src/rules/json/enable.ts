@@ -1,17 +1,14 @@
-import {
-  // OFF,
-  ON,
-} from "../state";
+import { State } from "../state";
 
+// DOC: https://github.com/eslint/json?tab=readme-ov-file#rules
 export default {
   id: "enable",
   rules: {
-    // DOC: https://github.com/eslint/json?tab=readme-ov-file#rules
-    "json/no-duplicate-keys": ON /* replaces jsonc/no-dupe-keys */,
-    // "json/no-empty-keys": OFF /* preference: I use empty keys or keys with only whitespace sometimes, as does `package-lock.json` per DOC: "jsonc/no-dupe-keys": ON /* ESLint: json/no-duplicate-keys */,
-    "json/no-unsafe-values": ON,
-    "json/no-unnormalized-keys": ON,
-    // "json/sort-keys": OFF /* replaces jsonc/sort-keys BUT preference: I don't like sorting keys, it makes diffs harder to read, and I don't see the point of it in JSON */,
-    "json/top-level-interop": ON,
+    "json/no-duplicate-keys": State.ON /* replaces jsonc/no-dupe-keys */,
+    // "json/no-empty-keys": State.OFF /* preference */,
+    "json/no-unsafe-values": State.ON,
+    "json/no-unnormalized-keys": State.ON,
+    // "json/sort-keys": State.OFF /* replaces jsonc/sort-keys BUT preference */,
+    "json/top-level-interop": State.ON,
   } as const,
 };

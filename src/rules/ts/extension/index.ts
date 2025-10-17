@@ -1,17 +1,14 @@
-import {
-  // OFF,
-  ON,
-} from "../../state";
+import { State } from "../../state";
 
+// DOC: https://typescript-eslint.io/rules/?=extension-xdeprecated#rules
 export default {
   id: "enable/extension",
   rules: {
-    // DOC: https://typescript-eslint.io/rules/?=extension-xdeprecated#rules
-    // "@typescript-eslint/class-methods-use-this": OFF /* ESLint now supports TS (preference -- eslint:OFF) */,
-    // "@typescript-eslint/consistent-return": OFF /* tsc: noImplicitReturns */,
-    // "@typescript-eslint/default-param-last": OFF /* ESLint now supports TS */,
+    // "@typescript-eslint/class-methods-use-this": State.OFF /* ESLint now supports TS (preference -- eslint:State.OFF) */,
+    // "@typescript-eslint/consistent-return": State.OFF /* tsc: noImplicitReturns */,
+    // "@typescript-eslint/default-param-last": State.OFF /* ESLint now supports TS */,
     "@typescript-eslint/dot-notation": [
-      ON,
+      State.ON,
       {
         // TS-only:
         allowPrivateClassPropertyAccess: true,
@@ -19,30 +16,30 @@ export default {
         allowIndexSignaturePropertyAccess: true,
       },
     ],
-    // "@typescript-eslint/init-declarations": OFF /* ESLint now supports TS */,
-    // "@typescript-eslint/max-params": OFF /* preference, although ESLint now supports TS */,
-    // "@typescript-eslint/no-array-constructor": OFF /* ESLint now supports TS */,
-    // "@typescript-eslint/no-dupe-class-members": OFF /* tsc, although ESLint now supports TS */,
-    // "@typescript-eslint/no-empty-function": OFF /* ESLint now supports TS */,
-    "@typescript-eslint/no-implied-eval": ON,
-    // "@typescript-eslint/no-invalid-this": OFF /* tsc: { strict, noImplicitThis }, although ESLint now supports TS */,
-    // "@typescript-eslint/no-loop-func": OFF /* ESLint now supports TS */,
-    // "@typescript-eslint/no-magic-numbers": OFF /* preference, although ESLint now supports TS */,
-    // "@typescript-eslint/no-redeclare": OFF /* tsc (let, const, -var) */,
-    // "@typescript-eslint/no-restricted-imports": OFF /* preference */,
-    // "@typescript-eslint/no-shadow": OFF /* ESLint now supports TS (was: investigate) */,
-    // "@typescript-eslint/no-unused-expressions": OFF /* ESLint now supports TS (preference -- eslint:OFF) */,
-    "@typescript-eslint/no-unused-vars": ON,
-    // "@typescript-eslint/no-use-before-define": OFF /* ESLint now supports TS */,
-    // "@typescript-eslint/no-useless-constructor": OFF /* ESLint now supports TS */,
+    // "@typescript-eslint/init-declarations": State.OFF /* ESLint now supports TS */,
+    // "@typescript-eslint/max-params": State.OFF /* preference, although ESLint now supports TS */,
+    // "@typescript-eslint/no-array-constructor": State.OFF /* ESLint now supports TS */,
+    // "@typescript-eslint/no-dupe-class-members": State.OFF /* tsc, although ESLint now supports TS */,
+    // "@typescript-eslint/no-empty-function": State.OFF /* ESLint now supports TS */,
+    "@typescript-eslint/no-implied-eval": State.ON,
+    // "@typescript-eslint/no-invalid-this": State.OFF /* tsc: { strict, noImplicitThis }, although ESLint now supports TS */,
+    // "@typescript-eslint/no-loop-func": State.OFF /* ESLint now supports TS */,
+    // "@typescript-eslint/no-magic-numbers": State.OFF /* preference, although ESLint now supports TS */,
+    // "@typescript-eslint/no-redeclare": State.OFF /* tsc (let, const, -var) */,
+    // "@typescript-eslint/no-restricted-imports": State.OFF /* preference */,
+    // "@typescript-eslint/no-shadow": State.OFF /* ESLint now supports TS (was: investigate) */,
+    // "@typescript-eslint/no-unused-expressions": State.OFF /* ESLint now supports TS (preference -- eslint:State.OFF) */,
+    "@typescript-eslint/no-unused-vars": State.ON,
+    // "@typescript-eslint/no-use-before-define": State.OFF /* ESLint now supports TS */,
+    // "@typescript-eslint/no-useless-constructor": State.OFF /* ESLint now supports TS */,
     "@typescript-eslint/only-throw-error": [
-      ON,
+      State.ON,
       {
         allowThrowingAny: false,
       },
     ],
     "@typescript-eslint/prefer-destructuring": [
-      ON,
+      State.ON,
       {
         AssignmentExpression: {
           array: false,
@@ -51,11 +48,11 @@ export default {
       },
     ],
     "@typescript-eslint/prefer-promise-reject-errors": [
-      ON,
+      State.ON,
       {
         allowThrowingUnknown: true,
       },
     ],
-    "@typescript-eslint/require-await": ON,
+    "@typescript-eslint/require-await": State.ON,
   } as const,
 };

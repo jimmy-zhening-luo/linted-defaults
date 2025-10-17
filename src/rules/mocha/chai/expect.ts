@@ -1,15 +1,12 @@
-import {
-  // OFF,
-  ON,
-} from "../../state";
+import { State } from "../../state";
 
+// DOC: https://github.com/turbo87/eslint-plugin-chai-expect?tab=readme-ov-file#rules
 export default {
-  id: "enable/plugin/chai/expect",
+  id: "enable/chai/expect",
   rules: {
-    // DOC: https://github.com/turbo87/eslint-plugin-chai-expect?tab=readme-ov-file#rules
-    "chai-expect/no-inner-compare": ON,
-    "chai-expect/no-inner-literal": ON,
-    "chai-expect/missing-assertion": ON,
-    // "chai-expect/terminating-properties": OFF,
+    "chai-expect/no-inner-compare": State.ON,
+    "chai-expect/no-inner-literal": State.ON,
+    "chai-expect/missing-assertion": State.ON,
+    // "chai-expect/terminating-properties": State.OFF,
   } as const,
 };

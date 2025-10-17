@@ -1,17 +1,28 @@
-import {
-  ROOTS,
-  SUBROOTS,
-} from "./const";
+const ROOTS = [
+  "",
+  "code/*/",
+],
+SUBROOTS = [
+  "",
+  "src",
+  "tests",
+  "static",
+  "typings",
+  "public",
+  "tools",
+];
 
-export function Scope(
+export default function Scope(
   extensions: string | string[],
   {
     folders = [],
     files = [],
+    paths = [],
   }: Partial<
     Record<
       | "folders"
-      | "files",
+      | "files"
+      | "paths",
       string[]
     >
   > = {},
@@ -54,5 +65,6 @@ export function Scope(
         .map(
           subpath => root.concat(subpath),
         ),
-    );
+    )
+    .concat(paths);
 }

@@ -1,13 +1,11 @@
-import {
-  ON,
-} from "../state";
+import { State } from "../state";
 
+// DOC: https://ota-meshi.github.io/eslint-plugin-yml/rules/#extension-rules
 export default {
-  id: "enable/plugin/extension",
+  id: "enable/extension",
   rules: {
-    // DOC: https://ota-meshi.github.io/eslint-plugin-yml/rules/#extension-rules
     "yml/flow-mapping-curly-newline": [
-      ON,
+      State.ON,
       {
         consistent: true,
         multiline: true,
@@ -15,15 +13,15 @@ export default {
       },
     ] /* MUST match jsonc/object-curly-newline */,
     "yml/flow-mapping-curly-spacing": [
-      ON,
+      State.ON,
       "always",
     ] /* MUST match jsonc/object-curly-spacing */,
-    "yml/flow-sequence-bracket-newline": ON /* @OVERRIDE jsonc/array-bracket-newline, instead -> MUST match its parent: @stylistic/array-bracket-newline */,
-    "yml/flow-sequence-bracket-spacing": ON /* MUST match jsonc/array-bracket-spacing */,
-    "yml/key-spacing": ON /* MUST match jsonc/key-spacing */,
-    "yml/no-irregular-whitespace": ON,
+    "yml/flow-sequence-bracket-newline": State.ON /* @OVERRIDE jsonc/array-bracket-newline, instead -> MUST match its parent: @stylistic/array-bracket-newline */,
+    "yml/flow-sequence-bracket-spacing": State.ON /* MUST match jsonc/array-bracket-spacing */,
+    "yml/key-spacing": State.ON /* MUST match jsonc/key-spacing */,
+    "yml/no-irregular-whitespace": State.ON,
     "yml/no-multiple-empty-lines": [
-      ON,
+      State.ON,
       {
         max: 1,
         maxBOF: 0,
@@ -31,7 +29,7 @@ export default {
       },
     ] /* MUST match @stylistic/no-multiple-empty-lines */,
     "yml/spaced-comment": [
-      ON,
+      State.ON,
       "always",
       {
         exceptions: ["#"],

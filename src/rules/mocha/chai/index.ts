@@ -1,13 +1,11 @@
-import {
-  ON,
-} from "../../state";
+import { State } from "../../state";
 
+// DOC: https://github.com/ihordiachenko/eslint-plugin-chai-friendly?tab=readme-ov-file#usage
 export default {
-  id: "enable/plugin/chai",
+  id: "enable/chai",
   rules: {
-    // DOC: https://github.com/ihordiachenko/eslint-plugin-chai-friendly?tab=readme-ov-file#usage
     "chai-friendly/no-unused-expressions": [
-      ON,
+      State.ON,
       {
         allowShortCircuit: true,
         allowTernary: true,

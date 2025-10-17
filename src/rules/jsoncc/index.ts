@@ -1,3 +1,3 @@
-import JsoncCommaPluginDisable from "./plugin";
+import JsoncCommaPluginDisable from "./override";
 
 export default [JsoncCommaPluginDisable];

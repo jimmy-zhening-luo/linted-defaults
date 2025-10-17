@@ -1,17 +1,13 @@
-import {
-  // OFF,
-  WARN,
-  ON,
-} from "./state";
+import { State } from "./state";
 
+// DOC: https://eslint.style/rules
 export default {
   id: "enable/stylistic",
   rules: {
-    // DOC: https://eslint.style/rules
-    "@stylistic/array-bracket-newline": ON,
-    "@stylistic/array-bracket-spacing": ON,
+    "@stylistic/array-bracket-newline": State.ON,
+    "@stylistic/array-bracket-spacing": State.ON,
     "@stylistic/array-element-newline": [
-      ON,
+      State.ON,
       {
         consistent: true,
         multiline: true,
@@ -19,44 +15,44 @@ export default {
       } /* never | consistent | @default always | { ... } */,
     ],
     "@stylistic/arrow-parens": [
-      ON,
+      State.ON,
       "as-needed" /* as-needed | @default always */,
     ],
-    "@stylistic/arrow-spacing": ON,
-    "@stylistic/block-spacing": ON,
+    "@stylistic/arrow-spacing": State.ON,
+    "@stylistic/block-spacing": State.ON,
     "@stylistic/brace-style": [
-      ON,
+      State.ON,
       "stroustrup" /* stroustrup | allman | @default 1tbs */,
       {
         allowSingleLine: true /* @default false */,
       },
     ],
     "@stylistic/comma-dangle": [
-      ON,
+      State.ON,
       "always-multiline",
     ],
-    "@stylistic/comma-spacing": ON,
-    "@stylistic/comma-style": ON,
-    "@stylistic/computed-property-spacing": ON,
-    "@stylistic/curly-newline": ON,
+    "@stylistic/comma-spacing": State.ON,
+    "@stylistic/comma-style": State.ON,
+    "@stylistic/computed-property-spacing": State.ON,
+    "@stylistic/curly-newline": State.ON,
     "@stylistic/dot-location": [
-      ON,
+      State.ON,
       "property" /* property | @default object */,
     ],
-    "@stylistic/eol-last": ON,
+    "@stylistic/eol-last": State.ON,
     "@stylistic/function-call-argument-newline": [
-      ON,
+      State.ON,
       "consistent" /* consistent | never | @default always */,
     ],
-    "@stylistic/function-call-spacing": ON,
+    "@stylistic/function-call-spacing": State.ON,
     "@stylistic/function-paren-newline": [
-      ON,
+      State.ON,
       "multiline-arguments",
     ] /* BUG: https://github.com/eslint-stylistic/eslint-stylistic/issues/290 */,
-    "@stylistic/generator-star-spacing": ON,
-    "@stylistic/implicit-arrow-linebreak": ON,
+    "@stylistic/generator-star-spacing": State.ON,
+    "@stylistic/implicit-arrow-linebreak": State.ON,
     "@stylistic/indent": [
-      ON,
+      State.ON,
       2 /* tab | number | @default 4 */,
       {
         assignmentOperator: 0,
@@ -70,15 +66,15 @@ export default {
       },
     ],
     "@stylistic/indent-binary-ops": [
-      ON,
+      State.ON,
       2 /* MUST be same as `@stylistic/indent`[1] */,
     ],
-    "@stylistic/key-spacing": ON,
-    "@stylistic/keyword-spacing": ON,
-    // "@stylistic/line-comment-position": OFF,
-    // "@stylistic/lines-around-comment": OFF,
+    "@stylistic/key-spacing": State.ON,
+    "@stylistic/keyword-spacing": State.ON,
+    // "@stylistic/line-comment-position": State.OFF,
+    // "@stylistic/lines-around-comment": State.OFF,
     "@stylistic/lines-between-class-members": [
-      ON,
+      State.ON,
       {
         enforce: [
           {
@@ -100,7 +96,7 @@ export default {
       },
     ],
     "@stylistic/max-len": [
-      ON,
+      State.ON,
       {
         code: 300 /* @default 80 */,
         // tabWidth: 4,
@@ -112,23 +108,23 @@ export default {
         ignoreRegExpLiterals: true,
       },
     ],
-    "@stylistic/max-statements-per-line": ON,
-    "@stylistic/member-delimiter-style": ON,
-    // "@stylistic/multiline-comment-style": OFF,
+    "@stylistic/max-statements-per-line": State.ON,
+    "@stylistic/member-delimiter-style": State.ON,
+    // "@stylistic/multiline-comment-style": State.OFF,
     "@stylistic/multiline-ternary": [
-      ON,
+      State.ON,
       "always-multiline" /* never | always-multiline | @default always */,
     ],
-    // "@stylistic/new-parens": OFF,
-    "@stylistic/newline-per-chained-call": ON,
-    // "@stylistic/no-confusing-arrow": OFF,
-    "@stylistic/no-extra-parens": ON,
-    "@stylistic/no-extra-semi": ON,
-    "@stylistic/no-floating-decimal": ON,
-    // "@stylistic/no-mixed-operators": OFF,
-    "@stylistic/no-mixed-spaces-and-tabs": ON,
+    // "@stylistic/new-parens": State.OFF,
+    "@stylistic/newline-per-chained-call": State.ON,
+    // "@stylistic/no-confusing-arrow": State.OFF,
+    "@stylistic/no-extra-parens": State.ON,
+    "@stylistic/no-extra-semi": State.ON,
+    "@stylistic/no-floating-decimal": State.ON,
+    // "@stylistic/no-mixed-operators": State.OFF,
+    "@stylistic/no-mixed-spaces-and-tabs": State.ON,
     "@stylistic/no-multi-spaces": [
-      ON,
+      State.ON,
       {
         exceptions: {
           Property: false,
@@ -137,22 +133,22 @@ export default {
       },
     ],
     "@stylistic/no-multiple-empty-lines": [
-      ON,
+      State.ON,
       {
         max: 1 /* @default 2 */,
         maxBOF: 0,
         maxEOF: 0 /* combine with `eol-last` to ensure file still ends with a single line-break (eol character) */,
       },
     ],
-    "@stylistic/no-tabs": ON,
-    "@stylistic/no-trailing-spaces": ON,
-    "@stylistic/no-whitespace-before-property": ON,
+    "@stylistic/no-tabs": State.ON,
+    "@stylistic/no-trailing-spaces": State.ON,
+    "@stylistic/no-whitespace-before-property": State.ON,
     "@stylistic/nonblock-statement-body-position": [
-      ON,
+      State.ON,
       "below" /* any | below | @default beside */,
     ],
     "@stylistic/object-curly-newline": [
-      ON,
+      State.ON,
       {
         consistent: true,
         multiline: true,
@@ -160,27 +156,27 @@ export default {
       },
     ],
     "@stylistic/object-curly-spacing": [
-      ON,
+      State.ON,
       "always" /* always | @default never */,
     ],
-    "@stylistic/object-property-newline": ON,
+    "@stylistic/object-property-newline": State.ON,
     "@stylistic/one-var-declaration-per-line": [
-      ON,
+      State.ON,
       "always" /* always | @default initializations */,
     ],
     "@stylistic/operator-linebreak": [
-      ON,
+      State.ON,
       "before" /* ignore | none | before | @default after */,
     ],
     "@stylistic/padded-blocks": [
-      ON,
+      State.ON,
       "never" /* never | start | end | @default always */,
       {
         allowSingleLineBlocks: true,
       },
     ],
     "@stylistic/padding-line-between-statements": [
-      WARN,
+      State.WARN,
       // #region *<
       {
         blankLine: "never",
@@ -380,36 +376,36 @@ export default {
       // #endregion
     ],
     "@stylistic/quote-props": [
-      ON,
+      State.ON,
       "as-needed",
       {
         keywords: true,
       },
     ],
     "@stylistic/quotes": [
-      ON,
+      State.ON,
       "double" /* @default double */,
       {
         avoidEscape: true,
         allowTemplateLiterals: "always" /* always | avoidEscape | @default never */,
       },
     ],
-    "@stylistic/rest-spread-spacing": ON,
-    "@stylistic/semi": ON,
-    "@stylistic/semi-spacing": ON,
-    "@stylistic/semi-style": ON,
-    "@stylistic/space-before-blocks": ON,
+    "@stylistic/rest-spread-spacing": State.ON,
+    "@stylistic/semi": State.ON,
+    "@stylistic/semi-spacing": State.ON,
+    "@stylistic/semi-style": State.ON,
+    "@stylistic/space-before-blocks": State.ON,
     "@stylistic/space-before-function-paren": [
-      ON,
+      State.ON,
       {
         named: "never",
       },
     ],
-    "@stylistic/space-in-parens": ON,
-    "@stylistic/space-infix-ops": ON,
-    "@stylistic/space-unary-ops": ON,
+    "@stylistic/space-in-parens": State.ON,
+    "@stylistic/space-infix-ops": State.ON,
+    "@stylistic/space-unary-ops": State.ON,
     "@stylistic/spaced-comment": [
-      ON,
+      State.ON,
       "always",
       {
         line: {
@@ -439,11 +435,11 @@ export default {
         },
       },
     ],
-    "@stylistic/switch-colon-spacing": ON,
-    "@stylistic/template-curly-spacing": ON,
-    "@stylistic/template-tag-spacing": ON,
+    "@stylistic/switch-colon-spacing": State.ON,
+    "@stylistic/template-curly-spacing": State.ON,
+    "@stylistic/template-tag-spacing": State.ON,
     "@stylistic/type-annotation-spacing": [
-      ON,
+      State.ON,
       {
         before: true,
         after: true,
@@ -455,16 +451,16 @@ export default {
         },
       } /* non-overriden rule affects all type annotations (arrows, "as" keyword, "satisfies" keyword) except colons */,
     ],
-    "@stylistic/type-generic-spacing": ON,
-    "@stylistic/type-named-tuple-spacing": ON,
+    "@stylistic/type-generic-spacing": State.ON,
+    "@stylistic/type-named-tuple-spacing": State.ON,
     "@stylistic/wrap-iife": [
-      ON,
+      State.ON,
       "inside",
       {
         functionPrototypeMethods: true,
       },
     ],
-    "@stylistic/wrap-regex": ON,
-    "@stylistic/yield-star-spacing": ON,
+    "@stylistic/wrap-regex": State.ON,
+    "@stylistic/yield-star-spacing": State.ON,
   } as const,
 };
