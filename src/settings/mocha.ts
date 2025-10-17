@@ -1,2 +1,0 @@
-// Inherits `ts`
-export default {};
