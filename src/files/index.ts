@@ -23,12 +23,9 @@ export default {
   jsoncc: pattern(
     ["jsonc", "code-snippets"],
     {
-      folders: [".vscode"],
       files: ["tsconfig.json"],
-      paths: [
-        ".vscode/**/*.json",
-        "code/*/.vscode/**/*.json",
-      ],
+      folders: [".vscode"],
+      paths: [".vscode/**/*.json"],
     },
   ),
   yml: pattern(

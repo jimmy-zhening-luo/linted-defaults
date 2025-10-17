@@ -15,13 +15,13 @@ SUBROOTS = [
 export default function pattern(
   extensions: string | string[],
   {
-    folders = [],
     files = [],
+    folders = [],
     paths = [],
   }: Partial<
     Record<
-      | "folders"
       | "files"
+      | "folders"
       | "paths",
       string[]
     >
@@ -34,15 +34,13 @@ export default function pattern(
       : extensions
   )
     .map(
-      extension => "*."
-        .concat(extension),
+      extension => "*.".concat(extension),
     )
     .concat(files),
   branches = (
     override
       ? folders
-      : SUBROOTS
-          .concat(folders)
+      : SUBROOTS.concat(folders)
   )
     .map(
       branch => branch === ""
@@ -59,12 +57,13 @@ export default function pattern(
             ),
         );
 
+  subpaths.concat(paths);
+
   return ROOTS
     .flatMap(
       root => subpaths
         .map(
           subpath => root.concat(subpath),
         ),
-    )
-    .concat(paths);
+    );
 }

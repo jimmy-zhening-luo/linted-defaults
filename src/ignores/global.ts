@@ -3,7 +3,7 @@ import pattern from "../_pattern";
 export default pattern(
   [],
   {
-    files: [
+    paths: [
       ".git",
       ".svelte-kit",
       "dist",
