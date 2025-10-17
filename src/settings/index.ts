@@ -1,13 +1,13 @@
-import js from "./settings/js";
-import ts from "./settings/ts";
-import mocha from "./settings/mocha";
-import svelte from "./settings/svelte";
-import html from "./settings/html";
-import css from "./settings/css";
-import json from "./settings/json";
-import jsonc from "./settings/jsonc";
-import jsoncc from "./settings/jsoncc";
-import yml from "./settings/yml";
+import js from "./js";
+import ts from "./ts";
+import mocha from "./mocha";
+import svelte from "./svelte";
+import html from "./html";
+import css from "./css";
+import json from "./json";
+import jsonc from "./jsonc";
+import jsoncc from "./jsoncc";
+import yml from "./yml";
 
 export default {
   js,
