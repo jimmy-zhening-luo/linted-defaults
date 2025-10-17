@@ -1,5 +1,5 @@
 export default {
-  plugins: ["html"],
+  plugins: ["html"] as const,
   languageOptions: {
     parser: "html" as const,
   },

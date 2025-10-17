@@ -1,3 +1,3 @@
 export default {
-  plugins: ["@stylistic"],
+  plugins: ["@stylistic"] as const,
 }

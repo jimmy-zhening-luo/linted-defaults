@@ -3,5 +3,5 @@ export default {
     "mocha",
     "chai-friendly",
     "chai-expect",
-  ],
+  ] as const,
 }
