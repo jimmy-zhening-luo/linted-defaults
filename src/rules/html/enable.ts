@@ -1,11 +1,10 @@
 import {
-  ID,
   // OFF,
   ON,
 } from "../_strings";
 
 export default {
-  id: ID.Enable.Plugin.Plugin,
+  id: "enable/plugin",
   rules: {
     // #region BEST PRACTICE
     // DOC: https://html-eslint.org/docs/rules#best-practice

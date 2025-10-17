@@ -1,11 +1,10 @@
 import {
-  ID,
   // OFF,
   ON,
 } from "../../_strings";
 
 export default {
-  id: `${ID.Enable.Plugin.Plugin}/chai/expect`,
+  id: "enable/plugin/chai/expect",
   rules: {
     // DOC: https://github.com/turbo87/eslint-plugin-chai-expect?tab=readme-ov-file#rules
     "chai-expect/no-inner-compare": ON,

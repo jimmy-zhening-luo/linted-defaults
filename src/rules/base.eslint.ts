@@ -1,17 +1,10 @@
 import {
-  ID,
   // OFF,
   ON,
-  always,
-  as_needed,
-  consecutive,
-  all,
-  multi,
-  both,
 } from "./_strings";
 
 export default {
-  id: ID.Enable.Enable,
+  id: "enable",
   rules: {
     // #region PROBLEMS
     // DOC: https://eslint.org/docs/latest/rules/#possible-problems
@@ -36,7 +29,7 @@ export default {
     "no-constant-condition": [
       ON,
       {
-        checkLoops: all /* none === false | all === true | @default: allExceptWhileTrue */,
+        checkLoops: "all" /* none === false | all === true | @default: allExceptWhileTrue */,
       },
     ] /* BUG: incorrect option description (claims "all" is ok): https://eslint.org/docs/latest/rules/no-constant-condition */,
     "no-constructor-return": ON,
@@ -62,7 +55,7 @@ export default {
     "no-import-assign": ON /* tsc (except Object.assign()) */,
     "no-inner-declarations": [
       ON,
-      both /* both (function & var) | @default functions */,
+      "both" /* both (function & var) | @default functions */,
     ],
     "no-invalid-regexp": ON,
     "no-irregular-whitespace": ON,
@@ -155,7 +148,7 @@ export default {
     "consistent-this": ON,
     curly: [
       ON,
-      multi /* multi | multi-line | multi-or-nest | consistent | @default all */,
+      "multi" /* multi | multi-line | multi-or-nest | consistent | @default all */,
     ],
     // "default-case": OFF /* preference: don't care */,
     "default-case-last": ON,
@@ -173,7 +166,7 @@ export default {
     "init-declarations": ON /* TS-capable */,
     "logical-assignment-operators": [
       ON,
-      always /* never | @default always */,
+      "always" /* never | @default always */,
       {
         enforceForIfStatements: true /* @default false */,
       },
@@ -326,11 +319,11 @@ export default {
     "one-var": [
       ON,
       {
-        "var": consecutive,
-        let: consecutive,
-        "const": consecutive,
-        using: consecutive,
-        awaitUsing: consecutive,
+        "var": "consecutive",
+        let: "consecutive",
+        "const": "consecutive",
+        using: "consecutive",
+        awaitUsing: "consecutive",
         separateRequires: true,
       },
     ],
@@ -339,7 +332,7 @@ export default {
     "prefer-const": [
       ON,
       {
-        destructuring: all /* any | @default all */,
+        destructuring: "all" /* any | @default all */,
       },
     ],
     "prefer-destructuring": [
@@ -374,7 +367,7 @@ export default {
     ],
     radix: [
       ON,
-      as_needed /* as-needed | @default always */,
+      "as-needed" /* as-needed | @default always */,
     ],
     "require-await": ON /* TSLint */,
     "require-unicode-regexp": ON,

@@ -1,10 +1,9 @@
 import {
-  ID,
   OFF,
 } from "../_strings";
 
 export default {
-  id: ID.Disable.Disable,
+  id: "disable",
   rules: {
     // Handled by TypeScript compiler
     "consistent-return": OFF /* TSLint BUT tsc */,

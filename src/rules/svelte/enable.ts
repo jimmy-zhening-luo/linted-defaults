@@ -1,14 +1,10 @@
 import {
-  ID,
   // OFF,
   ON,
-  all,
-  below,
-  never,
 } from "../_strings";
 
 export default {
-  id: ID.Enable.Enable,
+  id: "enable",
   rules: {
     // #region ERRORS
     // DOC: http://sveltejs.github.io/eslint-plugin-svelte/rules/#possible-errors
@@ -71,7 +67,7 @@ export default {
     "svelte/prefer-const": [
       ON,
       {
-        destructuring: all,
+        destructuring: "all",
       },
     ] /* same options: prefer-const */,
     "svelte/prefer-destructured-store-props": ON,
@@ -95,14 +91,14 @@ export default {
     "svelte/first-attribute-linebreak": [
       ON,
       {
-        singleline: below,
+        singleline: "below",
       },
     ],
     "svelte/html-closing-bracket-new-line": ON,
     "svelte/html-closing-bracket-spacing": [
       ON,
       {
-        selfClosingTag: never,
+        selfClosingTag: "never",
       },
     ],
     // "svelte/html-quotes": OFF /* BUG: incompatible with object props, which should not be stringified */,

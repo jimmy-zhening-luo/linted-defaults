@@ -1,12 +1,10 @@
 import {
-  ID,
   // OFF,
   ON,
-  never,
 } from "../_strings";
 
 export default {
-  id: ID.Enable.Enable,
+  id: "enable",
   rules: {
     // DOC: https://typescript-eslint.io/rules/?=xextension-xdeprecated#rules
     // "@typescript-eslint/adjacent-overload-signatures": OFF,
@@ -20,8 +18,8 @@ export default {
     "@typescript-eslint/consistent-type-assertions": [
       ON,
       {
-        arrayLiteralTypeAssertions: never,
-        objectLiteralTypeAssertions: never,
+        arrayLiteralTypeAssertions: "never",
+        objectLiteralTypeAssertions: "never",
       },
     ],
     // "@typescript-eslint/consistent-type-definitions": OFF,

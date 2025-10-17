@@ -1,22 +1,11 @@
 import {
-  ID,
   // OFF,
   WARN,
   ON,
-  always_multiline,
-  always,
-  as_needed,
-  before,
-  below,
-  consistent,
-  double,
-  inside,
-  never,
-  wildcard,
 } from "./_strings";
 
 export default {
-  id: ID.Enable.Style,
+  id: "enable/stylistic",
   rules: {
     // DOC: https://eslint.style/rules
     "@stylistic/array-bracket-newline": ON,
@@ -31,7 +20,7 @@ export default {
     ],
     "@stylistic/arrow-parens": [
       ON,
-      as_needed /* as-needed | @default always */,
+      "as-needed" /* as-needed | @default always */,
     ],
     "@stylistic/arrow-spacing": ON,
     "@stylistic/block-spacing": ON,
@@ -44,7 +33,7 @@ export default {
     ],
     "@stylistic/comma-dangle": [
       ON,
-      always_multiline,
+      "always-multiline",
     ],
     "@stylistic/comma-spacing": ON,
     "@stylistic/comma-style": ON,
@@ -57,7 +46,7 @@ export default {
     "@stylistic/eol-last": ON,
     "@stylistic/function-call-argument-newline": [
       ON,
-      consistent /* consistent | never | @default always */,
+      "consistent" /* consistent | never | @default always */,
     ],
     "@stylistic/function-call-spacing": ON,
     "@stylistic/function-paren-newline": [
@@ -95,17 +84,17 @@ export default {
           {
             prev: "field",
             next: "field",
-            blankLine: never,
+            blankLine: "never",
           },
           {
             prev: "field",
             next: "method",
-            blankLine: always,
+            blankLine: "always",
           },
           {
             prev: "method",
-            next: wildcard,
-            blankLine: always,
+            next: "*",
+            blankLine: "always",
           },
         ],
       },
@@ -128,7 +117,7 @@ export default {
     // "@stylistic/multiline-comment-style": OFF,
     "@stylistic/multiline-ternary": [
       ON,
-      always_multiline /* never | always-multiline | @default always */,
+      "always-multiline" /* never | always-multiline | @default always */,
     ],
     // "@stylistic/new-parens": OFF,
     "@stylistic/newline-per-chained-call": ON,
@@ -160,7 +149,7 @@ export default {
     "@stylistic/no-whitespace-before-property": ON,
     "@stylistic/nonblock-statement-body-position": [
       ON,
-      below /* any | below | @default beside */,
+      "below" /* any | below | @default beside */,
     ],
     "@stylistic/object-curly-newline": [
       ON,
@@ -172,20 +161,20 @@ export default {
     ],
     "@stylistic/object-curly-spacing": [
       ON,
-      always /* always | @default never */,
+      "always" /* always | @default never */,
     ],
     "@stylistic/object-property-newline": ON,
     "@stylistic/one-var-declaration-per-line": [
       ON,
-      always /* always | @default initializations */,
+      "always" /* always | @default initializations */,
     ],
     "@stylistic/operator-linebreak": [
       ON,
-      before /* ignore | none | before | @default after */,
+      "before" /* ignore | none | before | @default after */,
     ],
     "@stylistic/padded-blocks": [
       ON,
-      never /* never | start | end | @default always */,
+      "never" /* never | start | end | @default always */,
       {
         allowSingleLineBlocks: true,
       },
@@ -194,7 +183,7 @@ export default {
       WARN,
       // #region *<
       {
-        blankLine: never,
+        blankLine: "never",
         prev: [
           "block-like",
           "block",
@@ -231,12 +220,12 @@ export default {
           "while",
           "with",
         ],
-        next: wildcard,
+        next: "*",
       },
       // #endregion
       // #region <Block>
       {
-        blankLine: always,
+        blankLine: "always",
         prev: [
           "block-like",
           "block",
@@ -256,11 +245,11 @@ export default {
           "while",
           "with",
         ],
-        next: wildcard,
+        next: "*",
       },
       {
-        blankLine: always,
-        prev: wildcard,
+        blankLine: "always",
+        prev: "*",
         next: [
           "block-like",
           "block",
@@ -284,7 +273,7 @@ export default {
       // #endregion
       // #region Declaration>
       {
-        blankLine: never,
+        blankLine: "never",
         prev: "interface",
         next: [
           "class",
@@ -293,7 +282,7 @@ export default {
         ],
       },
       {
-        blankLine: never,
+        blankLine: "never",
         prev: "function-overload",
         next: [
           "function-overload",
@@ -303,7 +292,7 @@ export default {
       // #endregion
       // #region <=[]
       {
-        blankLine: always,
+        blankLine: "always",
         prev: [
           "const",
           "enum",
@@ -319,15 +308,15 @@ export default {
       // #endregion
       // #region Import[]>
       {
-        blankLine: always,
+        blankLine: "always",
         prev: [
           "cjs-import",
           "import",
         ],
-        next: wildcard,
+        next: "*",
       },
       {
-        blankLine: never,
+        blankLine: "never",
         prev: [
           "cjs-import",
           "import",
@@ -340,23 +329,23 @@ export default {
       // #endregion
       // #region <Export[]>
       {
-        blankLine: always,
+        blankLine: "always",
         prev: [
           "cjs-export",
           "export",
         ],
-        next: wildcard,
+        next: "*",
       },
       {
-        blankLine: always,
-        prev: wildcard,
+        blankLine: "always",
+        prev: "*",
         next: [
           "cjs-export",
           "export",
         ],
       },
       {
-        blankLine: never,
+        blankLine: "never",
         prev: [
           "cjs-export",
           "export",
@@ -369,18 +358,18 @@ export default {
       // #endregion
       // #region <Return>
       {
-        blankLine: always,
+        blankLine: "always",
         prev: [
           "break",
           "continue",
           "return",
           "throw",
         ],
-        next: wildcard,
+        next: "*",
       },
       {
-        blankLine: always,
-        prev: wildcard,
+        blankLine: "always",
+        prev: "*",
         next: [
           "break",
           "continue",
@@ -392,17 +381,17 @@ export default {
     ],
     "@stylistic/quote-props": [
       ON,
-      as_needed,
+      "as-needed",
       {
         keywords: true,
       },
     ],
     "@stylistic/quotes": [
       ON,
-      double /* @default double */,
+      "double" /* @default double */,
       {
         avoidEscape: true,
-        allowTemplateLiterals: always /* always | avoidEscape | @default never */,
+        allowTemplateLiterals: "always" /* always | avoidEscape | @default never */,
       },
     ],
     "@stylistic/rest-spread-spacing": ON,
@@ -413,7 +402,7 @@ export default {
     "@stylistic/space-before-function-paren": [
       ON,
       {
-        named: never,
+        named: "never",
       },
     ],
     "@stylistic/space-in-parens": ON,
@@ -421,7 +410,7 @@ export default {
     "@stylistic/space-unary-ops": ON,
     "@stylistic/spaced-comment": [
       ON,
-      always,
+      "always",
       {
         line: {
           exceptions: [
@@ -470,7 +459,7 @@ export default {
     "@stylistic/type-named-tuple-spacing": ON,
     "@stylistic/wrap-iife": [
       ON,
-      inside,
+      "inside",
       {
         functionPrototypeMethods: true,
       },

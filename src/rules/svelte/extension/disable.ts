@@ -1,10 +1,9 @@
 import {
-  ID,
   OFF,
 } from "../../_strings";
 
 export default {
-  id: ID.Disable.Extension,
+  id: "disable/extension",
   rules: {
     // DOC: http://sveltejs.github.io/eslint-plugin-svelte/rules/#extension-rules
     "no-inner-declarations": OFF /* also disabled in svelte/disable per Svelte base config */,

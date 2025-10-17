@@ -1,11 +1,10 @@
 import {
-  ID,
   // OFF,
   ON,
 } from "../_strings";
 
 export default {
-  id: ID.Enable.Enable,
+  id: "enable",
   rules: {
     // DOC: https://github.com/eslint/css/tree/main/docs/rules
     "css/font-family-fallbacks": ON,

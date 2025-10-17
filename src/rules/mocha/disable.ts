@@ -1,10 +1,9 @@
 import {
-  ID,
   OFF,
 } from "../_strings";
 
 export default {
-  id: ID.Disable.Disable,
+  id: "disable",
   rules: {
     "prefer-arrow-callback": OFF /* TS-capable */,
     "no-unused-expressions": OFF /* INFO: looks like these guys got the hint too ;) https://github.com/ihordiachenko/eslint-plugin-chai-friendly/releases/tag/v1.1.0 */,

@@ -1,10 +1,9 @@
 import {
-  ID,
   OFF,
 } from "../_strings";
 
 export default {
-  id: ID.Disable.Disable,
+  id: "disable",
   rules: {
     // ESLint core rules known to cause problems with `.svelte`.
     // DOC: https://github.com/sveltejs/eslint-plugin-svelte/blob/ca37fbbe82d01019946e12eeb1b57c2a5736c018/packages/eslint-plugin-svelte/src/configs/base.ts

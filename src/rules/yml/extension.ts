@@ -1,11 +1,9 @@
 import {
-  ID,
   ON,
-  always,
 } from "../_strings";
 
 export default {
-  id: ID.Enable.Plugin.Extension,
+  id: "enable/plugin/extension",
   rules: {
     // DOC: https://ota-meshi.github.io/eslint-plugin-yml/rules/#extension-rules
     "yml/flow-mapping-curly-newline": [
@@ -18,7 +16,7 @@ export default {
     ] /* MUST match jsonc/object-curly-newline */,
     "yml/flow-mapping-curly-spacing": [
       ON,
-      always,
+      "always",
     ] /* MUST match jsonc/object-curly-spacing */,
     "yml/flow-sequence-bracket-newline": ON /* @OVERRIDE jsonc/array-bracket-newline, instead -> MUST match its parent: @stylistic/array-bracket-newline */,
     "yml/flow-sequence-bracket-spacing": ON /* MUST match jsonc/array-bracket-spacing */,
@@ -34,7 +32,7 @@ export default {
     ] /* MUST match @stylistic/no-multiple-empty-lines */,
     "yml/spaced-comment": [
       ON,
-      always,
+      "always",
       {
         exceptions: ["#"],
         markers: [

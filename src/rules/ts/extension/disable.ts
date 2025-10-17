@@ -1,10 +1,9 @@
 import {
-  ID,
   OFF,
 } from "../../_strings";
 
 export default {
-  id: ID.Disable.Extension,
+  id: "disable/extension",
   rules: {
     // DOC: https://typescript-eslint.io/rules/?=extension-xdeprecated#rules
     // "class-methods-use-this": OFF /* ESLint now supports TS */,

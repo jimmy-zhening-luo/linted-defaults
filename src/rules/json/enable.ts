@@ -1,11 +1,10 @@
 import {
-  ID,
   // OFF,
   ON,
 } from "../_strings";
 
 export default {
-  id: ID.Enable.Enable,
+  id: "enable",
   rules: {
     // DOC: https://github.com/eslint/json?tab=readme-ov-file#rules
     "json/no-duplicate-keys": ON /* replaces jsonc/no-dupe-keys */,

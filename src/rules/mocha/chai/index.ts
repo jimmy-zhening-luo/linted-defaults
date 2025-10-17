@@ -1,10 +1,9 @@
 import {
-  ID,
   ON,
 } from "../../_strings";
 
 export default {
-  id: `${ID.Enable.Plugin.Plugin}/chai`,
+  id: "enable/plugin/chai",
   rules: {
     // DOC: https://github.com/ihordiachenko/eslint-plugin-chai-friendly?tab=readme-ov-file#usage
     "chai-friendly/no-unused-expressions": [

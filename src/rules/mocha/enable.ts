@@ -1,11 +1,10 @@
 import {
-  ID,
   // OFF,
   ON,
 } from "../_strings";
 
 export default {
-  id: ID.Enable.Enable,
+  id: "enable",
   rules: {
     // DOC: https://github.com/lo1tuma/eslint-plugin-mocha/tree/main?tab=readme-ov-file#rules
     // "mocha/consistent-interface": OFF /* unable, must choose BDD or TDD first */,
