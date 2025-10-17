@@ -47,17 +47,18 @@ export default function pattern(
         ? branch
         : branch.concat("/**/"),
     ),
-  subpaths = branches.length === 0
-    ? leaves
-    : branches
-        .flatMap(
-          branch => leaves
-            .map(
-              leaf => branch.concat(leaf),
-            ),
-        );
-
-  subpaths.concat(paths);
+  subpaths = (
+    branches.length === 0
+      ? leaves
+      : branches
+          .flatMap(
+            branch => leaves
+              .map(
+                leaf => branch.concat(leaf),
+              ),
+          )
+  )
+    .concat(paths);
 
   return ROOTS
     .flatMap(
