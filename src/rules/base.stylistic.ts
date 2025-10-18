@@ -158,6 +158,9 @@ export default {
     "@stylistic/object-curly-spacing": [
       State.ON,
       "always" /* always | @default never */,
+      {
+        emptyObjects: "never",
+      }
     ],
     "@stylistic/object-property-newline": State.ON,
     "@stylistic/one-var-declaration-per-line": [
