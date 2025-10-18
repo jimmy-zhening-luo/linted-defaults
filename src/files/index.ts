@@ -1,11 +1,8 @@
-import { pattern } from "../_pattern";
+import pattern from "../_pattern";
+import js from "./base";
 
 export default {
-  js: pattern([
-    "js",
-    "cjs",
-    "mjs",
-  ]),
+  js,
   ts: pattern([
     "ts",
     "cts",

@@ -1,4 +1,4 @@
-import { pattern } from "../_pattern";
+import js from "../files/base";
 
 export default [
   "**/.git/",
@@ -10,10 +10,7 @@ export default [
   "!*.mjs",
 ]
   .concat(
-    pattern([
-      "*.js",
-      "*.cjs",
-      "*.mjs",
-    ])
-      .map(path => "!".concat(path)),
+    js.map(
+      file => "!".concat(file),
+    ),
   );
