@@ -23,7 +23,7 @@ export default {
   jsoncc: pattern(
     ["jsonc", "code-snippets"],
     {
-      files: ["tsconfig.json"],
+      files: ["tsconfig.json", "tsconfig-*.json"],
       folders: [".vscode"],
       paths: [".vscode/**/*.json"],
     },
