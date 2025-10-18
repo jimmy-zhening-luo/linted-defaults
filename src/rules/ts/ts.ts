@@ -2,7 +2,7 @@ import { State } from "../state";
 
 // DOC: https://typescript-eslint.io/rules/?=xextension-xdeprecated#rules
 export default {
-  id: "enable",
+  name: "enable",
   rules: {
     // "@typescript-eslint/adjacent-overload-signatures": State.OFF,
     // "@typescript-eslint/array-type": State.OFF /* preference: ideally, I'd like to don't-care mutable arrays while requiring readonly [] syntax for immutable arrays, but there is no way to do that with the current rule options */,
@@ -172,7 +172,7 @@ export default {
       },
     ], /* requires tsconfig: strictNullChecks */
     "@typescript-eslint/switch-exhaustiveness-check": State.ON,
-    // "@typescript-eslint/triple-slash-reference": State.OFF /* preference - who gives a fuck */,
+    // "@typescript-eslint/triple-slash-reference": State.OFF /* preference */,
     // "@typescript-eslint/typedef": State.OFF /* tsconfig: { noImplicitAny, strictPropertyInitialization } */,
     "@typescript-eslint/unbound-method": State.ON,
     "@typescript-eslint/unified-signatures": State.ON,

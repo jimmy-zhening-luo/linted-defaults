@@ -2,7 +2,7 @@ import { State } from "./state";
 
 // DOC: https://eslint.style/rules
 export default {
-  id: "enable/stylistic",
+  name: "enable/stylistic",
   rules: {
     "@stylistic/array-bracket-newline": State.ON,
     "@stylistic/array-bracket-spacing": State.ON,

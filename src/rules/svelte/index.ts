@@ -1,11 +1,9 @@
-import SvelteDisable from "./disable";
-import SvelteDisableExtension from "./extension/disable";
-import SvelteEnable from "./enable";
-import SvelteEnableExtension from "./extension";
+import disable from "./disable";
+import svelte from "./svelte";
+import extend from "./extend";
 
 export default [
-  SvelteDisable,
-  SvelteDisableExtension,
-  SvelteEnable,
-  SvelteEnableExtension,
+  disable,
+  svelte,
+  extend,
 ];

@@ -2,7 +2,7 @@ import { State } from "../state";
 
 // DOC: https://ota-meshi.github.io/eslint-plugin-yml/rules/#yaml-rules
 export default {
-  id: "enable",
+  name: "enable",
   rules: {
     "yml/block-mapping-colon-indicator-newline": State.ON,
     "yml/block-mapping-question-indicator-newline": State.ON,
@@ -18,7 +18,7 @@ export default {
     "yml/no-empty-sequence-entry": State.ON,
     "yml/no-tab-indent": State.ON,
     "yml/no-trailing-zeros": State.ON,
-    // "yml/plain-scalar": State.OFF /* breaks any holdovers from YAML 1.1 or non-YAML 1.2 core implementers (god YAML is so fucking stupid, everyone should just use JSState.ON but noooo somebody had to try to be clever and make something "more readable", fucking feeble-minded fuck) */,
+    // "yml/plain-scalar": State.OFF /* breaks any holdovers from YAML 1.1 or non-YAML 1.2 core implementers */,
     // "yml/quotes": State.OFF /* doesn't allow enough flexibility for me to use single quotes and double quotes depending on string interpolation needs when there's extra engine logic outside of YAML spec */,
     "yml/require-string-key": State.ON,
     // "yml/sort-keys": State.OFF,

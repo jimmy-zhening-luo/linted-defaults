@@ -1,7 +1,7 @@
 import { State } from "../state";
 
 export default {
-  id: "disable",
+  name: "disable",
   rules: {
     // Handled by TypeScript compiler
     "consistent-return": State.OFF /* TSLint BUT tsc */,

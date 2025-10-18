@@ -2,7 +2,7 @@ import { State } from "../../state";
 
 // DOC: https://ota-meshi.github.io/eslint-plugin-jsonc/rules/#jsonc-rules
 export default {
-  id: "enable/plugin",
+  name: "jsonc/json",
   rules: {
     // "jsonc/auto": State.OFF,
     // "jsonc/key-name-casing": State.OFF,

@@ -2,7 +2,7 @@ import { State } from "../../state";
 
 // DOC: https://ota-meshi.github.io/eslint-plugin-jsonc/rules/#extension-rules
 export default {
-  id: "enable/plugin/extension",
+  name: "jsonc/json/extend",
   rules: {
     // "jsonc/array-bracket-newline": State.OFF /* @OVERRIDE: BIGGER BUG: i mean this basically just doesn't work, even with multiple lines it will still fail| BUG: the spec says: `requires line breaks if the number of elements is at least the given integer. If this is 0, this condition will act the same as the option "always". If this is null (the default), this condition is disabled`. However, when null, the jsonc plugin actually errors when there are linebreaks with a single item | (was: MUST match @stylistic/array-bracket-newline) */,
     "jsonc/array-bracket-spacing": State.ON /* MUST match @stylistic/array-bracket-spacing */,

@@ -2,7 +2,7 @@ import { State } from "../state";
 
 // DOC: https://github.com/lo1tuma/eslint-plugin-mocha/tree/main?tab=readme-ov-file#rules
 export default {
-  id: "enable",
+  name: "mocha",
   rules: {
     // "mocha/consistent-interface": State.OFF /* unable, must choose BDD or TDD first */,
     // "mocha/consistent-spacing-between-blocks": State.OFF,
@@ -25,6 +25,7 @@ export default {
     "mocha/no-sibling-hooks": State.ON,
     // "mocha/no-synchronous-tests": State.OFF,
     "mocha/no-top-level-hooks": State.ON,
+    /* @OVERRIDE */ "prefer-arrow-callback": State.OFF /* TS-capable */,
     "mocha/prefer-arrow-callback": State.ON /* MUST match ../js/enable.ts, which is TS-capable -- is this?? */,
     // "mocha/valid-suite-title": State.OFF /* preference */,
     // "mocha/valid-test-title": State.OFF /* preference */,

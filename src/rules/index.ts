@@ -1,4 +1,4 @@
-import js from "./base";
+import js from "./js";
 import ts from "./ts";
 import mocha from "./mocha";
 import svelte from "./svelte";

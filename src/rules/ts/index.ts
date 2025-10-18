@@ -1,11 +1,9 @@
-import TsDisable from "./disable";
-import TsDisableExtension from "./extension/disable";
-import TsEnable from "./enable";
-import TsEnableExtension from "./extension";
+import disable from "./disable";
+import ts from "./ts";
+import extend from "./extend";
 
 export default [
-  TsDisable,
-  TsDisableExtension,
-  TsEnable,
-  TsEnableExtension,
+  disable,
+  ts,
+  extend,
 ];

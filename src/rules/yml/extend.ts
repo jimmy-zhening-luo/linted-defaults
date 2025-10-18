@@ -2,7 +2,7 @@ import { State } from "../state";
 
 // DOC: https://ota-meshi.github.io/eslint-plugin-yml/rules/#extension-rules
 export default {
-  id: "enable/extension",
+  name: "enable/extension",
   rules: {
     "yml/flow-mapping-curly-newline": [
       State.ON,

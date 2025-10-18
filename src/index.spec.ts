@@ -179,11 +179,11 @@ describe(
                   .should
                   .have
                   .keys(
-                    "id",
+                    "name",
                     "rules",
                   );
                 rule
-                  .id
+                  .name
                   .should
                   .be
                   .a("string");
