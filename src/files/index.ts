@@ -1,4 +1,4 @@
-import pattern from "../_pattern";
+import { pattern } from "../_pattern";
 
 export default {
   js: pattern([

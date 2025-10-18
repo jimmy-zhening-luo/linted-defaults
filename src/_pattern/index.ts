@@ -1,8 +1,8 @@
-const ROOTS = [
+export const ROOTS = [
   "",
   "code/*/",
-],
-SUBROOTS = [
+];
+export const SUBROOTS = [
   "",
   "src",
   "tests",
@@ -11,8 +11,7 @@ SUBROOTS = [
   "public",
   "tools",
 ];
-
-export default function pattern(
+export function pattern(
   extensions: string | string[],
   {
     files = [],
