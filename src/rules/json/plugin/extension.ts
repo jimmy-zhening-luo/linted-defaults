@@ -45,7 +45,7 @@ export default {
     "jsonc/object-curly-spacing": [
       State.ON,
       "always",
-    ] /* MUST match @stylistic/object-curly-spacing */,
+    ] /* MUST match @stylistic/object-curly-spacing (except unsupported 3rd options) */,
     "jsonc/object-property-newline": State.ON /* MUST match @stylistic/object-property-newline */,
     "jsonc/quote-props": State.ON,
     "jsonc/quotes": State.ON,
