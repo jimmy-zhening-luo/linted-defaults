@@ -17,6 +17,7 @@ export default {
   html: pattern("html"),
   css: pattern("css"),
   json: pattern("json"),
+  jsonc: [],
   jsoncc: pattern(
     ["jsonc", "code-snippets"],
     {
