@@ -14,8 +14,11 @@ export default {
     ] /* MUST match jsonc/object-curly-newline */,
     "yml/flow-mapping-curly-spacing": [
       State.ON,
-      "always",
-    ] /* MUST match jsonc/object-curly-spacing */,
+      "never",
+      {
+        objectsInObjects: true,
+      },
+    ] /* @OVERRIDE jsonc/object-curly-spacing */,
     "yml/flow-sequence-bracket-newline": State.ON /* @OVERRIDE jsonc/array-bracket-newline, instead -> MUST match its parent: stylistic/array-bracket-newline */,
     "yml/flow-sequence-bracket-spacing": State.ON /* MUST match jsonc/array-bracket-spacing */,
     "yml/key-spacing": State.ON /* MUST match jsonc/key-spacing */,
