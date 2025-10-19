@@ -16,7 +16,7 @@ export default {
       State.ON,
       "always",
     ] /* MUST match jsonc/object-curly-spacing */,
-    "yml/flow-sequence-bracket-newline": State.ON /* @OVERRIDE jsonc/array-bracket-newline, instead -> MUST match its parent: @stylistic/array-bracket-newline */,
+    "yml/flow-sequence-bracket-newline": State.ON /* @OVERRIDE jsonc/array-bracket-newline, instead -> MUST match its parent: stylistic/array-bracket-newline */,
     "yml/flow-sequence-bracket-spacing": State.ON /* MUST match jsonc/array-bracket-spacing */,
     "yml/key-spacing": State.ON /* MUST match jsonc/key-spacing */,
     "yml/no-irregular-whitespace": State.ON,
@@ -27,7 +27,7 @@ export default {
         maxBOF: 0,
         maxEOF: 0 /* INFO: auto-fix still keeps final line-break (eol character) at EOF even though unlike `stylistic`, `yml` does not have `eol-last` */,
       },
-    ] /* MUST match @stylistic/no-multiple-empty-lines */,
+    ] /* MUST match stylistic/no-multiple-empty-lines */,
     "yml/spaced-comment": [
       State.ON,
       "always",
@@ -44,6 +44,6 @@ export default {
           "endregion",
         ],
       },
-    ] /* @OVERRIDE @stylistic/spaced-comment */,
+    ] /* @OVERRIDE stylistic/spaced-comment */,
   } as const,
 };

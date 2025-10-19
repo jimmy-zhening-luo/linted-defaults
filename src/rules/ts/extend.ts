@@ -5,7 +5,7 @@ export default {
   name: "enable/extension",
   rules: {
     /* @OVERRIDE */ "dot-notation": State.OFF,
-    "@typescript-eslint/dot-notation": [
+    "ts/dot-notation": [
       State.ON,
       {
         // TS-only:
@@ -15,21 +15,21 @@ export default {
       },
     ],
     /* @OVERRIDE */ "no-implied-eval": State.OFF,
-    "@typescript-eslint/no-implied-eval": State.ON,
-    // "@typescript-eslint/no-redeclare": State.OFF /* tsc (let, const, -var) */,
+    "ts/no-implied-eval": State.ON,
+    // "ts/no-redeclare": State.OFF /* tsc (let, const, -var) */,
     /* @OVERRIDE */ "no-restricted-imports": State.OFF,
-    // "@typescript-eslint/no-restricted-imports": State.OFF /* preference */,
+    // "ts/no-restricted-imports": State.OFF /* preference */,
     /* @OVERRIDE */ "no-unused-vars": State.OFF,
-    "@typescript-eslint/no-unused-vars": State.ON,
+    "ts/no-unused-vars": State.ON,
     /* @OVERRIDE */ "no-throw-literal": State.OFF,
-    "@typescript-eslint/only-throw-error": [
+    "ts/only-throw-error": [
       State.ON,
       {
         allowThrowingAny: false,
       },
     ],
     /* @OVERRIDE */ "prefer-destructuring": State.OFF,
-    "@typescript-eslint/prefer-destructuring": [
+    "ts/prefer-destructuring": [
       State.ON,
       {
         AssignmentExpression: {
@@ -39,13 +39,13 @@ export default {
       },
     ],
     /* @OVERRIDE */ "prefer-promise-reject-errors": State.OFF,
-    "@typescript-eslint/prefer-promise-reject-errors": [
+    "ts/prefer-promise-reject-errors": [
       State.ON,
       {
         allowThrowingUnknown: true,
       },
     ],
     /* @OVERRIDE */ "require-await": State.OFF,
-    "@typescript-eslint/require-await": State.ON,
+    "ts/require-await": State.ON,
   } as const,
 };

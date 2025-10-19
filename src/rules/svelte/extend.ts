@@ -9,7 +9,7 @@ export default {
       State.ON,
       "both",
     ] /* same options: no-inner-declarations */,
-    "@stylistic/no-trailing-spaces": State.OFF /* replaces `no-trailing-spaces` */,
-    "svelte/no-trailing-spaces": State.ON /* same options: @stylistic/no-trailing-spaces */,
+    "stylistic/no-trailing-spaces": State.OFF /* replaces `no-trailing-spaces` */,
+    "svelte/no-trailing-spaces": State.ON /* same options: stylistic/no-trailing-spaces */,
   } as const,
 };

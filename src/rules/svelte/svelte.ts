@@ -118,7 +118,7 @@ export default {
     "svelte/shorthand-attribute": State.ON,
     "svelte/shorthand-directive": State.ON,
     // "svelte/sort-attributes": State.OFF /* INVESTIGATE: */,
-    "svelte/spaced-html-comment": State.ON /* INFO: does not have third object option (exceptions/markers), unlike @stylistic/spaced-comment */,
+    "svelte/spaced-html-comment": State.ON /* INFO: does not have third object option (exceptions/markers), unlike stylistic/spaced-comment */,
     // #endregion
 
     // #region SVELTE-KIT
