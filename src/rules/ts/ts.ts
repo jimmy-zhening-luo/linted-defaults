@@ -171,7 +171,13 @@ export default {
         allowString: false,
       },
     ], /* requires tsconfig: strictNullChecks */
-    "ts/switch-exhaustiveness-check": State.ON,
+    "ts/switch-exhaustiveness-check": [
+      State.ON,
+      {
+        requireDefaultForNonUnion: true,
+        considerDefaultExhaustiveForUnions: true,
+      },
+    ],
     // "ts/triple-slash-reference": State.OFF /* preference */,
     // "ts/typedef": State.OFF /* tsconfig: { noImplicitAny, strictPropertyInitialization } */,
     "ts/unbound-method": State.ON,
