@@ -11,7 +11,7 @@ export default {
     "ts/ban-tslint-comment": State.ON,
     "ts/class-literal-property-style": State.ON,
     "ts/consistent-generic-constructors": State.ON,
-    "ts/consistent-indexed-object-style": State.ON,
+    // "ts/consistent-indexed-object-style": State.OFF /* preference */,
     "ts/consistent-type-assertions": [
       State.ON,
       {
