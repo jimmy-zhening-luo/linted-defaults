@@ -27,7 +27,14 @@ export default {
     },
   ),
   yml: pattern(
-    ["yml", "yaml"],
+    [
+      "yml",
+      "yaml",
+      "yml.example",
+      "yaml.example",
+      "yml-example",
+      "yaml-example",
+    ],
     {
       folders: [".github"],
     },
