@@ -146,46 +146,28 @@ describe(
           },
         );
         it(
-          "of objects",
+          "of rule config objects",
           function () {
             for (const scope of Object.values(rules))
-              for (const rule of scope)
-                rule
+              for (const config of scope) {
+                config
                   .should
                   .be
-                  .an("object");
-          },
-        );
-        it(
-          "only containing rules",
-          function () {
-            for (const scope of Object.values(rules))
-              for (const rule of scope)
-                rule
-                  .should
-                  .have
-                  .keys("rules");
-          },
-        );
-        it(
-          "an object of rules",
-          function () {
-            for (const scope of Object.values(rules))
-              for (const rule of scope) {
-                rule
-                  .should
-                  .have
+                  .an("object")
+                  .with
+                  .keys("rules")
+                  .with
                   .own
                   .property("rules")
                   .an("object");
 
-                for (const key of Object.keys(rule.rules)) {
-                  key
+                for (const rule of Object.keys(config.rules)) {
+                  rule
                     .should
                     .be
                     .a("string");
 
-                  const value = rule.rules[key as keyof typeof rule.rules] as number | object;
+                  const value = config.rules[rule as keyof typeof config.rules] as number | object;
 
                   if (typeof value !== "number")
                     value
