@@ -2,7 +2,6 @@ import { State } from "../state";
 
 // DOC: https://github.com/eslint/json?tab=readme-ov-file#rules
 export default {
-  name: "json",
   rules: {
     "json/no-duplicate-keys": State.ON /* replaces jsonc/no-dupe-keys */,
     // "json/no-empty-keys": State.OFF /* preference */,

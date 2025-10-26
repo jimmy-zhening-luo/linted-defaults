@@ -2,7 +2,6 @@ import { State } from "./state";
 
 // DOC: https://eslint.org/docs/latest/rules/
 export default {
-  name: "enable",
   rules: {
     // #region PROBLEMS
     // DOC: https://eslint.org/docs/latest/rules/#possible-problems

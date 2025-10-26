@@ -2,7 +2,6 @@ import { State } from "../state";
 
 // DOC: http://sveltejs.github.io/eslint-plugin-svelte/rules/#extension-rules
 export default {
-  name: "svelte/extend",
   rules: {
     "no-inner-declarations": State.OFF /* INFO: also disabled by svelte  */,
     "svelte/no-inner-declarations": [

@@ -2,7 +2,6 @@ import { State } from "../state";
 
 // DOC: https://ota-meshi.github.io/eslint-plugin-yml/rules/#yaml-rules
 export default {
-  name: "enable",
   rules: {
     "yml/block-mapping-colon-indicator-newline": State.ON,
     "yml/block-mapping-question-indicator-newline": State.ON,

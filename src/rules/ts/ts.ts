@@ -2,7 +2,6 @@ import { State } from "../state";
 
 // DOC: https://typescript-eslint.io/rules/?=xextension-xdeprecated#rules
 export default {
-  name: "enable",
   rules: {
     // "ts/adjacent-overload-signatures": State.OFF,
     // "ts/array-type": State.OFF /* preference: ideally, I'd like to don't-care mutable arrays while requiring readonly [] syntax for immutable arrays, but there is no way to do that with the current rule options */,

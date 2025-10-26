@@ -3,7 +3,6 @@ import { State } from "../state";
 // DOC: https://github.com/eslint/css/tree/main/docs/rules
 export default [
   {
-    name: "css",
     rules: {
       "css/font-family-fallbacks": State.ON,
       "css/no-duplicate-imports": State.ON,

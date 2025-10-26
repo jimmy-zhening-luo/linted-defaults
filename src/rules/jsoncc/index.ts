@@ -2,7 +2,6 @@ import { State } from "../state";
 
 export default [
   {
-    name: "jsonc/jsoncc",
     rules: {
       "jsonc/comma-dangle": [
         State.ON,

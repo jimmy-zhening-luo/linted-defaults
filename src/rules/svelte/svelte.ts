@@ -2,7 +2,6 @@ import { State } from "../state";
 
 // DOC: http://sveltejs.github.io/eslint-plugin-svelte/rules/
 export default {
-  name: "svelte",
   rules: {
     // #region ERRORS
     // DOC: http://sveltejs.github.io/eslint-plugin-svelte/rules/#possible-errors

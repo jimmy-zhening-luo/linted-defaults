@@ -2,7 +2,6 @@ import { State } from "../state";
 
 // DOC: https://typescript-eslint.io/rules/?=extension-xdeprecated#rules
 export default {
-  name: "enable/extension",
   rules: {
     /* @OVERRIDE */ "dot-notation": State.OFF,
     "ts/dot-notation": [

@@ -3,7 +3,6 @@ import { State } from "../state";
 // DOC: https://html-eslint.org/docs/rules
 export default [
   {
-    name: "html",
     rules: {
     // #region BEST PRACTICE
     // DOC: https://html-eslint.org/docs/rules#best-practice
