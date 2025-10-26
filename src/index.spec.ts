@@ -1,14 +1,11 @@
 import "chai/register-should.js";
 import defaults from ".";
+import { scopes } from "./index.scopes.spec";
 
 describe(
   "Main Export",
   function () {
-    const SCOPE = [
-      "js",
-      "ts",
-    ],
-    GLOBAL = "*",
+    const GLOBAL = "*",
     {
       ignores,
       files,
@@ -19,13 +16,13 @@ describe(
       "module",
       function () {
         it(
-          "with object submodules: ignores, files, rules",
+          "with object submodules: files, ignores, rules",
           function () {
-            ignores
+            files
               .should
               .be
               .an("object");
-            files
+            ignores
               .should
               .be
               .an("object");
@@ -38,16 +35,63 @@ describe(
       },
     );
     describe(
-      "submodule: ignores",
+      "files",
       function () {
         it(
-          "has global scope",
+          "only has all scopes",
+          function () {
+            files
+              .should
+              .have
+              .keys(scopes);
+          },
+        );
+        it(
+          "of arrays",
+          function () {
+            for (const scope of Object.values(files))
+              scope
+                .should
+                .be
+                .an("array");
+          },
+        );
+        it(
+          "of expanded strings",
+          function () {
+            for (const scope of Object.values(files))
+              for (const pattern of scope)
+                pattern
+                  .should
+                  .be
+                  .a("string")
+                  .not
+                  .have
+                  .string("{")
+                  .not
+                  .have
+                  .string("}");
+          },
+        );
+      },
+    );
+    describe(
+      "ignores",
+      function () {
+        it(
+          "only has globals and any scopes",
           function () {
             ignores
               .should
               .have
-              .own
-              .property(GLOBAL);
+              .keys(
+                GLOBAL,
+                ...new Set(scopes).intersection(
+                  new Set(
+                    Object.keys(ignores),
+                  ),
+                ),
+              );
           },
         );
         it(
@@ -55,112 +99,54 @@ describe(
           function () {
             for (const scope of Object.values(ignores))
               scope
-
                 .should
                 .be
                 .an("array");
           },
         );
         it(
-          "of strings",
+          "of expanded strings",
           function () {
             for (const scope of Object.values(ignores))
               for (const pattern of scope)
                 pattern
                   .should
                   .be
-                  .a("string");
+                  .a("string")
+                  .not
+                  .have
+                  .string("{")
+                  .not
+                  .have
+                  .string("}");
           },
         );
       },
     );
     describe(
-      "submodule: files",
+      "rules",
       function () {
         it(
-          "has scopes",
-          function () {
-            for (const scope of SCOPE)
-              files
-                .should
-                .have
-                .own
-                .property(scope);
-          },
-        );
-        it(
-          "NO global scope",
-          function () {
-            files
-              .should
-              .not
-              .have
-              .own
-              .property(GLOBAL);
-          },
-        );
-        it(
-          "of arrays",
-          function () {
-            for (const scope of Object.values(files))
-              scope
-
-                .should
-                .be
-                .an("array");
-          },
-        );
-        it(
-          "of strings",
-          function () {
-            for (const scope of Object.values(files))
-              for (const pattern of scope)
-                pattern
-                  .should
-                  .be
-                  .a("string");
-          },
-        );
-      },
-    );
-    describe(
-      "submodule: rules",
-      function () {
-        it(
-          "has scopes",
-          function () {
-            for (const scope of SCOPE)
-              rules
-                .should
-                .have
-                .own
-                .property(scope);
-          },
-        );
-        it(
-          "NO global scope",
+          "only has all scopes",
           function () {
             rules
               .should
-              .not
               .have
-              .own
-              .property(GLOBAL);
+              .keys(scopes);
           },
         );
         it(
           "of arrays",
           function () {
-            for (const scope of Object.values(files))
+            for (const scope of Object.values(rules))
               scope
-
                 .should
                 .be
                 .an("array");
           },
         );
         it(
-          "of object",
+          "of objects",
           function () {
             for (const scope of Object.values(rules))
               for (const rule of scope)
@@ -171,28 +157,45 @@ describe(
           },
         );
         it(
-          "named rulesets",
+          "only containing rules",
+          function () {
+            for (const scope of Object.values(rules))
+              for (const rule of scope)
+                rule
+                  .should
+                  .have
+                  .keys("rules");
+          },
+        );
+        it(
+          "an object of rules",
           function () {
             for (const scope of Object.values(rules))
               for (const rule of scope) {
                 rule
                   .should
                   .have
-                  .keys(
-                    "name",
-                    "rules",
-                  );
-                rule
-                  .rules
-                  .should
-                  .be
+                  .own
+                  .property("rules")
                   .an("object");
 
-                for (const key of Object.keys(rule.rules))
+                for (const key of Object.keys(rule.rules)) {
                   key
                     .should
                     .be
                     .a("string");
+
+                  const value = rule.rules[key as keyof typeof rule.rules] as number | object;
+
+                  if (typeof value !== "number")
+                    value
+                      .should
+                      .be
+                      .an("array")
+                      .with
+                      .property("0")
+                      .a("number");
+                }
               }
           },
         );
