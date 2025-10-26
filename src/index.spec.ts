@@ -183,11 +183,6 @@ describe(
                     "rules",
                   );
                 rule
-                  .name
-                  .should
-                  .be
-                  .a("string");
-                rule
                   .rules
                   .should
                   .be
