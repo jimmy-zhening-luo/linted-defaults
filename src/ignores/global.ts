@@ -10,7 +10,5 @@ export default [
   "!*.mjs",
 ]
   .concat(
-    js.map(
-      file => "!".concat(file),
-    ),
+    js.map(file => "!" + file),
   );

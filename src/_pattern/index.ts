@@ -33,9 +33,7 @@ export default function pattern(
       ? [extensions]
       : extensions
   )
-    .map(
-      extension => "*.".concat(extension),
-    )
+    .map(extension => "*." + extension)
     .concat(files),
   branches = (
     override
@@ -45,26 +43,22 @@ export default function pattern(
     .map(
       branch => branch === ""
         ? branch
-        : branch.concat("/**/"),
+        : branch + "/**/",
     ),
   subpaths = (
     branches.length === 0
       ? leaves
-      : branches
-          .flatMap(
-            branch => leaves
-              .map(
-                leaf => branch.concat(leaf),
-              ),
-          )
+      : branches.flatMap(
+          branch => leaves.map(
+            leaf => branch + leaf,
+          ),
+        )
   )
     .concat(paths);
 
-  return ROOTS
-    .flatMap(
-      root => subpaths
-        .map(
-          subpath => root.concat(subpath),
-        ),
-    );
+  return ROOTS.flatMap(
+    root => subpaths.map(
+      subpath => root + subpath,
+    ),
+  );
 }
