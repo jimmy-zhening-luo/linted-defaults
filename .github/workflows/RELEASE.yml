@@ -25,9 +25,6 @@ jobs:
         with:
           node-version: 24
           registry-url: https://registry.npmjs.org
-      - name: Install NPM
-        id: npm
-        run: npm install -g npm@latest
       - name: Install Dependencies
         id: ci
         run: npm ci --loglevel=error --fund=false
