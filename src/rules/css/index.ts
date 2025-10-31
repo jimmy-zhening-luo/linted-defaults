@@ -13,6 +13,7 @@ export default [
       "css/no-invalid-at-rules": State.ON,
       "css/no-invalid-named-grid-areas": State.ON,
       // "css/no-invalid-properties": State.OFF /* BUG: this shit is still way too broken, it doens't recognize actual rules. in futue if it recognizes actual rules, turn on allow unknown values btw */,
+      "css/no-unmatchable-selectors": State.ON,
       "css/prefer-logical-properties": State.ON,
       "css/relative-font-units": State.ON,
       // "css/selector-complexity": State.OFF /* preference, or rather too lazy to configure because its default state is literally infinitely permissable */,
