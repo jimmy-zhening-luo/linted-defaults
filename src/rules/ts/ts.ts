@@ -180,7 +180,7 @@ export default {
     // "ts/triple-slash-reference": State.OFF /* preference */,
     // "ts/typedef": State.OFF /* tsconfig: { noImplicitAny, strictPropertyInitialization } */,
     "ts/unbound-method": State.ON,
-    "ts/unified-signatures": State.ON,
+    // "ts/unified-signatures": State.OFF /* BUG: https://github.com/typescript-eslint/typescript-eslint/issues/11732 */,
     "ts/use-unknown-in-catch-callback-variable": State.ON,
   } as const,
 };
