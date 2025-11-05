@@ -1,3 +1,5 @@
+import { State } from "../state";
+
 // DOC: https://github.com/eslint/json?tab=readme-ov-file#rules
 export default {
   rules: {

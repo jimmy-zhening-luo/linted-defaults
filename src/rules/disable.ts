@@ -1,3 +1,5 @@
+import { State } from "./state";
+
 export default {
   // The following rules can be used in some cases. See the README for more
   // information. These are marked with `0` instead of `"off"` so that a

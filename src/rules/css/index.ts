@@ -1,3 +1,5 @@
+import { State } from "../state";
+
 // DOC: https://github.com/eslint/css/tree/main/docs/rules
 export default [
   {

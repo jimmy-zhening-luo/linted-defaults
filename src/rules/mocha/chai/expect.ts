@@ -1,3 +1,5 @@
+import { State } from "../../state";
+
 // DOC: https://github.com/turbo87/eslint-plugin-chai-expect?tab=readme-ov-file#rules
 export default {
   rules: {

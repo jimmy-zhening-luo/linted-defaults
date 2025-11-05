@@ -1,3 +1,5 @@
+import { State } from "../state";
+
 // DOC: https://typescript-eslint.io/rules/?=extension-xdeprecated#rules
 export default {
   rules: {
