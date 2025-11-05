@@ -1,5 +1,3 @@
-import { State } from "../state";
-
 // DOC: https://ota-meshi.github.io/eslint-plugin-yml/rules/#yaml-rules
 export default {
   rules: {

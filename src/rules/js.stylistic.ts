@@ -1,5 +1,3 @@
-import { State } from "./state";
-
 // DOC: https://eslint.style/rules
 export default {
   rules: {

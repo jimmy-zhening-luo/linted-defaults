@@ -1,5 +1,3 @@
-import { State } from "../state";
-
 // DOC: http://sveltejs.github.io/eslint-plugin-svelte/rules/
 export default {
   rules: {

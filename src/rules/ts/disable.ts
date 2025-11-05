@@ -1,5 +1,3 @@
-import { State } from "../state";
-
 export default {
   rules: {
     // Handled by TypeScript compiler

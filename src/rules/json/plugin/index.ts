@@ -1,5 +1,3 @@
-import { State } from "../../state";
-
 // DOC: https://ota-meshi.github.io/eslint-plugin-jsonc/rules/#jsonc-rules
 export default {
   rules: {

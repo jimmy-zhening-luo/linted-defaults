@@ -1,5 +1,3 @@
-import { State } from "../state";
-
 // DOC: https://github.com/lo1tuma/eslint-plugin-mocha/tree/main?tab=readme-ov-file#rules
 export default {
   rules: {
