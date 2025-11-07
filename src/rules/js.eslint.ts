@@ -249,14 +249,7 @@ export default {
     "no-object-constructor": State.ON,
     "no-octal": State.ON,
     "no-octal-escape": State.ON,
-    "no-param-reassign": [
-      State.ON,
-      {
-        props: true /* @default false */,
-        // ignorePropertyModificationsFor: [],
-        // ignorePropertyModificationsForRegex: [],
-      },
-    ],
+    "no-param-reassign": State.ON,
     "no-plusplus": [
       State.ON,
       {
