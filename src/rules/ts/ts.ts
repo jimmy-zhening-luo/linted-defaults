@@ -131,7 +131,7 @@ export default {
     "ts/prefer-for-of": State.ON,
     "ts/prefer-function-type": State.ON,
     "ts/prefer-includes": State.ON,
-    "ts/prefer-literal-enum-member": State.ON,
+    // "ts/prefer-literal-enum-member": State.OFF /* preference - idk why this would be considering, maybe we should ban all variable scopes */,
     "ts/prefer-namespace-keyword": State.ON,
     "ts/prefer-nullish-coalescing": State.ON /* requires tsconfig: strictNullChecks */,
     "ts/prefer-optional-chain": State.ON,
