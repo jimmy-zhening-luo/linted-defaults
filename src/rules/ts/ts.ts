@@ -134,8 +134,23 @@ export default {
     "ts/prefer-includes": State.ON,
     // "ts/prefer-literal-enum-member": State.OFF /* preference - idk why this would be considering, maybe we should ban all variable scopes */,
     "ts/prefer-namespace-keyword": State.ON,
-    "ts/prefer-nullish-coalescing": State.ON /* requires tsconfig: strictNullChecks */,
-    "ts/prefer-optional-chain": State.ON,
+    "ts/prefer-nullish-coalescing": [
+      State.ON,
+      {
+        ignoreMixedLogicalExpressions: true,
+        ignorePrimitives: true,
+        
+      },
+    ] /* requires tsconfig: strictNullChecks */,
+    "ts/prefer-optional-chain": [
+      State.ON,
+      {
+        checkBigInt: false,
+        checkBoolean: false,
+        checkNumber: false,
+        checkString: false,
+      },
+    ],
     "ts/prefer-readonly": State.ON,
     // "ts/prefer-readonly-parameter-types": State.OFF /* preference - WAY too restrictive */,
     "ts/prefer-reduce-type-parameter": State.ON,
@@ -167,8 +182,9 @@ export default {
     "ts/strict-boolean-expressions": [
       State.ON,
       {
-        allowNullableObject: false,
-        allowString: false,
+        allowNullableBoolean: true,
+        allowNullableNumber: true,
+        allowNullableString: true,
       },
     ], /* requires tsconfig: strictNullChecks */
     "ts/switch-exhaustiveness-check": [
