@@ -83,7 +83,7 @@ export default {
     "ts/no-misused-promises": State.ON,
     "ts/no-misused-spread": State.ON,
     "ts/no-mixed-enums": State.ON,
-    // "ts/no-namespace": State.OFF,
+    "ts/no-namespace": State.ON,
     "ts/no-non-null-asserted-nullish-coalescing": State.ON,
     "ts/no-non-null-asserted-optional-chain": State.ON,
     // "ts/no-non-null-assertion": State.OFF /* preference */,
