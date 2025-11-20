@@ -139,7 +139,7 @@ export default {
       {
         ignoreMixedLogicalExpressions: true,
         ignorePrimitives: true,
-        
+
       },
     ] /* requires tsconfig: strictNullChecks */,
     "ts/prefer-optional-chain": [
