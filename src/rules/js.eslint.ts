@@ -213,16 +213,7 @@ export default {
     ],
     "no-extra-label": State.ON,
     "no-global-assign": State.ON,
-    "no-implicit-coercion": [
-      State.ON,
-      {
-        // "boolean": true,
-        // number: true,
-        // string: true,
-        disallowTemplateShorthand: true,
-        // allow: [],
-      },
-    ],
+    "no-implicit-coercion": State.ON,
     // "no-implicit-globals": State.OFF /* investigate (breaks Scriptable? breaks Sveltekit?) */,
     "no-implied-eval": State.ON /* TSLint */,
     // "no-inline-comments": State.OFF /* preference */,
