@@ -166,15 +166,15 @@ export default {
         allowAny: false,
         allowBoolean: false,
         allowNullish: false,
-        allowNumberAndString: false,
         allowRegExp: false,
       },
     ],
     "ts/restrict-template-expressions": [
       State.ON,
       {
+        allowAny: false,
+        allowBoolean: false,
         allowNullish: false,
-        allowNever: false,
         allowRegExp: false,
       },
     ],
@@ -183,6 +183,7 @@ export default {
       State.ON,
       {
         allowNullableBoolean: true,
+        allowNullableEnum: true,
         allowNullableNumber: true,
         allowNullableString: true,
       },
