@@ -173,7 +173,6 @@ export default {
       State.ON,
       {
         allowAny: false,
-        allowBoolean: false,
         allowNullish: false,
         allowRegExp: false,
       },
