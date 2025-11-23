@@ -14,11 +14,7 @@ SUBROOTS = [
 
 export default function pattern(
   extensions: string | string[],
-  {
-    files = [],
-    folders = [],
-    paths = [],
-  }: Partial<
+  pattern: Partial<
     Record<
       | "files"
       | "folders"
@@ -26,35 +22,41 @@ export default function pattern(
       string[]
     >
   > = {},
-  override = false,
+  override?: boolean,
 ) {
   const leaves = (
     typeof extensions === "string"
       ? [extensions]
       : extensions
   )
-    .map(extension => "*." + extension)
-    .concat(files),
-  branches = (
-    override
-      ? folders
-      : SUBROOTS.concat(folders)
-  )
-    .map(
-      branch => branch === ""
-        ? branch
-        : branch + "/**/",
-    ),
-  subpaths = (
-    branches.length === 0
-      ? leaves
-      : branches.flatMap(
-          branch => leaves.map(
-            leaf => branch + leaf,
-          ),
-        )
-  )
-    .concat(paths);
+    .map(extension => "*." + extension);
+
+  if (pattern.files)
+    leaves.push(...pattern.files);
+
+  const _branches = override
+    ? pattern.folders
+    : pattern.folders
+      ? SUBROOTS.concat(pattern.folders)
+      : SUBROOTS,
+  branches = _branches
+    ? _branches.map(
+        branch => branch === ""
+          ? branch
+          : branch + "/**/",
+      )
+    : undefined,
+  subpaths
+  = branches
+    ? branches.flatMap(
+        branch => leaves.map(
+          leaf => branch + leaf,
+        ),
+      )
+    : leaves;
+
+  if (pattern.paths)
+    subpaths.push(...pattern.paths);
 
   return ROOTS.flatMap(
     root => subpaths.map(
