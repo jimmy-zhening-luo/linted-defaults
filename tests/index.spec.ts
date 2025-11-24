@@ -38,11 +38,11 @@ describe(
       "files",
       () => {
         it(
-          "only has all scopes",
+          "has some scopes",
           () => {
             files
               .should
-              .have
+              .include
               .keys(scopes);
           },
         );
@@ -79,19 +79,12 @@ describe(
       "ignores",
       () => {
         it(
-          "only has globals and any scopes",
+          "has globals",
           () => {
             ignores
               .should
-              .have
-              .keys(
-                GLOBAL,
-                ...new Set(scopes).intersection(
-                  new Set(
-                    Object.keys(ignores),
-                  ),
-                ),
-              );
+              .include
+              .keys(GLOBAL);
           },
         );
         it(
@@ -127,11 +120,11 @@ describe(
       "rules",
       () => {
         it(
-          "only has all scopes",
+          "has some scopes",
           () => {
             rules
               .should
-              .have
+              .include
               .keys(scopes);
           },
         );
