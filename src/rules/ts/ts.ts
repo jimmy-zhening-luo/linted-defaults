@@ -105,7 +105,7 @@ export default {
     "ts/no-unsafe-assignment": State.ON,
     "ts/no-unsafe-call": State.ON,
     "ts/no-unsafe-declaration-merging": State.ON,
-    "ts/no-unsafe-enum-comparison": State.ON,
+    // "ts/no-unsafe-enum-comparison": State.OFF /* dumb fucking rule */,
     "ts/no-unsafe-function-type": State.ON,
     "ts/no-unsafe-member-access": [
       State.ON,
