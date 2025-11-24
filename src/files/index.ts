@@ -8,11 +8,6 @@ export default {
     "cts",
     "mts",
   ]),
-  mocha: pattern([
-    "spec.ts",
-    "spec.cts",
-    "spec.mts",
-  ]),
   svelte: pattern("svelte"),
   html: pattern("html"),
   css: pattern("css"),
