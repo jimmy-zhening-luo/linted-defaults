@@ -4,7 +4,7 @@ import { scopes } from "./index.scopes.spec";
 
 describe(
   "Main Export",
-  function () {
+  () => {
     const GLOBAL = "*",
     {
       ignores,
@@ -14,10 +14,10 @@ describe(
 
     describe(
       "module",
-      function () {
+      () => {
         it(
           "with object submodules: files, ignores, rules",
-          function () {
+          () => {
             files
               .should
               .be
@@ -36,10 +36,10 @@ describe(
     );
     describe(
       "files",
-      function () {
+      () => {
         it(
           "only has all scopes",
-          function () {
+          () => {
             files
               .should
               .have
@@ -48,7 +48,7 @@ describe(
         );
         it(
           "of arrays",
-          function () {
+          () => {
             for (const scope of Object.values(files))
               scope
                 .should
@@ -58,7 +58,7 @@ describe(
         );
         it(
           "of expanded strings",
-          function () {
+          () => {
             for (const scope of Object.values(files))
               for (const pattern of scope)
                 pattern
@@ -77,10 +77,10 @@ describe(
     );
     describe(
       "ignores",
-      function () {
+      () => {
         it(
           "only has globals and any scopes",
-          function () {
+          () => {
             ignores
               .should
               .have
@@ -96,7 +96,7 @@ describe(
         );
         it(
           "of arrays",
-          function () {
+          () => {
             for (const scope of Object.values(ignores))
               scope
                 .should
@@ -106,7 +106,7 @@ describe(
         );
         it(
           "of expanded strings",
-          function () {
+          () => {
             for (const scope of Object.values(ignores))
               for (const pattern of scope)
                 pattern
@@ -125,10 +125,10 @@ describe(
     );
     describe(
       "rules",
-      function () {
+      () => {
         it(
           "only has all scopes",
-          function () {
+          () => {
             rules
               .should
               .have
@@ -137,7 +137,7 @@ describe(
         );
         it(
           "of arrays",
-          function () {
+          () => {
             for (const scope of Object.values(rules))
               scope
                 .should
@@ -147,7 +147,7 @@ describe(
         );
         it(
           "of rule config objects",
-          function () {
+          () => {
             for (const scope of Object.values(rules))
               for (const config of scope) {
                 config
