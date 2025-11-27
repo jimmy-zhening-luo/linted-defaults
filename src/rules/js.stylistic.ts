@@ -71,6 +71,7 @@ export default {
     "stylistic/key-spacing": State.ON,
     "stylistic/keyword-spacing": State.ON,
     // "stylistic/line-comment-position": State.OFF,
+    "stylistic/linebreak-style": State.ON,
     // "stylistic/lines-around-comment": State.OFF,
     "stylistic/lines-between-class-members": [
       State.ON,
