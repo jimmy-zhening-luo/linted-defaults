@@ -2,5 +2,5 @@
   "files": [
     "index.ts",
   ],
-  "extends": "../tsconfig-src.json",
+  "extends": "../tsconfig-src",
 }

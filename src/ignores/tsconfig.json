@@ -3,7 +3,7 @@
     "index.ts",
     "global.ts",
   ],
-  "extends": "../tsconfig-src.json",
+  "extends": "../tsconfig-src",
   "references": [
     {
       "path": "../files",
