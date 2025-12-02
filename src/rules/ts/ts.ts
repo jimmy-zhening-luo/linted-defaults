@@ -87,7 +87,7 @@ export default {
     "ts/no-non-null-asserted-nullish-coalescing": State.ON,
     "ts/no-non-null-asserted-optional-chain": State.ON,
     // "ts/no-non-null-assertion": State.OFF /* preference */,
-    "ts/no-redundant-type-constituents": State.OFF,
+    "ts/no-redundant-type-constituents": State.ON,
     // "ts/no-restricted-types": State.OFF /* preference - no shared custom types across all projects that I wish to ban */,
     "ts/no-require-imports": State.ON,
     "ts/no-this-alias": State.ON,
