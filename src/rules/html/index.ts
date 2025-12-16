@@ -21,6 +21,7 @@ export default [
       // "html/no-restricted-tags": State.OFF,
       // "html/no-script-style-type": State.OFF,
       "html/no-target-blank": State.ON,
+      "html/no-whitespace-only-children": State.ON,
       // "html/prefer-https": State.OFF /* @CONFLICT: not everything is https */,
       // "html/require-attrs": State.OFF,
       "html/require-button-type": State.ON,
