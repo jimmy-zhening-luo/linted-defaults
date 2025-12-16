@@ -25,6 +25,6 @@ export default {
     // "jsonc/sort-array-values": State.OFF /* preference: this makes no sense, arrays can be ordered */,
     // "jsonc/sort-keys": State.OFF /* ESLint: json/sort-keys BUT preference: only sort keys manually when I'd like */,
     "jsonc/valid-json-number": State.ON,
-    "jsonc/vue-custom-block/no-parsing-error": State.OFF,
+    // "jsonc/vue-custom-block/no-parsing-error": State.OFF,
   } as const,
 };

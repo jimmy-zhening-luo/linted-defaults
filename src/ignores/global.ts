@@ -8,6 +8,7 @@ export default [
   "!*.js",
   "!*.cjs",
   "!*.mjs",
+  "**/.vscode/c_cpp_properties.json",
 ]
   .concat(
     js.map(file => "!" + file),

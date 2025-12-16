@@ -10,7 +10,7 @@ export default {
     "ts/no-unused-vars": State.OFF /* TS: breaks use of svelte global */,
     "prefer-const": State.OFF /* svelte/prefer-const */,
     // My own
-    "stylistic/indent": State.OFF /* Conflicts with `svelte/indent` */,
+    "stylistic/indent": State.OFF /* conflicts with `svelte/indent` */,
     "ts/no-confusing-void-expression": State.OFF /* errors on render() */,
   } as const,
 };

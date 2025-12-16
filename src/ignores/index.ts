@@ -6,5 +6,4 @@ export default {
     "**/.clasprc.json",
     "**/package-lock.json",
   ],
-  jsoncc: ["**/.vscode/c_cpp_properties.json"],
 };
