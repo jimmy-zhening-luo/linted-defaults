@@ -11,7 +11,11 @@ export default {
   json: pattern("json"),
   jsonc: [],
   jsoncc: pattern(
-    ["jsonc", "code-snippets"],
+    [
+      "jsonc",
+      "code-snippets",
+      "code-workspace",
+    ],
     {
       files: ["tsconfig.json", "tsconfig-*.json"],
       folders: [".vscode"],
