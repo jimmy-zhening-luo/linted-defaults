@@ -186,7 +186,7 @@ export default {
     "no-continue": State.ON,
     "no-delete-var": State.ON,
     "no-div-regex": State.ON,
-    // "no-else-return": State.OFF /* preference */,
+    "no-else-return": State.ON /* preference */,
     "no-empty": State.ON,
     "no-empty-function": [
       State.ON,
