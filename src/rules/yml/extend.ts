@@ -4,7 +4,7 @@ import { State } from "../state";
 export default {
   rules: {
     "yml/flow-mapping-curly-newline": [
-      State.ON,
+      State.WARN,
       {
         consistent: true,
         multiline: true,
@@ -12,18 +12,18 @@ export default {
       },
     ] /* MUST match jsonc/object-curly-newline */,
     "yml/flow-mapping-curly-spacing": [
-      State.ON,
+      State.WARN,
       "never",
       {
         objectsInObjects: true,
       },
     ] /* @OVERRIDE jsonc/object-curly-spacing */,
-    "yml/flow-sequence-bracket-newline": State.ON /* @OVERRIDE jsonc/array-bracket-newline, instead -> MUST match its parent: stylistic/array-bracket-newline */,
-    "yml/flow-sequence-bracket-spacing": State.ON /* MUST match jsonc/array-bracket-spacing */,
-    "yml/key-spacing": State.ON /* MUST match jsonc/key-spacing */,
+    "yml/flow-sequence-bracket-newline": State.WARN /* @OVERRIDE jsonc/array-bracket-newline, instead -> MUST match its parent: stylistic/array-bracket-newline */,
+    "yml/flow-sequence-bracket-spacing": State.WARN /* MUST match jsonc/array-bracket-spacing */,
+    "yml/key-spacing": State.WARN /* MUST match jsonc/key-spacing */,
     "yml/no-irregular-whitespace": State.ON,
     "yml/no-multiple-empty-lines": [
-      State.ON,
+      State.WARN,
       {
         max: 1,
         maxBOF: 0,
@@ -31,7 +31,7 @@ export default {
       },
     ] /* MUST match stylistic/no-multiple-empty-lines */,
     "yml/spaced-comment": [
-      State.ON,
+      State.WARN,
       "always",
       {
         exceptions: ["#"],

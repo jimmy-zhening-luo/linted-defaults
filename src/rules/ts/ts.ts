@@ -4,26 +4,26 @@ import { State } from "../state";
 export default {
   rules: {
     // "ts/adjacent-overload-signatures": State.OFF,
-    // "ts/array-type": State.OFF /* preference: ideally, I'd like to don't-care mutable arrays while requiring readonly [] syntax for immutable arrays, but there is no way to do that with the current rule options */,
+    // "ts/array-type": State.OFF /* @preference: ideally, I'd like to don't-care mutable arrays while requiring readonly [] syntax for immutable arrays, but there is no way to do that with the current rule options */,
     "ts/await-thenable": State.ON,
-    "ts/ban-ts-comment": State.ON,
-    "ts/ban-tslint-comment": State.ON,
-    "ts/class-literal-property-style": State.ON,
-    "ts/consistent-generic-constructors": State.ON,
-    // "ts/consistent-indexed-object-style": State.OFF /* preference */,
+    "ts/ban-ts-comment": State.WARN,
+    "ts/ban-tslint-comment": State.WARN,
+    "ts/class-literal-property-style": State.WARN,
+    "ts/consistent-generic-constructors": State.WARN,
+    // "ts/consistent-indexed-object-style": State.OFF,
     "ts/consistent-type-assertions": [
-      State.ON,
+      State.WARN,
       {
         arrayLiteralTypeAssertions: "never",
         objectLiteralTypeAssertions: "never",
       },
     ],
     // "ts/consistent-type-definitions": State.OFF,
-    "ts/consistent-type-exports": State.ON,
-    "ts/consistent-type-imports": State.ON,
+    "ts/consistent-type-exports": State.WARN,
+    "ts/consistent-type-imports": State.WARN,
     // "ts/explicit-function-return-type": State.OFF,
     "ts/explicit-member-accessibility": [
-      State.ON,
+      State.WARN,
       {
         overrides: {
           constructors: "no-public",
@@ -32,14 +32,14 @@ export default {
     ],
     // "ts/explicit-module-boundary-types": State.OFF,
     "ts/member-ordering": [
-      State.ON,
+      State.WARN,
       {
         "default": {
           optionalityOrder: "required-first",
         },
       },
     ],
-    "ts/method-signature-style": State.ON,
+    "ts/method-signature-style": State.WARN,
     // "ts/naming-convention": State.OFF,
     "ts/no-array-delete": State.ON,
     "ts/no-base-to-string": State.ON,
@@ -72,7 +72,7 @@ export default {
     "ts/no-for-in-array": State.ON,
     "ts/no-import-type-side-effects": State.ON,
     "ts/no-inferrable-types": State.ON,
-    // "ts/no-invalid-void-type": State.OFF /* preference - I powerfully ideologically disagree with disallowing void, a valid type */,
+    // "ts/no-invalid-void-type": State.OFF /* @preference: I powerfully ideologically disagree with disallowing void, a valid type */,
     "ts/no-meaningless-void-operator": [
       State.ON,
       {
@@ -86,9 +86,9 @@ export default {
     "ts/no-namespace": State.ON,
     "ts/no-non-null-asserted-nullish-coalescing": State.ON,
     "ts/no-non-null-asserted-optional-chain": State.ON,
-    // "ts/no-non-null-assertion": State.OFF /* preference */,
+    // "ts/no-non-null-assertion": State.OFF,
     "ts/no-redundant-type-constituents": State.ON,
-    // "ts/no-restricted-types": State.OFF /* preference - no shared custom types across all projects that I wish to ban */,
+    // "ts/no-restricted-types": State.OFF /* @preference: no shared custom types across all projects that I wish to ban */,
     "ts/no-require-imports": State.ON,
     "ts/no-this-alias": State.ON,
     "ts/no-unnecessary-boolean-literal-compare": State.ON,
@@ -105,7 +105,7 @@ export default {
     "ts/no-unsafe-assignment": State.ON,
     "ts/no-unsafe-call": State.ON,
     "ts/no-unsafe-declaration-merging": State.ON,
-    // "ts/no-unsafe-enum-comparison": State.OFF /* dumb fucking rule */,
+    // "ts/no-unsafe-enum-comparison": State.OFF,
     "ts/no-unsafe-function-type": State.ON,
     "ts/no-unsafe-member-access": [
       State.ON,
@@ -116,35 +116,35 @@ export default {
     "ts/no-unsafe-return": State.ON,
     // "ts/no-unsafe-type-assertion": State.OFF,
     "ts/no-unsafe-unary-minus": State.ON,
-    "ts/no-unused-private-class-members": State.ON,
-    // "ts/no-useless-default-assignment": State.OFF /* BUG: shit's broken */,
-    "ts/no-useless-empty-export": State.ON,
+    "ts/no-unused-private-class-members": State.WARN,
+    // "ts/no-useless-default-assignment": State.OFF /* BUG: it's broken */,
+    "ts/no-useless-empty-export": State.WARN,
     "ts/no-wrapper-object-types": State.ON,
-    // "ts/non-nullable-type-assertion-style": State.OFF /* preference */,
+    // "ts/non-nullable-type-assertion-style": State.OFF,
     "ts/parameter-properties": [
-      State.ON,
+      State.WARN,
       {
-        prefer: "parameter-property" /* parameter-property | @default class-property */,
+        prefer: "parameter-property",
       },
     ],
-    "ts/prefer-as-const": State.ON,
-    // "ts/prefer-enum-initializers": State.OFF /* preference */,
-    "ts/prefer-find": State.ON,
-    "ts/prefer-for-of": State.ON,
-    "ts/prefer-function-type": State.ON,
-    "ts/prefer-includes": State.ON,
-    // "ts/prefer-literal-enum-member": State.OFF /* preference - idk why this would be considering, maybe we should ban all variable scopes */,
-    "ts/prefer-namespace-keyword": State.ON,
+    "ts/prefer-as-const": State.WARN,
+    // "ts/prefer-enum-initializers": State.OFF,
+    "ts/prefer-find": State.WARN,
+    "ts/prefer-for-of": State.WARN,
+    "ts/prefer-function-type": State.WARN,
+    "ts/prefer-includes": State.WARN,
+    // "ts/prefer-literal-enum-member": State.OFF /* @preference: idk why this would be considering, maybe we should ban all variable scopes */,
+    "ts/prefer-namespace-keyword": State.WARN,
     "ts/prefer-nullish-coalescing": [
-      State.ON,
+      State.WARN,
       {
         ignoreMixedLogicalExpressions: true,
         ignorePrimitives: true,
 
       },
-    ] /* requires tsconfig: strictNullChecks */,
+    ] /* @requires @tsc: strictNullChecks */,
     "ts/prefer-optional-chain": [
-      State.ON,
+      State.WARN,
       {
         checkBigInt: false,
         checkBoolean: false,
@@ -152,15 +152,15 @@ export default {
         checkString: false,
       },
     ],
-    "ts/prefer-readonly": State.ON,
-    // "ts/prefer-readonly-parameter-types": State.OFF /* preference - WAY too restrictive */,
-    "ts/prefer-reduce-type-parameter": State.ON,
-    "ts/prefer-regexp-exec": State.ON,
-    "ts/prefer-return-this-type": State.ON,
-    "ts/prefer-string-starts-ends-with": State.ON,
+    "ts/prefer-readonly": State.WARN,
+    // "ts/prefer-readonly-parameter-types": State.OFF /* @preference: WAY too restrictive */,
+    "ts/prefer-reduce-type-parameter": State.WARN,
+    "ts/prefer-regexp-exec": State.WARN,
+    "ts/prefer-return-this-type": State.WARN,
+    "ts/prefer-string-starts-ends-with": State.WARN,
     "ts/promise-function-async": State.ON,
-    "ts/related-getter-setter-pairs": State.ON,
-    "ts/require-array-sort-compare": State.ON,
+    // "ts/related-getter-setter-pairs": State.OFF,
+    "ts/require-array-sort-compare": State.WARN,
     "ts/restrict-plus-operands": [
       State.ON,
       {
@@ -187,7 +187,7 @@ export default {
         allowNullableNumber: true,
         allowNullableString: true,
       },
-    ], /* requires tsconfig: strictNullChecks */
+    ], /* @requires @tsc: strictNullChecks */
     "ts/switch-exhaustiveness-check": [
       State.ON,
       {
@@ -195,8 +195,8 @@ export default {
         considerDefaultExhaustiveForUnions: true,
       },
     ],
-    // "ts/triple-slash-reference": State.OFF /* preference */,
-    // "ts/typedef": State.OFF /* tsconfig: { noImplicitAny, strictPropertyInitialization } */,
+    // "ts/triple-slash-reference": State.OFF,
+    // "ts/typedef": State.OFF /* @tsc: noImplicitAny, strictPropertyInitialization */,
     "ts/unbound-method": [
       State.ON,
       {

@@ -4,9 +4,9 @@ export default [
   {
     rules: {
       "jsonc/comma-dangle": [
-        State.ON,
+        State.WARN,
         "always-multiline",
-      ] /* trailing commas ARE allowed in JSONC */,
+      ],
     } as const,
   },
 ];

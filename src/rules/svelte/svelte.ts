@@ -35,12 +35,12 @@ export default {
     // #region BEST PRACTICES
     // DOC: http://sveltejs.github.io/eslint-plugin-svelte/rules/#best-practices
     "svelte/block-lang": [
-      State.ON,
+      State.WARN,
       {
         script: ["ts"],
         style: ["css"],
       },
-    ], /* INVESTIGATE: */
+    ],
     "svelte/button-has-type": State.ON,
     "svelte/no-add-event-listener": State.ON,
     "svelte/no-at-debug-tags": State.ON,
@@ -53,22 +53,22 @@ export default {
     "svelte/no-unnecessary-state-wrap": State.ON,
     // "svelte/no-unused-class-name": State.OFF /* incompatible: breaks if css class is located in another file; BUG: ESLint error if array empty */,
     "svelte/no-unused-props": [
-      State.ON,
+      State.WARN,
       {
         checkImportedTypes: true,
       },
     ],
-    "svelte/no-unused-svelte-ignore": State.ON,
-    "svelte/no-useless-children-snippet": State.ON,
-    "svelte/no-useless-mustaches": State.ON,
+    "svelte/no-unused-svelte-ignore": State.WARN,
+    "svelte/no-useless-children-snippet": State.WARN,
+    "svelte/no-useless-mustaches": State.WARN,
     "svelte/prefer-const": [
-      State.ON,
+      State.WARN,
       {
         destructuring: "all",
       },
     ] /* same options: prefer-const */,
-    "svelte/prefer-destructured-store-props": State.ON,
-    "svelte/prefer-writable-derived": State.ON,
+    "svelte/prefer-destructured-store-props": State.WARN,
+    "svelte/prefer-writable-derived": State.WARN,
     "svelte/require-each-key": State.ON,
     "svelte/require-event-dispatcher-types": State.ON,
     "svelte/require-optimized-style-attribute": State.ON,
@@ -79,45 +79,45 @@ export default {
     // #region STYLE
     // DOC: http://sveltejs.github.io/eslint-plugin-svelte/rules/#stylistic-issues
     "svelte/consistent-selector-style": [
-      State.ON,
+      State.WARN,
       {
-        checkGlobal: true /* @default false */,
+        checkGlobal: true,
       },
     ],
     "svelte/derived-has-same-inputs-outputs": State.ON,
     "svelte/first-attribute-linebreak": [
-      State.ON,
+      State.WARN,
       {
         singleline: "below",
       },
     ],
-    "svelte/html-closing-bracket-new-line": State.ON,
+    "svelte/html-closing-bracket-new-line": State.WARN,
     "svelte/html-closing-bracket-spacing": [
-      State.ON,
+      State.WARN,
       {
         selfClosingTag: "never",
       },
     ],
     // "svelte/html-quotes": State.OFF /* BUG: incompatible with object props, which should not be stringified */,
-    "svelte/html-self-closing": State.ON,
-    "svelte/indent": State.ON,
-    "svelte/max-attributes-per-line": State.ON,
-    "svelte/mustache-spacing": State.ON,
-    "svelte/no-extra-reactive-curlies": State.ON,
+    "svelte/html-self-closing": State.WARN,
+    "svelte/indent": State.WARN,
+    "svelte/max-attributes-per-line": State.WARN,
+    "svelte/mustache-spacing": State.WARN,
+    "svelte/no-extra-reactive-curlies": State.WARN,
     // "svelte/no-restricted-html-elements": State.OFF,
-    "svelte/no-spaces-around-equal-signs-in-attribute": State.ON,
+    "svelte/no-spaces-around-equal-signs-in-attribute": State.WARN,
     "svelte/prefer-class-directive": [
-      State.ON,
+      State.WARN,
       {
         prefer: "empty",
       },
     ],
-    "svelte/prefer-style-directive": State.ON,
+    "svelte/prefer-style-directive": State.WARN,
     "svelte/require-event-prefix": State.ON,
-    "svelte/shorthand-attribute": State.ON,
-    "svelte/shorthand-directive": State.ON,
-    // "svelte/sort-attributes": State.OFF /* INVESTIGATE: */,
-    "svelte/spaced-html-comment": State.ON /* INFO: does not have third object option (exceptions/markers), unlike stylistic/spaced-comment */,
+    "svelte/shorthand-attribute": State.WARN,
+    "svelte/shorthand-directive": State.WARN,
+    // "svelte/sort-attributes": State.OFF,
+    "svelte/spaced-html-comment": State.WARN /* INFO: does not have third object option (exceptions/markers), unlike stylistic/spaced-comment */,
     // #endregion
 
     // #region SVELTE-KIT
