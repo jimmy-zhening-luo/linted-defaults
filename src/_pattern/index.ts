@@ -10,6 +10,7 @@ SUBROOTS = [
   "typings",
   "public",
   "tools",
+  "docs",
 ];
 
 export default function pattern(
