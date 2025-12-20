@@ -11,5 +11,5 @@ export default [
   "**/.vscode/c_cpp_properties.json",
 ]
   .concat(
-    js.map(file => "!" + file),
+    js.map(pattern => "!" + pattern),
   );
