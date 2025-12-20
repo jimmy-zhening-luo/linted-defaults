@@ -364,7 +364,7 @@ export default {
 
     // #region FORMATTING
     // [ https://eslint.org/docs/latest/rules/#layout--formatting ]
-    // "unicode-bom": State.OFF /* preference: don't care */,
+    "unicode-bom": State.ON,
     // #endregion
   } as const,
 };
