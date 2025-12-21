@@ -17,7 +17,10 @@ export default {
       "code-workspace",
     ],
     {
-      files: ["tsconfig.json", "tsconfig-*.json"],
+      files: [
+        "tsconfig.json",
+        "tsconfig-*.json",
+      ],
       folders: [".vscode"],
       paths: [".vscode/**/*.json"],
     },
