@@ -8,7 +8,12 @@ export default {
   svelte: pattern("svelte"),
   html: pattern("html"),
   css: pattern("css"),
-  json: pattern("json"),
+  json: pattern(
+    [
+      "json",
+      "JSON-tmLanguage",
+    ],
+  ),
   jsonc: [],
   jsoncc: pattern(
     [
@@ -31,8 +36,7 @@ export default {
       "yaml",
       "yml.example",
       "yaml.example",
-      "yml-example",
-      "yaml-example",
+      "YAML-tmLanguage",
     ],
     {
       folders: [".github"],
