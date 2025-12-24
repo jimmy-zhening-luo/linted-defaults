@@ -1,8 +1,8 @@
-const ROOTS = [
-  "",
-  "code/*/",
-],
-SUBROOTS = [
+const enum Path {
+  Root = "code/*/",
+}
+
+const SUBROOTS = [
   "",
   "src",
   "tests",
@@ -25,43 +25,54 @@ export default function pattern(
   > = {},
   override?: boolean,
 ) {
-  const leaves = (
-    typeof extensions === "string"
-      ? [extensions]
-      : extensions
+  const leaves = typeof extensions === "string"
+    ? ["*." + extensions]
+    : extensions.map(ext => "*." + ext);
+
+  if (pattern.files) {
+    const { length } = leaves,
+    { files } = pattern,
+    { length: fileCount } = files;
+
+    leaves.length = length + fileCount;
+
+    for (let i = 0; i < fileCount; ++i)
+      leaves[length + i] = files[i]!;
+  }
+
+  const subpaths = (
+    override
+      ? pattern.folders
+      : pattern.folders
+        ? SUBROOTS.concat(pattern.folders)
+        : SUBROOTS
   )
-    .map(extension => "*." + extension);
+    ?.map(path => path && path + "/**/")
+    ?.flatMap(
+      path => leaves.map(leaf => path + leaf),
+    )
+    ?? leaves;
 
-  if (pattern.files)
-    leaves.push(...pattern.files);
+  if (pattern.paths) {
+    const { length } = subpaths,
+    { paths } = pattern,
+    { length: pathCount } = paths;
 
-  const _branches = override
-    ? pattern.folders
-    : pattern.folders
-      ? SUBROOTS.concat(pattern.folders)
-      : SUBROOTS,
-  branches = _branches
-    ? _branches.map(
-        branch => branch === ""
-          ? branch
-          : branch + "/**/",
-      )
-    : undefined,
-  subpaths
-  = branches
-    ? branches.flatMap(
-        branch => leaves.map(
-          leaf => branch + leaf,
-        ),
-      )
-    : leaves;
+    subpaths.length = length + pathCount;
 
-  if (pattern.paths)
-    subpaths.push(...pattern.paths);
+    for (let i = 0; i < pathCount; ++i)
+      subpaths[length + i] = paths[i]!;
+  }
 
-  return ROOTS.flatMap(
-    root => subpaths.map(
-      subpath => root + subpath,
-    ),
-  );
+  if (!subpaths.length)
+    return [];
+
+  const { length } = subpaths;
+
+  subpaths.length = length + length;
+
+  for (let i = 0; i < length; ++i)
+    subpaths[length + i] = Path.Root + subpaths[i]!;
+
+  return subpaths;
 }
