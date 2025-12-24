@@ -13,8 +13,8 @@ const globalIgnores = [
 invertedJsFiles = jsIncludePatterns.map(
   pattern => "!" + pattern,
 ),
-{ length } = globalIgnores,
-{ length: jsFilesLength } = invertedJsFiles;
+length = globalIgnores.length,
+jsFilesLength = invertedJsFiles.length;
 
 globalIgnores.length = length + jsFilesLength;
 
