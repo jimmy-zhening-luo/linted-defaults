@@ -48,7 +48,7 @@ export default function pattern(
         : SUBROOTS
   )
     ?.map(path => path && path + "/**/")
-    ?.flatMap(
+    .flatMap(
       path => leaves.map(leaf => path + leaf),
     )
     ?? leaves;
