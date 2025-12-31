@@ -117,7 +117,7 @@ export default {
     // "ts/no-unsafe-type-assertion": State.OFF,
     "ts/no-unsafe-unary-minus": State.ON,
     "ts/no-unused-private-class-members": State.WARN,
-    // "ts/no-useless-default-assignment": State.OFF /* BUG: it's broken */,
+    "ts/no-useless-default-assignment": State.WARN,
     "ts/no-useless-empty-export": State.WARN,
     "ts/no-wrapper-object-types": State.ON,
     // "ts/non-nullable-type-assertion-style": State.OFF,
