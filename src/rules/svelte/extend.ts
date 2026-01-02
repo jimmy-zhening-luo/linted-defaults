@@ -8,7 +8,6 @@ export default {
       State.ON,
       "both",
     ] /* same options: no-inner-declarations */,
-    /* @OVERRIDE */ "stylistic/no-trailing-spaces": State.OFF /* replaces `no-trailing-spaces` */,
-    "svelte/no-trailing-spaces": State.WARN /* same options: stylistic/no-trailing-spaces */,
+    "svelte/no-trailing-spaces": State.WARN,
   } as const,
 };

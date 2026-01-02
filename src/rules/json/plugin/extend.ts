@@ -4,18 +4,18 @@ import { State } from "../../state";
 export default {
   rules: {
     // "jsonc/array-bracket-newline": State.OFF /* BUG: DO NOT CONFIGURE */,
-    "jsonc/array-bracket-spacing": State.WARN /* MUST match stylistic/array-bracket-spacing */,
+    "jsonc/array-bracket-spacing": State.WARN,
     "jsonc/array-element-newline": [
       State.WARN,
       "consistent",
-    ] /* WOULD match stylistic/array-element-newline, but jsonc plugin has slightly different options */,
+    ],
     "jsonc/comma-dangle": State.ON,
     "jsonc/comma-style": State.WARN,
     "jsonc/indent": [
       State.WARN,
       2,
     ],
-    "jsonc/key-spacing": State.WARN /* MUST match stylistic/key-spacing */,
+    "jsonc/key-spacing": State.WARN,
     // "jsonc/no-dupe-keys": State.OFF /* ESLint: json/no-duplicate-keys */,
     "jsonc/no-floating-decimal": State.ON,
     "jsonc/no-irregular-whitespace": [
@@ -35,14 +35,14 @@ export default {
       {
         consistent: true,
         multiline: true,
-        minProperties: 2 /* @OVERRIDE: instead of 3 in stylistic */,
+        minProperties: 2,
       },
-    ] /* @OVERRIDE stylistic/object-curly-newline */,
+    ],
     "jsonc/object-curly-spacing": [
       State.WARN,
       "always",
-    ] /* MUST match stylistic/object-curly-spacing (except unsupported 3rd options) */,
-    "jsonc/object-property-newline": State.WARN /* MUST match stylistic/object-property-newline */,
+    ],
+    "jsonc/object-property-newline": State.WARN,
     "jsonc/quote-props": State.ON,
     "jsonc/quotes": State.ON,
     "jsonc/space-unary-ops": State.ON,

@@ -117,7 +117,7 @@ export default {
     "svelte/shorthand-attribute": State.WARN,
     "svelte/shorthand-directive": State.WARN,
     // "svelte/sort-attributes": State.OFF,
-    "svelte/spaced-html-comment": State.WARN /* INFO: does not have third object option (exceptions/markers), unlike stylistic/spaced-comment */,
+    "svelte/spaced-html-comment": State.WARN,
     // #endregion
 
     // #region SVELTE-KIT
