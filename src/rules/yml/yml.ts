@@ -9,7 +9,7 @@ export default {
     "yml/block-sequence-hyphen-indicator-newline": State.WARN,
     "yml/block-sequence": State.WARN,
     // "yml/file-extension": State.OFF,
-    "yml/indent": State.WARN,
+    // "yml/indent": State.OFF,
     // "yml/key-name-casing": State.OFF,
     // "yml/no-empty-document": State.OFF,
     "yml/no-empty-key": State.WARN,
