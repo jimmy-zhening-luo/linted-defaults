@@ -11,15 +11,9 @@ export default {
         minProperties: 2,
       },
     ] /* MUST match jsonc/object-curly-newline */,
-    "yml/flow-mapping-curly-spacing": [
-      State.WARN,
-      "never",
-      {
-        objectsInObjects: true,
-      },
-    ] /* @OVERRIDE jsonc/object-curly-spacing */,
+    // "yml/flow-mapping-curly-spacing": State.OFF,
     "yml/flow-sequence-bracket-newline": State.WARN /* @OVERRIDE jsonc/array-bracket-newline */,
-    "yml/flow-sequence-bracket-spacing": State.WARN /* MUST match jsonc/array-bracket-spacing */,
+    // "yml/flow-sequence-bracket-spacing": State.OFF,
     "yml/key-spacing": State.WARN /* MUST match jsonc/key-spacing */,
     "yml/no-irregular-whitespace": State.ON,
     "yml/no-multiple-empty-lines": [
