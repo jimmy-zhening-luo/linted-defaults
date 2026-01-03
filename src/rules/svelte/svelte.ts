@@ -92,7 +92,7 @@ export default {
     // "svelte/html-self-closing": State.OFF,
     // "svelte/indent": State.OFF,
     // "svelte/max-attributes-per-line": State.OFF,
-    "svelte/mustache-spacing": State.WARN,
+    // "svelte/mustache-spacing": State.OFF,
     "svelte/no-extra-reactive-curlies": State.WARN,
     // "svelte/no-restricted-html-elements": State.OFF,
     // "svelte/no-spaces-around-equal-signs-in-attribute": State.OFF,
