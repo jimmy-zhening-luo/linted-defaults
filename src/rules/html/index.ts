@@ -63,42 +63,16 @@ export default [
 
       // #region STYLE
       // DOC: https://html-eslint.org/docs/rules#style
-      "html/attrs-newline": [
-        State.WARN,
-        {
-          ifAttrsMoreThan: 0,
-        },
-      ],
-      "html/element-newline": [
-        State.WARN,
-        {
-          skip: ["head"],
-          inline: ["$inline"],
-        },
-      ],
+      // "html/attrs-newline": State.OFF,
+      // "html/element-newline": State.OFF,
       // "html/id-naming-convention": State.OFF,
-      "html/indent": [
-        State.WARN,
-        2,
-      ],
-      "html/lowercase": State.WARN,
-      "html/no-extra-spacing-attrs": [
-        State.WARN,
-        {
-          disallowMissing: true,
-          disallowTabs: true,
-          disallowInAssignment: true,
-        },
-      ],
-      "html/no-extra-spacing-text": State.WARN,
-      "html/no-multiple-empty-lines": [
-        State.WARN,
-        {
-          max: 1,
-        },
-      ],
-      "html/no-trailing-spaces": State.WARN,
-      "html/quotes": State.WARN,
+      // "html/indent": State.OFF,
+      // "html/lowercase": State.OFF,
+      // "html/no-extra-spacing-attrs": State.OFF,
+      // "html/no-extra-spacing-text": State.OFF,
+      // "html/no-multiple-empty-lines": State.OFF,
+      // "html/no-trailing-spaces": State.OFF,
+      // "html/quotes": State.OFF,
     // "html/sort-attrs": State.OFF,
     // #endregion
     } as const,
