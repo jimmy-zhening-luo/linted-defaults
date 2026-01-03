@@ -56,9 +56,9 @@ export default {
       {
         assignmentOperator: 0,
         VariableDeclarator: {
-          var: 0,
+          "var": 0,
           let: 0,
-          const: 0,
+          "const": 0,
         },
         outerIIFEBody: 0,
         offsetTernaryExpressions: true,
