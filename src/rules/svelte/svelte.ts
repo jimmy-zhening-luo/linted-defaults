@@ -85,27 +85,17 @@ export default {
       },
     ],
     "svelte/derived-has-same-inputs-outputs": State.ON,
-    "svelte/first-attribute-linebreak": [
-      State.WARN,
-      {
-        singleline: "below",
-      },
-    ],
-    "svelte/html-closing-bracket-new-line": State.WARN,
-    "svelte/html-closing-bracket-spacing": [
-      State.WARN,
-      {
-        selfClosingTag: "never",
-      },
-    ],
+    // "svelte/first-attribute-linebreak": State.OFF,
+    // "svelte/html-closing-bracket-new-line": State.OFF,
+    // "svelte/html-closing-bracket-spacing": State.OFF,
     // "svelte/html-quotes": State.OFF /* BUG: incompatible with object props, which should not be stringified */,
-    "svelte/html-self-closing": State.WARN,
-    "svelte/indent": State.WARN,
-    "svelte/max-attributes-per-line": State.WARN,
+    // "svelte/html-self-closing": State.OFF,
+    // "svelte/indent": State.OFF,
+    // "svelte/max-attributes-per-line": State.OFF,
     "svelte/mustache-spacing": State.WARN,
     "svelte/no-extra-reactive-curlies": State.WARN,
     // "svelte/no-restricted-html-elements": State.OFF,
-    "svelte/no-spaces-around-equal-signs-in-attribute": State.WARN,
+    // "svelte/no-spaces-around-equal-signs-in-attribute": State.OFF,
     "svelte/prefer-class-directive": [
       State.WARN,
       {
@@ -117,7 +107,7 @@ export default {
     "svelte/shorthand-attribute": State.WARN,
     "svelte/shorthand-directive": State.WARN,
     // "svelte/sort-attributes": State.OFF,
-    "svelte/spaced-html-comment": State.WARN,
+    // "svelte/spaced-html-comment": State.OFF,
     // #endregion
 
     // #region SVELTE-KIT

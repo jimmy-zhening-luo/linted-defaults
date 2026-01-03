@@ -9,6 +9,6 @@ export default {
       "both",
     ], /* same options: no-inner-declarations */
     /* @OVERRIDE */ "stylistic/no-trailing-spaces": State.OFF, /* replaces `no-trailing-spaces` */
-    "svelte/no-trailing-spaces": State.WARN,
+    // "svelte/no-trailing-spaces": State.OFF,
   } as const,
 };
