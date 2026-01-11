@@ -38,7 +38,7 @@ export default {
       State.WARN,
       "property",
     ],
-    "stylistic/eol-last": State.WARN,
+    // "stylistic/eol-last": State.OFF /* @global */,
     "stylistic/function-call-argument-newline": [
       State.WARN,
       "consistent",
@@ -71,7 +71,7 @@ export default {
     "stylistic/key-spacing": State.WARN,
     "stylistic/keyword-spacing": State.WARN,
     // "stylistic/line-comment-position": State.OFF,
-    "stylistic/linebreak-style": State.WARN,
+    // "stylistic/linebreak-style": State.OFF /* @global */,
     // "stylistic/lines-around-comment": State.OFF,
     "stylistic/lines-between-class-members": [
       State.WARN,
