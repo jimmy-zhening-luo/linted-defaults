@@ -1,3 +1,4 @@
+import global from "./global";
 import js from "./js";
 import ts from "./ts";
 import mocha from "./mocha";
@@ -10,6 +11,7 @@ import jsoncc from "./jsoncc";
 import yml from "./yml";
 
 export default {
+  "*": global,
   js,
   ts,
   mocha,
