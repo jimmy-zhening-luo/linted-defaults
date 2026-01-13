@@ -188,6 +188,7 @@ export default {
         allowNullableString: true,
       },
     ] /* @requires @tsc: strictNullChecks */,
+    "ts/strict-void-return": State.ON,
     "ts/switch-exhaustiveness-check": [
       State.ON,
       {
