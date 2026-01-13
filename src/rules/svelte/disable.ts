@@ -15,5 +15,6 @@ export default {
     "ts/no-confusing-void-expression": State.OFF, /* @CONFLICT: errors on render() */
     // My own (dprint)
     "stylistic/object-curly-spacing": State.OFF,
+    "stylistic/semi": State.OFF,
   } as const,
 };
