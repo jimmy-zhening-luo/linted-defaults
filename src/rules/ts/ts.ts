@@ -187,7 +187,7 @@ export default {
         allowNullableNumber: true,
         allowNullableString: true,
       },
-    ], /* @requires @tsc: strictNullChecks */
+    ] /* @requires @tsc: strictNullChecks */,
     "ts/switch-exhaustiveness-check": [
       State.ON,
       {

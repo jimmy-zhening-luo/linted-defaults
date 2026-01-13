@@ -47,7 +47,7 @@ export default {
     "stylistic/function-paren-newline": [
       State.WARN,
       "multiline-arguments",
-    ], /* BUG: https://github.com/eslint-stylistic/eslint-stylistic/issues/290 */
+    ] /* BUG: https://github.com/eslint-stylistic/eslint-stylistic/issues/290 */,
     "stylistic/generator-star-spacing": State.WARN,
     "stylistic/implicit-arrow-linebreak": State.WARN,
     "stylistic/indent": [
@@ -66,7 +66,7 @@ export default {
     ],
     "stylistic/indent-binary-ops": [
       State.WARN,
-      2, /* MUST be same as `stylistic/indent`[1] */
+      2 /* MUST be same as `stylistic/indent`[1] */,
     ],
     "stylistic/key-spacing": State.WARN,
     "stylistic/keyword-spacing": State.WARN,
@@ -136,7 +136,7 @@ export default {
       {
         max: 1,
         maxBOF: 0,
-        maxEOF: 0, /* INFO: combine with `eol-last` to ensure file still ends with a single line-break (eol character) */
+        maxEOF: 0 /* INFO: combine with `eol-last` to ensure file still ends with a single line-break (eol character) */,
       },
     ],
     "stylistic/no-tabs": State.WARN,
@@ -252,7 +252,7 @@ export default {
             after: true,
           },
         },
-      }, /* BUG: non-overriden rule affects all type annotations (arrows, "as" keyword, "satisfies" keyword) except colons */
+      } /* BUG: non-overriden rule affects all type annotations (arrows, "as" keyword, "satisfies" keyword) except colons */,
     ],
     "stylistic/type-generic-spacing": State.WARN,
     "stylistic/type-named-tuple-spacing": State.WARN,

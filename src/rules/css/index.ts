@@ -18,7 +18,7 @@ export default [
       "css/relative-font-units": State.WARN,
       // "css/selector-complexity": State.OFF /* @preference: or rather too lazy to configure because its default state is literally infinitely permissable */,
       "css/use-baseline": State.WARN,
-    // "css/use-layers": State.OFF, /* not recommended by docs: https://github.com/eslint/css?tab=readme-ov-file#rules; also BUG: ESLint config inspector: css/use-layers: Invalid rule has no description [INVALID] */
+    // "css/use-layers": State.OFF /* not recommended by docs: https://github.com/eslint/css?tab=readme-ov-file#rules | BUG: ESLint config inspector: css/use-layers: Invalid rule has no description [INVALID] */,
     } as const,
   },
 ];
