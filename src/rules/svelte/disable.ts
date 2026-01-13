@@ -14,6 +14,7 @@ export default {
     "stylistic/indent": State.OFF /* @CONFLICT: with `svelte/indent` */,
     "ts/no-confusing-void-expression": State.OFF /* @CONFLICT: errors on render() */,
     // My own (dprint)
+    "stylistic/member-delimiter-style": State.OFF,
     "stylistic/object-curly-spacing": State.OFF,
     "stylistic/semi": State.OFF,
   } as const,
