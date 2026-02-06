@@ -327,10 +327,7 @@ export default {
         requireCatchParameter: true,
       },
     ],
-    radix: [
-      State.ON,
-      "as-needed",
-    ],
+    radix: State.ON,
     "require-await": State.ON /* TSLint */,
     "require-unicode-regexp": State.ON,
     "require-yield": State.ON,
