@@ -248,12 +248,7 @@ export default {
     "no-script-url": State.ON,
     "no-sequences": State.ON,
     // "no-shadow": State.OFF /* supports TypeScript */,
-    "no-shadow-restricted-names": [
-      State.ON,
-      {
-        reportGlobalThis: false,
-      },
-    ],
+    "no-shadow-restricted-names": State.ON,
     // "no-ternary": State.OFF,
     "no-throw-literal": State.WARN /* TSLint */,
     "no-undef-init": State.ON,
