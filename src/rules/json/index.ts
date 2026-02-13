@@ -1,5 +1,5 @@
 import json from "./json";
-import jsonc from "./plugin";
+import jsonc from "./jsonc";
 
 export default [
   json,
