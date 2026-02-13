@@ -17,7 +17,7 @@ export default {
     ],
     "jsonc/key-spacing": State.WARN,
     // "jsonc/no-dupe-keys": State.OFF /* ESLint: json/no-duplicate-keys */,
-    "jsonc/no-floating-decimal": State.ON,
+    // "jsonc/no-floating-decimal": State.OFF,
     "jsonc/no-irregular-whitespace": [
       State.ON,
       {
@@ -25,11 +25,11 @@ export default {
         skipComments: true,
       },
     ],
-    "jsonc/no-multi-str": State.ON,
-    "jsonc/no-octal-escape": State.ON,
-    "jsonc/no-octal": State.ON,
-    "jsonc/no-sparse-arrays": State.ON,
-    "jsonc/no-useless-escape": State.ON,
+    // "jsonc/no-multi-str": State.OFF,
+    // "jsonc/no-octal-escape": State.OFF,
+    // "jsonc/no-octal": State.OFF,
+    // "jsonc/no-sparse-arrays": State.OFF,
+    // "jsonc/no-useless-escape": State.OFF,
     "jsonc/object-curly-newline": [
       State.WARN,
       {
@@ -43,8 +43,8 @@ export default {
       "always",
     ],
     "jsonc/object-property-newline": State.WARN,
-    "jsonc/quote-props": State.ON,
-    "jsonc/quotes": State.ON,
-    "jsonc/space-unary-ops": State.ON,
+    // "jsonc/quote-props": State.OFF,
+    // "jsonc/quotes": State.OFF,
+    // "jsonc/space-unary-ops": State.OFF,
   } as const,
 };
