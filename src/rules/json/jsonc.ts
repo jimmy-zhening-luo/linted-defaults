@@ -39,7 +39,7 @@ export default {
       2,
     ],
     "jsonc/key-spacing": State.WARN,
-    // "jsonc/no-dupe-keys": State.OFF /* ESLint: json/no-duplicate-keys */,
+    "jsonc/no-dupe-keys": State.ON /* ESLint: json/no-duplicate-keys */,
     // "jsonc/no-floating-decimal": State.OFF,
     "jsonc/no-irregular-whitespace": [
       State.ON,
