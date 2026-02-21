@@ -14,8 +14,7 @@ export default {
       "JSON-tmLanguage",
     ],
   ),
-  jsonc: [],
-  jsoncc: pattern(
+  jsonc: pattern(
     [
       "jsonc",
       "code-snippets",
