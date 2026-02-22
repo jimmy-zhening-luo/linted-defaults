@@ -100,7 +100,7 @@ export default {
     "ts/no-unnecessary-type-assertion": State.ON,
     "ts/no-unnecessary-type-constraint": State.ON,
     "ts/no-unnecessary-type-conversion": State.ON,
-    "ts/no-unnecessary-type-parameters": State.ON,
+    // "ts/no-unnecessary-type-parameters": State.OFF /* extremely noisy and pointless, do not ever configure again */,
     "ts/no-unsafe-argument": State.ON,
     "ts/no-unsafe-assignment": State.ON,
     "ts/no-unsafe-call": State.ON,
