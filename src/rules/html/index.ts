@@ -7,6 +7,7 @@ export default [
     // #region BEST PRACTICE
     // DOC: https://html-eslint.org/docs/rules#best-practice
       "html/css-no-empty-blocks": State.WARN,
+      "html/head-order": State.ON,
       // "html/max-element-depth": State.OFF /* @preference: simply do not care */,
       "html/no-duplicate-attrs": State.WARN,
       "html/no-duplicate-class": State.WARN,
