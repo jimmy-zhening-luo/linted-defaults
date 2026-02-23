@@ -64,6 +64,9 @@ export default {
     "jsonc/object-curly-spacing": [
       State.WARN,
       "always",
+      {
+        emptyObjects: "never",
+      },
     ],
     "jsonc/object-property-newline": State.WARN,
     // "jsonc/quote-props": State.OFF,
