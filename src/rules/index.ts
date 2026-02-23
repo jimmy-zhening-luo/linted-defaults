@@ -1,7 +1,6 @@
 import global from "./global";
 import js from "./js";
 import ts from "./ts";
-import mocha from "./mocha";
 import svelte from "./svelte";
 import html from "./html";
 import css from "./css";
@@ -13,7 +12,6 @@ export default {
   "*": global,
   js,
   ts,
-  mocha,
   svelte,
   html,
   css,
