@@ -25,7 +25,7 @@ export default function pattern(
   > = {},
   override?: boolean,
 ) {
-  const filetype = (extension: string) => "*." + extensions,
+  const filetype = (extension: string) => "*." + extension,
   leaves = typeof extensions === "string"
     ? [filetype(extensions)]
     : extensions.map(filetype);
