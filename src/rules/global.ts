@@ -6,7 +6,7 @@ export default [
       "stylistic/eol-last": State.WARN,
       "stylistic/linebreak-style": State.WARN,
       "stylistic/exp-list-style": [
-        State.OFF,
+        State.WARN,
         {
           singleLine: {
             maxItems: 2,

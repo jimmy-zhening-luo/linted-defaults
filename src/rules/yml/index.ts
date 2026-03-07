@@ -26,6 +26,7 @@ export default [
       // "yml/sort-sequence-values": State.OFF,
       // "yml/vue-custom-block/no-parsing-error": State.OFF,
       //#endregion
+
       //#region Extension
       // "yml/flow-mapping-curly-newline": State.OFF,
       // "yml/flow-mapping-curly-spacing": State.OFF,

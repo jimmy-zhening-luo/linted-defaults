@@ -27,11 +27,11 @@ export default {
     // "jsonc/valid-json-number": State.OFF,
     // "jsonc/vue-custom-block/no-parsing-error": State.OFF,
     // "jsonc/array-bracket-newline": State.OFF /* BUG: DO NOT CONFIGURE */,
-    "jsonc/array-bracket-spacing": State.WARN,
+    "jsonc/array-bracket-spacing": State.OFF /* @global stylistic/list-style */,
     "jsonc/array-element-newline": [
-      State.WARN,
+      State.OFF,
       "consistent",
-    ],
+    ] /* @global stylistic/list-style */,
     "jsonc/comma-dangle": State.ON,
     "jsonc/comma-style": State.WARN,
     "jsonc/indent": [
@@ -54,21 +54,21 @@ export default {
     // "jsonc/no-sparse-arrays": State.OFF,
     // "jsonc/no-useless-escape": State.OFF,
     "jsonc/object-curly-newline": [
-      State.WARN,
+      State.OFF,
       {
         consistent: true,
         multiline: true,
         minProperties: 2,
       },
-    ],
+    ] /* @global stylistic/list-style */,
     "jsonc/object-curly-spacing": [
-      State.WARN,
+      State.OFF,
       "always",
       {
         emptyObjects: "never",
       },
-    ],
-    "jsonc/object-property-newline": State.WARN,
+    ] /* @global stylistic/list-style */,
+    "jsonc/object-property-newline": State.OFF /* @global stylistic/list-style */,
     // "jsonc/quote-props": State.OFF,
     // "jsonc/quotes": State.OFF,
     // "jsonc/space-unary-ops": State.OFF,
