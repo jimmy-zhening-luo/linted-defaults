@@ -38,18 +38,6 @@ export default {
               maxItems: 1,
             },
           },
-          JSONArrayExpression: {
-            singleLine: {
-              maxItems: 0,
-              spacing: "never",
-            },
-          },
-          JSONObjectExpression: {
-            singleLine: {
-              maxItems: 0,
-              spacing: "never",
-            },
-          },
         },
       },
     ],
