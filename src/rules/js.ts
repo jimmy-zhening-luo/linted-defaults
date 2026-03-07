@@ -1,7 +1,622 @@
-import eslint from "./js.eslint";
-import stylistic from "./js.stylistic";
+import { State } from "./state";
 
-export default [
-  eslint,
-  stylistic,
-];
+// DOC: https://eslint.org/docs/latest/rules/
+export default {
+  rules: {
+    // #region PROBLEMS
+    // DOC: https://eslint.org/docs/latest/rules/#possible-problems
+    "array-callback-return": [
+      State.ON,
+      {
+        checkForEach: true,
+        allowVoid: true /* INFO: only works if checkForEach */,
+      },
+    ],
+    "constructor-super": State.ON /* @tsc */,
+    "for-direction": State.ON,
+    "getter-return": State.ON /* @tsc */,
+    "no-async-promise-executor": State.ON,
+    "no-await-in-loop": State.ON,
+    "no-class-assign": State.ON,
+    "no-compare-neg-zero": State.ON,
+    "no-cond-assign": State.ON,
+    "no-const-assign": State.ON /* @tsc */,
+    "no-constant-binary-expression": State.ON,
+    "no-constant-condition": [
+      State.ON,
+      {
+        checkLoops: "all",
+      },
+    ] /* BUG: incorrect option description (claims "all" is ok): https://eslint.org/docs/latest/rules/no-constant-condition */,
+    "no-constructor-return": State.ON,
+    "no-control-regex": State.ON,
+    "no-debugger": State.ON,
+    "no-dupe-args": State.ON /* @tsc */,
+    "no-dupe-class-members": State.ON /* supports TypeScript BUT @tsc */,
+    "no-dupe-else-if": State.ON,
+    "no-dupe-keys": State.ON /* @tsc */,
+    "no-duplicate-case": State.ON,
+    "no-duplicate-imports": [
+      State.ON,
+      {
+        includeExports: true,
+        allowSeparateTypeImports: true,
+      },
+    ],
+    "no-empty-character-class": State.ON,
+    "no-empty-pattern": State.ON,
+    "no-ex-assign": State.ON,
+    "no-fallthrough": State.ON,
+    "no-func-assign": State.ON /* @tsc */,
+    "no-import-assign": State.ON /* @tsc: (-Object.assign) */,
+    "no-inner-declarations": [
+      State.ON,
+      "both",
+    ],
+    "no-invalid-regexp": State.ON,
+    "no-irregular-whitespace": State.ON,
+    "no-loss-of-precision": State.ON /* supports TypeScript */,
+    "no-misleading-character-class": State.ON,
+    "no-new-native-nonconstructor": State.ON,
+    "no-obj-calls": State.ON /* @tsc */,
+    "no-promise-executor-return": [
+      State.ON,
+      {
+        allowVoid: true,
+      },
+    ],
+    "no-prototype-builtins": State.ON,
+    "no-self-assign": State.ON,
+    "no-self-compare": State.ON,
+    "no-setter-return": State.ON /* @tsc */,
+    "no-sparse-arrays": State.ON,
+    "no-template-curly-in-string": State.ON,
+    "no-this-before-super": State.ON /* @tsc */,
+    "no-unassigned-vars": State.ON,
+    "no-undef": State.ON /* @tsc */,
+    "no-unexpected-multiline": State.ON,
+    "no-unmodified-loop-condition": State.ON,
+    "no-unreachable": State.WARN /* @tsc */,
+    "no-unreachable-loop": State.WARN,
+    "no-unsafe-finally": State.ON,
+    "no-unsafe-negation": [
+      State.ON,
+      {
+        enforceForOrderingRelations: true,
+      },
+    ] /* @tsc */,
+    "no-unsafe-optional-chaining": [
+      State.ON,
+      {
+        disallowArithmeticOperators: true,
+      },
+    ],
+    "no-unused-private-class-members": State.WARN,
+    "no-unused-vars": State.WARN /* TSLint */,
+    "no-use-before-define": [
+      State.ON,
+      {
+        typedefs: false,
+      },
+    ] /* supports TypeScript */,
+    "no-useless-assignment": State.ON,
+    "no-useless-backreference": State.ON,
+    "require-atomic-updates": State.ON,
+    "use-isnan": [
+      State.ON,
+      {
+        enforceForIndexOf: true,
+      },
+    ],
+    "valid-typeof": [
+      State.ON,
+      {
+        requireStringLiterals: true,
+      },
+    ],
+    // #endregion
+
+    // #region SUGGESTIONS
+    // [ https://eslint.org/docs/latest/rules/#suggestions ]
+    "accessor-pairs": [
+      State.ON,
+      {
+        enforceForTSTypes: true,
+      },
+    ],
+    "arrow-body-style": State.WARN,
+    "block-scoped-var": State.ON,
+    // camelcase: State.OFF,
+    // "capitalized-comments": State.OFF,
+    // "class-methods-use-this": State.OFF /* supports TypeScript */,
+    // complexity: State.OFF,
+    "consistent-return": State.ON /* @tsc: noImplicitReturns */,
+    "consistent-this": State.ON,
+    curly: [
+      State.WARN,
+      "multi",
+    ],
+    // "default-case": State.OFF /* @preference: don't care */,
+    "default-case-last": State.ON,
+    "default-param-last": State.ON /* supports TypeScript */,
+    "dot-notation": State.WARN /* TSLint */,
+    eqeqeq: State.ON,
+    // "func-name-matching": State.OFF,
+    // "func-names": State.OFF,
+    // "func-style": State.OFF /* supports TypeScript */,
+    // "grouped-accessor-pairs": State.OFF /* BUG: requires adjacency, not as described in documentation */,
+    // "guard-for-in": State.OFF /* @preference: not helpful because using for-in on non-literal objects is bad practice and this rule doesn't guard against that anyway, while adding a pointless check to known object literals */,
+    // "id-denylist": State.OFF,
+    // "id-length": State.OFF,
+    // "id-match": State.OFF,
+    "init-declarations": State.WARN /* supports TypeScript */,
+    "logical-assignment-operators": [
+      State.WARN,
+      "always",
+      {
+        enforceForIfStatements: true,
+      },
+    ],
+    // "max-classes-per-file": State.OFF,
+    // "max-depth": State.OFF,
+    // "max-lines": State.OFF,
+    // "max-lines-per-function": State.OFF,
+    // "max-nested-callbacks": State.OFF,
+    // "max-params": State.OFF /* supports TypeScript */,
+    // "max-statements": State.OFF,
+    // "multiline-comment-style": State.OFF,
+    // "new-cap": State.OFF /* @CONFLICT: breaks Scriptable */,
+    "no-alert": State.ON,
+    "no-array-constructor": State.ON /* supports TypeScript */,
+    "no-bitwise": State.ON,
+    "no-caller": State.ON,
+    "no-case-declarations": State.ON,
+    // "no-console": State.OFF /* @CONFLICT: breaks Node.js console applications and Scriptable, and otherwise unnecessarily hampers browser test code */,
+    "no-continue": State.ON,
+    "no-delete-var": State.ON,
+    "no-div-regex": State.ON,
+    "no-else-return": State.ON,
+    "no-empty": State.ON,
+    "no-empty-function": [
+      State.WARN,
+      {
+        allow: [
+          "constructors",
+          "privateConstructors",
+          "protectedConstructors",
+          "decoratedFunctions",
+          "overrideMethods",
+        ],
+      },
+    ] /* supports TypeScript */,
+    "no-empty-static-block": State.WARN,
+    "no-eq-null": State.ON,
+    "no-eval": State.ON,
+    "no-extend-native": State.ON,
+    "no-extra-bind": State.ON,
+    "no-extra-boolean-cast": [
+      State.WARN,
+      {
+        enforceForLogicalOperands: true,
+      },
+    ],
+    "no-extra-label": State.WARN,
+    "no-global-assign": State.ON,
+    "no-implicit-coercion": State.ON,
+    // "no-implicit-globals": State.OFF /* @CONFLICT: breaks Scriptable? breaks Sveltekit? */,
+    "no-implied-eval": State.ON /* TSLint */,
+    // "no-inline-comments": State.OFF,
+    "no-invalid-this": [
+      State.ON,
+      {
+        capIsConstructor: false,
+      },
+    ] /* supports TypeScript BUT @tsc: strict, noImplicitThis */,
+    "no-iterator": State.ON,
+    "no-label-var": State.WARN,
+    "no-lone-blocks": State.ON,
+    // "no-lonely-if": State.OFF,
+    "no-loop-func": State.ON /* supports TypeScript */,
+    // "no-magic-numbers": State.OFF /* supports TypeScript BUT @CONFLICT: breaks TypeScript number literals, even with most liberal exceptions */,
+    "no-multi-assign": State.ON,
+    "no-multi-str": State.WARN,
+    // "no-negated-condition": State.OFF,
+    // "no-nested-ternary": State.OFF,
+    "no-new": State.ON,
+    "no-new-func": State.ON,
+    "no-new-wrappers": State.ON,
+    "no-nonoctal-decimal-escape": State.ON,
+    "no-object-constructor": State.ON,
+    "no-octal": State.ON,
+    "no-octal-escape": State.ON,
+    "no-param-reassign": State.ON,
+    "no-plusplus": [
+      State.ON,
+      {
+        allowForLoopAfterthoughts: true,
+      },
+    ],
+    "no-proto": State.ON,
+    // "no-redeclare": State.OFF /* @tsc: (let, const, -var) */,
+    // "no-regex-spaces": State.OFF,
+    // "no-restricted-exports": State.OFF,
+    // "no-restricted-globals": State.OFF /* supports TypeScript */,
+    // "no-restricted-imports": State.OFF /* TSLint */,
+    // "no-restricted-properties": State.OFF,
+    // "no-restricted-syntax": State.OFF,
+    // "no-return-assign": State.OFF,
+    "no-script-url": State.ON,
+    "no-sequences": State.ON,
+    // "no-shadow": State.OFF /* supports TypeScript */,
+    "no-shadow-restricted-names": State.ON,
+    // "no-ternary": State.OFF,
+    "no-throw-literal": State.WARN /* TSLint */,
+    "no-undef-init": State.ON,
+    // "no-undefined": State.OFF /* @CONFLICT: breaks Scriptable? breaks Sveltekit? */,
+    // "no-underscore-dangle": State.OFF,
+    "no-unneeded-ternary": State.WARN,
+    "no-unused-expressions": [
+      State.WARN,
+      {
+        allowShortCircuit: true,
+        allowTernary: true,
+      },
+    ] /* supports TypeScript */,
+    "no-unused-labels": State.WARN,
+    "no-useless-call": State.WARN,
+    "no-useless-catch": State.WARN,
+    "no-useless-computed-key": State.WARN,
+    "no-useless-concat": State.WARN,
+    "no-useless-constructor": State.WARN /* supports TypeScript */,
+    "no-useless-escape": [
+      State.WARN,
+      {
+        allowRegexCharacters: ["-"],
+      },
+    ],
+    "no-useless-rename": State.WARN,
+    "no-useless-return": State.WARN,
+    "no-var": State.WARN /* supports TypeScript */,
+    "no-void": [
+      State.ON,
+      {
+        allowAsStatement: true,
+      },
+    ],
+    // "no-warning-comments": State.OFF,
+    "no-with": State.ON,
+    "object-shorthand": State.WARN,
+    "one-var": [
+      State.WARN,
+      {
+        "var": "consecutive",
+        let: "consecutive",
+        "const": "consecutive",
+        using: "consecutive",
+        awaitUsing: "consecutive",
+        separateRequires: true,
+      },
+    ],
+    "operator-assignment": State.WARN,
+    "prefer-arrow-callback": State.WARN /* supports TypeScript */,
+    "prefer-const": [
+      State.WARN,
+      {
+        destructuring: "all",
+      },
+    ],
+    // "prefer-destructuring": State.OFF /* TSLint BUT @preference: too prescriptive */,
+    "prefer-exponentiation-operator": State.WARN,
+    // "prefer-named-capture-group": State.OFF,
+    "prefer-numeric-literals": State.WARN,
+    "prefer-object-has-own": State.WARN,
+    "prefer-object-spread": State.WARN,
+    "prefer-promise-reject-errors": State.WARN,
+    "prefer-regex-literals": [
+      State.WARN,
+      {
+        disallowRedundantWrapping: true,
+      },
+    ] /* TSLint */,
+    "prefer-rest-params": State.WARN,
+    "prefer-spread": State.WARN,
+    // "prefer-template": State.OFF /* @CONFLICT: performance */,
+    "preserve-caught-error": [
+      State.ON,
+      {
+        requireCatchParameter: true,
+      },
+    ],
+    radix: State.ON,
+    "require-await": State.ON /* TSLint */,
+    "require-unicode-regexp": State.ON,
+    "require-yield": State.ON,
+    // "sort-imports": State.OFF,
+    // "sort-keys": State.OFF,
+    // "sort-vars": State.OFF,
+    // strict: State.OFF,
+    // "symbol-description": State.OFF,
+    "vars-on-top": State.WARN,
+    yoda: State.WARN,
+    // #endregion
+
+    // #region FORMATTING
+    // [ https://eslint.org/docs/latest/rules/#layout--formatting ]
+    "unicode-bom": State.WARN,
+    // #endregion
+
+    // #region STYLISTIC
+    // DOC: https://eslint.style/rules
+
+    "stylistic/eol-last": State.WARN,
+    "stylistic/linebreak-style": State.WARN,
+    "stylistic/array-bracket-newline": State.WARN,
+    "stylistic/array-bracket-spacing": State.WARN,
+    "stylistic/array-element-newline": [
+      State.WARN,
+      {
+        consistent: true,
+        multiline: true,
+        minItems: 3,
+      },
+    ],
+    "stylistic/arrow-parens": [
+      State.WARN,
+      "as-needed",
+    ],
+    "stylistic/arrow-spacing": State.WARN,
+    "stylistic/block-spacing": State.WARN,
+    "stylistic/brace-style": [
+      State.WARN,
+      "stroustrup",
+      {
+        allowSingleLine: true,
+      },
+    ],
+    "stylistic/comma-dangle": [
+      State.WARN,
+      "always-multiline",
+    ],
+    "stylistic/comma-spacing": State.WARN,
+    "stylistic/comma-style": State.WARN,
+    "stylistic/computed-property-spacing": State.WARN,
+    "stylistic/curly-newline": State.WARN,
+    "stylistic/dot-location": [
+      State.WARN,
+      "property",
+    ],
+    // "stylistic/eol-last": State.OFF /* @global */,
+    "stylistic/function-call-argument-newline": [
+      State.WARN,
+      "consistent",
+    ],
+    "stylistic/function-call-spacing": State.WARN,
+    "stylistic/function-paren-newline": [
+      State.WARN,
+      "multiline-arguments",
+    ] /* BUG: https://github.com/eslint-stylistic/eslint-stylistic/issues/290 */,
+    "stylistic/generator-star-spacing": State.WARN,
+    "stylistic/implicit-arrow-linebreak": State.WARN,
+    "stylistic/indent": [
+      State.WARN,
+      2,
+      {
+        assignmentOperator: 0,
+        VariableDeclarator: {
+          "var": 0,
+          let: 0,
+          "const": 0,
+        },
+        outerIIFEBody: 0,
+        offsetTernaryExpressions: true,
+      },
+    ],
+    "stylistic/indent-binary-ops": [
+      State.WARN,
+      2 /* MUST be same as `stylistic/indent`[1] */,
+    ],
+    "stylistic/key-spacing": State.WARN,
+    "stylistic/keyword-spacing": State.WARN,
+    // "stylistic/line-comment-position": State.OFF,
+    // "stylistic/linebreak-style": State.OFF /* @global */,
+    // "stylistic/lines-around-comment": State.OFF,
+    "stylistic/lines-between-class-members": [
+      State.WARN,
+      {
+        enforce: [
+          {
+            prev: "field",
+            next: "field",
+            blankLine: "never",
+          },
+          {
+            prev: "field",
+            next: "method",
+            blankLine: "always",
+          },
+          {
+            prev: "method",
+            next: "*",
+            blankLine: "always",
+          },
+        ],
+      },
+    ],
+    "stylistic/max-len": [
+      State.WARN,
+      {
+        code: 300,
+        ignoreComments: true,
+        ignoreTrailingComments: true,
+        ignoreUrls: true,
+        ignoreStrings: true,
+        ignoreTemplateLiterals: true,
+        ignoreRegExpLiterals: true,
+      },
+    ],
+    "stylistic/max-statements-per-line": State.WARN,
+    "stylistic/member-delimiter-style": State.WARN,
+    // "stylistic/multiline-comment-style": State.OFF,
+    "stylistic/multiline-ternary": [
+      State.WARN,
+      "always-multiline",
+    ],
+    // "stylistic/new-parens": State.OFF,
+    "stylistic/newline-per-chained-call": [
+      State.WARN,
+      {
+        ignoreChainWithDepth: 1,
+      },
+    ],
+    // "stylistic/no-confusing-arrow": State.OFF,
+    "stylistic/no-extra-parens": State.WARN,
+    "stylistic/no-extra-semi": State.WARN,
+    "stylistic/no-floating-decimal": State.WARN,
+    // "stylistic/no-mixed-operators": State.OFF,
+    "stylistic/no-mixed-spaces-and-tabs": State.WARN,
+    "stylistic/no-multi-spaces": [
+      State.WARN,
+      {
+        exceptions: {
+          Property: false,
+          ImportAttributes: false,
+        },
+      },
+    ],
+    "stylistic/no-multiple-empty-lines": [
+      State.WARN,
+      {
+        max: 1,
+        maxBOF: 0,
+        maxEOF: 0 /* INFO: combine with `eol-last` to ensure file still ends with a single line-break (eol character) */,
+      },
+    ],
+    "stylistic/no-tabs": State.WARN,
+    "stylistic/no-trailing-spaces": State.WARN,
+    "stylistic/no-whitespace-before-property": State.WARN,
+    "stylistic/nonblock-statement-body-position": [
+      State.WARN,
+      "below",
+    ],
+    "stylistic/object-curly-newline": [
+      State.WARN,
+      {
+        consistent: true,
+        multiline: true,
+        minProperties: 3,
+      },
+    ],
+    "stylistic/object-curly-spacing": [
+      State.WARN,
+      "always",
+      {
+        emptyObjects: "never",
+      },
+    ],
+    "stylistic/object-property-newline": State.WARN,
+    "stylistic/one-var-declaration-per-line": [
+      State.WARN,
+      "always",
+    ],
+    "stylistic/operator-linebreak": [
+      State.WARN,
+      "before",
+    ],
+    "stylistic/padded-blocks": [
+      State.WARN,
+      "never",
+      {
+        allowSingleLineBlocks: true,
+      },
+    ],
+    // "stylistic/padding-line-between-statements": State.OFF /* BUG: when in editor, always removes too many lines and ends up crushing two lines into one statement, which then cannot be autofixed */,
+    "stylistic/quote-props": [
+      State.WARN,
+      "as-needed",
+      {
+        keywords: true,
+      },
+    ],
+    "stylistic/quotes": [
+      State.WARN,
+      "double",
+      {
+        avoidEscape: true,
+        allowTemplateLiterals: "always",
+      },
+    ],
+    "stylistic/rest-spread-spacing": State.WARN,
+    "stylistic/semi": State.WARN,
+    "stylistic/semi-spacing": State.WARN,
+    "stylistic/semi-style": State.WARN,
+    "stylistic/space-before-blocks": State.WARN,
+    "stylistic/space-before-function-paren": [
+      State.WARN,
+      {
+        named: "never",
+      },
+    ],
+    "stylistic/space-in-parens": State.WARN,
+    "stylistic/space-infix-ops": State.WARN,
+    "stylistic/space-unary-ops": State.WARN,
+    "stylistic/spaced-comment": [
+      State.WARN,
+      "always",
+      {
+        line: {
+          exceptions: [
+            "/",
+            "-",
+            "+",
+            "=",
+          ],
+          markers: [
+            "!",
+            "@",
+            "#",
+            "/",
+            "#region",
+            "#endregion",
+            "#part",
+            "/#region",
+            "/#endregion",
+            "/#part",
+          ],
+        },
+        block: {
+          exceptions: ["*"],
+          markers: ["*"],
+          balanced: true,
+        },
+      },
+    ],
+    "stylistic/switch-colon-spacing": State.WARN,
+    "stylistic/template-curly-spacing": State.WARN,
+    "stylistic/template-tag-spacing": State.WARN,
+    "stylistic/type-annotation-spacing": [
+      State.WARN,
+      {
+        before: true,
+        after: true,
+        overrides: {
+          colon: {
+            before: false,
+            after: true,
+          },
+        },
+      } /* BUG: non-overriden rule affects all type annotations (arrows, "as" keyword, "satisfies" keyword) except colons */,
+    ],
+    "stylistic/type-generic-spacing": State.WARN,
+    "stylistic/type-named-tuple-spacing": State.WARN,
+    "stylistic/wrap-iife": [
+      State.WARN,
+      "inside",
+      {
+        functionPrototypeMethods: true,
+      },
+    ],
+    "stylistic/wrap-regex": State.WARN,
+    "stylistic/yield-star-spacing": State.WARN,
+    //#endregion
+  } as const,
+};
