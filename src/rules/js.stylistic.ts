@@ -3,6 +3,11 @@ import { State } from "./state";
 // DOC: https://eslint.style/rules
 export default {
   rules: {
+    // "global"
+    "stylistic/eol-last": State.WARN,
+    "stylistic/linebreak-style": State.WARN,
+    // end
+
     "stylistic/array-bracket-newline": State.WARN,
     "stylistic/array-bracket-spacing": State.WARN,
     "stylistic/array-element-newline": [
