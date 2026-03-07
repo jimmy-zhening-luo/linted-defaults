@@ -20,11 +20,13 @@ export default [
             TSInterfaceBody: {
               singleLine: {
                 maxItems: 0,
+                spacing: "never",
               },
             },
             TSEnumBody: {
               singleLine: {
                 maxItems: 0,
+                spacing: "never",
               },
             },
             TSTupleType: {
@@ -40,11 +42,13 @@ export default [
             JSONArrayExpression: {
               singleLine: {
                 maxItems: 0,
+                spacing: "never",
               },
             },
             JSONObjectExpression: {
               singleLine: {
                 maxItems: 0,
+                spacing: "never",
               },
             },
           },
