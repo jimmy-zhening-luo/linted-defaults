@@ -25,29 +25,31 @@ export default function pattern(
   > = {},
   override?: boolean,
 ) {
-  const leaves = typeof extensions === "string"
-    ? ["*." + extensions]
-    : extensions.map(ext => "*." + ext);
+  const filetype = (extension: string) => "*." + extensions,
+  leaves = typeof extensions === "string"
+    ? [filetype(extensions)]
+    : extensions.map(filetype);
 
   if (pattern.files) {
     const { length } = leaves,
     { files } = pattern,
-    { length: fileCount } = files;
+    { length: nFiles } = files;
 
-    leaves.length = length + fileCount;
+    leaves.length = length + nFiles;
 
-    for (let i = 0; i < fileCount; ++i)
+    for (let i = 0; i < nFiles; ++i)
       leaves[length + i] = files[i]!;
   }
 
-  const subpaths = (
+  const recurse = (directory: string) => directory && directory + "/**/",
+  subpaths = (
     override
       ? pattern.folders
       : pattern.folders
         ? SUBROOTS.concat(pattern.folders)
         : SUBROOTS
   )
-    ?.map(path => path && path + "/**/")
+    ?.map(recurse)
     .flatMap(
       path => leaves.map(leaf => path + leaf),
     )
@@ -56,11 +58,11 @@ export default function pattern(
   if (pattern.paths) {
     const { length } = subpaths,
     { paths } = pattern,
-    { length: pathCount } = paths;
+    { length: nPaths } = paths;
 
-    subpaths.length = length + pathCount;
+    subpaths.length = length + nPaths;
 
-    for (let i = 0; i < pathCount; ++i)
+    for (let i = 0; i < nPaths; ++i)
       subpaths[length + i] = paths[i]!;
   }
 
