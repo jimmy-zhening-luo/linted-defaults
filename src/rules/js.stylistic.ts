@@ -102,7 +102,12 @@ export default {
       "always-multiline",
     ],
     // "stylistic/new-parens": State.OFF,
-    "stylistic/newline-per-chained-call": State.WARN,
+    "stylistic/newline-per-chained-call": [
+      State.WARN,
+      {
+        ignoreChainWithDepth: 1,
+      },
+    ],
     // "stylistic/no-confusing-arrow": State.OFF,
     "stylistic/no-extra-parens": State.WARN,
     "stylistic/no-extra-semi": State.WARN,
