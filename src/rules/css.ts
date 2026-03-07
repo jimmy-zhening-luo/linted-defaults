@@ -1,4 +1,4 @@
-import { State } from "../state";
+import { State } from "./_state";
 
 // DOC: https://github.com/eslint/css/tree/main/docs/rules
 export default {

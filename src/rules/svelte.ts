@@ -1,4 +1,4 @@
-import { State } from "../state";
+import { State } from "./_state";
 
 // DOC: https://github.com/sveltejs/eslint-plugin-svelte/blob/ca37fbbe82d01019946e12eeb1b57c2a5736c018/packages/eslint-plugin-svelte/src/configs/base.ts
 export default {
