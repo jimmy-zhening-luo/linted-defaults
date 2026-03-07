@@ -1,4 +1,4 @@
-import jsIncludePatterns from "../files/base";
+import jsFiles from "../files/base";
 
 const globalIgnores = [
   "**/.git/",
@@ -10,15 +10,15 @@ const globalIgnores = [
   "!*.mjs",
   "**/.vscode/c_cpp_properties.json",
 ],
-invertedJsFiles = jsIncludePatterns.map(
-  pattern => "!" + pattern,
+notJsFiles = jsFiles.map(
+  pattern => "!" + pattern
 ),
-length = globalIgnores.length,
-jsFilesLength = invertedJsFiles.length;
+{ length: nFiles } = notJsFiles,
+{ length } = globalIgnores;
 
-globalIgnores.length = length + jsFilesLength;
+globalIgnores.length = length + nFiles
 
-for (let i = 0; i < jsFilesLength; ++i)
-  globalIgnores[length + i] = invertedJsFiles[i]!;
+for (let i = 0; i < nFiles; ++i)
+  globalIgnores[length + i] = notJsFiles[i]!;
 
 export default globalIgnores;
