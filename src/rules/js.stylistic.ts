@@ -3,16 +3,9 @@ import { State } from "./state";
 // DOC: https://eslint.style/rules
 export default {
   rules: {
-    "stylistic/array-bracket-newline": State.OFF /* @global stylistic/list-style */,
-    "stylistic/array-bracket-spacing": State.OFF /* @global stylistic/list-style */,
-    "stylistic/array-element-newline": [
-      State.OFF,
-      {
-        consistent: true,
-        multiline: true,
-        minItems: 3,
-      },
-    ] /* @global stylistic/list-style */,
+    // "stylistic/array-bracket-newline": State.OFF /* @global stylistic/list-style */,
+    // "stylistic/array-bracket-spacing": State.OFF /* @global stylistic/list-style */,
+    // "stylistic/array-element-newline": State.OFF /* @global stylistic/list-style */,
     "stylistic/arrow-parens": [
       State.WARN,
       "as-needed",
@@ -39,15 +32,9 @@ export default {
       "property",
     ],
     // "stylistic/eol-last": State.OFF /* @global */,
-    "stylistic/function-call-argument-newline": [
-      State.OFF,
-      "consistent",
-    ] /* @global stylistic/list-style */,
+    // "stylistic/function-call-argument-newline": State.OFF /* @global stylistic/list-style */,
     "stylistic/function-call-spacing": State.WARN,
-    "stylistic/function-paren-newline": [
-      State.OFF,
-      "multiline-arguments",
-    ] /* @global stylistic/list-style | BUG: https://github.com/eslint-stylistic/eslint-stylistic/issues/290 */,
+    // "stylistic/function-paren-newline": State.OFF /* @global stylistic/list-style | BUG: https://github.com/eslint-stylistic/eslint-stylistic/issues/290 */,
     "stylistic/generator-star-spacing": State.WARN,
     "stylistic/implicit-arrow-linebreak": State.WARN,
     "stylistic/indent": [
@@ -146,22 +133,9 @@ export default {
       State.WARN,
       "below",
     ],
-    "stylistic/object-curly-newline": [
-      State.OFF,
-      {
-        consistent: true,
-        multiline: true,
-        minProperties: 3,
-      },
-    ] /* @global stylistic/list-style */,
-    "stylistic/object-curly-spacing": [
-      State.OFF,
-      "always",
-      {
-        emptyObjects: "never",
-      },
-    ] /* @global stylistic/list-style */,
-    "stylistic/object-property-newline": State.OFF /* @global stylistic/list-style */,
+    // "stylistic/object-curly-newline": State.OFF /* @global stylistic/list-style */,
+    // "stylistic/object-curly-spacing": State.OFF /* @global stylistic/list-style */,
+    // "stylistic/object-property-newline": State.OFF /* @global stylistic/list-style */,
     "stylistic/one-var-declaration-per-line": [
       State.WARN,
       "always",
@@ -204,7 +178,7 @@ export default {
         named: "never",
       },
     ],
-    "stylistic/space-in-parens": State.OFF /* @global stylistic/list-style */,
+    // "stylistic/space-in-parens": State.OFF /* @global stylistic/list-style */,
     "stylistic/space-infix-ops": State.WARN,
     "stylistic/space-unary-ops": State.WARN,
     "stylistic/spaced-comment": [

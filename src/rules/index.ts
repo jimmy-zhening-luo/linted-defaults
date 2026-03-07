@@ -1,4 +1,3 @@
-import global from "./global";
 import js from "./js";
 import ts from "./ts";
 import svelte from "./svelte";
@@ -9,7 +8,6 @@ import jsonc from "./jsonc";
 import yml from "./yml";
 
 export default {
-  "*": global,
   js,
   ts,
   svelte,

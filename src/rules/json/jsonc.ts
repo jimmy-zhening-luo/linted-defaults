@@ -27,11 +27,8 @@ export default {
     // "jsonc/valid-json-number": State.OFF,
     // "jsonc/vue-custom-block/no-parsing-error": State.OFF,
     // "jsonc/array-bracket-newline": State.OFF /* BUG: DO NOT CONFIGURE */,
-    "jsonc/array-bracket-spacing": State.OFF /* @global stylistic/list-style */,
-    "jsonc/array-element-newline": [
-      State.OFF,
-      "consistent",
-    ] /* @global stylistic/list-style */,
+    // "jsonc/array-bracket-spacing": State.OFF /* @global stylistic/list-style */,
+    // "jsonc/array-element-newline": State.OFF /* @global stylistic/list-style */,
     "jsonc/comma-dangle": State.ON,
     "jsonc/comma-style": State.WARN,
     "jsonc/indent": [
@@ -53,22 +50,9 @@ export default {
     // "jsonc/no-octal": State.OFF,
     // "jsonc/no-sparse-arrays": State.OFF,
     // "jsonc/no-useless-escape": State.OFF,
-    "jsonc/object-curly-newline": [
-      State.OFF,
-      {
-        consistent: true,
-        multiline: true,
-        minProperties: 2,
-      },
-    ] /* @global stylistic/list-style */,
-    "jsonc/object-curly-spacing": [
-      State.OFF,
-      "always",
-      {
-        emptyObjects: "never",
-      },
-    ] /* @global stylistic/list-style */,
-    "jsonc/object-property-newline": State.OFF /* @global stylistic/list-style */,
+    // "jsonc/object-curly-newline": State.OFF /* @global stylistic/list-style */,
+    // "jsonc/object-curly-spacing": State.OFF /* @global stylistic/list-style */,
+    // "jsonc/object-property-newline": State.OFF /* @global stylistic/list-style */,
     // "jsonc/quote-props": State.OFF,
     // "jsonc/quotes": State.OFF,
     // "jsonc/space-unary-ops": State.OFF,
