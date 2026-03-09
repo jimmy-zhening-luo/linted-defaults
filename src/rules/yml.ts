@@ -1,6 +1,6 @@
 import { State } from "./_state";
 
-// DOC: https://ota-meshi.github.io/eslint-plugin-yml/rules/#yaml-rules
+//@doc https://ota-meshi.github.io/eslint-plugin-yml/rules/#yaml-rules
 export default {
   rules: {
     //#region Custom

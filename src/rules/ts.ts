@@ -25,8 +25,8 @@ export default {
     "no-unsafe-negation": State.OFF,
     //#endregion
 
-    // #region EXTEND
-    // DOC: https://typescript-eslint.io/rules/?=extension-xdeprecated#rules
+    //#region EXTEND
+    //@doc https://typescript-eslint.io/rules/?=extension-xdeprecated#rules
     /* @OVERRIDE */ "dot-notation": State.OFF,
     "ts/dot-notation": [
       State.WARN,
@@ -62,10 +62,10 @@ export default {
     ],
     /* @OVERRIDE */ "require-await": State.OFF,
     "ts/require-await": State.ON,
-    // #endregion
+    //#endregion
 
-    // #region ...
-    // DOC: https://typescript-eslint.io/rules/?=xextension-xdeprecated#rules
+    //#region ...
+    //@doc https://typescript-eslint.io/rules/?=xextension-xdeprecated#rules
 
     // "ts/adjacent-overload-signatures": State.OFF,
     // "ts/array-type": State.OFF /* @preference: ideally, I'd like to don't-care mutable arrays while requiring readonly [] syntax for immutable arrays, but there is no way to do that with the current rule options */,
@@ -242,7 +242,7 @@ export default {
         allowRegExp: false,
       },
     ],
-    "ts/return-await": State.ON /* BUG: doc incorrectly states that this extends the DEPRECATED (since 8.46) no-return-await: https://typescript-eslint.io/rules/return-await */,
+    "ts/return-await": State.ON /* @BUG doc incorrectly states that this extends the DEPRECATED (since 8.46) no-return-await: https://typescript-eslint.io/rules/return-await */,
     "ts/strict-boolean-expressions": [
       State.ON,
       {
@@ -268,8 +268,8 @@ export default {
         ignoreStatic: true,
       },
     ],
-    // "ts/unified-signatures": State.OFF /* BUG: https://github.com/typescript-eslint/typescript-eslint/issues/11732 */,
+    // "ts/unified-signatures": State.OFF /* @BUG https://github.com/typescript-eslint/typescript-eslint/issues/11732 */,
     "ts/use-unknown-in-catch-callback-variable": State.ON,
-    // #endregion
+    //#endregion
   } as const,
 };

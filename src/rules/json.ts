@@ -1,6 +1,6 @@
 import { State } from "./_state";
 
-// DOC: https://ota-meshi.github.io/eslint-plugin-jsonc/rules/
+//@doc https://ota-meshi.github.io/eslint-plugin-jsonc/rules/
 export default {
   rules: {
     // "json/no-duplicate-keys": State.OFF /* jsonc/no-dupe-keys */,
@@ -32,7 +32,7 @@ export default {
     // "jsonc/sort-keys": State.OFF /* ESLint: json/sort-keys */,
     // "jsonc/valid-json-number": State.OFF,
     // "jsonc/vue-custom-block/no-parsing-error": State.OFF,
-    // "jsonc/array-bracket-newline": State.OFF /* BUG: DO NOT CONFIGURE */,
+    // "jsonc/array-bracket-newline": State.OFF /* @BUG DO NOT CONFIGURE */,
     "jsonc/array-bracket-spacing": State.WARN,
     "jsonc/array-element-newline": [
       State.WARN,

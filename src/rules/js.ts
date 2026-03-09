@@ -1,15 +1,15 @@
 import { State } from "./_state";
 
-// DOC: https://eslint.org/docs/latest/rules/
+//@doc https://eslint.org/docs/latest/rules/
 export default {
   rules: {
-    // #region PROBLEMS
-    // DOC: https://eslint.org/docs/latest/rules/#possible-problems
+    //#region PROBLEMS
+    //@doc https://eslint.org/docs/latest/rules/#possible-problems
     "array-callback-return": [
       State.ON,
       {
         checkForEach: true,
-        allowVoid: true /* INFO: only works if checkForEach */,
+        allowVoid: true /* @info only works if checkForEach */,
       },
     ],
     "constructor-super": State.ON /* @tsc */,
@@ -27,7 +27,7 @@ export default {
       {
         checkLoops: "all",
       },
-    ] /* BUG: incorrect option description (claims "all" is ok): https://eslint.org/docs/latest/rules/no-constant-condition */,
+    ] /* @BUG incorrect option description (claims "all" is ok): https://eslint.org/docs/latest/rules/no-constant-condition */,
     "no-constructor-return": State.ON,
     "no-control-regex": State.ON,
     "no-debugger": State.ON,
@@ -114,9 +114,9 @@ export default {
         requireStringLiterals: true,
       },
     ],
-    // #endregion
+    //#endregion
 
-    // #region SUGGESTIONS
+    //#region SUGGESTIONS
     // [ https://eslint.org/docs/latest/rules/#suggestions ]
     "accessor-pairs": [
       State.ON,
@@ -144,7 +144,7 @@ export default {
     // "func-name-matching": State.OFF,
     // "func-names": State.OFF,
     // "func-style": State.OFF /* supports TypeScript */,
-    // "grouped-accessor-pairs": State.OFF /* BUG: requires adjacency, not as described in documentation */,
+    // "grouped-accessor-pairs": State.OFF /* @BUG requires adjacency, not as described in documentation */,
     // "guard-for-in": State.OFF /* @preference: not helpful because using for-in on non-literal objects is bad practice and this rule doesn't guard against that anyway, while adding a pointless check to known object literals */,
     // "id-denylist": State.OFF,
     // "id-length": State.OFF,
@@ -338,15 +338,15 @@ export default {
     // "symbol-description": State.OFF,
     "vars-on-top": State.WARN,
     yoda: State.WARN,
-    // #endregion
+    //#endregion
 
-    // #region FORMATTING
+    //#region FORMATTING
     // [ https://eslint.org/docs/latest/rules/#layout--formatting ]
     "unicode-bom": State.WARN,
-    // #endregion
+    //#endregion
 
-    // #region STYLISTIC
-    // DOC: https://eslint.style/rules
+    //#region STYLISTIC
+    //@doc https://eslint.style/rules
 
     "stylistic/eol-last": State.WARN,
     "stylistic/linebreak-style": State.WARN,
@@ -394,7 +394,7 @@ export default {
     "stylistic/function-paren-newline": [
       State.WARN,
       "multiline-arguments",
-    ] /* BUG: https://github.com/eslint-stylistic/eslint-stylistic/issues/290 */,
+    ] /* @BUG https://github.com/eslint-stylistic/eslint-stylistic/issues/290 */,
     "stylistic/generator-star-spacing": State.WARN,
     "stylistic/implicit-arrow-linebreak": State.WARN,
     "stylistic/indent": [
@@ -488,7 +488,7 @@ export default {
       {
         max: 1,
         maxBOF: 0,
-        maxEOF: 0 /* INFO: combine with `eol-last` to ensure file still ends with a single line-break (eol character) */,
+        maxEOF: 0 /* @info combine with `eol-last` to ensure file still ends with a single line-break (eol character) */,
       },
     ],
     "stylistic/no-tabs": State.WARN,
@@ -529,7 +529,7 @@ export default {
         allowSingleLineBlocks: true,
       },
     ],
-    // "stylistic/padding-line-between-statements": State.OFF /* BUG: when in editor, always removes too many lines and ends up crushing two lines into one statement, which then cannot be autofixed */,
+    // "stylistic/padding-line-between-statements": State.OFF /* @BUG when in editor, always removes too many lines and ends up crushing two lines into one statement, which then cannot be autofixed */,
     "stylistic/quote-props": [
       State.WARN,
       "as-needed",
@@ -596,7 +596,7 @@ export default {
             after: true,
           },
         },
-      } /* BUG: non-overriden rule affects all type annotations (arrows, "as" keyword, "satisfies" keyword) except colons */,
+      } /* @BUG non-overriden rule affects all type annotations (arrows, "as" keyword, "satisfies" keyword) except colons */,
     ],
     "stylistic/type-generic-spacing": State.WARN,
     "stylistic/type-named-tuple-spacing": State.WARN,

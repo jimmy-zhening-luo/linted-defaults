@@ -1,10 +1,10 @@
 import { State } from "./_state";
 
-// DOC: https://html-eslint.org/docs/rules
+//@doc https://html-eslint.org/docs/rules
 export default {
   rules: {
-    // #region BEST PRACTICE
-    // DOC: https://html-eslint.org/docs/rules#best-practice
+    //#region BEST PRACTICE
+    //@doc https://html-eslint.org/docs/rules#best-practice
     "html/css-no-empty-blocks": State.WARN,
     "html/head-order": State.ON,
     // "html/max-element-depth": State.OFF /* @preference: simply do not care */,
@@ -33,19 +33,19 @@ export default {
     "html/require-li-container": State.WARN,
     "html/require-meta-charset": State.WARN,
     "html/use-baseline": State.WARN,
-    // #endregion
+    //#endregion
 
-    // #region SEO
-    // DOC: https://html-eslint.org/docs/rules#seo
+    //#region SEO
+    //@doc https://html-eslint.org/docs/rules#seo
     "html/no-multiple-h1": State.WARN,
     "html/require-lang": State.WARN,
     // "html/require-meta-description": State.OFF /* @CONFLICT: breaks Svelte which leaves meta descriptions to route leaves */,
     // "html/require-open-graph-protocol": State.OFF /* @CONFLICT: idk what this is, also it probably breaks Svelte */,
     // "html/require-title": State.OFF /* @CONFLICT: breaks Svelte which leaves title to route leaves */,
-    // #endregion
+    //#endregion
 
-    // #region ACCESSIBILITY
-    // DOC: https://html-eslint.org/docs/rules#accessibility
+    //#region ACCESSIBILITY
+    //@doc https://html-eslint.org/docs/rules#accessibility
     "html/no-abstract-roles": State.WARN,
     "html/no-accesskey-attrs": State.WARN,
     "html/no-aria-hidden-body": State.WARN,
@@ -62,10 +62,10 @@ export default {
     "html/require-img-alt": State.WARN,
     "html/require-input-label": State.WARN,
     "html/require-meta-viewport": State.WARN,
-    // #endregion
+    //#endregion
 
-    // #region STYLE
-    // DOC: https://html-eslint.org/docs/rules#style
+    //#region STYLE
+    //@doc https://html-eslint.org/docs/rules#style
     // "html/attrs-newline": State.OFF,
     // "html/element-newline": State.OFF,
     // "html/id-naming-convention": State.OFF,
@@ -77,6 +77,6 @@ export default {
     // "html/no-trailing-spaces": State.OFF,
     // "html/quotes": State.OFF,
     // "html/sort-attrs": State.OFF,
-    // #endregion
+    //#endregion
   } as const,
 };
