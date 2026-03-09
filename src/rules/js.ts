@@ -564,23 +564,15 @@ export default {
       "always",
       {
         line: {
-          exceptions: [
-            "/",
-            "-",
-            "+",
-            "=",
-          ],
           markers: [
-            "!",
-            "@",
-            "#",
-            "/",
             "#region",
             "#endregion",
             "#part",
+            "@doc",
             "/#region",
             "/#endregion",
             "/#part",
+            "/@doc",
           ],
         },
         block: {
