@@ -3,7 +3,7 @@
   "$help": "https://docs.npmjs.com/cli/configuring-npm/package-json",
   "$schema": "https://json.schemastore.org/package",
   "name": "@eslinted/defaults",
-  "version": "21.0.3",
+  "version": "21.1.0",
   "repository": "github:jimmy-zhening-luo/linted-defaults",
   "description": "Default scopes for `linted`",
   "keywords": [],
