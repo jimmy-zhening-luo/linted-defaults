@@ -3,7 +3,14 @@ import js from "./base";
 
 export default {
   js,
-  ts: pattern("ts"),
+  ts: pattern(
+    [
+      "ts",
+      "mts",
+      "cts",
+      "tsx",
+    ],
+  ),
   svelte: pattern("svelte"),
   html: pattern("html"),
   css: pattern("css"),
