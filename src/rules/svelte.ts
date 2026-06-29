@@ -70,6 +70,7 @@ export default {
     ],
     "svelte/button-has-type": State.ON,
     "svelte/no-add-event-listener": State.ON,
+    "svelte/no-at-const-tags": State.ON,
     "svelte/no-at-debug-tags": State.ON,
     "svelte/no-ignored-unsubscribe": State.ON,
     "svelte/no-immutable-reactive-statements": State.ON,

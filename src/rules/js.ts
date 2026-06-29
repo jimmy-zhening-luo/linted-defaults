@@ -21,7 +21,12 @@ export default {
     "no-compare-neg-zero": State.ON,
     "no-cond-assign": State.ON,
     "no-const-assign": State.ON /* @tsc */,
-    "no-constant-binary-expression": State.ON,
+    "no-constant-binary-expression": [
+      State.ON,
+      {
+        checkRelationalComparisons: true,
+      },
+    ],
     "no-constant-condition": [
       State.ON,
       {
