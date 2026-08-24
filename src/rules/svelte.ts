@@ -32,6 +32,8 @@ export default {
     //#region ERRORS
     //@doc http://sveltejs.github.io/eslint-plugin-svelte/rules/#possible-errors
     "svelte/infinite-reactive-loop": State.ON,
+    "svelte/no-bind-value-on-checkable-inputs": State.ON,
+    "svelte/no-conflicting-module-names": State.ON,
     "svelte/no-dom-manipulating": State.ON,
     "svelte/no-dupe-else-if-blocks": State.ON,
     "svelte/no-dupe-on-directives": State.ON,
@@ -125,6 +127,7 @@ export default {
     "svelte/no-extra-reactive-curlies": State.WARN,
     // "svelte/no-restricted-html-elements": State.OFF,
     // "svelte/no-spaces-around-equal-signs-in-attribute": State.OFF,
+    "svelte/prefer-attribute-interpolation": State.WARN,
     "svelte/prefer-class-directive": [
       State.WARN,
       {
