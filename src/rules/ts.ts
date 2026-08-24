@@ -40,8 +40,6 @@ export default {
     /* @OVERRIDE */ "no-implied-eval": State.OFF,
     "ts/no-implied-eval": State.ON,
     // "ts/no-redeclare": State.OFF /* @tsc: (let, const, -var) */,
-    /* @OVERRIDE */ "no-restricted-imports": State.OFF,
-    // "ts/no-restricted-imports": State.OFF,
     /* @OVERRIDE */ "no-unused-vars": State.OFF,
     "ts/no-unused-vars": State.WARN,
     /* @OVERRIDE */ "no-throw-literal": State.OFF,
