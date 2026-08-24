@@ -12,6 +12,7 @@ export default {
     // "yml/file-extension": State.OFF,
     // "yml/indent": State.OFF,
     // "yml/key-name-casing": State.OFF,
+    "yml/no-boolean-key": State.WARN,
     // "yml/no-empty-document": State.OFF,
     "yml/no-empty-key": State.WARN,
     // "yml/no-empty-mapping-value": State.OFF /* @preference: breaks Home Assistant integration enablement shorthand style (would require a `{}` after) */,
