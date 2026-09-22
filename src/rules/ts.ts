@@ -132,6 +132,7 @@ export default {
       },
     ],
     "ts/no-for-in-array": State.ON,
+    "ts/no-generated-empty-object-type": State.ON,
     "ts/no-import-type-side-effects": State.ON,
     "ts/no-inferrable-types": State.ON,
     // "ts/no-invalid-void-type": State.OFF /* @preference: I powerfully ideologically disagree with disallowing void, a valid type */,
